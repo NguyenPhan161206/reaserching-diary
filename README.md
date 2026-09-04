@@ -43,10 +43,10 @@ Hệ thống kiến thức được thiết kế và phân bổ thành các thư
 - 💡 `/random_ideas` - Góc nhìn cá nhân, những ý tưởng ngẫu nhiên, hay các dự án đột phá nảy ra trong đầu.
 
 ## 🚀 Trạng thái & Lộ trình (Roadmap)
-- **Giai đoạn hiện tại:** `Khởi tạo` (Vừa thành lập kho lưu trữ).
+- **Giai đoạn hiện tại:** `Đang hoạt động` (Đã thiết lập khung cơ bản).
 - **Kế hoạch sắp tới:**
-  - [ ] Thiết lập hệ thống thư mục và quy chuẩn ghi chú.
-  - [ ] Đẩy các ghi chú đầu tiên về AI và Kinh tế học lên repository.
+  - [x] Thiết lập hệ thống thư mục và quy chuẩn ghi chú.
+  - [x] Đẩy các ghi chú đầu tiên về AI và Kinh tế học lên repository.
   - [ ] Duy trì thói quen cập nhật định kỳ kiến thức mới.
 
 ---
