@@ -9,7 +9,13 @@
       <h3>Phan Hữu Bình Nguyên</h3>
       <ul>
         <li><b>Nghề nghiệp:</b> IT student</li>
-        <li><b>Sở thích:</b> Khám phá kiến thức, áp dụng kiến thức, đi chơi khắp nơi, networking</li>
+        <li><b>Sở thích:</b>
+          <ul>
+            <li>Khám phá và áp dụng kiến thức</li>
+            <li>Đi chơi khắp nơi</li>
+            <li>Networking</li>
+          </ul>
+        </li>
       </ul>
     </td>
   </tr>
