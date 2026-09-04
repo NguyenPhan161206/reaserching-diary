@@ -9,6 +9,8 @@
       <h3>Phan Hữu Bình Nguyên</h3>
       <ul>
         <li><b>Nghề nghiệp:</b> IT student</li>
+        <li><b>Mục tiêu nghề nghiệp:</b> AI Engineer (lĩnh vực Kinh tế & Kinh doanh)</li>
+        <li><b>Đang nghiên cứu:</b> AI, IoT, AIoT, Kinh tế, Chính trị, Tâm lý học</li>
         <li><b>Sở thích:</b>
           <ul>
             <li>Khám phá và áp dụng kiến thức</li>
@@ -16,6 +18,7 @@
             <li>Networking</li>
           </ul>
         </li>
+        <li><b>Liên hệ:</b> <a href="mailto:phbn303030@gmail.com">phbn303030@gmail.com</a></li>
       </ul>
     </td>
   </tr>
