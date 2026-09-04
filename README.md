@@ -1,8 +1,19 @@
 # Researching Diary 📖
 
-<p align="center">
-  <img src="b0a2877b09cb8895d1da.jpg" alt="NguyenPhan161206" width="200" style="border-radius: 50%;">
-</p>
+<table>
+  <tr>
+    <td align="center">
+      <img src="b0a2877b09cb8895d1da.jpg" alt="Phan Hữu Bình Nguyên" width="200" style="border-radius: 50%;">
+    </td>
+    <td>
+      <h3>Phan Hữu Bình Nguyên</h3>
+      <ul>
+        <li><b>Nghề nghiệp:</b> IT student</li>
+        <li><b>Sở thích:</b> Khám phá kiến thức, áp dụng kiến thức, đi chơi khắp nơi, networking</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 Chào mừng đến với **Researching Diary**! Đây là kho lưu trữ cá nhân nơi tôi ghi chép lại hành trình tìm hiểu và nghiên cứu về **mọi thứ trên đời**. Từ công nghệ, khoa học, đời sống cho đến những điều nhỏ bé thú vị hàng ngày.
 
