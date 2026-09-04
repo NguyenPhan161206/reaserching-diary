@@ -1,0 +1,19 @@
+# Hệ điều hành
+.DS_Store
+Thumbs.db
+
+# Trình soạn thảo / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# File tạm thời / Bản nháp
+*.draft.md
+*.tmp
+*~
+
+# Thư mục build (nếu sau này dùng MkDocs/Hugo tạo web)
+site/
+public/
+_site/
