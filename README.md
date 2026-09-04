@@ -26,22 +26,28 @@
 
 Chào mừng đến với **Researching Diary**! Đây là kho lưu trữ cá nhân nơi tôi ghi chép lại hành trình tìm hiểu và nghiên cứu về **mọi thứ trên đời**. Từ công nghệ, khoa học, đời sống cho đến những điều nhỏ bé thú vị hàng ngày.
 
-## 🎯 Mục tiêu
-- **Ghi chép & Lưu trữ:** Nơi an toàn để lưu lại mọi kiến thức mới học được.
-- **Xây dựng "Bộ não thứ hai" (Second Brain):** Giúp dễ dàng tra cứu lại thông tin khi cần.
-- **Theo dõi sự phát triển:** Nhìn lại quá trình học tập và mở rộng thế giới quan của bản thân.
+## 🎯 Mục tiêu cốt lõi
+Kho lưu trữ này không chỉ là những dòng ghi chép đơn thuần, mà là một hệ thống kiến thức được tổ chức chặt chẽ nhằm phục vụ cho mục tiêu phát triển dài hạn:
+- **Xây dựng "Bộ não thứ hai" (Second Brain):** Số hóa và liên kết mọi kiến thức, trải nghiệm và tài liệu thu thập được. Điều này giúp giảm tải cho trí nhớ ngắn hạn, dễ dàng tra cứu, xâu chuỗi thông tin và kích thích sự sáng tạo.
+- **Phát triển tư duy liên ngành:** Kết hợp tư duy logic, hệ thống của khối Kỹ thuật (AI, IoT) với tư duy phân tích, thấu cảm của khối Xã hội (Kinh tế, Chính trị, Tâm lý học) nhằm hướng tới mục tiêu trở thành một AI Engineer có khả năng giải quyết các bài toán thực tiễn trong kinh doanh.
+- **Theo dõi hành trình trưởng thành:** Là minh chứng rõ nét cho việc "Khám phá & Áp dụng", giúp tôi nhìn lại sự thay đổi trong nhận thức và sự mở rộng thế giới quan của bản thân qua từng giai đoạn.
 
-## 📂 Cấu trúc dự kiến
-Kho lưu trữ này có thể sẽ được tổ chức theo các thư mục chủ đề để dễ quản lý, ví dụ như:
+## 📂 Cấu trúc lưu trữ (Knowledge Base)
+Hệ thống kiến thức được thiết kế và phân bổ thành các thư mục chuyên biệt, phản ánh đúng những lĩnh vực tôi đang theo đuổi:
 
-- 💻 `/tech` - Công nghệ, lập trình, phần mềm...
-- 🔬 `/science` - Các kiến thức khoa học.
-- 📚 `/books` - Tóm tắt và ghi chú từ những cuốn sách đã đọc.
-- 💡 `/ideas` - Những ý tưởng, suy nghĩ ngẫu nhiên.
-- 🌍 `/life` - Xã hội, lịch sử, kỹ năng sống...
+- 🤖 `/ai_ml` - Trí tuệ nhân tạo, Machine Learning, Deep Learning và cách ứng dụng vào kinh tế/doanh nghiệp.
+- 📡 `/iot_aiot` - Internet of Things, kiến trúc AIoT, phần cứng và các giải pháp tự động hóa.
+- 📊 `/economics_business` - Kinh tế vĩ mô/vi mô, chiến lược kinh doanh, quản trị và phân tích thị trường.
+- 🧠 `/psychology_society` - Tâm lý học hành vi, chính trị và cách vận hành của xã hội.
+- 📚 `/books_summaries` - Tóm tắt, đánh giá (review) và những bài học chắt lọc từ sách.
+- 💡 `/random_ideas` - Góc nhìn cá nhân, những ý tưởng ngẫu nhiên, hay các dự án đột phá nảy ra trong đầu.
 
-## 🚀 Trạng thái
-Dự án vừa được khởi tạo. Các bài viết và ghi chép sẽ sớm được cập nhật!
+## 🚀 Trạng thái & Lộ trình (Roadmap)
+- **Giai đoạn hiện tại:** `Khởi tạo` (Vừa thành lập kho lưu trữ).
+- **Kế hoạch sắp tới:**
+  - [ ] Thiết lập hệ thống thư mục và quy chuẩn ghi chú.
+  - [ ] Đẩy các ghi chú đầu tiên về AI và Kinh tế học lên repository.
+  - [ ] Duy trì thói quen cập nhật định kỳ kiến thức mới.
 
 ---
 *"Live as if you were to die tomorrow. Learn as if you were to live forever."* - Mahatma Gandhi
