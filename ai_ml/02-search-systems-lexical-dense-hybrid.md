@@ -1,6 +1,7 @@
 # Hệ thống Tìm kiếm (Search Systems): Lexical, Dense và Hybrid Search
 
 **Ngày tạo:** 2026-09-04
+**Ngày bổ sung kiến thức:** 2026-09-07
 **Tags:** `#AI`, `#NLP`, `#SearchEngine`, `#VectorDatabase`, `#InformationRetrieval`
 **Tài liệu tham khảo/Nguồn:** [Gemini Share](https://share.gemini.google/zEAVGArmeM7e) & [https://share.gemini.google/C3HUVEIvYfGX]
 
@@ -49,11 +50,36 @@ Hệ thống không thể cộng trực tiếp 2 loại điểm (vì công thứ
 - Chỉ quan tâm đến **Thứ hạng (Rank)** của document trên từng nhánh. 
 - Một document đạt top trên cả 2 bảng xếp hạng sẽ được thưởng điểm khổng lồ, vươn lên giành vị trí hiển thị tối ưu nhất.
 
-## 🤔 Kiến thức cần đào sâu
-- [ ] Cơ sở toán học của thuật toán BM25 và cách tune (điều chỉnh) các tham số k1, b trong Elasticsearch/Opensearch.
-- [ ] Các thuật toán tìm kiếm lân cận gần nhất (ANN) trong Vector Database như HNSW, FAISS hoạt động thế nào để giữ độ chính xác nhưng tăng tốc tra cứu lên hàng nghìn lần?
-- [ ] Tìm hiểu sâu hơn về kiến trúc và cách triển khai của các Vector DB nổi tiếng hiện nay (như Milvus, Pinecone, Qdrant, ChromaDB).
-- [ ] Làm thế nào để setup mô hình Cross-Encoder vào bước Re-ranking thứ 2 nhằm cải thiện độ chính xác cuối cùng của Hybrid Search?
+## 🚀 Đào sâu kiến thức bổ sung (Cập nhật 2026-09-07)
+
+### 1. Cơ sở toán học của BM25 và cách tune tham số (k1, b)
+Công thức gốc của BM25 để tính điểm cho tài liệu $D$ với truy vấn $Q$:
+![BM25 Formula](/home/binhnguyen/reaserching-diary/ai_ml/images/bm25_formula.png)
+Trong Elasticsearch/OpenSearch, bạn có thể tune 2 tham số chính:
+- **$k_1$ (Term frequency saturation):** Thường mặc định = 1.2. Nó kiểm soát mức độ bão hòa điểm số khi một từ khóa xuất hiện nhiều lần.
+  - Tăng $k_1$ (VD: 2.0): Điểm sẽ tiếp tục tăng mạnh nếu từ lặp lại nhiều lần (phù hợp với văn bản dài như bài báo).
+  - Giảm $k_1$ (VD: 0.1): Chỉ quan tâm từ đó *có* xuất hiện hay không, lặp lại 100 lần cũng không tăng điểm đáng kể.
+- **$b$ (Length normalization):** Thường mặc định = 0.75. Kiểm soát mức độ phạt tài liệu dài.
+  - Tăng $b$ về 1: Phạt nặng tài liệu dài. Phù hợp nếu tài liệu của bạn thường rất ngắn (như title, tweets).
+  - Giảm $b$ về 0: Không phạt độ dài tài liệu. Phù hợp với tài liệu có độ dài rất chênh lệch nhưng độ dài không phản ánh mức độ nhiễu.
+
+### 2. Thuật toán ANN (Approximate Nearest Neighbor) trong Vector DB
+Để tra cứu hàng tỷ vector mà không cần duyệt toàn bộ (KNN), Vector DB sử dụng ANN chấp nhận đánh đổi một chút độ chính xác (Recall) để đổi lấy tốc độ cực nhanh (Latency).
+- **HNSW (Hierarchical Navigable Small World):** Cấu trúc dạng đồ thị nhiều tầng (giống Skip List). Các đỉnh trên cùng thưa thớt, giúp thuật toán nhảy những bước rất dài qua không gian vector. Khi đến gần mục tiêu, nó hạ dần xuống các tầng thấp dày đặc hơn để tìm kết quả chính xác. HNSW cho tốc độ và Recall tuyệt vời, đang là tiêu chuẩn công nghiệp.
+- **FAISS (Facebook AI Similarity Search):** Nổi tiếng với kỹ thuật **IVF-PQ**. Chia không gian thành các cụm (Voronoi cells - Inverted File Index) để chỉ tìm trong cụm gần nhất. Đồng thời dùng Product Quantization (PQ) nén vector từ dạng float32 sang mã byte gọn nhẹ, tiết kiệm cực nhiều RAM.
+
+### 3. Kiến trúc các Vector DB nổi tiếng
+- **Pinecone:** Giải pháp SaaS fully-managed, cloud-native. Cực kỳ dễ dùng, không cần lo về hạ tầng, nhưng mã nguồn đóng (closed-source) và tốn phí theo usage.
+- **Milvus:** Hệ sinh thái phân tán khổng lồ. Tách biệt hoàn toàn tầng lưu trữ (Storage) và tính toán (Compute/Query). Rất lý tưởng cho doanh nghiệp xử lý tập dữ liệu ở scale siêu lớn (hàng tỷ vectors) đòi hỏi cluster phức tạp.
+- **Qdrant:** Viết bằng Rust. Nổi bật với tính năng "Payload-based Filtering", kết hợp cực tốt giữa việc lọc siêu dữ liệu truyền thống (SQL-like) và tìm kiếm vector mà không làm chậm tốc độ.
+- **ChromaDB:** Viết bằng Python/TypeScript. Rất nhẹ, thường chạy dưới dạng thư viện nhúng (In-memory/Local SQLite) trong quá trình phát triển (dev/PoC) các ứng dụng LLM/LangChain, dĩ nhiên vẫn có chế độ Client-Server để scale nhẹ.
+
+### 4. Setup Cross-Encoder cho bước Re-ranking trong Hybrid Search
+Bi-Encoder (dùng để tạo vector cho Dense Search) rất nhanh vì vector được tính sẵn, nhưng mô hình bị "mù" sự tương tác chéo giữa từng từ của truy vấn và tài liệu.
+Để cải thiện đột phá độ chính xác, kiến trúc phổ biến nhất là **Retrieve-then-Rerank**:
+- **Giai đoạn 1 (Retrieve):** Dùng Hybrid Search (Bi-Encoder + BM25) với tốc độ siêu tốc kéo về top 100 tài liệu tiềm năng nhất.
+- **Giai đoạn 2 (Re-rank):** Nạp câu query và 100 tài liệu này qua mô hình **Cross-Encoder**. Khác với Bi-encoder, Cross-Encoder nhận chuỗi đầu vào theo dạng `[CLS] Câu Query [SEP] Câu Tài Liệu [SEP]` và đẩy qua các tầng Transformer.
+- **Cơ chế:** Nhờ cơ chế Self-Attention, mọi token trong query sẽ được tương tác chéo trực tiếp với mọi token trong document. Tuy tốn chi phí tính toán (rất chậm), nhưng do chỉ áp dụng cho 100 kết quả nên vẫn đáp ứng được thời gian thực, mang lại độ chính xác tổng thể (MAP, NDCG) tăng vọt.
 
 ## 📚 Tài liệu nên tham khảo
 - Nguồn thu thập chính: [https://share.gemini.google/zEAVGArmeM7e](https://share.gemini.google/zEAVGArmeM7e)
