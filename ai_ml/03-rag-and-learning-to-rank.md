@@ -16,13 +16,13 @@
 
 ### 1. Phân loại và Tối ưu Xếp hạng
 - **Không gian nhãn:** tương ứng Reject (Loại), Hold (Cân nhắc), Shortlist (Vào vòng tiếp theo).
-  ![Y = {0, 1, 2}](/home/binhnguyen/reaserching-diary/ai_ml/images/label_space.png)
+  ![Y = {0, 1, 2}](images/label_space.png)
 - **Quan hệ xếp hạng:** 
-  ![d_i > d_j](/home/binhnguyen/reaserching-diary/ai_ml/images/preference_rel.png)
+  ![d_i > d_j](images/preference_rel.png)
   - Nếu bằng điểm, áp dụng quy tắc phá hòa (tie-breaking rules).
 - **Mục tiêu tối ưu:** Sử dụng **NDCG@k** làm evaluation metric chính.
-  ![NDCG](/home/binhnguyen/reaserching-diary/ai_ml/images/ndcg_formula.png)
-  ![DCG](/home/binhnguyen/reaserching-diary/ai_ml/images/dcg_formula.png)
+  ![NDCG](images/ndcg_formula.png)
+  ![DCG](images/dcg_formula.png)
   DCG (Discounted Cumulative Gain) phạt nặng sai lệch ở các vị trí top-k vì nhà tuyển dụng chủ yếu chỉ xem ứng viên đầu danh sách.
 
 ### 2. Kiến trúc RAG (Retrieval-Augmented Generation)
@@ -30,7 +30,7 @@ Kết hợp trí nhớ phi tham số (hệ thống truy xuất) và tham số (L
 1. **Indexing (Lập chỉ mục):** Phân đoạn (chunking), chuẩn hóa và lưu trữ dạng vector.
 2. **Retrieval (Truy xuất):** Rút trích tài liệu liên quan nhất dựa trên đối sánh.
 3. **Generation (Sinh nội dung):** LLM sinh phản hồi dựa trên tài liệu đã truy xuất.
-   ![g_{rag}](/home/binhnguyen/reaserching-diary/ai_ml/images/rag_generation.png)
+   ![g_{rag}](images/rag_generation.png)
 
 *Để giới hạn khả năng sinh thông tin ảo (hallucination), hệ thống sử dụng dữ liệu CV dạng JSON và snippets đối chiếu, ràng buộc chặt chẽ không gian suy luận của LLM.*
 
@@ -50,10 +50,10 @@ Tối ưu hóa thứ tự tương đối giữa các tài liệu.
 **c. Khai thác đặc trưng cho LTR (Hybrid Retrieval):**
 Tích hợp 4 nhóm đặc trưng chính:
 - **Nhóm A (Tín hiệu nền tảng):** Điểm Okapi BM25 (chuẩn hóa), Độ tương đồng vector ngữ nghĩa.
-  ![x1](/home/binhnguyen/reaserching-diary/ai_ml/images/feature_x1.png)
-  ![x2](/home/binhnguyen/reaserching-diary/ai_ml/images/feature_x2.png)
+  ![x1](images/feature_x1.png)
+  ![x2](images/feature_x2.png)
 - **Nhóm B (Tương thích kỹ năng):** Mức tương đồng Jaccard kỹ năng cứng, TF-IDF kỹ năng mềm, tỷ lệ bao phủ yêu cầu bắt buộc.
-  ![x3](/home/binhnguyen/reaserching-diary/ai_ml/images/feature_x3.png)
+  ![x3](images/feature_x3.png)
 - **Nhóm C (Cấu trúc CV):** Cấp bậc, số năm kinh nghiệm, trình độ học vấn.
 - **Nhóm D (Từ vựng bổ trợ):** Điểm BM25 trên chức danh (title), TF-IDF của kỹ năng cứng.
 

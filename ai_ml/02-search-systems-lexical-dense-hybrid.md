@@ -54,7 +54,7 @@ Hệ thống không thể cộng trực tiếp 2 loại điểm (vì công thứ
 
 ### 1. Cơ sở toán học của BM25 và cách tune tham số (k1, b)
 Công thức gốc của BM25 để tính điểm cho tài liệu $D$ với truy vấn $Q$:
-![BM25 Formula](/home/binhnguyen/reaserching-diary/ai_ml/images/bm25_formula.png)
+![BM25 Formula](images/bm25_formula.png)
 Trong Elasticsearch/OpenSearch, bạn có thể tune 2 tham số chính:
 - **$k_1$ (Term frequency saturation):** Thường mặc định = 1.2. Nó kiểm soát mức độ bão hòa điểm số khi một từ khóa xuất hiện nhiều lần.
   - Tăng $k_1$ (VD: 2.0): Điểm sẽ tiếp tục tăng mạnh nếu từ lặp lại nhiều lần (phù hợp với văn bản dài như bài báo).
