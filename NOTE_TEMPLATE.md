@@ -1,28 +1,28 @@
-# [Tiêu đề bài viết / Chủ đề]
+# [Article Title / Topic]
 
-**Ngày tạo:** YYYY-MM-DD
+**Created Date:** YYYY-MM-DD
 **Tags:** `#tag1`, `#tag2`
-**Tài liệu tham khảo/Nguồn:** [Link hoặc tên sách]
+**References / Sources:** [Link or book title]
 
 ---
 
-## 📌 Tóm tắt ý chính (TL;DR)
-- Ý chính 1
-- Ý chính 2
+## 📌 Key Takeaways (TL;DR)
+- Key point 1
+- Key point 2
 
-## 🧠 Nội dung chi tiết
-[Ghi chép chi tiết của bạn ở đây. Có thể sử dụng heading cấp 3 `###`, gạch đầu dòng, bảng biểu, hoặc hình ảnh...]
+## 🧠 Detailed Notes
+[Your detailed notes here. You can use level 3 headings `###`, bullet points, tables, or images...]
 
-### 1. Khái niệm cốt lõi
+### 1. Core Concepts
 - ...
 
-### 2. Áp dụng thực tiễn (Actionable Insights)
-- Làm thế nào để áp dụng kiến thức này vào thực tế/công việc?
+### 2. Practical Application (Actionable Insights)
+- How to apply this knowledge in practice / at work?
 - ...
 
-## 🤔 Câu hỏi mở / Điểm cần nghiên cứu thêm
-- [ ] Câu hỏi 1 cần tìm hiểu sâu hơn?
-- [ ] Liên kết với kiến thức ABC như thế nào?
+## 🤔 Open Questions / Areas for Further Research
+- [ ] Question 1 that needs deeper exploration?
+- [ ] How does this connect to knowledge ABC?
 
 ---
-*Ghi chú: Luôn cố gắng diễn đạt lại bằng ngôn ngữ và tư duy của chính mình (Feynman Technique).*
+*Note: Always strive to rephrase in your own words and thinking (Feynman Technique).*

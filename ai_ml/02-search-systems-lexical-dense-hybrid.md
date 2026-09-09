@@ -1,86 +1,86 @@
-# Hệ thống Tìm kiếm (Search Systems): Lexical, Dense và Hybrid Search
+# Search Systems: Lexical, Dense, and Hybrid Search
 
-**Ngày tạo:** 2026-09-04
-**Ngày bổ sung kiến thức:** 2026-09-07
+**Date Created:** 2026-09-04
+**Knowledge Update Date:** 2026-09-07
 **Tags:** `#AI`, `#NLP`, `#SearchEngine`, `#VectorDatabase`, `#InformationRetrieval`
-**Tài liệu tham khảo/Nguồn:** [Gemini Share](https://share.gemini.google/zEAVGArmeM7e) & [https://share.gemini.google/C3HUVEIvYfGX]
+**References/Sources:** [Gemini Share](https://share.gemini.google/zEAVGArmeM7e) & [https://share.gemini.google/C3HUVEIvYfGX]
 
 ---
 
-## 📌 Tóm tắt ý chính (TL;DR)
-- **Lexical Retrieval (BM25):** Phương pháp tìm kiếm truyền thống so khớp mặt chữ (Keyword-based). Cực nhanh, giải thích được, nhưng kém trong việc hiểu đồng nghĩa ngữ cảnh.
-- **Dense Retrieval (Vector Search):** Sử dụng các mô hình AI Embeddings để hiểu ngữ nghĩa (Semantic-based). Giải quyết triệt để lỗi chính tả và từ đồng nghĩa.
-- **Hybrid Search:** Sự kết hợp sức mạnh của cả Lexical và Dense thông qua thuật toán RRF, giúp hệ thống không bị lọt từ khóa kỹ thuật (keyword) mà vẫn thấu hiểu ý định (intent) của người dùng.
+## 📌 Key Takeaways (TL;DR)
+- **Lexical Retrieval (BM25):** Traditional keyword-based search method. Extremely fast and explainable, but poor at understanding context and synonyms.
+- **Dense Retrieval (Vector Search):** Uses AI embedding models to understand semantics (semantic-based). Completely solves misspellings and synonyms.
+- **Hybrid Search:** Combines the strengths of both Lexical and Dense retrieval via algorithms like RRF, ensuring the system does not miss exact technical keywords while still understanding user intent.
 
-## 🧠 Nội dung chi tiết
+## 🧠 Detailed Content
 
-### 1. Lexical Retrieval & Thuật toán BM25
-**Lexical Retrieval (hay Sparse Retrieval)** là cơ chế hoạt động của các Search Engine đời cũ, hoạt động dựa trên việc quét chính xác các từ khóa (keywords).
-- **Điểm mạnh:** Latency cực thấp, tốn ít tài nguyên compute, khả năng giải thích (Explainability) rõ ràng. Rất cần thiết để tra cứu các mã lỗi, ID, tên riêng chuyên ngành.
-- **Điểm yếu:** Mắc hội chứng "bất đồng ngôn ngữ" (Vocabulary Mismatch) - Không thể match nếu query dùng "xe hơi" còn document dùng "ô tô". Khó bắt lỗi chính tả.
+### 1. Lexical Retrieval & The BM25 Algorithm
+**Lexical Retrieval (or Sparse Retrieval)** is the mechanism behind traditional search engines, operating on exact keyword matching.
+- **Strengths:** Extremely low latency, minimal compute resource usage, clear explainability. Essential for looking up error codes, IDs, and specialized proper nouns.
+- **Weaknesses:** Suffers from the "vocabulary mismatch" problem—unable to match if the query uses "automobile" while the document uses "car". Struggles with typos and misspellings.
 
-**Thuật toán BM25 (Best Matching 25):** 
-Thuật toán "quốc dân" (core của Elasticsearch/Lucene) để ranking cho Lexical Retrieval. Chấm điểm dựa trên 3 yếu tố cốt lõi:
-1. **Term Frequency (TF):** Tần suất từ khóa xuất hiện. Dùng hàm log để bão hòa, chống tình trạng spam keyword lặp lại hàng trăm lần.
-2. **Inverse Document Frequency (IDF):** Độ hiếm của từ. Những từ quá phổ biến (stop-words) bị hạ trọng số, những từ hiếm/đặc thù được boost điểm cao.
-3. **Document Length (Độ dài tài liệu):** Phạt các tài liệu quá dài để duy trì tính công bằng về mật độ từ khóa với các tài liệu ngắn.
+**BM25 Algorithm (Best Matching 25):** 
+The go-to ranking algorithm (the core of Elasticsearch/Lucene) for Lexical Retrieval. Scores documents based on three core factors:
+1. **Term Frequency (TF):** The frequency of keyword occurrences. Uses a saturation function to prevent keyword stuffing from inflating scores by repeating a word hundreds of times.
+2. **Inverse Document Frequency (IDF):** The rarity of a term. Overly common words (stop words) are down-weighted, while rare or specialized words are boosted with higher scores.
+3. **Document Length:** Penalizes overly long documents to maintain fairness regarding keyword density compared to shorter documents.
 
-### 2. Embeddings và Dense Retrieval
-**Embeddings là gì?**
-Máy tính không hiểu text. Embedding là quá trình dùng các mô hình AI (như OpenAI Text-Embedding, BERT) để nén/dịch một đoạn văn bản thành một **Vector** (mảng số thực đa chiều).
-- Điểm đột phá là các khái niệm có ý nghĩa tương đồng sẽ nằm gần nhau trong không gian vector (Toán học hóa ngữ nghĩa).
-- Gọi là **Dense** (Dày đặc) vì vector thường ngắn (384-1536 chiều) nhưng chiều nào cũng mang giá trị số thực ý nghĩa. Khác với Lexical sinh ra **Sparse** Vector khổng lồ (bằng số lượng từ vựng) nhưng toàn số 0.
+### 2. Embeddings and Dense Retrieval
+**What are Embeddings?**
+Computers do not understand raw text. Embedding is the process of using AI models (such as OpenAI Text-Embedding, BERT) to compress/convert a piece of text into a **Vector** (a multi-dimensional array of real numbers).
+- The breakthrough is that concepts with similar meanings lie close to each other in vector space (mathematizing semantics).
+- It is called **Dense** because the vectors are relatively compact (typically 384–1536 dimensions), yet every dimension holds a meaningful real-valued number. This contrasts with Lexical methods that generate massive **Sparse** vectors (equal to the vocabulary size) dominated by zeros.
 
-**Quy trình vận hành Dense Retrieval (Vector/Semantic Search):**
-1. **Indexing:** Push toàn bộ raw document qua mô hình Embedding -> Lưu vào **Vector Database**.
-2. **Querying & Similarity Search:** User gõ query -> Chạy qua cùng mô hình Embedding đó để ra Vector -> Tính toán khoảng cách (ví dụ bằng *Cosine Similarity*) để kéo về k kết quả gần nhất, dù không hề trùng một mặt chữ nào.
+**Dense Retrieval Workflow (Vector/Semantic Search):**
+1. **Indexing:** Pass all raw documents through an embedding model -> Store them in a **Vector Database**.
+2. **Querying & Similarity Search:** The user inputs a query -> Pass it through the same embedding model to obtain a vector -> Calculate the distance/similarity (e.g., using *Cosine Similarity*) to retrieve the top $k$ nearest results, even if there is no exact keyword overlap.
 
-### 3. Hybrid Search (Sự kết hợp hoàn hảo)
-Các hệ thống tìm kiếm hiện đại (như Google) đều dùng Hybrid Search.
-- **Tại sao cần Hybrid?** Giả sử query là: `"Hướng dẫn fix lỗi OOM-KILLER"`. 
-  - Nếu chỉ dùng Vector: Nó có thể trả về các bài "cách sửa lỗi hết RAM" (đúng nghĩa nhưng mất tiêu từ khóa kỹ thuật OOM-KILLER quan trọng). 
-  - Nếu chỉ dùng BM25: Nó có thể trả về một đoạn log spam lặp lại quá nhiều chữ OOM-KILLER mà không phải bài "hướng dẫn".
+### 3. Hybrid Search (The Best of Both Worlds)
+Modern search systems (such as Google) rely on Hybrid Search.
+- **Why is Hybrid needed?** Consider the query: `"How to fix OOM-KILLER error"`. 
+  - If using only Vector Search: It might return articles on "how to resolve out-of-memory errors" (semantically relevant, but missing the critical technical keyword OOM-KILLER). 
+  - If using only BM25: It might return a spammy log file repeatedly mentioning the word OOM-KILLER rather than a helpful "how-to guide".
 
-**Cách xử lý:** 
-Chạy song song 2 luồng Lexical và Dense. Nhánh Lexical làm "người gác cổng" neo keyword cứng, nhánh Dense làm người hiểu ý định bao quát.
+**Approach:** 
+Execute both Lexical and Dense pipelines in parallel. The Lexical branch acts as a "gatekeeper" anchoring exact keywords, while the Dense branch captures overarching semantic intent.
 
-**Hợp nhất và Re-ranking (RRF):**
-Hệ thống không thể cộng trực tiếp 2 loại điểm (vì công thức tính BM25 và Cosine khác hẳn nhau). Thay vào đó, áp dụng thuật toán **RRF (Reciprocal Rank Fusion)**:
-- Bỏ qua điểm số (score) tuyệt đối.
-- Chỉ quan tâm đến **Thứ hạng (Rank)** của document trên từng nhánh. 
-- Một document đạt top trên cả 2 bảng xếp hạng sẽ được thưởng điểm khổng lồ, vươn lên giành vị trí hiển thị tối ưu nhất.
+**Fusion and Re-ranking (RRF):**
+The system cannot directly sum the two types of scores (since the scales of BM25 and Cosine similarity are completely different). Instead, it applies the **RRF (Reciprocal Rank Fusion)** algorithm:
+- Ignores absolute scores.
+- Focuses solely on the **Rank** of each document within each branch. 
+- A document ranking near the top in both lists receives a substantial score boost, rising to the most optimal final display position.
 
-## 🚀 Đào sâu kiến thức bổ sung (Cập nhật 2026-09-07)
+## 🚀 Deep Dive: Additional Insights (Updated 2026-09-07)
 
-### 1. Cơ sở toán học của BM25 và cách tune tham số (k1, b)
-Công thức gốc của BM25 để tính điểm cho tài liệu $D$ với truy vấn $Q$:
+### 1. Mathematical Foundation of BM25 and Parameter Tuning (k1, b)
+The original BM25 scoring formula for document $D$ and query $Q$:
 $$score(D, Q) = \sum_{q_i \in Q} IDF(q_i) \cdot \frac{TF(q_i, D) \cdot (k_1 + 1)}{TF(q_i, D) + k_1 \cdot (1 - b + b \cdot \frac{|D|}{avgdl})}$$
-Trong Elasticsearch/OpenSearch, bạn có thể tune 2 tham số chính:
-- **$k_1$ (Term frequency saturation):** Thường mặc định = 1.2. Nó kiểm soát mức độ bão hòa điểm số khi một từ khóa xuất hiện nhiều lần.
-  - Tăng $k_1$ (VD: 2.0): Điểm sẽ tiếp tục tăng mạnh nếu từ lặp lại nhiều lần (phù hợp với văn bản dài như bài báo).
-  - Giảm $k_1$ (VD: 0.1): Chỉ quan tâm từ đó *có* xuất hiện hay không, lặp lại 100 lần cũng không tăng điểm đáng kể.
-- **$b$ (Length normalization):** Thường mặc định = 0.75. Kiểm soát mức độ phạt tài liệu dài.
-  - Tăng $b$ về 1: Phạt nặng tài liệu dài. Phù hợp nếu tài liệu của bạn thường rất ngắn (như title, tweets).
-  - Giảm $b$ về 0: Không phạt độ dài tài liệu. Phù hợp với tài liệu có độ dài rất chênh lệch nhưng độ dài không phản ánh mức độ nhiễu.
+In Elasticsearch/OpenSearch, you can tune two main parameters:
+- **$k_1$ (Term frequency saturation):** Typically defaults to 1.2. It controls how quickly term frequency saturation is reached as a keyword appears multiple times.
+  - Increasing $k_1$ (e.g., 2.0): Scores continue to increase significantly as the term repeats (suitable for long-form text like articles/papers).
+  - Decreasing $k_1$ (e.g., 0.1): Emphasizes whether the term is *present* or not; repeating it 100 times will not significantly boost the score.
+- **$b$ (Length normalization):** Typically defaults to 0.75. Controls the penalty applied to longer documents.
+  - Increasing $b$ towards 1: Heavily penalizes long documents. Suitable when documents are expected to be very short (e.g., titles, tweets).
+  - Decreasing $b$ towards 0: Disables document length normalization. Suitable when documents vary widely in length, but length does not reflect noise or dilution.
 
-### 2. Thuật toán ANN (Approximate Nearest Neighbor) trong Vector DB
-Để tra cứu hàng tỷ vector mà không cần duyệt toàn bộ (KNN), Vector DB sử dụng ANN chấp nhận đánh đổi một chút độ chính xác (Recall) để đổi lấy tốc độ cực nhanh (Latency).
-- **HNSW (Hierarchical Navigable Small World):** Cấu trúc dạng đồ thị nhiều tầng (giống Skip List). Các đỉnh trên cùng thưa thớt, giúp thuật toán nhảy những bước rất dài qua không gian vector. Khi đến gần mục tiêu, nó hạ dần xuống các tầng thấp dày đặc hơn để tìm kết quả chính xác. HNSW cho tốc độ và Recall tuyệt vời, đang là tiêu chuẩn công nghiệp.
-- **FAISS (Facebook AI Similarity Search):** Nổi tiếng với kỹ thuật **IVF-PQ**. Chia không gian thành các cụm (Voronoi cells - Inverted File Index) để chỉ tìm trong cụm gần nhất. Đồng thời dùng Product Quantization (PQ) nén vector từ dạng float32 sang mã byte gọn nhẹ, tiết kiệm cực nhiều RAM.
+### 2. ANN (Approximate Nearest Neighbor) Algorithms in Vector Databases
+To search across billions of vectors without performing exhaustive comparisons (KNN), Vector DBs use ANN algorithms, trading a small amount of accuracy (Recall) for ultra-fast query execution (low Latency).
+- **HNSW (Hierarchical Navigable Small World):** A multi-layer graph structure (similar to a Skip List). The upper layers have sparse connections, allowing the algorithm to take long leaps across the vector space. As it approaches the target, it descends to denser lower layers to find precise matches. HNSW provides excellent speed and Recall, serving as the current industry standard.
+- **FAISS (Facebook AI Similarity Search):** Renowned for its **IVF-PQ** technique. It partitions the space into clusters (Voronoi cells - Inverted File Index) to search only within the closest clusters. Simultaneously, it uses Product Quantization (PQ) to compress vectors from float32 into compact byte codes, drastically reducing RAM consumption.
 
-### 3. Kiến trúc các Vector DB nổi tiếng
-- **Pinecone:** Giải pháp SaaS fully-managed, cloud-native. Cực kỳ dễ dùng, không cần lo về hạ tầng, nhưng mã nguồn đóng (closed-source) và tốn phí theo usage.
-- **Milvus:** Hệ sinh thái phân tán khổng lồ. Tách biệt hoàn toàn tầng lưu trữ (Storage) và tính toán (Compute/Query). Rất lý tưởng cho doanh nghiệp xử lý tập dữ liệu ở scale siêu lớn (hàng tỷ vectors) đòi hỏi cluster phức tạp.
-- **Qdrant:** Viết bằng Rust. Nổi bật với tính năng "Payload-based Filtering", kết hợp cực tốt giữa việc lọc siêu dữ liệu truyền thống (SQL-like) và tìm kiếm vector mà không làm chậm tốc độ.
-- **ChromaDB:** Viết bằng Python/TypeScript. Rất nhẹ, thường chạy dưới dạng thư viện nhúng (In-memory/Local SQLite) trong quá trình phát triển (dev/PoC) các ứng dụng LLM/LangChain, dĩ nhiên vẫn có chế độ Client-Server để scale nhẹ.
+### 3. Architectures of Popular Vector Databases
+- **Pinecone:** Fully-managed, cloud-native SaaS solution. Extremely easy to use with zero infrastructure maintenance, but it is closed-source and incurs usage-based costs.
+- **Milvus:** A massive distributed ecosystem. Fully decouples storage and compute/query layers. Ideal for enterprises handling massive scale (billions of vectors) requiring complex clusters.
+- **Qdrant:** Written in Rust. Stands out with its "Payload-based Filtering" capability, seamlessly combining traditional metadata filtering (SQL-like) with vector search without degrading search performance.
+- **ChromaDB:** Written in Python/TypeScript. Lightweight and frequently used as an embedded library (In-memory/Local SQLite) during development and prototyping (PoC) for LLM/LangChain applications, with client-server support for modest scaling.
 
-### 4. Setup Cross-Encoder cho bước Re-ranking trong Hybrid Search
-Bi-Encoder (dùng để tạo vector cho Dense Search) rất nhanh vì vector được tính sẵn, nhưng mô hình bị "mù" sự tương tác chéo giữa từng từ của truy vấn và tài liệu.
-Để cải thiện đột phá độ chính xác, kiến trúc phổ biến nhất là **Retrieve-then-Rerank**:
-- **Giai đoạn 1 (Retrieve):** Dùng Hybrid Search (Bi-Encoder + BM25) với tốc độ siêu tốc kéo về top 100 tài liệu tiềm năng nhất.
-- **Giai đoạn 2 (Re-rank):** Nạp câu query và 100 tài liệu này qua mô hình **Cross-Encoder**. Khác với Bi-encoder, Cross-Encoder nhận chuỗi đầu vào theo dạng `[CLS] Câu Query [SEP] Câu Tài Liệu [SEP]` và đẩy qua các tầng Transformer.
-- **Cơ chế:** Nhờ cơ chế Self-Attention, mọi token trong query sẽ được tương tác chéo trực tiếp với mọi token trong document. Tuy tốn chi phí tính toán (rất chậm), nhưng do chỉ áp dụng cho 100 kết quả nên vẫn đáp ứng được thời gian thực, mang lại độ chính xác tổng thể (MAP, NDCG) tăng vọt.
+### 4. Cross-Encoder Setup for the Re-ranking Step in Hybrid Search
+Bi-Encoders (used to generate vectors for Dense Search) are fast because vectors are precomputed, but the model remains "blind" to cross-interactions between individual query terms and document terms.
+To achieve a breakthrough in search accuracy, the most widely adopted architecture is **Retrieve-then-Rerank**:
+- **Stage 1 (Retrieve):** Use Hybrid Search (Bi-Encoder + BM25) at ultra-high speed to fetch the top 100 candidate documents.
+- **Stage 2 (Re-rank):** Pass the query and these 100 documents through a **Cross-Encoder** model. Unlike Bi-Encoders, a Cross-Encoder takes input formatted as `[CLS] Query [SEP] Document [SEP]` and processes it across Transformer layers.
+- **Mechanism:** Thanks to the Self-Attention mechanism, every token in the query directly interacts cross-attentively with every token in the document. Although computationally expensive (much slower), applying it to only 100 candidates keeps latency within real-time thresholds while delivering dramatic improvements in overall accuracy (MAP, NDCG).
 
-## 📚 Tài liệu nên tham khảo
-- Nguồn thu thập chính: [https://share.gemini.google/zEAVGArmeM7e](https://share.gemini.google/zEAVGArmeM7e)
-- Nguồn bổ trợ: [https://share.gemini.google/C3HUVEIvYfGX](https://share.gemini.google/C3HUVEIvYfGX)
+## 📚 Recommended References
+- Primary Source: [https://share.gemini.google/zEAVGArmeM7e](https://share.gemini.google/zEAVGArmeM7e)
+- Supplementary Source: [https://share.gemini.google/C3HUVEIvYfGX](https://share.gemini.google/C3HUVEIvYfGX)

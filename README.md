@@ -8,46 +8,46 @@
     <td>
       <h3>Phan Hữu Bình Nguyên</h3>
       <ul>
-        <li><b>Nghề nghiệp:</b> IT student</li>
-        <li><b>Mục tiêu nghề nghiệp:</b> AI Engineer (lĩnh vực Kinh tế & Kinh doanh)</li>
-        <li><b>Đang nghiên cứu:</b> AI, IoT, AIoT, Kinh tế, Chính trị, Tâm lý học</li>
-        <li><b>Sở thích:</b>
+        <li><b>Occupation:</b> IT student</li>
+        <li><b>Career Goal:</b> AI Engineer (Economics & Business fields)</li>
+        <li><b>Currently Researching:</b> AI, IoT, AIoT, Economics, Politics, Psychology</li>
+        <li><b>Hobbies:</b>
           <ul>
-            <li>Khám phá và áp dụng kiến thức</li>
-            <li>Đi chơi khắp nơi</li>
+            <li>Exploring and applying knowledge</li>
+            <li>Traveling and exploring places</li>
             <li>Networking</li>
           </ul>
         </li>
-        <li><b>Liên hệ:</b> <a href="mailto:phbn303030@gmail.com">phbn303030@gmail.com</a></li>
+        <li><b>Contact:</b> <a href="mailto:phbn303030@gmail.com">phbn303030@gmail.com</a></li>
       </ul>
     </td>
   </tr>
 </table>
 
-Chào mừng đến với **Researching Diary**! Đây là kho lưu trữ cá nhân nơi tôi ghi chép lại hành trình tìm hiểu và nghiên cứu về **mọi thứ trên đời**. Từ công nghệ, khoa học, đời sống cho đến những điều nhỏ bé thú vị hàng ngày.
+Welcome to **Researching Diary**! This is a personal repository where I document my journey of exploring and researching **everything in the world**—from technology, science, and life to the fascinating little things of everyday existence.
 
-## 🎯 Mục tiêu cốt lõi
-Kho lưu trữ này không chỉ là những dòng ghi chép đơn thuần, mà là một hệ thống kiến thức được tổ chức chặt chẽ nhằm phục vụ cho mục tiêu phát triển dài hạn:
-- **Xây dựng "Bộ não thứ hai" (Second Brain):** Số hóa và liên kết mọi kiến thức, trải nghiệm và tài liệu thu thập được. Điều này giúp giảm tải cho trí nhớ ngắn hạn, dễ dàng tra cứu, xâu chuỗi thông tin và kích thích sự sáng tạo.
-- **Phát triển tư duy liên ngành:** Kết hợp tư duy logic, hệ thống của khối Kỹ thuật (AI, IoT) với tư duy phân tích, thấu cảm của khối Xã hội (Kinh tế, Chính trị, Tâm lý học) nhằm hướng tới mục tiêu trở thành một AI Engineer có khả năng giải quyết các bài toán thực tiễn trong kinh doanh.
-- **Theo dõi hành trình trưởng thành:** Là minh chứng rõ nét cho việc "Khám phá & Áp dụng", giúp tôi nhìn lại sự thay đổi trong nhận thức và sự mở rộng thế giới quan của bản thân qua từng giai đoạn.
+## 🎯 Core Objectives
+This repository is not merely a collection of simple notes, but a tightly organized knowledge system designed to support long-term development:
+- **Building a "Second Brain":** Digitizing and connecting all acquired knowledge, experiences, and collected materials. This offloads short-term memory, makes information retrieval effortless, connects ideas, and sparks creativity.
+- **Developing Interdisciplinary Thinking:** Combining the logical and systematic mindset of Engineering/Technology (AI, IoT) with the analytical and empathetic perspective of the Social Sciences (Economics, Politics, Psychology) to work toward becoming an AI Engineer capable of solving practical business challenges.
+- **Tracking Personal Growth:** Serving as clear evidence of "Exploring & Applying", allowing me to reflect on changes in cognition and the broadening of my worldview across each stage.
 
-## 📂 Cấu trúc lưu trữ (Knowledge Base)
-Hệ thống kiến thức được thiết kế và phân bổ thành các thư mục chuyên biệt, phản ánh đúng những lĩnh vực tôi đang theo đuổi:
+## 📂 Repository Structure (Knowledge Base)
+The knowledge system is designed and organized into specialized directories, reflecting the exact domains I am pursuing:
 
-- 🤖 `/ai_ml` - Trí tuệ nhân tạo, Machine Learning, Deep Learning và cách ứng dụng vào kinh tế/doanh nghiệp.
-- 📡 `/iot_aiot` - Internet of Things, kiến trúc AIoT, phần cứng và các giải pháp tự động hóa.
-- 📊 `/economics_business` - Kinh tế vĩ mô/vi mô, chiến lược kinh doanh, quản trị và phân tích thị trường.
-- 🧠 `/psychology_society` - Tâm lý học hành vi, chính trị và cách vận hành của xã hội.
-- 📚 `/books_summaries` - Tóm tắt, đánh giá (review) và những bài học chắt lọc từ sách.
-- 💡 `/random_ideas` - Góc nhìn cá nhân, những ý tưởng ngẫu nhiên, hay các dự án đột phá nảy ra trong đầu.
+- 🤖 `/ai_ml` - Artificial Intelligence, Machine Learning, Deep Learning, and applications in economics/business.
+- 📡 `/iot_aiot` - Internet of Things, AIoT architecture, hardware, and automation solutions.
+- 📊 `/economics_business` - Macro/Microeconomics, business strategy, management, and market analysis.
+- 🧠 `/psychology_society` - Behavioral psychology, politics, and how society functions.
+- 📚 `/books_summaries` - Summaries, reviews, and key takeaways distilled from books.
+- 💡 `/random_ideas` - Personal perspectives, random ideas, or breakthrough project concepts that come to mind.
 
-## 🚀 Trạng thái & Lộ trình (Roadmap)
-- **Giai đoạn hiện tại:** `Đang hoạt động` (Đã thiết lập khung cơ bản).
-- **Kế hoạch sắp tới:**
-  - [x] Thiết lập hệ thống thư mục và quy chuẩn ghi chú.
-  - [x] Đẩy các ghi chú đầu tiên về AI và Kinh tế học lên repository.
-  - [ ] Duy trì thói quen cập nhật định kỳ kiến thức mới.
+## 🚀 Status & Roadmap
+- **Current Stage:** `Active` (Basic framework established).
+- **Upcoming Plans:**
+  - [x] Set up directory structure and note-taking standards.
+  - [x] Push initial notes on AI and Economics to the repository.
+  - [ ] Maintain a habit of periodically updating new knowledge.
 
 ---
 *"Live as if you were to die tomorrow. Learn as if you were to live forever."* - Mahatma Gandhi

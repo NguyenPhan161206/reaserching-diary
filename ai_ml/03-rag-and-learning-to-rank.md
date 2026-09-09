@@ -1,75 +1,75 @@
-# Hệ thống RAG và Mô hình Học xếp hạng (Learning to Rank) trong Tuyển dụng
+# RAG Systems and Learning-to-Rank (LTR) Models in Recruitment
 
-**Ngày tạo:** 2026-09-07
+**Date Created:** 2026-09-07
 **Tags:** `#rag`, `#learning-to-rank`, `#lambdamart`, `#cross-encoder`, `#information-retrieval`, `#llm`
-**Tài liệu tham khảo/Nguồn:** Khóa Luận Tốt Nghiệp (Võ Ngọc Trâm Anh, CNTT khoá 2022-2026)
+**Reference/Source:** Graduation Thesis (Vo Ngoc Tram Anh, IT Cohort 2022-2026)
 
 ---
 
-## 📌 Tóm tắt ý chính (TL;DR)
-- **Học xếp hạng (LTR):** Sử dụng các thuật toán như LambdaMART và Cross-Encoder để tối ưu hóa thứ tự hiển thị của các ứng viên, ưu tiên độ chính xác ở nhóm đầu (đánh giá bằng NDCG).
-- **Kiến trúc RAG:** Kết hợp truy xuất thông tin (Retrieval) và LLM (Generation) để đánh giá ứng viên dựa trên ngữ cảnh thực tế, giảm thiểu nội suy vô căn cứ (hallucination).
-- **Quản trị dữ liệu & Hệ thống:** Thiết kế lưu trữ 2 tầng (In-memory cho truy xuất nhanh, PostgreSQL JSONB cho lưu trữ kết quả linh hoạt) và kiến trúc xử lý bất đồng bộ (FastAPI) để tối ưu độ trễ.
-- **Trích xuất đặc trưng (Feature Engineering):** Kết hợp cả tín hiệu từ vựng (BM25) và ngữ nghĩa (Vector Embedding, TF-IDF) cùng cấu trúc hồ sơ (kinh nghiệm, học vấn) để huấn luyện mô hình LTR.
+## 📌 Key Takeaways (TL;DR)
+- **Learning to Rank (LTR):** Uses algorithms such as LambdaMART and Cross-Encoder to optimize candidate display ranking, prioritizing top-rank precision (evaluated by NDCG).
+- **RAG Architecture:** Combines Information Retrieval and LLM Generation to evaluate candidates based on actual context, minimizing unsubstantiated hallucinations.
+- **Data & System Management:** Dual-layer storage design (In-memory for fast retrieval, PostgreSQL JSONB for flexible result storage) and asynchronous architecture (FastAPI) to minimize latency.
+- **Feature Engineering:** Combines both lexical signals (BM25) and semantic signals (Vector Embedding, TF-IDF) along with resume structure (experience, education) to train LTR models.
 
-## 🧠 Nội dung chi tiết
+## 🧠 Detailed Content
 
-### 1. Phân loại và Tối ưu Xếp hạng
-- **Không gian nhãn:** $Y = \{0, 1, 2\}$ tương ứng Reject (Loại), Hold (Cân nhắc), Shortlist (Vào vòng tiếp theo).
-- **Quan hệ xếp hạng:** 
+### 1. Classification and Ranking Optimization
+- **Label Space:** $Y = \{0, 1, 2\}$ corresponding to Reject, Hold, and Shortlist (Proceeding to the next round).
+- **Ranking Relation:** 
   - $d_i > d_j \Leftrightarrow f(q, d_i) > f(q, d_j)$
-  - Nếu bằng điểm, áp dụng quy tắc phá hòa (tie-breaking rules).
-- **Mục tiêu tối ưu:** Sử dụng **NDCG@k** làm evaluation metric chính. DCG (Discounted Cumulative Gain) phạt nặng sai lệch ở các vị trí top-k vì nhà tuyển dụng chủ yếu chỉ xem ứng viên đầu danh sách.
+  - If scores are tied, apply tie-breaking rules.
+- **Optimization Objective:** Uses **NDCG@k** as the primary evaluation metric. DCG (Discounted Cumulative Gain) heavily penalizes errors at top-$k$ positions because recruiters primarily examine candidates at the top of the list.
 
-### 2. Kiến trúc RAG (Retrieval-Augmented Generation)
-Kết hợp trí nhớ phi tham số (hệ thống truy xuất) và tham số (LLM) thông qua 3 giai đoạn:
-1. **Indexing (Lập chỉ mục):** Phân đoạn (chunking), chuẩn hóa và lưu trữ dạng vector.
-2. **Retrieval (Truy xuất):** Rút trích tài liệu liên quan nhất dựa trên đối sánh.
-3. **Generation (Sinh nội dung):** LLM sinh phản hồi dựa trên tài liệu đã truy xuất.
+### 2. RAG (Retrieval-Augmented Generation) Architecture
+Combines non-parametric memory (retrieval system) and parametric memory (LLM) across 3 stages:
+1. **Indexing:** Chunking, normalization, and vector storage.
+2. **Retrieval:** Extracting the most relevant documents based on matching.
+3. **Generation:** LLM generates responses conditioned on the retrieved documents.
 
-*Để giới hạn khả năng sinh thông tin ảo (hallucination), hệ thống sử dụng dữ liệu CV dạng JSON và snippets đối chiếu, ràng buộc chặt chẽ không gian suy luận của LLM.*
+*To constrain hallucination, the system utilizes resume data in JSON format and matching snippets, strictly bounding the LLM's reasoning space.*
 
-### 3. Mô hình Học xếp hạng (LTR) đa tầng
-Tối ưu hóa thứ tự tương đối giữa các tài liệu.
+### 3. Multi-tier Learning-to-Rank (LTR) Model
+Optimizes the relative order among documents.
 
 **a. LambdaMART:**
-- Dựa trên Gradient Boosted Decision Trees.
-- Sử dụng $\lambda$-gradients để xấp xỉ hướng tối ưu cho các hàm không khả vi như NDCG.
-- Học theo cặp (pairwise comparisons) và kết hợp đa nguồn tín hiệu (từ vựng, ngữ nghĩa, cấu trúc).
+- Based on Gradient Boosted Decision Trees.
+- Uses $\lambda$-gradients to approximate the optimization direction for non-differentiable metrics like NDCG.
+- Learns via pairwise comparisons and combines multiple signal sources (lexical, semantic, structural).
 
-**b. Re-ranking với Cross-Encoder:**
-- Giải quyết hạn chế của Bi-Encoder (mã hóa độc lập truy vấn và tài liệu).
-- Nối (concatenate) truy vấn và tài liệu thành một chuỗi duy nhất, sử dụng self-attention trong Transformer để tìm mối tương quan sâu ở cấp độ token.
-- Chi phí tính toán cao, chỉ áp dụng cho một tập ứng viên nhỏ đã được truy xuất sơ bộ (retrieve-then-rerank).
+**b. Re-ranking with Cross-Encoder:**
+- Resolves the limitations of Bi-Encoders (which encode queries and documents independently).
+- Concatenates query and document into a single sequence, using self-attention in Transformers to capture deep token-level interactions.
+- Computationally expensive; applied only to a small preliminary retrieved candidate pool (retrieve-then-rerank).
 
-**c. Khai thác đặc trưng cho LTR (Hybrid Retrieval):**
-Tích hợp 4 nhóm đặc trưng chính:
-- **Nhóm A (Tín hiệu nền tảng):** Điểm Okapi BM25 (chuẩn hóa), Độ tương đồng vector ngữ nghĩa.
-- **Nhóm B (Tương thích kỹ năng):** Mức tương đồng Jaccard kỹ năng cứng, TF-IDF kỹ năng mềm, tỷ lệ bao phủ yêu cầu bắt buộc.
-- **Nhóm C (Cấu trúc CV):** Cấp bậc, số năm kinh nghiệm, trình độ học vấn.
-- **Nhóm D (Từ vựng bổ trợ):** Điểm BM25 trên chức danh (title), TF-IDF của kỹ năng cứng.
+**c. Feature Engineering for LTR (Hybrid Retrieval):**
+Integrates 4 primary feature groups:
+- **Group A (Foundational Signals):** Normalized Okapi BM25 score, Semantic vector similarity.
+- **Group B (Skill Matching):** Hard skill Jaccard similarity, Soft skill TF-IDF, Mandatory requirement coverage ratio.
+- **Group C (Resume Structure):** Seniority level, Years of experience, Education level.
+- **Group D (Auxiliary Lexical Signals):** BM25 score on job title, TF-IDF of hard skills.
 
-### 4. Đánh giá chất lượng (Evaluation Metrics)
-- **Xếp hạng (Retrieval):** 
-  - **NDCG:** Xem xét vị trí, ưu tiên tài liệu liên quan ở vị trí cao.
-  - **MAP:** Độ chính xác trung bình tích lũy.
-  - **MRR:** Vị trí của kết quả đúng đầu tiên.
-- **Sinh văn bản (RAGAS framework):**
-  - **Faithfulness:** Tính trung thực, không bịa đặt ngoài ngữ cảnh.
-  - **Answer Relevancy:** Câu trả lời đúng trọng tâm truy vấn.
-  - **Context Precision:** Độ chính xác/hữu ích của ngữ cảnh được trích xuất.
+### 4. Evaluation Metrics
+- **Ranking (Retrieval):** 
+  - **NDCG:** Position-aware metric that prioritizes relevant documents at higher ranks.
+  - **MAP:** Mean Average Precision.
+  - **MRR:** Mean Reciprocal Rank (position of the first relevant result).
+- **Text Generation (RAGAS framework):**
+  - **Faithfulness:** Factual consistency, avoiding fabrication outside the provided context.
+  - **Answer Relevancy:** How pertinent the response is to the query.
+  - **Context Precision:** Accuracy and usefulness of the retrieved context.
 
-### 5. Thiết kế Hệ thống Thực thi (Model Serving)
-- **Quản trị lưu trữ 2 tầng (Dual-layer):**
-  1. *In-memory/File-based:* Lưu trữ các chỉ mục tĩnh (BM25 Index) trên RAM để giảm trễ I/O.
-  2. *Relational Database (PostgreSQL):* Dùng trường `JSONB` để lưu kết quả LLM bán cấu trúc (phi chuẩn hóa), dễ dàng thay đổi prompt mà không cần migrate DB schema.
-- **Kiến trúc bất đồng bộ (Asynchronous):** Dùng FastAPI (Async/Await) để gọi API của LLM bên thứ 3 (GPT-4, Claude) mà không gây nghẽn (blocking) luồng hệ thống.
+### 5. Serving & System Architecture Design (Model Serving)
+- **Dual-Layer Storage Management:**
+  1. *In-memory / File-based:* Stores static indexes (BM25 Index) in RAM to minimize I/O latency.
+  2. *Relational Database (PostgreSQL):* Uses `JSONB` fields to store semi-structured (denormalized) LLM outputs, allowing easy prompt iteration without database schema migrations.
+- **Asynchronous Architecture:** Uses FastAPI (Async/Await) to invoke third-party LLM APIs (GPT-4, Claude) without blocking system worker threads.
 
 ---
 
-## 🤔 Câu hỏi mở / Điểm cần nghiên cứu thêm
-*Đây là các hướng bạn cần tự tìm hiểu sâu hơn trong thời gian tới:*
-- [ ] Cơ chế tính toán $\lambda$-gradients trong thuật toán LambdaMART cụ thể hoạt động như thế nào?
-- [ ] Cách triển khai (code) một Cross-Encoder kết hợp cùng mô hình Bi-Encoder cho pipeline re-ranking.
-- [ ] Cách thiết lập thư viện RAGAS để tự động hóa đánh giá Faithfulness và Answer Relevancy cho các phản hồi LLM.
-- [ ] Tối ưu hóa In-memory Indexing trong Python như thế nào để phục vụ việc tính toán các hàm Okapi BM25 tốc độ cao?
+## 🤔 Open Questions / Further Research Topics
+*Directions to explore more deeply in the near future:*
+- [ ] How does the $\lambda$-gradients calculation mechanism specifically work in the LambdaMART algorithm?
+- [ ] How to implement (code) a Cross-Encoder alongside a Bi-Encoder model in a re-ranking pipeline.
+- [ ] How to set up the RAGAS library to automate evaluations of Faithfulness and Answer Relevancy for LLM responses.
+- [ ] How to optimize In-memory Indexing in Python to achieve high-speed computation for Okapi BM25 ranking functions?

@@ -1,41 +1,41 @@
-# Kiến trúc Backend: Rate Limit và Server-Sent Events (SSE)
+# Backend Architecture: Rate Limit and Server-Sent Events (SSE)
 
-**Ngày tạo:** 2026-09-04
-**Tags:** `#SystemDesign`, `#Backend`, `#Realtime`, `#API`
-**Tài liệu tham khảo/Nguồn:** [Gemini Share](https://share.gemini.google/zEAVGArmeM7e) & [https://share.gemini.google/C3HUVEIvYfGX]
+**Date Created:** 2026-09-04  
+**Tags:** `#SystemDesign`, `#Backend`, `#Realtime`, `#API`  
+**References/Sources:** [Gemini Share](https://share.gemini.google/zEAVGArmeM7e) & [https://share.gemini.google/C3HUVEIvYfGX]
 
 ---
 
-## 📌 Tóm tắt ý chính (TL;DR)
-- **Rate Limit Constraints:** Cơ chế kiểm soát lưu lượng request đến server nhằm bảo vệ tài nguyên, chống DDoS, đảm bảo công bằng và hỗ trợ phân cấp dịch vụ (monetization).
-- **Server-Sent Events (SSE):** Giao thức kết nối một chiều (Server -> Client) trên nền HTTP tiêu chuẩn, tối ưu cho các tính năng real-time chỉ cần luồng dữ liệu đọc (ví dụ: Chatbot AI streaming, log system).
+## 📌 Summary (TL;DR)
+- **Rate Limit Constraints:** Traffic control mechanisms for incoming server requests to protect resources, prevent DDoS attacks, ensure fair use, and support service tiering (monetization).
+- **Server-Sent Events (SSE):** A unidirectional connection protocol (Server -> Client) over standard HTTP, optimized for real-time features that only require read streams (e.g., AI Chatbot streaming, log systems).
 
-## 🧠 Nội dung chi tiết
+## 🧠 Detailed Content
 
 ### 1. Rate Limit Constraints
-Rate limit là các ràng buộc định tuyến trên tầng Server, API Gateway hoặc Firewall nhằm giới hạn tần suất gửi request từ một định danh (IP, User ID, API Key) trong một khung thời gian (Time window).
-- **Cơ chế phản hồi:** Vượt quá ngưỡng -> `429 Too Many Requests`.
-- **Mục đích cốt lõi:**
-  1. **Prevent Overload (Bảo vệ tài nguyên):** Ngăn cản crash server do peak traffic.
-  2. **Security (Chống tấn công):** Block các luồng request rác từ botnet/hacker muốn DDoS hệ thống.
-  3. **Fair Use (Chia sẻ công bằng):** Tránh hiện tượng Noisy Neighbor (một user chiếm dụng toàn bộ pool tài nguyên, làm chậm hệ thống của người khác).
-  4. **Monetization (Mô hình kinh doanh):** Phân tier dịch vụ API của bên thứ ba (Ví dụ: Free cho 1.000 reqs/tháng, Pro cho 10.000 reqs/tháng).
+Rate limiting consists of routing constraints at the Server, API Gateway, or Firewall level to restrict the request frequency from an identity (IP, User ID, API Key) within a specific time window.
+- **Response Mechanism:** Exceeding threshold -> `429 Too Many Requests`.
+- **Core Purposes:**
+  1. **Prevent Overload (Resource Protection):** Prevent server crashes caused by peak traffic.
+  2. **Security (Attack Prevention):** Block spam request streams from botnets/hackers attempting to DDoS the system.
+  3. **Fair Use (Fair Resource Sharing):** Prevent the "Noisy Neighbor" problem (one user consuming the entire resource pool and slowing down the system for others).
+  4. **Monetization (Business Model):** Tier third-party API services (e.g., Free for 1,000 reqs/month, Pro for 10,000 reqs/month).
 
 ### 2. Server-Sent Events (SSE)
-SSE là kỹ thuật đẩy dữ liệu (Data Push) từ Server về Client qua một kết nối HTTP duy nhất được giữ mở (Persistent Connection). Nó sinh ra để khắc phục sự lãng phí băng thông của kỹ thuật Polling truyền thống (Client liên tục ping hỏi server xem có data mới không).
+SSE is a data push technique from Server to Client over a single persistent HTTP connection. It was designed to overcome the bandwidth inefficiency of traditional Polling (where the client repeatedly pings the server asking for new data).
 
-- **Đặc trưng kỹ thuật:**
-  - **Unidirectional (Một chiều):** Data chỉ chảy từ Server -> Client.
-  - **HTTP Native:** Chạy trên giao thức HTTP thông thường, không cần cơ chế handshake phức tạp, bypass qua firewall/proxy dễ dàng.
-  - **Auto-reconnect:** Trình duyệt tự động cố gắng kết nối lại với server nếu đường truyền bị ngắt.
-- **Use-cases (Ứng dụng) tiêu biểu:**
-  - Streaming output của các LLM Chatbot (như ChatGPT, Gemini) để hiển thị từng từ (typing effect) thay vì đợi load toàn bộ.
-  - Ticker giá chứng khoán/Crypto trực tiếp.
-  - Notification feeds (Thông báo hệ thống).
-  - Live system logs monitor.
+- **Technical Characteristics:**
+  - **Unidirectional:** Data only flows from Server -> Client.
+  - **HTTP Native:** Runs over standard HTTP, requires no complex handshake mechanism, and easily traverses firewalls/proxies.
+  - **Auto-reconnect:** Browsers automatically attempt to reconnect to the server if the connection is dropped.
+- **Typical Use Cases:**
+  - Streaming LLM Chatbot outputs (e.g., ChatGPT, Gemini) to display token-by-token (typing effect) instead of waiting for the full response.
+  - Live stock/crypto price tickers.
+  - Notification feeds (system notifications).
+  - Live system log monitoring.
 
-#### Thiết kế cơ sở (Implementation cơ bản)
-Nguyên tắc: Client mở request `GET`, Server phản hồi với các header đặc thù và giữ nguyên trạng thái kết nối.
+#### Basic Implementation
+Principle: Client opens a `GET` request, and the Server responds with specific headers while keeping the connection open.
 
 **Backend (Node.js/Express):**
 ```javascript
@@ -43,19 +43,19 @@ const express = require('express');
 const app = express();
 
 app.get('/stream', (req, res) => {
-    // 1. Headers bắt buộc để định nghĩa stream SSE
+    // 1. Mandatory headers to define SSE stream
     res.setHeader('Content-Type', 'text/event-stream');
     res.setHeader('Cache-Control', 'no-cache');
     res.setHeader('Connection', 'keep-alive');
 
-    // 2. Bơm dữ liệu định kỳ cho client
+    // 2. Periodically push data to client
     const intervalId = setInterval(() => {
         const time = new Date().toLocaleTimeString();
-        // Cú pháp chuẩn SSE bắt buộc: data: [payload]\n\n
-        res.write(`data: Thời gian hiện tại là ${time}\n\n`); 
+        // Mandatory SSE format: data: [payload]\n\n
+        res.write(`data: Current time is ${time}\n\n`); 
     }, 2000);
 
-    // 3. Dọn dẹp tài nguyên (memory leak) khi client ngắt kết nối (tắt tab)
+    // 3. Clean up resources (prevent memory leaks) when client disconnects (closes tab)
     req.on('close', () => clearInterval(intervalId));
 });
 
@@ -65,22 +65,22 @@ app.listen(3000, () => console.log('SSE Server running on port 3000'));
 **Frontend (HTML/JS - EventSource API):**
 ```html
 <script>
-    // Mở kết nối
+    // Open connection
     const eventSource = new EventSource('http://localhost:3000/stream');
     
-    // Lắng nghe sự kiện đẩy về
+    // Listen for incoming events
     eventSource.onmessage = (event) => {
         console.log("Server pushed:", event.data);
     };
 </script>
 ```
 
-## 🤔 Kiến thức cần đào sâu
-- [ ] **Các thuật toán Rate Limiting:** Token Bucket, Leaky Bucket, Fixed Window Counter, Sliding Window Log hoạt động ra sao và ưu nhược điểm?
-- [ ] **Thực hành Cấu hình:** Cách thiết lập Rate Limit trên Nginx, Kong Gateway hoặc dùng Redis để store counter phân tán.
-- [ ] **So sánh Giao thức:** Khi nào SSE là đủ, và khi nào bắt buộc phải chuyển sang WebSockets (Bi-directional) hoặc gRPC streaming?
-- [ ] **Hạ tầng mạng:** Cấu hình Load Balancer (HAProxy, AWS ALB) như thế nào để không bị timeout (ngắt sớm) các kết nối SSE đang mở dài hạn?
+## 🤔 Deep Dive Topics
+- [ ] **Rate Limiting Algorithms:** How do Token Bucket, Leaky Bucket, Fixed Window Counter, and Sliding Window Log work, and what are their pros and cons?
+- [ ] **Practical Configuration:** How to set up Rate Limiting on Nginx, Kong Gateway, or using Redis for distributed counter storage.
+- [ ] **Protocol Comparison:** When is SSE sufficient, and when is it necessary to switch to WebSockets (Bi-directional) or gRPC streaming?
+- [ ] **Network Infrastructure:** How to configure Load Balancers (HAProxy, AWS ALB) to avoid timing out (prematurely closing) long-lived SSE connections?
 
-## 📚 Tài liệu nên tham khảo
-- Nguồn từ Gemini: [https://share.gemini.google/zEAVGArmeM7e](https://share.gemini.google/zEAVGArmeM7e)
-- Nguồn tham khảo thêm: [https://share.gemini.google/C3HUVEIvYfGX](https://share.gemini.google/C3HUVEIvYfGX)
+## 📚 References & Recommended Reading
+- Gemini Source: [https://share.gemini.google/zEAVGArmeM7e](https://share.gemini.google/zEAVGArmeM7e)
+- Additional Reference: [https://share.gemini.google/C3HUVEIvYfGX](https://share.gemini.google/C3HUVEIvYfGX)

@@ -1,30 +1,30 @@
-# Nguyên lý Cung - Cầu và Ứng dụng trong Kinh doanh
+# Principles of Supply and Demand and Applications in Business
 
-**Ngày tạo:** 2026-09-04
+**Created Date:** 2026-09-04
 **Tags:** `#Economics`, `#Microeconomics`, `#BusinessStrategy`
-**Tài liệu tham khảo/Nguồn:** Kinh tế học vi mô cơ bản
+**References/Sources:** Basic Microeconomics
 
 ---
 
-## 📌 Tóm tắt ý chính (TL;DR)
-- Giá cả thị trường được quyết định bởi sự giao nhau giữa Cung (Supply) và Cầu (Demand).
-- Doanh nghiệp không chỉ thụ động chờ đợi thị trường, mà có thể dùng chiến lược marketing và định vị để dịch chuyển đường Cầu (tăng giá trị cảm nhận của khách hàng).
+## 📌 Key Takeaways (TL;DR)
+- Market prices are determined by the intersection of Supply and Demand.
+- Businesses do not just passively wait for the market; they can use marketing and positioning strategies to shift the Demand curve (increasing perceived customer value).
 
-## 🧠 Nội dung chi tiết
+## 🧠 Detailed Content
 
-### 1. Khái niệm cốt lõi
-- **Luật Cầu (Law of Demand):** Giá càng cao, lượng cầu càng thấp (và ngược lại), với điều kiện các yếu tố khác không đổi.
-- **Luật Cung (Law of Supply):** Giá càng cao, lượng cung càng cao (nhà sản xuất muốn bán nhiều hơn để tối đa hóa lợi nhuận).
-- **Điểm cân bằng (Equilibrium):** Điểm mà lượng cung và lượng cầu bằng nhau, tạo ra giá cả thị trường ổn định.
+### 1. Core Concepts
+- **Law of Demand:** The higher the price, the lower the quantity demanded (and vice versa), all other things being equal (ceteris paribus).
+- **Law of Supply:** The higher the price, the higher the quantity supplied (producers want to sell more to maximize profits).
+- **Equilibrium:** The point where quantity supplied equals quantity demanded, creating a stable market price.
 
-### 2. Áp dụng thực tiễn (Actionable Insights)
-Trong kinh doanh, thay vì giảm giá (làm giảm lợi nhuận), hãy tìm cách:
-- **Làm đường Cầu dịch chuyển sang phải (Tăng cầu ở mọi mức giá):** Thông qua việc xây dựng thương hiệu tốt, tăng trải nghiệm khách hàng, tạo sự khan hiếm (scarcity marketing).
-- **Phân tích Cung - Cầu để ra mắt sản phẩm mới:** Khi thị trường có nhu cầu cao (Cầu lớn) nhưng ít người cung cấp (Cung thấp), đây là "Đại dương xanh" để nhảy vào.
+### 2. Practical Applications (Actionable Insights)
+In business, instead of lowering prices (which erodes profit margins), find ways to:
+- **Shift the Demand curve to the right (Increase demand at every price level):** Through strong brand building, enhancing customer experience, and creating scarcity (scarcity marketing).
+- **Analyze Supply and Demand to launch new products:** When a market has high demand but few providers (low supply), this is a "Blue Ocean" opportunity to enter.
 
-## 🤔 Câu hỏi mở / Điểm cần nghiên cứu thêm
-- [ ] Trong một số mô hình kinh doanh nền tảng (như Grab, Airbnb), làm sao để cân bằng cung-cầu trong thời gian thực (real-time)?
-- [ ] AI có thể dự đoán đường Cầu tốt đến mức nào để giúp doanh nghiệp định giá động (Dynamic Pricing)?
+## 🤔 Open Questions / Areas for Further Research
+- [ ] In platform business models (such as Grab, Airbnb), how can supply and demand be balanced in real time?
+- [ ] How well can AI predict the Demand curve to help businesses implement Dynamic Pricing?
 
 ---
-*Ghi chú: Kinh tế học không chỉ là lý thuyết, nó giải thích hành vi con người và cách thị trường vận hành.*
+*Note: Economics is not just theory; it explains human behavior and how markets operate.*
