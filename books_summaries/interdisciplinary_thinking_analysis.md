@@ -68,3 +68,15 @@ If you want to cultivate this power, you must actively restructure how you consu
     *   *Mathematics:* Compounding, probability, permutations.
 
 **Your Action Step:** Look at a difficult problem you are facing right now. Force yourself to brainstorm solutions using a vocabulary from a completely different profession. If you are a coder, try to solve the bug as if you were a *detective*, a *biologist*, or an *economist*.
+
+---
+
+## 🌌 Part 4: Deep Questions for Serious Reflection
+
+To truly build interdisciplinary muscle, you must aggressively interrogate your own worldview. Spend time journaling or meditating on these questions:
+
+1. **The Epistemological Question:** What is a "fact" in your current profession that would be considered an "absurdity" in another? (e.g., In physics, time is relative; in business, time is absolute and money. How does viewing time as "relative" change how you manage a team?)
+2. **The Inversion Question (from Charlie Munger):** Instead of asking how to achieve success in your current project using your industry's best practices, ask: "How could I guarantee absolute failure using the laws of physics or biology?" What does that inversion reveal about your blind spots?
+3. **The Transferability Question:** If your current industry was entirely wiped out tomorrow, what underlying principles from your expertise could you successfully transfer to farming, politics, or healthcare? If the answer is "none," are you relying too heavily on tools rather than mental models?
+4. **The Friction Question:** Where is the greatest friction or conflict between two departments in your organization (e.g., Engineering vs. Sales)? That friction is usually a boundary between disciplines. What entirely new product or solution could be born if you combined the conflicting mindsets rather than forcing a compromise?
+5. **The Biological Analogy:** Consider a persistent problem in your life or work (e.g., technical debt, procrastination, employee turnover). If this problem were an *autoimmune disease* or an *invasive species*, what would be the cure? How does nature solve this without meetings or memos?
