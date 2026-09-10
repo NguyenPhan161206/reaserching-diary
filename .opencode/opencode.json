@@ -1,0 +1,33 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": ["AGENTS.md"],
+  "permission": {
+    "edit": "ask",
+    "bash": {
+      "git status": "allow",
+      "git log *": "allow",
+      "git diff *": "allow",
+      "git add *": "allow",
+      "git commit *": "ask",
+      "git push *": "ask",
+      "ls *": "allow",
+      "find *": "allow",
+      "*": "ask"
+    }
+  },
+  "agent": {
+    "research-assistant": {
+      "mode": "primary",
+      "description": "Research diary manager — creates, formats, reviews notes; tracks contributions; suggests knowledge; proposes folders",
+      "permission": {
+        "edit": "ask",
+        "bash": {
+          "git *": "ask",
+          "ls *": "allow",
+          "find *": "allow",
+          "*": "ask"
+        }
+      }
+    }
+  }
+}

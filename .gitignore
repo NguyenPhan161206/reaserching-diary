@@ -17,3 +17,7 @@ Thumbs.db
 site/
 public/
 _site/
+
+# Agent session files (do NOT commit)
+*.agent-session
+.opencode/sessions/
