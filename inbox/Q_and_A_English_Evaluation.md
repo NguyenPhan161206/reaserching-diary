@@ -14,9 +14,9 @@
 ### 2. English Proficiency: **Pre-Intermediate / Intermediate**
 - **Observation:** You are fully capable of expressing complex technical ideas in English so that a listener can understand your core message. However, the phrasing often relies on literal translations from Vietnamese, and there are frequent typographical errors.
 - **Areas for Improvement:**
-  - **Spelling / Typos:** Frequent minor errors (*sever* instead of *server*, *form* instead of *from*, *corect* instead of *correct*).
-  - **Vocabulary (Technical Jargon):** Using literal translations (e.g., *"marking the point"* or *"information way"*) instead of industry-standard terms (e.g., *"scoring/ranking"* or *"data flow"*).
-  - **Phrasing:** Using conversational phrases for logical connections (e.g., *"turn around"* instead of *"vice versa"*).
+  - **Spelling / Typos:** Frequent minor errors (**sever** instead of **server**, **form** instead of **from**, **corect** instead of **correct**).
+  - **Vocabulary (Technical Jargon):** Using literal translations (e.g., **"marking the point"** or **"information way"**) instead of industry-standard terms (e.g., **"scoring/ranking"** or **"data flow"**).
+  - **Phrasing:** Using conversational phrases for logical connections (e.g., **"turn around"** instead of **"vice versa"**).
 
 ---
 
@@ -44,5 +44,5 @@
 
 ## 🚀 Recommendations for Next Steps
 1. **Slow Down:** Take an extra 10 seconds to proofread your English answer before sending it to catch simple typos (sever/server).
-2. **Collect Industry Terms:** When reading English documentation, pay attention to the exact verbs they use (like *route, fetch, query, score, deploy*) rather than trying to translate Vietnamese verbs directly.
+2. **Collect Industry Terms:** When reading English documentation, pay attention to the exact verbs they use (like **route**, **fetch**, **query**, **score**, **deploy**) rather than trying to translate Vietnamese verbs directly.
 3. **Practice Consistently:** Continue doing these Q&A sessions. It is the fastest way to map your strong technical knowledge to the correct English vocabulary.
