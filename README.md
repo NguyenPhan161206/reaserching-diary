@@ -26,6 +26,8 @@
 
 Welcome to **Researching Diary**! This is a personal repository where I document my journey of exploring and researching **everything in the world**—from technology, science, and life to the fascinating little things of everyday existence.
 
+More than just a storage space, this repository acts as the core of my **active learning methodology**. To optimize my time, I leverage the Ubuntu Linux terminal and GitHub to consolidate the technical and business concepts I skim through. I then actively interact with AI models (like Antigravity/agy) to analyze the material, generate targeted Q&A tests, and push my understanding deeper. This seamless loop—combining Git version control, AI-driven Interleaved Practice, and real-time feedback—allows me to rapidly absorb complex knowledge, systematically upgrade my English proficiency (IELTS standard), and continuously evaluate my professional competence for my career.
+
 ## 🎯 Core Objectives
 This repository is not merely a collection of simple notes, but a tightly organized knowledge system designed to support long-term development:
 - **Building a "Second Brain":** Digitizing and connecting all acquired knowledge, experiences, and collected materials. This offloads short-term memory, makes information retrieval effortless, connects ideas, and sparks creativity.
