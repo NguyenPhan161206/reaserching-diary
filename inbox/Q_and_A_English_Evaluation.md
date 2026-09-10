@@ -46,3 +46,40 @@
 1. **Slow Down:** Take an extra 10 seconds to proofread your English answer before sending it to catch simple typos (sever/server).
 2. **Collect Industry Terms:** When reading English documentation, pay attention to the exact verbs they use (like **route**, **fetch**, **query**, **score**, **deploy**) rather than trying to translate Vietnamese verbs directly.
 3. **Practice Consistently:** Continue doing these Q&A sessions. It is the fastest way to map your strong technical knowledge to the correct English vocabulary.
+
+---
+
+## 📖 Vocabulary & Word Families Master List
+
+Here is a consolidated list of the technical vocabulary we discussed, along with their word families (noun, verb, adjective forms) to help you expand your vocabulary:
+
+1. **Score / Rank** (Meaning: Đánh giá, xếp hạng điểm số)
+   - **Score / Rank** (Verb/Noun): *The AI will score the documents.*
+   - **Scoring / Ranking** (Noun): *The scoring system uses BM25.*
+
+2. **Optimize** (Meaning: Tối ưu hóa)
+   - **Optimize** (Verb): *We need to optimize the algorithm.*
+   - **Optimization** (Noun): *Performance optimization is crucial.*
+   - **Optimized** (Adjective): *This is not the most optimized way.*
+   - **Optimal** (Adjective): *The optimal solution.*
+
+3. **Loophole** (Meaning: Lỗ hổng, kẽ hở)
+   - **Loophole** (Noun): *Candidates found a loophole in the AI.*
+
+4. **Route** (Meaning: Định tuyến, điều phối đường đi)
+   - **Route** (Verb/Noun): *The broker routes the messages.*
+   - **Routing** (Noun): *Message routing is the core feature.*
+   - **Router** (Noun): *A network router.*
+   - **Reroute** (Verb): *Reroute the traffic.*
+
+5. **Fetch** (Meaning: Gọi/lấy dữ liệu về)
+   - **Fetch** (Verb): *The client fetches data from the API.*
+   - **Fetching** (Noun): *Data fetching takes 200ms.*
+
+6. **Query** (Meaning: Truy vấn)
+   - **Query** (Verb/Noun): *Write a SQL query. / Query the database.*
+
+7. **Deploy** (Meaning: Triển khai code/hệ thống)
+   - **Deploy** (Verb): *Deploy the code to production.*
+   - **Deployment** (Noun): *The deployment was successful.*
+   - **Deployable** (Adjective): *A deployable package.*
