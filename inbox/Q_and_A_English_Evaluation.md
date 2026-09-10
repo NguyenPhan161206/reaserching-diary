@@ -24,21 +24,29 @@
 
 ### Session 1: AI / Search Systems
 **Question:** What is the main difference between Lexical Retrieval (BM25) and Dense Retrieval? What is the major weakness of Lexical Retrieval?
-*   **Your Answer:** "with the BM5, the base idea is using keywords to be the standart of marking the point, which appearance of keywords more, so dose thier point. And the Dense Retrival base on the contex... they have the bad hole that if the candidate know the keyword form HRs, the can spam it..."
+*   **Your Base Answer:** "with the BM5, the base idea is using keywords to be the standart of marking the point, which appearance of keywords more, so dose thier point. And the Dense Retrival base on the contex... they have the bad hole that if the candidate know the keyword form HRs, the can spam it..."
+*   **Strengths (IELTS Evaluation):** You correctly grasped the technical difference between exact keyword matching and semantic context. Great critical thinking in pointing out the system's vulnerability.
 *   **Corrections & Vocabulary Learned:**
     *   *marking the point* ➡️ **scoring / ranking**
     *   *bad hole* ➡️ **loophole**
     *   *spam keyword* ➡️ **keyword-stuffing**
     *   *optimize way* ➡️ **optimized way**
+*   **💡 Fixed Answer (Band 7.0+):** 
+    > *"With BM25, the basic idea is using keywords as the standard for scoring; the more a keyword appears, the higher the score. Dense Retrieval, on the other hand, is based on the context of the input query to score and compare documents. With the first method, there is a loophole: if a candidate knows the keywords HR is looking for, they can use keyword-stuffing to bypass the AI filter. However, relying solely on the second method is not fully optimized."*
+*   **🧠 How to go deeper (Learning Advice):** BM25 actually has a built-in defense against keyword stuffing called a **Saturation Function** (Term Frequency limits). Investigate how TF-IDF prevents infinite scoring to deepen your understanding of search math.
 
 ### Session 2: IoT / MQTT Protocol
 **Question:** In the MQTT protocol, what is the role of the Broker compared to a Publisher and a Subscriber?
-*   **Your Answer:** "Broker is a sever playing key role that connect information way form Publishers to subscribers or turn around, Is that corect?"
+*   **Your Base Answer:** "Broker is a sever playing key role that connect information way form Publishers to subscribers or turn around, Is that corect?"
+*   **Strengths (IELTS Evaluation):** You perfectly captured the architectural essence of a central server handling bidirectional routing. Very concise and accurate.
 *   **Corrections & Vocabulary Learned:**
     *   *sever* ➡️ **server**
     *   *information way* ➡️ **data flow / information flow**
     *   *turn around* ➡️ **and vice versa** (ngược lại)
     *   *connect information* ➡️ **routing messages** (điều phối tin nhắn)
+*   **💡 Fixed Answer (Band 7.0+):** 
+    > *"The Broker is a central server playing a key role in connecting the data flow and routing messages from Publishers to Subscribers, and vice versa."*
+*   **🧠 How to go deeper (Learning Advice):** Think about failure points. What happens if the Broker goes down completely? Look into advanced MQTT concepts like **Clustering** or **Last Will and Testament (LWT)** to understand how real-world systems handle Broker failures.
 
 ### Session 3: IELTS Speaking Part 1 (Study Habits & AI Workflow)
 **Question:** How has artificial intelligence changed the way you study or work?
