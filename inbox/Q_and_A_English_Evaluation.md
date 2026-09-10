@@ -42,13 +42,19 @@
 
 ### Session 3: IELTS Speaking Part 1 (Study Habits & AI Workflow)
 **Question:** How has artificial intelligence changed the way you study or work?
-*   **Your Answer:** "I usually use GitHub for saving all the knowledh because i'd like to use terminal of Ubuntu Linux... I use antigrafity (agy) to analyse and expand them without reading to much... The last round is evaluate me and give me more advise..."
+*   **Your Base Answer:** "I usually use GitHub for saving all the knowledh because i'd like to use terminal of Ubuntu Linux... I use antigrafity (agy) to analyse and expand them without reading to much... The last round is evaluate me and give me more advise..."
+*   **Strengths (IELTS Evaluation):** Strong coherence and logical flow. You effectively use sequence markers ("Next step", "The last round"). 
 *   **Corrections & Vocabulary Learned:**
     *   *knowledh* ➡️ **knowledge**
     *   *to much* ➡️ **too much**
     *   *go a round it* ➡️ **skim through it** (đọc lướt qua)
     *   *advise (verb)* ➡️ **advice (noun)** (lời khuyên)
     *   *evaluate me* ➡️ **to evaluate my performance**
+*   **💡 Fixed Answer (Band 7.0+):** 
+    > *"I usually use GitHub to store my knowledge base because I prefer working in the Ubuntu Linux terminal. Regarding the content I learn, I use Antigravity (agy) to analyze and expand on it without having to read too much. I just skim through the text to store it in my short-term memory, and then push everything to GitHub because I am pressed for time. Following that, I ask agy to generate questions based on any concept I choose. The final step is for the AI to evaluate my performance, provide advice, and suggest directions for deeper exploration."*
+*   **🧠 How to go deeper (Learning Advice):**
+    *   **Interleaving Practice:** Ask AI to combine two unrelated concepts (e.g., RAG and MQTT) into one question to force long-term memory retention.
+    *   **Inversion Model:** Instead of asking "What is this?", ask "How do I break this system?" Understanding failure states leads to mastery.
 
 ---
 
