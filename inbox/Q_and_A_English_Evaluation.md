@@ -40,6 +40,16 @@
     *   *turn around* ➡️ **and vice versa** (ngược lại)
     *   *connect information* ➡️ **routing messages** (điều phối tin nhắn)
 
+### Session 3: IELTS Speaking Part 1 (Study Habits & AI Workflow)
+**Question:** How has artificial intelligence changed the way you study or work?
+*   **Your Answer:** "I usually use GitHub for saving all the knowledh because i'd like to use terminal of Ubuntu Linux... I use antigrafity (agy) to analyse and expand them without reading to much... The last round is evaluate me and give me more advise..."
+*   **Corrections & Vocabulary Learned:**
+    *   *knowledh* ➡️ **knowledge**
+    *   *to much* ➡️ **too much**
+    *   *go a round it* ➡️ **skim through it** (đọc lướt qua)
+    *   *advise (verb)* ➡️ **advice (noun)** (lời khuyên)
+    *   *evaluate me* ➡️ **to evaluate my performance**
+
 ---
 
 ## 🚀 Recommendations for Next Steps
@@ -83,3 +93,11 @@ Here is a consolidated list of the technical vocabulary we discussed, along with
    - **Deploy** (Verb): *Deploy the code to production.*
    - **Deployment** (Noun): *The deployment was successful.*
    - **Deployable** (Adjective): *A deployable package.*
+
+8. **Skim** (Meaning: Đọc lướt qua để lấy ý chính)
+   - **Skim** (Verb): *I just skim through the text.*
+   - **Skimming** (Noun/Gerund): *Skimming saves a lot of time.*
+
+9. **Advice vs. Advise** (Meaning: Lời khuyên vs. Khuyên bảo)
+   - **Advice** (Noun - Uncountable): *Please give me some advice.* (Not "advices")
+   - **Advise** (Verb): *I advise you to learn Linux.*
