@@ -37,13 +37,7 @@ Mỗi note PHẢI có section "Research Journey":
 - **Aha moments** — khoảnh khắc hiểu ra
 - **Career connection** — liên hệ với mục tiêu AI Engineer
 
-### A5. Contribution Logging
-Sau MỖI lần thay đổi file, Agent PHẢI:
-1. Cập nhật CONTRIBUTION_LOG.md (Section E)
-2. Cập nhật CONTRIBUTION_CALENDAR.md (Section F)
-3. Đề xuất commit message theo format: `[category] action: brief description`
-
-### A6. Cross-Reference Policy
+### A5. Cross-Reference Policy
 Khi tạo note mới, Agent PHẢI:
 1. Tìm notes liên quan trong TẤT CẢ folders (dùng tags + grep)
 2. Thêm section "Related Topics" với cross-folder links
@@ -56,7 +50,6 @@ Khi tạo note mới, Agent PHẢI:
 ### B1. AUTO (không cần hỏi)
 - Read files, grep, glob, list directories
 - Git status, git log, git diff
-- Log vào CONTRIBUTION_LOG.md & CONTRIBUTION_CALENDAR.md
 - Search existing notes by tags/keywords
 
 ### B2. SUGGEST (đề xuất, chờ confirm)
@@ -73,7 +66,6 @@ Khi tạo note mới, Agent PHẢI:
 
 ### B4. BLOCK (không bao giờ)
 - Push secrets, API keys, tokens
-- Xóa CONTRIBUTION_LOG.md
 - Sửa git history (rebase, force push)
 - Thay đổi file mà không có user interaction record
 
@@ -118,7 +110,6 @@ Nếu user chọn tạo folder mới, Agent PHẢI:
 4. Cập nhật AGENTS.md Section C (thêm mapping)
 5. Cập nhật README.md root (thêm description)
 6. Cập nhật RESEARCH_AREAS.md (thêm row)
-7. Log vào CONTRIBUTION_LOG.md
 
 ### Step 3: TEMPLATE SELECTION
 Nếu domain mới không match template nào → tạo template variant:
@@ -130,20 +121,7 @@ Agent: "Domain này cần custom template. Bạn muốn:
 ```
 
 ## ═══════════════════════════════════════════
-## SECTION E: CONTRIBUTION LOG FORMAT
-## ═══════════════════════════════════════════
-
-File: CONTRIBUTION_LOG.md
-
-Mỗi entry format:
-```
-| YYYY-MM-DD | HH:MM | [category] | [action] | [files] | [notes_summary] |
-```
-
-Categories: ai_ml | iot_aiot | economics | psychology | books | evaluations | ideas | setup | housekeeping | cross-ref
-
-## ═══════════════════════════════════════════
-## SECTION F: CONTRIBUTION CALENDAR
+## SECTION E: CONTRIBUTION CALENDAR
 ## ═══════════════════════════════════════════
 
 File: CONTRIBUTION_CALENDAR.md
@@ -165,7 +143,6 @@ Agent cập nhật file này TRƯỚC KHI đề xuất push.
 
 ### Push Conditions (tất cả phải thỏa):
 - [ ] 3+ notes mới đã format đúng template
-- [ ] CONTRIBUTION_LOG.md đã cập nhật
 - [ ] CONTRIBUTION_CALENDAR.md đã cập nhật
 - [ ] Files đã move từ inbox/ (nếu có)
 - [ ] Cross-references đã thêm (nếu có)
@@ -179,7 +156,6 @@ New files:
   + psychology_society/01-cognitive-bias.md
 
 Modified files:
-  ~ CONTRIBUTION_LOG.md
   ~ CONTRIBUTION_CALENDAR.md
   ~ README.md
 

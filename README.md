@@ -69,7 +69,7 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
 ```
 
 > `░░` = No activity | `▓▓` = Light (1-2) | `██` = Heavy (3+)
-> Full log: [CONTRIBUTION_LOG.md](CONTRIBUTION_LOG.md) | [CONTRIBUTION_CALENDAR.md](CONTRIBUTION_CALENDAR.md)
+> Full calendar: [CONTRIBUTION_CALENDAR.md](CONTRIBUTION_CALENDAR.md)
 
 ---
 
@@ -106,7 +106,6 @@ The knowledge system is designed and organized into specialized directories, ref
 | [AGENTS.md](AGENTS.md) | AI agent configuration & rules |
 | [NOTE_TEMPLATE.md](NOTE_TEMPLATE.md) | 5 template variants per domain |
 | [RESEARCH_AREAS.md](RESEARCH_AREAS.md) | Research tracking & domain coverage |
-| [CONTRIBUTION_LOG.md](CONTRIBUTION_LOG.md) | Detailed interaction log |
 | [CONTRIBUTION_CALENDAR.md](CONTRIBUTION_CALENDAR.md) | Visual activity calendar |
 
 ## 🚀 Status & Roadmap
