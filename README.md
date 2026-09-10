@@ -9,6 +9,7 @@
       <h3>Phan Hữu Bình Nguyên</h3>
       <ul>
         <li><b>Occupation:</b> IT student</li>
+        <li><b>Dream:</b> Master</li>
         <li><b>Career Goal:</b> AI Engineer (Economics & Business fields)</li>
         <li><b>Currently Researching:</b> AI, IoT, AIoT, Economics, Politics, Psychology</li>
         <li><b>Hobbies:</b>
