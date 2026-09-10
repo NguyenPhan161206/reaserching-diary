@@ -1,7 +1,7 @@
 # Research Areas — Tracking & Proposals
 
 > Auto-maintained by Agent. DO NOT manually edit.
-> Last updated: 2026-09-10
+> Last updated: 2026-09-11
 
 ## Active Folders
 | # | Folder | Domain | Template | Notes | Status | Last Updated |
@@ -9,7 +9,7 @@
 | 1 | ai_ml/ | AI/ML/DL/NLP | A (Tech) | 3 | Active | 2026-09-07 |
 | 2 | iot_aiot/ | IoT/AIoT | A (Tech) | 2 | Active | 2026-09-07 |
 | 3 | economics_business/ | Economics/Business | B (Business) | 1 | Active | 2026-09-04 |
-| 4 | psychology_society/ | Psychology/Society | C (Social) | 0 | Reserved | — |
+| 4 | psychology_society/ | Psychology/Society | C (Social) | 3 | Active | 2026-09-11 |
 | 5 | books_summaries/ | Book Analysis | D (Book) | 1 | Active | 2026-09-09 |
 | 6 | personal_evaluations/ | Self-Assessment | E (Eval) | 1 | Active | 2026-09-09 |
 | 7 | random_ideas/ | Ideas | Flexible | 0 | Reserved | — |
@@ -23,6 +23,9 @@
 ## Recently Added
 | Date | Folder | File | Action |
 |------|--------|------|--------|
+| 2026-09-11 | psychology_society/ | 01-dunning-kruger-effect.md | created |
+| 2026-09-11 | psychology_society/ | 02-hedonic-treadmill.md | created |
+| 2026-09-11 | psychology_society/ | 03-tragedy-of-the-commons.md | created |
 | 2026-09-10 | — | AGENTS.md | created (agent config) |
 | 2026-09-09 | books_summaries/ | interdisciplinary_thinking_analysis.md | created |
 | 2026-09-07 | ai_ml/ | 03-rag-and-learning-to-rank.md | created |
@@ -35,7 +38,7 @@
 | AI/ML | ██████░░░░ 60% | 3 | Transformers, Fine-tuning, MLOps, RLHF |
 | IoT | ████░░░░░░ 40% | 2 | MQTT deep dive, Edge Computing, Zigbee |
 | Economics | ██░░░░░░░░ 20% | 1 | Macro, Game Theory, Behavioral Econ, Finance |
-| Psychology | ░░░░░░░░░░ 0% | 0 | Empty — needs initial notes |
+| Psychology | ██████░░░░ 60% | 3 | Cognitive Biases, Behavioral Econ, Game Theory |
 | Books | ██░░░░░░░░ 20% | 1 | More summaries needed |
 | Evaluations | ██░░░░░░░░ 20% | 1 | Regular tracking sessions |
 
