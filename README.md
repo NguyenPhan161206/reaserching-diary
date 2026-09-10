@@ -40,6 +40,7 @@ The knowledge system is designed and organized into specialized directories, ref
 - 📊 `/economics_business` - Macro/Microeconomics, business strategy, management, and market analysis.
 - 🧠 `/psychology_society` - Behavioral psychology, politics, and how society functions.
 - 📚 `/books_summaries` - Summaries, reviews, and key takeaways distilled from books.
+- 📈 `/personal_evaluations` - Personal competence tracking, English/technical skill evaluations, and feedback logs.
 - 💡 `/random_ideas` - Personal perspectives, random ideas, or breakthrough project concepts that come to mind.
 
 ## 🚀 Status & Roadmap
