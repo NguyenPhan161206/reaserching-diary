@@ -10,7 +10,7 @@
 | 2 | iot_aiot/ | IoT/AIoT | A (Tech) | 2 | Active | 2026-09-07 |
 | 3 | economics_business/ | Economics/Business | B (Business) | 4 | Active | 2026-09-11 |
 | 4 | psychology_society/ | Psychology/Society | C (Social) | 3 | Active | 2026-09-11 |
-| 5 | books_summaries/ | Book Analysis | D (Book) | 4 | Active | 2026-09-11 |
+| 5 | books_summaries/ | Book Analysis | D (Book) | 5 | Active | 2026-09-11 |
 | 6 | personal_evaluations/ | Self-Assessment | E (Eval) | 1 | Active | 2026-09-09 |
 | 7 | random_ideas/ | Ideas | Flexible | 3 | Active | 2026-09-11 |
 | 8 | inbox/ | Staging | Flexible | 1 | Active | 2026-09-07 |
@@ -26,6 +26,7 @@
 | 2026-09-11 | random_ideas/ | 01-stoicism-in-modern-life.md | created |
 | 2026-09-11 | random_ideas/ | 02-time-blocking-method.md | created |
 | 2026-09-11 | random_ideas/ | 03-imposter-syndrome.md | created |
+| 2026-09-11 | books_summaries/agile_project_management/ | README.md (and 6 parts) | created |
 | 2026-09-11 | books_summaries/ | 02-thinking-fast-and-slow.md | created |
 | 2026-09-11 | books_summaries/ | 03-deep-work.md | created |
 | 2026-09-11 | books_summaries/ | 04-atomic-habits.md | created |
@@ -48,7 +49,7 @@
 | IoT | ████░░░░░░ 40% | 2 | MQTT deep dive, Edge Computing, Zigbee |
 | Economics | ████████░░ 80% | 4 | Macro, Game Theory, Behavioral Econ, Finance |
 | Psychology | ██████░░░░ 60% | 3 | Cognitive Biases, Behavioral Econ, Game Theory |
-| Books | ██░░░░░░░░ 20% | 1 | More summaries needed |
+| Books | ██████░░░░ 60% | 5 | Agile, Productivity |
 | Evaluations | ██░░░░░░░░ 20% | 1 | Regular tracking sessions |
 
 ## Folder Naming Convention
