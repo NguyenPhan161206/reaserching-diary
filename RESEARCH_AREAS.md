@@ -6,7 +6,7 @@
 ## Active Folders
 | # | Folder | Domain | Template | Notes | Status | Last Updated |
 |---|--------|--------|----------|-------|--------|-------------|
-| 1 | ai_ml/ | AI/ML/DL/NLP | A (Tech) | 3 | Active | 2026-09-07 |
+| 1 | ai_ml/ | AI/ML/DL/NLP | A (Tech) | 4 | Active | 2026-09-12 |
 | 2 | iot_aiot/ | IoT/AIoT | A (Tech) | 2 | Active | 2026-09-07 |
 | 3 | economics_business/ | Economics/Business | B (Business) | 4 | Active | 2026-09-11 |
 | 4 | psychology_society/ | Psychology/Society | C (Social) | 3 | Active | 2026-09-11 |
@@ -26,6 +26,7 @@
 ## Recently Added
 | Date | Folder | File | Action |
 |------|--------|------|--------|
+| 2026-09-12 | ai_ml/ | 04-xp-engineering-practices-for-ml.md | created |
 | 2026-09-12 | books_summaries/agile_project_management/notes/ | 01-agility-mindset-and-manifesto.md | created |
 | 2026-09-12 | books_summaries/agile_project_management/{knowledge,notes,practice}/ | README.md (x3) + restructure | created |
 | 2026-09-12 | inbox/ | se_knowledge_agile_release_tags.md | created |
