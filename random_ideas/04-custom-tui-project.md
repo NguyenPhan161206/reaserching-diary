@@ -13,22 +13,14 @@ Xây dựng một hệ thống Terminal User Interface (TUI) tùy chỉnh để 
 - **Thư viện UI:** `textual` (xây dựng giao diện terminal hiện đại, hỗ trợ async tốt).
 - **SDK:** `google-antigravity` và SDK của Opencode.
 
-## 🗂️ Kiến trúc đề xuất (Mono-repo)
-Sử dụng chung một repository và một môi trường ảo (`venv`) để dễ quản lý và tái sử dụng code giao diện (khung chat, ô input).
+## 🗂️ Kiến trúc đề xuất (Multi-repo)
+Vì lý do an toàn, độc lập dependencies và tính chất đóng/mở (Private vs Open Source), dự án sẽ được chia thành 3 repositories riêng biệt:
 
-```text
-custom_terminal_uis/
-├── requirements.txt
-├── shared/
-│   ├── __init__.py
-│   └── ui_components.py    # (Các widget UI dùng chung: RichLog chat, Input bar)
-├── agy_tui/
-│   ├── __init__.py
-│   └── main.py             # App tích hợp google-antigravity SDK
-└── opencode_tui/
-    ├── __init__.py
-    └── main.py             # App tích hợp Opencode SDK/API
-```
+1. **`reaserching-diary`**: Repo hiện tại, thuần túy chứa Markdown để ghi chép.
+2. **`agy-tui`**: Repo Python độc lập, chứa giao diện và tích hợp SDK `google-antigravity`.
+3. **`opencode-tui`**: Repo Python độc lập, chứa giao diện và tích hợp API của Opencode.
+
+*(Lưu ý: Chấp nhận việc lặp lại code (Code Duplication) ở các thành phần UI cơ bản như Header, Footer, ChatBox giữa 2 repo code để đổi lấy sự độc lập tuyệt đối).*
 
 ## 📝 Action Items (Next Steps)
 - [ ] Khởi tạo thư mục dự án nằm NGOÀI repository `reaserching-diary` để tránh rác log.
