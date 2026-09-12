@@ -18,7 +18,8 @@
   "agent": {
     "research-assistant": {
       "mode": "primary",
-      "description": "Research diary manager — creates, formats, reviews notes; tracks contributions; suggests knowledge; proposes folders",
+      "color": "#9B59B6",
+      "description": "🔍 Research diary manager — creates, formats, reviews notes; tracks contributions; suggests knowledge; proposes folders",
       "permission": {
         "edit": "ask",
         "bash": {
@@ -30,10 +31,12 @@
       }
     },
     "build": {
-      "color": "#4CAF50"
+      "color": "#2E86C1",
+      "description": "🔨 Build and edit files — write, test, and implement code"
     },
     "plan": {
-      "color": "#F44336"
+      "color": "#9B59B6",
+      "description": "✏️ Plan — think, research, and outline before making changes"
     }
   }
 }
