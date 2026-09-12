@@ -15,7 +15,7 @@
 | 7 | random_ideas/ | Ideas | Flexible | 4 | Active | 2026-09-12 |
 | 8 | inbox/ | Staging | Flexible | 2 | Active | 2026-09-12 |
 | 9 | books_summaries/agile_project_management/knowledge/ | Agile Knowledge | D (Book) | 6 | Active | 2026-09-12 |
-| 10 | books_summaries/agile_project_management/notes/ | Agile Q&A | Q&A custom | 1 | Active | 2026-09-12 |
+| 10 | books_summaries/agile_project_management/notes/ | Agile Q&A | Q&A custom | 4 | Active | 2026-09-12 |
 | 11 | books_summaries/agile_project_management/practice/ | Agile Quiz | Practice custom | 0 | Active | 2026-09-12 |
 
 ## Proposed Folders (waiting for user confirmation)
@@ -26,6 +26,7 @@
 ## Recently Added
 | Date | Folder | File | Action |
 |------|--------|------|--------|
+| 2026-09-12 | books_summaries/agile_project_management/notes/ | 04-permanent-team-tuckman-decision-timing.md | created |
 | 2026-09-12 | ai_ml/ | 04-xp-engineering-practices-for-ml.md | created |
 | 2026-09-12 | books_summaries/agile_project_management/notes/ | 01-agility-mindset-and-manifesto.md | created |
 | 2026-09-12 | books_summaries/agile_project_management/{knowledge,notes,practice}/ | README.md (x3) + restructure | created |
