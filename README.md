@@ -27,53 +27,6 @@
 
 ---
 
-## 📊 Contribution Dashboard
-
-<table>
-  <tr>
-    <td align="center" width="200">
-      <h4>🔥 Streak</h4>
-      <h2>4 days</h2>
-      <p>Current: 4 | Longest: 4</p>
-    </td>
-    <td align="center" width="200">
-      <h4>📅 This Month</h4>
-      <h2>34</h2>
-      <p>interactions | 6 active days</p>
-    </td>
-    <td align="center" width="200">
-      <h4>📝 Notes</h4>
-      <h2>24</h2>
-      <p>total across all folders</p>
-    </td>
-    <td align="center" width="200">
-      <h4>📂 Folders</h4>
-      <h2>8</h2>
-      <p>active + reserved</p>
-    </td>
-  </tr>
-</table>
-
-### September 2026
-```
-Mon  Tue  Wed  Thu  Fri  Sat  Sun
- 1    2    3    4    5    6    7
- ░░   ░░   ░░   ██   ░░   ░░   ██
- 8    9   10   11   12   13   14
- ░░   ██   ██   ██   ▓▓   ░░   ░░
-15   16   17   18   19   20   21
- ░░   ░░   ░░   ░░   ░░   ░░   ░░
-22   23   24   25   26   27   28
- ░░   ░░   ░░   ░░   ░░   ░░   ░░
-29   30
- ░░   ░░
-```
-
-> `░░` = No activity | `▓▓` = Light (1-2) | `██` = Heavy (3+)
-> Full calendar: [CONTRIBUTION_CALENDAR.md](CONTRIBUTION_CALENDAR.md)
-
----
-
 Welcome to **Researching Diary**! This is a personal repository where I document my journey of exploring and researching **everything in the world**—from technology, science, and life to the fascinating little things of everyday existence.
 
 ## 🔄 Active Learning Methodology
