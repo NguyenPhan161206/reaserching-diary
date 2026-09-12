@@ -33,17 +33,17 @@
   <tr>
     <td align="center" width="200">
       <h4>🔥 Streak</h4>
-      <h2>2 days</h2>
-      <p>Current: 2 | Longest: 2</p>
+      <h2>4 days</h2>
+      <p>Current: 4 | Longest: 4</p>
     </td>
     <td align="center" width="200">
       <h4>📅 This Month</h4>
-      <h2>29</h2>
-      <p>interactions | 4 active days</p>
+      <h2>34</h2>
+      <p>interactions | 6 active days</p>
     </td>
     <td align="center" width="200">
       <h4>📝 Notes</h4>
-      <h2>12</h2>
+      <h2>24</h2>
       <p>total across all folders</p>
     </td>
     <td align="center" width="200">
@@ -60,7 +60,7 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
  1    2    3    4    5    6    7
  ░░   ░░   ░░   ██   ░░   ░░   ██
  8    9   10   11   12   13   14
- ░░   ██   ██   ░░   ░░   ░░   ░░
+ ░░   ██   ██   ██   ▓▓   ░░   ░░
 15   16   17   18   19   20   21
  ░░   ░░   ░░   ░░   ░░   ░░   ░░
 22   23   24   25   26   27   28
