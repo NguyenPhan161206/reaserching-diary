@@ -12,8 +12,8 @@
 | 4 | psychology_society/ | Psychology/Society | C (Social) | 3 | Active | 2026-09-11 |
 | 5 | books_summaries/ | Book Analysis | D (Book) | 5 | Active | 2026-09-11 |
 | 6 | personal_evaluations/ | Self-Assessment | E (Eval) | 1 | Active | 2026-09-09 |
-| 7 | random_ideas/ | Ideas | Flexible | 3 | Active | 2026-09-11 |
-| 8 | inbox/ | Staging | Flexible | 1 | Active | 2026-09-07 |
+| 7 | random_ideas/ | Ideas | Flexible | 4 | Active | 2026-09-12 |
+| 8 | inbox/ | Staging | Flexible | 2 | Active | 2026-09-12 |
 
 ## Proposed Folders (waiting for user confirmation)
 | # | Proposed Folder | Domain | Suggested Template | Reason | Proposed Date |
@@ -23,6 +23,8 @@
 ## Recently Added
 | Date | Folder | File | Action |
 |------|--------|------|--------|
+| 2026-09-12 | inbox/ | se_knowledge_agile_release_tags.md | created |
+| 2026-09-12 | random_ideas/ | 04-custom-tui-project.md | created |
 | 2026-09-11 | random_ideas/ | 01-stoicism-in-modern-life.md | created |
 | 2026-09-11 | random_ideas/ | 02-time-blocking-method.md | created |
 | 2026-09-11 | random_ideas/ | 03-imposter-syndrome.md | created |

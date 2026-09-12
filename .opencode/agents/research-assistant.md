@@ -1,6 +1,7 @@
 ---
 description: Manages research diary — creates, formats, reviews notes; tracks contributions; suggests knowledge; proposes folders
 mode: primary
+color: "#FFC107"
 permission:
   edit: ask
   bash:
