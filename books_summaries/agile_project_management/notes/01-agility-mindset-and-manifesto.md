@@ -1,35 +1,35 @@
-# Phiên 01 — Agility Mindset & Agile Manifesto
+# Session 01 — Agility Mindset & Agile Manifesto
 
-**Ngày:** 2026-09-12
-**Nguồn kiến thức:** [[../knowledge/part-1-understanding-agility.md]]
+**Date:** 2026-09-12
+**Source:** [[../knowledge/part-1-understanding-agility.md]]
 **Tags:** `#AgileMindset`, `#AgileManifesto`, `#CustomerFocus`
 
 ---
 
-## 📚 Bài giảng phiên 1: Understanding Agility
+## 📚 Session 1 Lecture: Understanding Agility
 
 ### 1. The Core Mindset Shift
 
 **"Being Agile" ≠ "Doing Agile".**
-- *Doing Agile*: chạy các ceremony (Sprint, Standup, Retro) theo khuôn → chỉ là hình thức.
-- *Being Agile*: một mindset — luôn sẵn sàng thích nghi, ưu tiên giao sản phẩm có giá trị, coi sự không chắc chắn là bình thường thay vì cố loại bỏ nó.
+- *Doing Agile*: running ceremonies (Sprint, Standup, Retro) mechanically → just a form.
+- *Being Agile*: a mindset — always ready to adapt, prioritizing delivery of valuable products, treating uncertainty as normal instead of trying to eliminate it.
 
-> **Ví dụ:** Một team "doing agile" nhưng vẫn cam kết scope cố định 6 tháng, báo cáo bằng Gantt chart → Fake Agile. Một team "being agile" sẵn sàng bỏ tính năng đã làm 2 tuần vì user feedback cho thấy nó vô dụng.
+> **Example:** A "doing agile" team still commits to a fixed 6-month scope and reports with Gantt charts → Fake Agile. A "being agile" team is willing to drop a feature built over 2 weeks because user feedback shows it's useless.
 
-**Tại sao quan trọng:** Hầu hết công ty thất bại Agile không phải vì thiếu process mà vì giữ nguyên mindset Waterfall (sợ thay đổi, coi việc dự đoán chính xác là thành công).
+**Why it matters:** Most companies fail at Agile not because of missing processes, but because they keep the Waterfall mindset (fearing change, treating accurate prediction as success).
 
 ---
 
 ### 2. Project vs. Product Mentality
 
-| Tiêu chí | Project | Product |
+| Criterion | Project | Product |
 |----------|---------|---------|
-| Focus | Outputs (đúng scope, đúng deadline) | *Outcomes* (giải quyết vấn đề user) |
-| Đo lường | % hoàn thành Gantt chart | Giá trị user nhận được |
-| Kết thúc | Khi giao hàng | Vòng đời liên tục, học và cải tiến |
-| Thay đổi | Là thảm họa cần né | Là thông tin quý giá |
+| Focus | Outputs (hit scope, hit deadline) | *Outcomes* (solve the user's problem) |
+| Measures | % complete on Gantt chart | Value the user receives |
+| Ends | At delivery | Continuous lifecycle, learn and improve |
+| Change | A disaster to avoid | Valuable information |
 
-> **AI Application:** Đừng tốn 6 tháng build một mạng neural khổng lồ trước khi biết user có cần feature đó không. Agile nói: build một heuristic baseline trước, đo, rồi mới scale.
+> **AI Application:** Don't spend 6 months building a giant neural network before knowing whether users need that feature. Agile says: build a heuristic baseline first, measure, then scale.
 
 ### 3. 4 Values (Agile Manifesto 2001)
 
@@ -38,54 +38,54 @@
 3. **Customer collaboration** > Contract negotiation
 4. **Responding to change** > Following a plan
 
-> ⚠️ Giá trị bên phải (processes, docs, contracts, plans) vẫn quan trọng — manifesto không bảo bạn xóa chúng, chỉ nói giá trị bên trái quan trọng **hơn**.
+> ⚠️ The right-hand values (processes, docs, contracts, plans) still matter — the Manifesto doesn't tell you to delete them, only that the left-hand values matter **more**.
 
-### 4. 12 Principles (nhóm lại thành 4 cụm)
+### 4. 12 Principles (grouped into 4 clusters)
 
-- **Giao hàng nhanh & liên tục:** Principle 1 (early & continuous delivery), 3 (frequent delivery, 2 tuần → 2 tháng), 8 (working software là thước đo progress).
-- **Chào đón thay đổi:** Principle 2 (chào đón changing requirements kể cả cuối dự án).
-- **Con người & hợp tác:** Principle 4 (business + dev làm việc chung hằng ngày), 6 (face-to-face là kênh tốt nhất), 12 (self-organizing teams).
-- **Kỹ thuật & bền vững:** Principle 5 (motivated individuals, trust), 7 (working software là measure of progress), 9 (continuous attention to technical excellence), 10 (simplicity), 11 (self-organizing teams).
+- **Fast & continuous delivery:** Principle 1 (early & continuous delivery), 3 (frequent delivery, 2 weeks → 2 months), 8 (working software as measure of progress).
+- **Welcome change:** Principle 2 (welcome changing requirements, even late in the project).
+- **People & collaboration:** Principle 4 (business + dev work together daily), 6 (face-to-face is the best channel), 12 (self-organizing teams).
+- **Engineering & sustainability:** Principle 5 (motivated individuals, trust), 7 (working software as the measure of progress), 9 (continuous attention to technical excellence), 10 (simplicity), 11 (self-organizing teams).
 
-> **Platinum Principles** (từ cuốn sách): Resist formality (tránh cồng kềnh giấy tờ), visualize work (bảng Kanban > spec 100 trang).
+> **Platinum Principles** (from the book): Resist formality (avoid heavyweight paperwork), visualize work (Kanban board > 100-page spec).
 
 ### 5. Why Being Agile Works Better
 
-- **Giảm rủi ro:** Giao nhỏ từng increment → cost of failure giảm mạnh. Fail sớm = thành công (tiết kiệm $$$ trước khi đổ quá nhiều).
-- **Ít lãng phí:** Cắt bỏ tasks không sinh giá trị (Lean).
-- **Chất lượng & kiểm soát tốt hơn:** Test liên tục + daily check-in → biết chính xác progress thay vì "99% xong" kiểu Gantt chart.
+- **Lower risk:** Deliver small increments → cost of failure drops sharply. Fail early = success (saves $$$ before you invest too much).
+- **Less waste:** Cut tasks that don't create value (Lean).
+- **Better quality & control:** Continuous testing + daily check-ins → you know exactly how far along you are instead of "99% done" Gantt-style.
 
 ### 6. Customer Focus = Scientific Method
 
-Product development = thí nghiệm khoa học:
+Product development = a scientific experiment:
 ```
 Form hypothesis → Build test (MVP) → Measure → Learn → Iterate
 ```
 Tools:
-- **Story Mapping:** visualize hành trình user để nhìn tổng thể product.
-- **Root Cause Analysis (Pareto 80/20, 5 Whys, Ishikawa/fishbone):** truy từ triệu chứng bề mặt về vấn đề gốc của user.
+- **Story Mapping:** visualize the user journey to see the whole product.
+- **Root Cause Analysis (Pareto 80/20, 5 Whys, Ishikawa/fishbone):** trace from surface symptoms back to the user's root problem.
 
 ---
 
-## 💡 Tổng kết phiên 1
+## 💡 Session 1 Summary
 
-- [x] Phân biệt Being vs Doing Agile, Project vs Product
-- [x] Thuộc 4 values + hiểu 12 principles theo 4 cụm
-- [x] Hiểu vì sao incremental delivery giảm rủi ro
-- [x] Nắm khung scientific method cho product development
+- [x] Distinguish Being vs Doing Agile, Project vs Product
+- [x] Memorize the 4 values + understand the 12 principles in 4 clusters
+- [x] Understand why incremental delivery reduces risk
+- [x] Master the scientific method framework for product development
 
-## ❓ Khu vực dành cho câu hỏi của bạn
+## ❓ Room for your questions
 
-> (Câu hỏi và câu trả lời sẽ được ghi vào đây trong phiên học tiếp theo)
+> (Questions and answers will be recorded here in the next learning session)
 
 ---
 
 ## 🔗 Related Topics
 
-- [[../notes/README.md]] — index các phiên Q&A
-- [[../knowledge/part-2-being-agile.md]] — bước tiếp theo: Scrum, Lean, XP
-- [SUGGESTED] Waterfall vs Agile comparison — hiểu sâu hơn bằng cách so sánh với đối thủ trực tiếp
-- [SUGGESTED] Scrum Framework Deep Dive — roles, artifacts, events cụ thể
+- [[../notes/README.md]] — Q&A session index
+- [[../knowledge/part-2-being-agile.md]] — next step: Scrum, Lean, XP
+- [SUGGESTED] Waterfall vs Agile comparison — deeper understanding by comparing with the direct opponent
+- [SUGGESTED] Scrum Framework Deep Dive — concrete roles, artifacts, events
 
 ---
-*Học bằng cách hỏi đúng câu hỏi.*
+*Learn by asking the right questions.*

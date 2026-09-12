@@ -1,218 +1,218 @@
-# Phiên 02 — Ceremony, Gantt & Core Concepts
+# Session 02 — Ceremonies, Gantt & Core Concepts
 
-**Ngày:** 2026-09-12
-**Nguồn kiến thức:** [[../knowledge/part-1-understanding-agility.md]], [[../knowledge/part-3-planning-and-execution.md]]
+**Date:** 2026-09-12
+**Source:** [[../knowledge/part-1-understanding-agility.md]], [[../knowledge/part-3-planning-and-execution.md]]
 **Tags:** `#Ceremony`, `#GanttChart`, `#Standup`, `#Retrospective`, `#AgileManifesto`
 
-> 📌 Đây là phiên Q&A đã diễn ra trong chat và bị mất do Ctrl+C — nội dung được khôi phục lại từ database opencode.
+> 📌 This Q&A session originally happened in chat and was lost to a Ctrl+C — content recovered from the opencode database.
 
 ---
 
-## ❓ Câu hỏi 1: Ceremony là gì?
+## ❓ Question 1: What is a ceremony?
 
-**Ceremony** = các cuộc họp/ghi nhận *có cấu trúc + có thời gian giới hạn (timeboxed)* mà team Agile lặp lại theo nhịp Sprint. Từ "ceremony" (nghi thức) nghe trang trọng nhưng chỉ có nghĩa: **những thời điểm cố định mà cả team quy tụ để đồng bộ và cải tiến**.
+**A ceremony** is a *structured, timeboxed* meeting that an Agile team repeats every Sprint. The word "ceremony" sounds formal, but it simply means: **the fixed moments when the whole team gathers to synchronize and improve**.
 
-### 📚 Trả lời chi tiết
+### 📚 Detailed answer
 
-4 ceremony chính của Scrum:
-| Ceremony | Mục đích | Timebox |
+The 4 main Scrum ceremonies:
+| Ceremony | Purpose | Timebox |
 |---|---|---|
-| Sprint Planning | Chọn User Stories cho sprint tới | ~ vài giờ |
-| Daily Standup | Đồng bộ 24h tới | **15 phút** |
-| Sprint Review | Demo sản phẩm cho stakeholder | ~ 1-2 giờ |
-| Sprint Retrospective | Cải tiến process | ~ 1 giờ |
+| Sprint Planning | Pick User Stories for the next sprint | a few hours |
+| Daily Standup | Synchronize the next 24h | **15 minutes** |
+| Sprint Review | Demo the product to stakeholders | ~1-2 hours |
+| Sprint Retrospective | Improve the process | ~1 hour |
 
-Quan trọng: ceremony **không phải rào cản hành chính** — chúng là cơ chế "inspect & adapt" định kỳ. Nếu team họp mà không cải tiến được gì → đó là ceremony rỗng (dấu hiệu Fake Agile #10).
+Important: ceremonies are **not administrative barriers** — they are the recurring "inspect & adapt" mechanism. If the team meets but improves nothing → that is an empty ceremony (Fake Agile sign #10).
 
 ---
 
-## ❓ Câu hỏi 2: Báo cáo bằng Gantt là gì? Tại sao phải dùng? Lợi thế & khuyết điểm?
+## ❓ Question 2: What is Gantt reporting? Why use it? Pros & cons?
 
-### 📚 Trả lời chi tiết
+### 📚 Detailed answer
 
-#### Là gì
-**Gantt chart** = biểu đồ ngang (bar chart) biểu diễn **lịch trình dự án**: mỗi task là 1 thanh nằm ngang, độ dài thanh = thời gian dự kiến, trục ngang = thời gian, các thanh nối nhau thể hiện dependency (task B chỉ bắt đầu khi task A xong).
+#### What it is
+A **Gantt chart** is a horizontal bar chart representing a **project schedule**: each task is a horizontal bar, the bar length = estimated duration, the horizontal axis = time, and connected bars show dependencies (task B only starts when task A finishes).
 
 ```
 Task A ████████████░░░░░░
-Task B ░░░░░████████████░  ← phụ thuộc A
+Task B ░░░░░████████████░  ← depends on A
 Task C ░░░░░░░██████░░░░░
         Jan   Feb   Mar
 ```
 
-#### Làm như thế nào (cách dựng)
-1. Liệt kê tất cả tasks (Work Breakdown Structure)
-2. Ước lượng thời gian mỗi task (thường theo *giờ tuyệt đối*)
-3. Xác định thứ tự + dependencies
-4. Vẽ thanh trên trục thời gian
-5. Theo dõi bằng % hoàn thành (task "90% xong" mà 3 tuần vẫn 90% 😅)
+#### How to build one
+1. List all tasks (Work Breakdown Structure)
+2. Estimate the duration of each task (usually in *absolute hours*)
+3. Define order and dependencies
+4. Draw bars on a timeline
+5. Track via % complete (a task "90% done" that stays 90% for 3 weeks 😅)
 
-#### Tại sao người ta PHẢI dùng nó? (gốc rễ lịch sử)
-Gantt ra đời ~1910s, phổ biến rộng trong **chiến tranh thế giới & xây dựng** (đập Hoover, tòa nhà) — nơi:
-- Yêu cầu **biết trước và cố định** (bản vẽ có sẵn)
-- Chi phí làm lại cực đắt
-- Đội ngũ lớn, làm theo lệnh cấp trên
+#### Why people USED to need it (historical root)
+Gantt appeared ~1910s and became widespread in **world wars & construction** (Hoover Dam, buildings) — where:
+- Requirements are **known and fixed in advance** (blueprints exist)
+- The cost of rework is extremely high
+- Teams are large and follow orders from above
 
-→ Trong thế giới đó, "lên kế hoạch chuẩn từ đầu rồi thi công đúng kế hoạch" là tối ưu. Gantt sinh ra để phục vụ tư duy đó. Người ta vẫn dùng nó vì: **ai cũng hiểu, trực quan, giúp cam kết deadline với khách hàng.** Nhưng nó giả định rằng **thế giới không đổi trong suốt dự án** — đúng với bê-tông, sai với phần mềm.
+→ In that world, "plan perfectly up front, then execute exactly" is optimal. Gantt was born to serve that mindset. People still use it because: **everyone understands it, it's visual, and it helps commit to deadlines with clients.** But it assumes that **the world won't change during the project** — true for concrete, false for software.
 
-#### Lợi thế
-- Trực quan, dễ đọc, dễ trình bày cho ban lãnh đạo
-- Thấy dependency rõ ràng → phát hiện task chặn
-- Tốt cho kiểu công việc vật lý/lặp lại
+#### Advantages
+- Visual, easy to read, easy to present to leadership
+- Shows dependencies clearly → spot blocking tasks
+- Good for physical/repetitive work types
 
-#### Khuyết điểm (với phần mềm)
-1. **% hoàn thành là ảo** — "task 90% xong" không cho biết thật sự còn bao nhiêu việc (phần mềm thì 90% hiển thị nhưng 90% logic ẩn chưa đụng)
-2. **Giả định thay đổi = thảm họa** — nhưng trong dev, thay đổi là chuyện thường
-3. **Khuyến khích báo cáo sai** — ai cũng sợ báo chậm nên "hợp thức hóa" % cho đẹp
-4. **Không đo được giá trị** — chỉ đo "đã làm bao nhiêu việc", không đo "user có hài lòng không"
-5. **Chi phí bảo trì cao** — mỗi lần đổi lịch là vẽ lại cả bảng
+#### Disadvantages (for software)
+1. **% complete is an illusion** — "task 90% done" doesn't say how much is actually left (in software 90% of UI shown, but 90% of hidden logic untouched)
+2. **Assumes change = disaster** — but in dev, change is routine
+3. **Encourages dishonest reporting** — nobody wants to report being late, so they "legitimize" nice-looking percentages
+4. **Measures no value** — only "how much work was done", not "is the user satisfied"
+5. **High maintenance cost** — every schedule change means redrawing the whole board
 
-> **Tóm lại:** Gantt đo **output** (đã làm xong bao nhiêu task), còn Agile đo **outcome** (task đó có tạo giá trị không). Đó là lý do Agile thay thế "báo cáo Gantt" bằng *Information Radiators* (bảng Kanban, burndown chart) — cập nhật bởi chính team, không cần họp báo cáo.
+> **Summary:** Gantt measures **output** (how many tasks are done), while Agile measures **outcome** (does the task create value). That is why Agile replaces "Gantt reporting" with *Information Radiators* (Kanban board, burndown chart) — updated by the team itself, no reporting meetings needed.
 
 ---
 
-## ❓ Câu hỏi 3: Standup và Retro là gì?
+## ❓ Question 3: What are Standup and Retro?
 
-### 📚 Trả lời chi tiết
+### 📚 Detailed answer
 
 #### Daily Standup (Daily Scrum)
-- **Họp 15 phút mỗi sáng, đứng họp** (đứng để... nhanh chóng hết giờ!). Chỉ dành cho Development Team.
-- **3 câu hỏi cố định:** Hôm qua làm gì? Hôm nay sẽ làm gì? Có gì cản trở (impediment)?
-- **Bản chất:** không phải báo cáo cho manager — là **micro-planning 24h tới**. Tìm ra "có ai đang bị kẹt không, team cần giúp gì".
-- ⚠️ Nếu thành "báo cáo tis tá cho sếp" → ceremony rỗng.
+- **15-minute meeting every morning, standing up** (standing up so it... ends quickly!). Only for the Development Team.
+- **3 fixed questions:** What did you do yesterday? What will you do today? Any blockers (impediments)?
+- **Its nature:** not a report to a manager — it is **micro-planning for the next 24h**. Find out "is anyone stuck, what does the team need help with".
+- ⚠️ If it becomes a "minute-by-minute status report for the boss" → empty ceremony.
 
 #### Retrospective (Sprint Retro)
-- **Họp cuối Sprint (~1 giờ)**, cả team nhìn lại **cách làm việc** (không phải sản phẩm — đó là việc của Sprint Review).
-- Framework quen thuộc: **Start / Stop / Continue** — "bắt đầu làm gì mới / ngừng làm gì / tiếp tục làm gì".
-- Là **ceremony quan trọng nhất** vì là nơi duy nhất team trực tiếp cải tiến process của chính mình, lặp lại mỗi sprint → vòng lặp cải tiến liên tục.
-- 📌 Học sâu hơn: `knowledge/part-3-planning-and-execution.md` Chapter 12.
+- **Meeting at the end of the Sprint (~1 hour)**, the whole team reviews **how it works** (not the product — that's Sprint Review's job).
+- Familiar framework: **Start / Stop / Continue** — "start doing something new / stop doing something harmful / keep doing what works".
+- It is **the most important ceremony** because it's the only place the team directly improves its own process, repeated every sprint → a continuous improvement loop.
+- 📌 Deeper: `knowledge/part-3-planning-and-execution.md` Chapter 12.
 
 ---
 
-## ❓ Câu hỏi 4: "Sự khác biệt Project vs Product có nói lên sự khác biệt của manager 2 kiểu đó không?"
+## ❓ Question 4: Does the Project vs Product distinction also show the distinction between the two types of managers?
 
-### 📚 Trả lời chi tiết
+### 📚 Detailed answer
 
-**Đúng, và đó là điểm mấu chốt** — nhưng cần tinh chỉnh: không phải "manager khác kiểu người", mà là **vai trò & văn hóa quản lý khác nhau**:
+**Yes, and that's the key point** — but with a refinement: it's not "different kinds of people as managers", but rather **different roles & management culture**:
 
 | | Project Manager (Waterfall) | Product-minded leader (Agile) |
 |---|---|---|
-| Câu hỏi hằng ngày | "Còn đúng deadline không? % xong?" | "Chúng ta đang giải quyết đúng vấn đề không?" |
-| Với team | Command & control: giao việc, kiểm tra, đôn đốc | Servant-leader: dọn chướng ngại, coach, bảo vệ team khỏi xao nhãng |
-| Với thay đổi | Cầu xin đừng đổi (đổi = phá kế hoạch) | Chào đón, đưa vào backlog ưu tiên lại |
-| Đo lường | Output: task, giờ, Gantt % | Outcome: value user nhận, velocity, working software |
-| Quan hệ khách | "Hợp đồng là thánh chỉ, đổi = kiện" | "Hợp tác, cùng học, cùng thích nghi" |
-| Team | Tạm thời, mượn người từ phòng ban | Đội cố định lâu dài, tự tổ chức |
+| Daily question | "Are we on deadline? % done?" | "Are we solving the right problem?" |
+| With the team | Command & control: assign, check, push | Servant-leader: remove blockers, coach, protect the team from distraction |
+| With change | Begs for no changes (change = broken plan) | Welcomes it, puts it on the backlog and re-prioritizes |
+| Measures | Output: tasks, hours, Gantt % | Outcome: value user receives, velocity, working software |
+| With the client | "The contract is sacred, change = lawsuit" | "Partnership, learn together, adapt together" |
+| Team | Temporary, borrowed from departments | Fixed long-term, self-organizing |
 
-> Ví dụ: Project Manager kiểu Waterfall nhìn "user đổi requirement" = tin xấu cần chặn. Servant-leader nhìn đó = **tín hiệu thị trường miễn phí**, càng sớm phát hiện càng rẻ. Nói gọn: *Project manager quản lý kế hoạch; Agile leader quản lý vấn đề của user.*
+> Example: A Waterfall Project Manager sees "user changes requirement" as bad news to block. A servant-leader sees it as **free market signal** — the earlier it's detected, the cheaper it is. In short: *Project manager manages the plan; Agile leader manages the user's problem.*
 
 ---
 
-## ❓ Câu hỏi 5: Giải thích kỹ 4 Values (Phần 3)
+## ❓ Question 5: Explain the 4 Values in detail (Part 3)
 
-### 📚 Trả lời chi tiết
+### 📚 Detailed answer
 
-Ý đồ của manifesto: **khi xung đột, ưu tiên vế trái, KHÔNG vứt vế phải.**
+The Manifesto's intent: **when they conflict, prioritize the left side — but DON'T throw away the right side.**
 
 **① Individuals & interactions > Processes & tools**
-- *Nghĩa:* Con người và trao đổi trực tiếp quan trọng hơn việc áp giáo trình quy trình & công cụ.
-- *Ví dụ:* Một team có Jira tối tân + 200 trang SOP nhưng không nói chuyện với nhau → chết. Team không có tool nhưng đồng nghiệp ngồi cạnh nhau trao đổi mỗi giờ → sống.
-- *Tại sao:* Công cụ là phương tiện; "tool triệu đô" không sửa được văn hóa.
-- *Liên hệ AI:* Mua GPU đắt tiền/autoML không thay được việc 2 kỹ sư trao đổi về dữ liệu.
+- *Meaning:* People and direct communication matter more than applying rigid processes & tools.
+- *Example:* A team with state-of-the-art Jira + 200 pages of SOP that never talk to each other → dead. A team with no tools but colleagues sitting next to each other exchanging every hour → alive.
+- *Why:* Tools are a means; a "million-dollar tool" can't fix culture.
+- *AI connection:* Buying expensive GPUs/autoML won't replace two engineers discussing data.
 
 **② Working software > Comprehensive documentation**
-- *Nghĩa:* Sản phẩm chạy được phải được ưu tiên hơn tài liệu "đầy đủ".
-- *Ví dụ:* Khách hàng vui vì thấy bản demo chạy thật sau 2 tuần, còn hơn nhận 300 trang spec sau 6 tháng.
-- *Tại sao:* Docs lỗi thời ngay khi viết xong (vì code đổi); working software là "sự thật duy nhất" (single source of truth).
-- *Lưu ý:* Vẫn cần docs tối thiểu (README, API doc) — value 2 không cấm docs, chỉ cấm docs làm *lý do* trì hoãn giao hàng.
+- *Meaning:* A working product must be prioritized over "complete" documentation.
+- *Example:* A customer is happier seeing a live demo after 2 weeks than receiving a 300-page spec after 6 months.
+- *Why:* Docs are obsolete the moment they're written (because code changes); working software is "the single source of truth".
+- *Note:* Minimum docs are still needed (README, API doc) — value 2 doesn't ban docs, it only bans docs being the *reason* to delay delivery.
 
 **③ Customer collaboration > Contract negotiation**
-- *Nghĩa:* Thay vì ngồi "chốt điều khoản" trong hợp đồng để sau này bám vào mà đòi nhau, hãy ngồi chung bàn với khách liên tục.
-- *Ví dụ:* Hợp đồng truyền thống: "Xong đúng scope = OK, đổi scope = phạt". Hợp tác Agile: khách ngồi trong Sprint Review, thấy sản phẩm, góp ý trực tiếp → cả 2 bên cùng thắng.
-- *Tại sao:* Trong sản phẩm phần mềm, khách **không thể biết họ cần gì trước khi thấy bản chạy**. Bám hợp đồng = đảm bảo cả 2 cùng thua.
+- *Meaning:* Instead of sitting down to "finalize contract terms" to later hold each other to, sit at the same table with the customer continuously.
+- *Example:* Traditional contract: "Done within scope = OK, scope change = penalty". Agile collaboration: the customer sits in Sprint Review, sees the product, gives direct feedback → both sides win.
+- *Why:* In software products, the customer **cannot know what they need before seeing something running**. Sticking to the contract = guaranteeing both sides lose.
 
 **④ Responding to change > Following a plan**
-- *Nghĩa:* Kế hoạch có giá trị nhưng khả năng phản ứng với thay đổi có giá trị hơn.
-- *Ví dụ:* Kế hoạch 6 tháng xây model X. Tháng 2 phát hiện dữ liệu không đủ cho X nhưng cực tốt cho Y (nhỏ hơn, rẻ hơn, user cần hơn). Agile: pivot sang Y. Waterfall: "kế hoạch ghi X, làm X".
-- *Tại sao:* Kế hoạch dựa trên giả định; giả định sai → bám kế hoạch = đi sai có hệ thống. "Plans are worthless, but planning is invaluable." — Eisenhower.
+- *Meaning:* The plan has value, but the ability to react to change has more.
+- *Example:* A 6-month plan to build model X. In month 2, you discover there isn't enough data for X, but the data is excellent for Y (smaller, cheaper, users need it more). Agile: pivot to Y. Waterfall: "the plan says X, we build X".
+- *Why:* Plans rely on assumptions; wrong assumptions → sticking to the plan means systematically going the wrong way. "Plans are worthless, but planning is invaluable." — Eisenhower.
 
 ---
 
-## ❓ Câu hỏi 6: Hypothesis là gì?
+## ❓ Question 6: What is a Hypothesis?
 
-### 📚 Trả lời chi tiết
+### 📚 Detailed answer
 
-**Hypothesis (giả thuyết)** = một **khẳng định có thể kiểm chứng** về mối quan hệ giữa hành động và kết quả, viết dưới dạng "Nếu... thì... bởi vì...". Trong Agile, nó biến product development thành khoa học:
+**Hypothesis** = a **falsifiable claim** about the relationship between an action and an outcome, written as "If... Then... Because...". In Agile, it turns product development into science:
 
 ```
-If   [ta xây tính năng X cho nhóm user Y]
-Then [chỉ số Z sẽ thay đổi (tăng/giảm)]
-Because [lý do ta tin điều đó]
+If   [we build feature X for user group Y]
+Then [metric Z will change (up/down)]
+Because [the reason we believe that]
 ```
 
-**Ví dụ AI cụ thể:**
-> "IF chúng ta thêm nút 'Tóm tắt tự động' cho sinh viên đang ôn thi, THEN tỉ lệ quay lại dùng app tăng 20%, BECAUSE họ đang tốn nhiều thời gian đọc tài liệu dài."
+**Concrete AI example:**
+> "IF we add an 'Auto-summarize' button for students cramming for exams, THEN the return rate of the app increases 20%, BECAUSE they spend a lot of time reading long documents."
 
-- Điểm chí mạng: hypothesis **phải đo được** (chỉ số Z định lượng) và **phải có ngày hết hạn** ("sau 1 sprint, đo…"). Không đo được = không phải hypothesis, là mong ước.
-- Kết quả thử nghiệm: **xác nhận** (thật, scale lên) hoặc **bác bỏ** (học được điều quý, pivot). Cả 2 đều là thắng — vì bạn đã tránh được việc đổ thêm $ vào thứ vô dụng.
-- Đây chính là MVP (Minimum Viable Product): build đủ nhỏ để *test giả thuyết*, không phải build đủ lớn để "gây ấn tượng".
-
----
-
-## ❓ Câu hỏi 7: 12 Principles ở đâu trong nội dung sách / thư mục?
-
-### 📚 Trả lời chi tiết
-
-**Có trong sách** — cuốn *Agile Project Management For Dummies* trình bày 12 Principles trong **Chapter 2 của Part 1**.
-
-Trong thư mục của bạn:
-- **`knowledge/part-1-understanding-agility.md`** → Chapter 2: đoạn tóm tắt ngắn: *"The 12 Principles: Emphasize early delivery, welcoming changing requirements, daily business-developer cooperation, and self-organizing teams."* (Chỉ là bản tóm lược 1 dòng).
-- **`notes/01-agility-mindset-and-manifesto.md`** → gom 12 nguyên tắc thành 4 cụm để dễ nhớ (số nguyên tắc ghi kèm từng cụm).
-
-**Nguyên văn đầy đủ 12 principles** (để bạn đối chiếu — nằm trong Agile Manifesto 2001):
-
-1. Ưu tiên cao nhất: thỏa mãn khách hàng qua giao phần mềm **sớm và liên tục**.
-2. **Chào đón yêu cầu thay đổi**, kể cả trễ trong dự án — thay đổi là lợi thế cạnh tranh.
-3. Giao phần mềm chạy được **thường xuyên**, từ 2 tuần đến 2 tháng.
-4. **Business và developers làm việc cùng nhau hằng ngày** suốt dự án.
-5. Xây dựng dự án quanh những **cá nhân được động viên** — tin họ, tạo môi trường và hỗ trợ họ.
-6. **Face-to-face** là phương thức truyền đạt hiệu quả nhất.
-7. **Working software** là thước đo tiến độ chính.
-8. Agile thúc đẩy **phát triển bền vững** — duy trì nhịp độ đều đặn vô hạn.
-9. Quan tâm liên tục đến **kỹ thuật xuất sắc và thiết kế tốt** giúp tăng agility.
-10. **Simplicity** — nghệ thuật tối đa hóa lượng việc *không làm* — là thiết yếu.
-11. Kiến trúc, yêu cầu và thiết kế tốt nhất đến từ **team tự tổ chức**.
-12. Team phản ánh **cách làm việc của mình đều đặn** và điều chỉnh hành vi cho hiệu quả hơn.
-
-> Mẹo học: đừng học thuộc 12 câu; hãy nhớ 4 nhóm + nhớ rằng *nguyên tắc 7 và 8 đối trực tiếp với 2 tội ác Waterfall: đo progress bằng "%, giờ" và ép team chạy nước rút tới kiệt sức.*
+- The critical point: a hypothesis **must be measurable** (quantifiable metric Z) and **must have an expiry date** ("after 1 sprint, measure…"). Not measurable = not a hypothesis, it's a wish.
+- Experiment outcome: **confirmed** (true, scale it up) or **rejected** (you learned something valuable, pivot). Both are wins — because you avoided pouring more $ into something useless.
+- This is exactly MVP (Minimum Viable Product): build small enough to *test the hypothesis*, not big enough to "impress".
 
 ---
 
-## 💡 Tổng kết phiên
+## ❓ Question 7: Where are the 12 Principles in the book / the folder?
 
-- [x] Phân biệt được ceremony thật vs ceremony rỗng ("inspect & adapt")
-- [x] Hiểu Gantt chart: lợi thế (trực quan, dependency), khuyết điểm với software (%, giả định tĩnh, báo cáo sai)
-- [x] Standup = micro-planning 24h, Retro = nơi team cải tiến process (Start/Stop/Continue)
-- [x] Project Manager = quản lý kế hoạch; Agile leader = quản lý vấn đề user
-- [x] Giải thích sâu 4 values của Manifesto
-- [x] Nắm framework "If-Then-Because" của Hypothesis + liên hệ MVP
-- [x] Nhận diện vị trí 12 Principles trong sách + thư mục
+### 📚 Detailed answer
 
-## 🔄 Câu hỏi tiếp theo đề xuất
+**They are in the book** — *Agile Project Management For Dummies* presents the 12 Principles in **Chapter 2 of Part 1**.
 
-1. [SUGGESTED] **Burndown chart vs Burnup chart** — 2 information radiator thay thế Gantt, cách đọc để biết team có "đang đi đúng hướng" không.
-2. [SUGGESTED] **Definition of Done (DoD)** — vì phần 3 nhắc "Done means Done" nhưng chưa giải thích vì sao thiếu DoD là nguồn gốc technical debt.
-3. [SUGGESTED] **Waterfall vs Agile đấu trực diện trên cùng 1 ví dụ** — để thấy đúng lúc nào nên dùng cái nào (Agile không phải luôn đúng!).
+In your folder:
+- **`knowledge/part-1-understanding-agility.md`** → Chapter 2: short summary: *"The 12 Principles: Emphasize early delivery, welcoming changing requirements, daily business-developer cooperation, and self-organizing teams."* (a one-line summary).
+- **`notes/01-agility-mindset-and-manifesto.md`** → the 12 principles grouped into 4 clusters for easy recall (principle numbers noted per cluster).
+
+**The full 12 principles, verbatim** (for you to cross-check — from the Agile Manifesto 2001):
+
+1. Our highest priority is to satisfy the customer through **early and continuous delivery** of valuable software.
+2. **Welcome changing requirements**, even late in development — change is a competitive advantage.
+3. Deliver working software **frequently**, from a couple of weeks to a couple of months.
+4. **Business people and developers work together daily** throughout the project.
+5. Build projects around **motivated individuals** — give them the environment and support they need, and trust them.
+6. The most efficient and effective method of conveying information is **face-to-face conversation**.
+7. **Working software** is the primary measure of progress.
+8. Agile processes promote **sustainable development** — maintain a constant, indefinite pace.
+9. Continuous attention to **technical excellence and good design** enhances agility.
+10. **Simplicity** — the art of maximizing the amount of work *not done* — is essential.
+11. The best architectures, requirements, and designs emerge from **self-organizing teams**.
+12. At regular intervals, the team reflects on **how to become more effective**, then tunes and adjusts its behavior accordingly.
+
+> Study tip: don't memorize 12 sentences; remember the 4 clusters + that *principles 7 and 8 directly counter the 2 Waterfall sins: measuring progress by "%, hours" and running the team ragged until burnout.*
+
+---
+
+## 💡 Session summary
+
+- [x] Distinguish real ceremonies vs empty ceremonies ("inspect & adapt")
+- [x] Understand Gantt chart: advantages (visual, dependencies), disadvantages for software (%, static assumptions, dishonest reporting)
+- [x] Standup = 24h micro-planning, Retro = where the team improves process (Start/Stop/Continue)
+- [x] Project Manager = manages the plan; Agile leader = manages the user problem
+- [x] Deep explanation of the 4 Manifesto values
+- [x] Master the "If-Then-Because" hypothesis framework + its link to MVP
+- [x] Identify where the 12 Principles live in the book + folder
+
+## 🔄 Suggested next questions
+
+1. [SUGGESTED] **Burndown vs Burnup charts** — the 2 information radiators that replace Gantt, how to read them to know if the team is "heading the right way".
+2. [SUGGESTED] **Definition of Done (DoD)** — Part 3 mentions "Done means Done" but doesn't explain why missing DoD is a source of technical debt.
+3. [SUGGESTED] **Waterfall vs Agile head-to-head on the same example** — to see exactly when to use which (Agile is not always right!).
 
 ---
 
 ## 🔗 Related Topics
 
-- [[01-agility-mindset-and-manifesto.md]] — Phiên 01: mindset, 4 values, 12 principles (4 cụm)
-- [[03-scrum-framework-and-four-ceremonies.md]] — Phiên 03: Scrum, status report, 4 ceremonies chi tiết
+- [[01-agility-mindset-and-manifesto.md]] — Session 01: mindset, 4 values, 12 principles (4 clusters)
+- [[03-scrum-framework-and-four-ceremonies.md]] — Session 03: Scrum, status reports, 4 ceremonies in detail
 - [[../knowledge/part-1-understanding-agility.md]]
 - [[../knowledge/part-3-planning-and-execution.md]]
-- [[README.md]] — index các phiên Q&A
+- [[README.md]] — Q&A session index
 
 ---
-*Học bằng cách hỏi đúng câu hỏi.*
+*Learn by asking the right questions.*

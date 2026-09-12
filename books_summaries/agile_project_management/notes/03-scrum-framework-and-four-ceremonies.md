@@ -1,151 +1,151 @@
-# Phiên 03 — Scrum Framework & 4 Ceremony Chi Tiết
+# Session 03 — The Scrum Framework & The 4 Ceremonies in Detail
 
-**Ngày:** 2026-09-12
-**Nguồn kiến thức:** [[../knowledge/part-2-being-agile.md]], [[../knowledge/part-3-planning-and-execution.md]]
+**Date:** 2026-09-12
+**Source:** [[../knowledge/part-2-being-agile.md]], [[../knowledge/part-3-planning-and-execution.md]]
 **Tags:** `#Scrum`, `#DailyStandup`, `#SprintPlanning`, `#SprintReview`, `#SprintRetrospective`, `#StatusReport`
 
-> 📌 Đây là phiên Q&A đã diễn ra trong chat và bị mất do Ctrl+C — nội dung được khôi phục lại từ database opencode.
+> 📌 This Q&A session originally happened in chat and was lost to a Ctrl+C — content recovered from the opencode database.
 
 ---
 
-## ❓ Câu hỏi 1: Scrum là gì?
+## ❓ Question 1: What is Scrum?
 
-### 📚 Trả lời chi tiết
+### 📚 Detailed answer
 
-**Scrum** là một **framework** (khuôn khổ) Agile phổ biến nhất, dùng để quản lý công việc tri thức phức tạp. Không phải quy trình cứng nhắc — là "bộ khung" bạn đổ đầy bằng team của mình.
+**Scrum** is the most popular **framework** (not a rigid process) in Agile, used to manage complex knowledge work. It's a "skeleton" you fill with your own team.
 
-Scrum gồm 3 trụ cột (**3 pillars**):
-- **Transparency**: mọi thứ nhìn thấy được (backlog, bảng Kanban, burndown)
-- **Inspection**: kiểm tra thường xuyên (Standup mỗi ngày, Review cuối sprint)
-- **Adaptation**: điều chỉnh ngay khi phát hiện lệch (Retro mỗi sprint)
+Scrum rests on **3 pillars**:
+- **Transparency**: everything is visible (backlog, Kanban board, burndown)
+- **Inspection**: frequent checks (Standup daily, Review at sprint end)
+- **Adaptation**: adjust immediately on detecting drift (Retro every sprint)
 
-**Cấu trúc 1 Sprint:**
+**Structure of 1 Sprint:**
 ```
-Sprint (1-4 tuần, timeboxed)
-├── Sprint Planning      → chọn User Stories, chốt mục tiêu
-├── Daily Standup (mỗi ngày) → đồng bộ 24h
-├── Sprint Review        → demo cho stakeholder, nhận feedback
-└── Sprint Retrospective → team cải tiến process
+Sprint (1-4 weeks, timeboxed)
+├── Sprint Planning      → pick User Stories, set the goal
+├── Daily Standup (every day) → synchronize 24h
+├── Sprint Review        → demo to stakeholders, get feedback
+└── Sprint Retrospective → the team improves its process
 ```
 
-**3 vai trò** (roles):
-| Role | Sở hữu | Trách nhiệm |
+**3 roles:**
+| Role | Owns | Responsibility |
 |---|---|---|
-| Product Owner (PO) | "What" | Tối ưu giá trị backlog, quyết ưu tiên, nói "không" với stakeholder |
-| Scrum Master (SM) | "Process" | Servant-leader: dọn impediment, coach, không quản lý người |
-| Development Team | "How" | Tự tổ chức, tự phân việc, cross-functional |
+| Product Owner (PO) | "What" | Optimizes backlog value, decides priorities, says "no" to stakeholders |
+| Scrum Master (SM) | "Process" | Servant-leader: removes impediments, coaches, does not manage people |
+| Development Team | "How" | Self-organizing, self-assigns work, cross-functional |
 
-**Artifacts** (sản phẩm quản lý): Product Backlog (danh sách ưu tiên), Sprint Backlog (việc của sprint này), Increment (phần sản phẩm hoàn thiện "Done").
+**Artifacts** (management products): Product Backlog (prioritized list), Sprint Backlog (this sprint's work), Increment (the "Done" product increment).
 
-📌 Nguồn trong thư mục: `knowledge/part-2-being-agile.md` (Chapter 5 mục Scrum) và `knowledge/part-3-planning-and-execution.md` (ceremonies).
-
----
-
-## ❓ Câu hỏi 2: "Báo cáo tis" / status report là gì?
-
-### 📚 Trả lời chi tiết
-
-**Status report** = báo cáo trạng thái kiểu truyền thống: mỗi người/tuần liệt kê *"Tôi đã làm gì, đến đâu rồi, theo % đúng kế hoạch"* để cấp trên kiểm soát.
-
-**Vấn đề của nó trong Agile:**
-- Standup KHÔNG phải status report lên sếp. Nếu team đứng họp mà nói chuyện với trạng thái "sếp đang nghe" → thành "báo cáo tí tách" — lãng phí 15 phút và tạo văn hóa phòng thủ (ai cũng kể công, giấu khó khăn).
-- Standup đúng nghĩa là **team nói chuyện với nhau**: "tôi kẹt chỗ này, ai giúp được?" → impediment được tháo ngay, không cần chờ báo cáo cuối tuần.
-
-> Công thức phân biệt: *Status report = thông tin đi LÊN để ai đó kiểm soát. Standup = thông tin đi NGANG để team tự phối hợp.*
+📌 Sources in the folder: `knowledge/part-2-being-agile.md` (Chapter 5, the Scrum section) and `knowledge/part-3-planning-and-execution.md` (ceremonies).
 
 ---
 
-## ❓ Câu hỏi 3: Giải thích kỹ 4 ceremony của Scrum
+## ❓ Question 2: What is a "status report"?
 
-### 📚 Trả lời chi tiết
+### 📚 Detailed answer
 
-Một sprint chuẩn có **4 event** (Scrum Guide gọi Sprint là "container" chứa cả 4):
+**Status report** = traditional status reporting: each person/week lists *"What I did, how far along I am, in % vs the plan"* for superiors to control.
 
-### 🔷 A. Sprint Planning (đầu sprint)
-- **Ai:** PO + Development Team (+ SM hỗ trợ).
-- **Timebox:** ~2 giờ cho mỗi tuần sprint (sprint 2 tuần → họp ~4 giờ).
-- **Trả lời 2 câu:** *"Chúng ta sẽ làm gì (Which)?"* và *"Làm thế nào (How)?"*
-- **Diễn biến:**
-  1. PO trình bày các User Stories ưu tiên cao nhất từ Product Backlog kèm rõ **mục tiêu sprint (Sprint Goal)**.
-  2. Team chọn stories đủ để cam kết trong thời gian có (based on **Velocity**).
-  3. Team tự chia task (đừng để manager giao!) và ước lượng.
-- **Tại sao quan trọng:** là nơi duy nhất team "cam kết" scope của sprint — nếu bỏ qua, sprint không có điểm xuất phát rõ.
+**Its problem in Agile:**
+- A Standup is NOT a status report to the boss. If the team meets but speaks with a "the boss is listening" attitude → it becomes a "tick-tock status report" — a waste of 15 minutes that creates a defensive culture (everyone brags about achievements and hides difficulties).
+- A proper Standup is **the team talking to each other**: "I'm stuck here, can anyone help?" → impediments are cleared immediately, no need to wait for a weekly report.
 
-> **Ví dụ:** Sprint Goal: *"Người dùng mới có thể đăng ký bằng Google trong 1 phút."* → Stories: "Đăng nhập OAuth", "Tạo profile mặc định", "Email chào mừng". Team nhận thấy đã ước lượng xong 2 story, story 3 chưa rõ → đưa lên bàn, thống nhất bỏ đợt này cho chắc "Done".
-
-### 🔷 B. Daily Standup / Daily Scrum (MỖI ngày trong sprint)
-- **Ai:** Chỉ Development Team (PO/SM tham gia tùy, KHÔNG bắt buộc). Có thể không cần SM.
-- **Timebox:** **15 phút. Đứng.** Đúng giờ, kể cả trễ.
-- **3 câu hỏi:**
-  1. Hôm qua tôi làm gì (đóng góp cho Sprint Goal)?
-  2. Hôm nay tôi sẽ làm gì?
-  3. Có impediment gì đang cản tôi?
-- **Không phải**: báo cáo sếp, không giải quyết vấn đề ngay tại họp (việc sâu → để breakout sau họp).
-- **Tại sao quan trọng:** là "nhịp tim" 24h — cho phép Inspection micro: nếu ai đó lệch hướng, team phát hiện trong ngày thay vì cuối tuần.
-
-> **Ví dụ:** "Hôm qua tôi xong API login. Hôm nay làm trang profile. Cản trở: chưa có test credentials từ team backend — cần ai đó cấp giúp." → Một dev khác: "Để tôi cấp sau 10 phút." Problem chết ngay trong họp.
-
-### 🔷 C. Sprint Review (cuối sprint — focus SẢN PHẨM)
-- **Ai:** Team + **stakeholders/khách hàng** (bắt buộc có!) + PO.
-- **Timebox:** ~1 giờ/tuần sprint (sprint 2 tuần → ~2 giờ).
-- **Nội dung:**
-  1. Team demo **working software** (không phải slide!) — phần nào "Done".
-  2. Stakeholder xem, thử, cho feedback.
-  3. PO cập nhật Product Backlog dựa trên feedback (thêm/đổi/ưu tiên lại).
-- **Tại sao quan trọng:** là cơ chế **thu feedback sớm nhất có thể** — "building the wrong thing" là rủi ro chết người nhất; Review là vaccine chống nó. Chỗ này khách "ngồi chung bàn" ở Value #3 của Manifesto.
-
-> **Ví dụ:** Demo xong tính năng "đăng ký Google", khách: "Ồ hay, nhưng tụi mình cần cả đăng nhập bằng số điện thoại nữa." → PO ghi story mới, ưu tiên cao vào backlog → sprint sau team làm. Nếu không có Review, team làm xong mới biết khách cần thêm cái khác → tốn 1 sprint.
-
-### 🔷 D. Sprint Retrospective (cuối sprint — focus QUY TRÌNH)
-- **Ai:** Chỉ team (KHÔNG stakeholder). SM facilitate.
-- **Timebox:** ~45-60 phút.
-- **Nội dung:** nhìn lại CÁCH team làm việc trong sprint vừa rồi. Framework kinh điển: **Start / Stop / Continue**:
-  - *Start:* điều mới nên làm (vd: thêm code review)
-  - *Stop:* thói quen hại (vd: commit thẳng vào main)
-  - *Continue:* giữ nguyên (vd: pair programming hiệu quả)
-- **Quan trọng nhất:** chọn **1-3 action item CỤ THỂ, có chủ sở hữu** để sprint sau thực hiện ngay. Retro mà không có action item = họp suông.
-- **Tại sao quan trọng:** là vòng **Adaptation** của vòng lặp — chỗ duy nhất team nâng cấp cách làm việc. "Work smarter" xảy ra ở đây, không phải ở chỗ code.
-
-> **Ví dụ:** Team nhận ra sprint vừa rồi 3 lần deadline trễ vì story "xong" nhưng lại vỡ ở production. → Action item: *"Lần sau, story chỉ Done khi pass CI + chạy được trên staging — assign: Minh, deadline: trước Sprint Planning tới."*
+> Rule of thumb: *Status report = information going UP so someone can control. Standup = information going ACROSS so the team can coordinate itself.*
 
 ---
 
-## 🔄 Tóm tắt 4 ceremony bằng 4 câu
+## ❓ Question 3: Explain the 4 Scrum ceremonies in detail
 
-| Ceremony | Câu hỏi trung tâm | Focus |
+### 📚 Detailed answer
+
+A standard sprint has **4 events** (the Scrum Guide calls the Sprint a "container" holding all 4):
+
+### 🔷 A. Sprint Planning (start of sprint)
+- **Who:** PO + Development Team (+ SM assists).
+- **Timebox:** ~2 hours per week of sprint (2-week sprint → ~4-hour meeting).
+- **Answers 2 questions:** *"What will we do (Which)?"* and *"How will we do it (How)?"*
+- **Flow:**
+  1. PO presents the highest-priority User Stories from the Product Backlog, clearly stating the **Sprint Goal**.
+  2. The team picks stories it can commit to in the available time (based on **Velocity**).
+  3. The team splits tasks itself (don't let the manager assign!) and estimates.
+- **Why it matters:** it's the only place the team "commits" to the sprint scope — skip it and the sprint has no clear starting point.
+
+> **Example:** Sprint Goal: *"New users can sign up with Google within 1 minute."* → Stories: "OAuth login", "Default profile creation", "Welcome email". The team has estimated 2 stories; story 3 is unclear → bring it to the table and agree to drop it this round to guarantee "Done".
+
+### 🔷 B. Daily Standup / Daily Scrum (EVERY day of the sprint)
+- **Who:** Development Team only (PO/SM join optionally, not required). SM may not even be needed.
+- **Timebox:** **15 minutes. Standing.** On time, even when late.
+- **3 questions:**
+  1. What did I do yesterday (contributing to the Sprint Goal)?
+  2. What will I do today?
+  3. Are there any impediments blocking me?
+- **It is not**: reporting to the boss, nor solving problems right in the meeting (deep work → breakout after the meeting).
+- **Why it matters:** it's the 24h "heartbeat" — enables micro-inspection: if someone drifts off course, the team detects it in a day instead of at the end of the week.
+
+> **Example:** "Yesterday I finished the login API. Today I'm building the profile page. Blocker: no test credentials from the backend team yet — can someone provide them?" → Another dev: "I'll issue them in 10 minutes." Problem dies right in the meeting.
+
+### 🔷 C. Sprint Review (end of sprint — product focus)
+- **Who:** Team + **stakeholders/customers** (mandatory!) + PO.
+- **Timebox:** ~1 hour per week of sprint (2-week sprint → ~2 hours).
+- **Content:**
+  1. The team demos **working software** (not slides!) — whatever is "Done".
+  2. Stakeholders look, try, and give feedback.
+  3. PO updates the Product Backlog based on feedback (add/change/re-prioritize).
+- **Why it matters:** it's the **earliest possible feedback mechanism** — "building the wrong thing" is the deadliest risk; Review is the vaccine against it. This is where the customer "sits at the same table" per Manifesto Value #3.
+
+> **Example:** After demoing the "Google sign-up" feature, the customer: "Oh nice, but we also need phone-number login." → PO writes a new story, high priority in the backlog → the team does it next sprint. Without a Review, the team would only find out the customer needs something else after finishing — costing a whole sprint.
+
+### 🔷 D. Sprint Retrospective (end of sprint — process focus)
+- **Who:** Team only (NO stakeholders). SM facilitates.
+- **Timebox:** ~45-60 minutes.
+- **Content:** review HOW the team worked in the past sprint. Classic framework: **Start / Stop / Continue**:
+  - *Start:* new things to do (e.g., add code review)
+  - *Stop:* harmful habits (e.g., committing straight to main)
+  - *Continue:* things to keep (e.g., effective pair programming)
+- **Most important:** pick **1-3 SPECIFIC action items with an owner** to implement immediately next sprint. A Retro without action items = a pointless meeting.
+- **Why it matters:** it's the **Adaptation** loop in the cycle — the only place the team upgrades its way of working. "Work smarter" happens here, not at the code.
+
+> **Example:** The team notices that in the past sprint, 3 deadlines slipped because stories were "done" but broke in production. → Action item: *"From now on, a story is only Done when it passes CI and runs on staging — owner: Minh, deadline: before next Sprint Planning."*
+
+---
+
+## 🔄 The 4 ceremonies in 4 sentences
+
+| Ceremony | Central question | Focus |
 |---|---|---|
-| Sprint Planning | *"Chúng ta làm gì, và làm gì tiếp?"* | Quyết định |
-| Daily Standup | *"24h tới, ai cần giúp gì?"* | Đồng bộ |
-| Sprint Review | *"Sản phẩm này có đúng ý khách không?"* | Sản phẩm + feedback |
-| Retrospective | *"Cách chúng ta làm việc có tốt hơn chưa?"* | Quy trình |
+| Sprint Planning | *"What do we do, and what next?"* | Decision |
+| Daily Standup | *"Next 24h, who needs help?"* | Synchronization |
+| Sprint Review | *"Is this product what the customer wanted?"* | Product + feedback |
+| Retrospective | *"Is our way of working getting better?"* | Process |
 
-> 💡 Mẹo nhớ: **Planning = nhìn tới, Review = nhìn sản phẩm, Retro = nhìn chính team. Standup giữ cho cả 3 chạy đúng hướng mỗi ngày.**
+> 💡 Memory trick: **Planning looks forward, Review looks at the product, Retro looks at the team itself. Standup keeps all three on track every day.**
 
 ---
 
-## 💡 Tổng kết phiên
+## 💡 Session summary
 
-- [x] Hiểu Scrum = framework với 3 pillars (Transparency, Inspection, Adaptation)
-- [x] Nắm 3 roles (PO/SM/Dev Team) + artifacts (Product/Sprint Backlog, Increment)
-- [x] Phân biệt Standup (đi NGANG, phối hợp) vs Status report (đi LÊN, kiểm soát)
-- [x] Giải thích chi tiết 4 ceremony: ai, timebox, diễn biến, tại sao quan trọng
-- [x] Retro phải có action item cụ thể kèm chủ sở hữu — nếu không là họp suông
+- [x] Understand Scrum = a framework with 3 pillars (Transparency, Inspection, Adaptation)
+- [x] Master the 3 roles (PO/SM/Dev Team) + artifacts (Product/Sprint Backlog, Increment)
+- [x] Distinguish Standup (ACROSS, coordination) vs Status report (UP, control)
+- [x] Explain all 4 ceremonies in detail: who, timebox, flow, why each matters
+- [x] A Retro must end with concrete action items + owners — otherwise it's a pointless meeting
 
-## 🔄 Câu hỏi tiếp theo đề xuất
+## 🔄 Suggested next questions
 
-1. [SUGGESTED] **Velocity & Story Points** — vì Sprint Planning "chọn bao nhiêu story" dựa vào nó; không hiểu velocity thì planning thành đoán mò.
-2. [SUGGESTED] **Definition of Done (DoD)** — thứ quyết định "story này có tính 'Done' không" trong Review.
-3. [SUGGESTED] **Burndown chart** — information radiator đo mỗi ngày xem team có kịp sprint goal không.
+1. [SUGGESTED] **Velocity & Story Points** — Sprint Planning "picks how many stories" based on it; without understanding velocity, planning becomes guesswork.
+2. [SUGGESTED] **Definition of Done (DoD)** — what decides whether a story counts as "Done" in Review.
+3. [SUGGESTED] **Burndown chart** — the information radiator that measures daily whether the team will hit the sprint goal.
 
 ---
 
 ## 🔗 Related Topics
 
-- [[01-agility-mindset-and-manifesto.md]] — Phiên 01: mindset, Manifesto
-- [[02-ceremony-gantt-core-concepts.md]] — Phiên 02: ceremony tổng quan, Gantt, hypothesis
+- [[01-agility-mindset-and-manifesto.md]] — Session 01: mindset, Manifesto
+- [[02-ceremony-gantt-core-concepts.md]] — Session 02: ceremonies overview, Gantt, hypothesis
 - [[../knowledge/part-2-being-agile.md]]
 - [[../knowledge/part-3-planning-and-execution.md]]
-- [[README.md]] — index các phiên Q&A
+- [[README.md]] — Q&A session index
 
 ---
-*Học bằng cách hỏi đúng câu hỏi.*
+*Learn by asking the right questions.*

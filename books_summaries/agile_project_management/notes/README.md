@@ -1,44 +1,44 @@
-# 📝 Q&A Notes — Nhật Ký Hỏi & Đáp
+# 📝 Q&A Notes — Question & Answer Journal
 
-**Purpose:** Lưu trữ các phiên học Q&A về Agile. Mỗi file = một phiên/topic: câu hỏi của user + câu trả lời chi tiết theo chuẩn depth (explanation + example + tại sao quan trọng).
+**Purpose:** Store Agile Q&A learning sessions. Each file = one session/topic: the user's questions + detailed answers following the depth standard (explanation + example + why it matters).
 
-**Tags:** `#AgileQA`, `#MuốnHọcSâu`
+**Tags:** `#AgileQA`, `#DeepLearning`
 
 ---
 
-## Format note
+## Note format
 
 ```markdown
-# [Phiên] — [Topic]
+# [Session] — [Topic]
 
-**Ngày:** YYYY-MM-DD
-**Nguồn kiến thức:** [[knowledge/...]]
+**Date:** YYYY-MM-DD
+**Source:** [[knowledge/...]]
 
-## ❓ Câu hỏi [số]: [Câu hỏi]
-### 📚 Trả lời chi tiết
-- Explanation (cho sv năm 3-4)
+## ❓ Question [number]: [Question]
+### 📚 Detailed answer
+- Explanation (for a junior/mid-level student)
 - Example / code / formula
-- Tại sao quan trọng
+- Why it matters
 
-## 💡 Tổng kết phiên
-- Kiến thức đã nắm
-- Câu hỏi tiếp theo
+## 💡 Session summary
+- What was learned
+- Next questions
 ```
 
-## 📖 Các phiên Q&A
+## 📖 Q&A sessions
 
-| # | Phiên | Topic | Ngày | Đầu ra |
-|---|-------|-------|------|--------|
-| 01 | [Agility Mindset & Manifesto](01-agility-mindset-and-manifesto.md) | 4 giá trị, 12 nguyên tắc, mindset | 2026-09-12 | Lesson 1 |
+| # | Session | Topic | Date | Output |
+|---|---------|-------|------|--------|
+| 01 | [Agility Mindset & Manifesto](01-agility-mindset-and-manifesto.md) | 4 values, 12 principles, mindset | 2026-09-12 | Lesson 1 |
 | 02 | [Ceremony, Gantt & Core Concepts](02-ceremony-gantt-core-concepts.md) | Ceremony, Gantt chart, Standup/Retro, 4 Values, Hypothesis, 12 Principles | 2026-09-12 | Lesson 2 |
-| 03 | [Scrum Framework & 4 Ceremony Chi Tiết](03-scrum-framework-and-four-ceremonies.md) | Scrum 3 pillars, roles, status report, 4 ceremonies | 2026-09-12 | Lesson 3 |
+| 03 | [Scrum Framework & The 4 Ceremonies in Detail](03-scrum-framework-and-four-ceremonies.md) | Scrum 3 pillars, roles, status report, 4 ceremonies | 2026-09-12 | Lesson 3 |
 
 ---
 
 ## 🔗 Related
 
-- [[../knowledge/README.md]] — nơi chứa nội dung gốc
-- [[../practice/README.md]] — quiz kiểm tra sau mỗi phiên
+- [[../knowledge/README.md]] — contains the original content
+- [[../practice/README.md]] — quiz to test after each session
 
 ---
-*Học bằng cách hỏi đúng câu hỏi.*
+*Learn by asking the right questions.*
