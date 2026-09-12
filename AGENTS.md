@@ -83,6 +83,9 @@ Agent PHẢI chọn đúng template dựa trên domain:
 | Books | books_summaries/ | Template D: Book Summary |
 | Self-evaluation | personal_evaluations/ | Template E: Evaluation Log |
 | Ideas, Inbox, Random | random_ideas/, inbox/ | Flexible |
+| Agile — Knowledge | books_summaries/agile_project_management/knowledge/ | Template D (Book) |
+| Agile — Q&A Notes | books_summaries/agile_project_management/notes/ | Q&A custom (xem notes/README.md) |
+| Agile — Practice | books_summaries/agile_project_management/practice/ | Practice custom (xem practice/README.md) |
 
 Xem NOTE_TEMPLATE.md để biết chi tiết từng template.
 

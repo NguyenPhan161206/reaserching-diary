@@ -1,7 +1,7 @@
 # Research Areas — Tracking & Proposals
 
 > Auto-maintained by Agent. DO NOT manually edit.
-> Last updated: 2026-09-11
+> Last updated: 2026-09-12
 
 ## Active Folders
 | # | Folder | Domain | Template | Notes | Status | Last Updated |
@@ -14,6 +14,9 @@
 | 6 | personal_evaluations/ | Self-Assessment | E (Eval) | 1 | Active | 2026-09-09 |
 | 7 | random_ideas/ | Ideas | Flexible | 4 | Active | 2026-09-12 |
 | 8 | inbox/ | Staging | Flexible | 2 | Active | 2026-09-12 |
+| 9 | books_summaries/agile_project_management/knowledge/ | Agile Knowledge | D (Book) | 6 | Active | 2026-09-12 |
+| 10 | books_summaries/agile_project_management/notes/ | Agile Q&A | Q&A custom | 1 | Active | 2026-09-12 |
+| 11 | books_summaries/agile_project_management/practice/ | Agile Quiz | Practice custom | 0 | Active | 2026-09-12 |
 
 ## Proposed Folders (waiting for user confirmation)
 | # | Proposed Folder | Domain | Suggested Template | Reason | Proposed Date |
@@ -23,6 +26,8 @@
 ## Recently Added
 | Date | Folder | File | Action |
 |------|--------|------|--------|
+| 2026-09-12 | books_summaries/agile_project_management/notes/ | 01-agility-mindset-and-manifesto.md | created |
+| 2026-09-12 | books_summaries/agile_project_management/{knowledge,notes,practice}/ | README.md (x3) + restructure | created |
 | 2026-09-12 | inbox/ | se_knowledge_agile_release_tags.md | created |
 | 2026-09-12 | random_ideas/ | 04-custom-tui-project.md | created |
 | 2026-09-11 | random_ideas/ | 01-stoicism-in-modern-life.md | created |

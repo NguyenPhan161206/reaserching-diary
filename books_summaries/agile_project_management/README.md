@@ -20,13 +20,26 @@
 - **Core thesis:** Traditional project management is too rigid for the modern knowledge economy. Agility allows teams to navigate uncertainty, reduce waste, and deliver products that customers actually want.
 - **Target audience:** IT professionals, Project Managers, and Developers (including AI Engineers) looking to transition to Agile or fix broken Agile implementations.
 
-## 🗂️ Book Structure (Deep Dive)
-- [Part 1: Understanding Agility](part-1-understanding-agility.md)
-- [Part 2: Being Agile](part-2-being-agile.md)
-- [Part 3: Agile Planning and Execution](part-3-planning-and-execution.md)
-- [Part 4: Agility Management](part-4-agility-management.md)
-- [Part 5: Ensuring Success](part-5-ensuring-success.md)
-- [Part 6: The Part of Tens](part-6-the-part-of-tens.md)
+## 🗂️ Cấu trúc thư mục
+```
+agile_project_management/
+├── knowledge/   ← Kho kiến thức Agile (notes phân tích sâu, sẽ cập nhật thêm)
+├── notes/       ← Q&A logs: {câu hỏi của user, câu trả lời chi tiết}
+└── practice/    ← Quiz & self-assessment kiểm tra retention
+```
+
+## 📖 Book Structure — Agile Project Management For Dummies (Deep Dive)
+- [Knowledge Base Index](knowledge/README.md)
+- [Part 1: Understanding Agility](knowledge/part-1-understanding-agility.md)
+- [Part 2: Being Agile](knowledge/part-2-being-agile.md)
+- [Part 3: Agile Planning and Execution](knowledge/part-3-planning-and-execution.md)
+- [Part 4: Agility Management](knowledge/part-4-agility-management.md)
+- [Part 5: Ensuring Success](knowledge/part-5-ensuring-success.md)
+- [Part 6: The Part of Tens](knowledge/part-6-the-part-of-tens.md)
+
+## 🗣️ Q&A Sessions
+- [Phiên học Q&A](notes/README.md)
+- [Phiên 01: Agility Mindset & Manifesto](notes/01-agility-mindset-and-manifesto.md)
 
 ## 📝 Research Journey
 - **Why I read this:** As an AI Engineer, building a technically sound model is useless if it doesn't solve the user's problem. Agile helps align tech development with business value.
