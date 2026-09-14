@@ -142,6 +142,101 @@
 
 ---
 
+## TEMPLATE F: IELTS Listening Practice
+**Sử dụng cho:** `ielts_training/listening/`
+
+```markdown
+# IELTS Listening Practice — [Source Title]
+
+**Created Date:** YYYY-MM-DD
+**Source:** [YouTube/Podcast/Article title + link]
+**Duration:** XX:XX
+**Tags:** `#IELTS`, `#Listening`, `#TechTopic` / `#BusinessTopic`
+**Difficulty:** Progressive (Easy → Hard across N parts)
+**Status:** Draft | Review | Complete
+
+---
+
+## 🎧 Source Overview
+
+| Chapter | Timestamp | Topic |
+|---------|-----------|-------|
+| 1 | 0:00–X:XX | Topic summary |
+| ... | ... | ... |
+
+---
+
+## PART 1 — [Exercise Type] (Easy)
+
+> **Skill tested:** [e.g., Catching specific details]
+> **Instructions:** [Standard IELTS instructions]
+> **Source chapters:** X:XX–Y:YY
+
+### Questions 1–N
+
+[Questions in IELTS format]
+
+---
+
+### ✅ Answer Key
+
+| Q | Answer | Explanation |
+|---|--------|-------------|
+| 1 | **answer** | Source quote or explanation |
+
+---
+
+### 📝 Vocabulary — Part N
+
+| Word/Phrase | Meaning | Example from Transcript |
+|-------------|---------|------------------------|
+| **term** | definition | "quote" |
+
+---
+---
+
+## PART N — [Next exercise type] (Harder)
+
+[Same structure as above]
+
+---
+---
+
+## 📊 Self-Assessment
+
+| Part | Questions | Your Score | Band Estimate |
+|------|-----------|------------|---------------|
+| Part 1 | N | __/N | |
+| **Total** | **X** | __/X | |
+
+### Band Score Guide (Listening)
+| Score | Band |
+|-------|------|
+| 23–26 | 8.0–9.0 |
+| 20–22 | 7.0–7.5 |
+| 16–19 | 5.5–6.5 |
+| 12–15 | 4.0–5.0 |
+| < 12 | Below 4.0 |
+
+---
+
+## 📝 Research Journey
+- **Why:** [Personal motivation for this practice]
+- **Struggle:** [What was hard about this listening]
+- **Aha moment:** [Breakthrough in understanding]
+- **Career link:** [Connection to AI Engineer goal]
+
+---
+
+## 🔗 Related Topics
+- [[other-note.md]] — connection
+
+---
+*Growth is measured, not assumed.*
+```
+
+---
+
 ## TEMPLATE C: Social Science / Psychology
 **Sử dụng cho:** `psychology_society/`
 
@@ -383,4 +478,4 @@ User asks about topic
 ```
 
 ---
-*Last updated: 2026-09-10 — Config version: 2.0*
+*Last updated: 2026-09-14 — Config version: 3.0*

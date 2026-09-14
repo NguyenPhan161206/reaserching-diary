@@ -96,6 +96,7 @@ Agent PHẢI chọn đúng template dựa trên domain:
 | Agile — Knowledge | books_summaries/agile_project_management/knowledge/ | Template D (Book) |
 | Agile — Q&A Notes | books_summaries/agile_project_management/notes/ | Q&A custom (xem notes/README.md) |
 | Agile — Practice | books_summaries/agile_project_management/practice/ | Practice custom (xem practice/README.md) |
+| IELTS — Listening | ielts_training/listening/ | Template F: IELTS Listening Practice |
 
 Xem NOTE_TEMPLATE.md để biết chi tiết từng template.
 
@@ -220,6 +221,15 @@ Agent PHẢI tự check trước khi hoàn thành note:
 - [ ] Có cross-book connections?
 - [ ] Có "how to apply" section?
 
+### IELTS Listening Practice (Template F):
+- [ ] Có link to source material (YouTube/article)?
+- [ ] Có chapter/timestamp breakdown?
+- [ ] Có ít nhất 3 exercise types khác nhau?
+- [ ] Có answer key với explanations?
+- [ ] Có vocabulary list từ transcript?
+- [ ] Có self-assessment scoring section?
+- [ ] Có Research Journey section?
+
 ## ═══════════════════════════════════════════
 ## SECTION I: RESEARCH AREA MAPPING
 ## ═══════════════════════════════════════════
@@ -234,6 +244,7 @@ Maintained in: RESEARCH_AREAS.md
 | psychology_society/ | Psychology | C (Social) | Reserved | 0 | — |
 | books_summaries/ | Books | D (Book) | Active | 1 | 2026-09-09 |
 | personal_evaluations/ | Self-eval | E (Eval) | Active | 1 | 2026-09-09 |
+| ielts_training/listening/ | IELTS Listening | F (IELTS) | Active | 1 | 2026-09-14 |
 | random_ideas/ | Ideas | Flexible | Reserved | 0 | — |
 | inbox/ | Staging | Flexible | Active | 1 | 2026-09-07 |
 
