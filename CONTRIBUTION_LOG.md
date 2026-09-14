@@ -11,3 +11,4 @@
 | 2026-09-14 | tracking | CONTRIBUTION_CALENDAR.md | updated (interactions +3) |
 | 2026-09-14 | tracking | RESEARCH_AREAS.md | updated (notes count) |
 | 2026-09-14 | config | AGENTS.md | updated (added A6 Language Policy: all files in English, version 3.0) |
+| 2026-09-14 | eval | personal_evaluations/no1_Q_and_A_English_Evaluation.md | updated (converted Vietnamese meanings to English) |

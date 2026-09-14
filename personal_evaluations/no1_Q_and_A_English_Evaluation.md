@@ -42,8 +42,8 @@
 *   **Corrections & Vocabulary Learned:**
     *   *sever* ➡️ **server**
     *   *information way* ➡️ **data flow / information flow**
-    *   *turn around* ➡️ **and vice versa** (ngược lại)
-    *   *connect information* ➡️ **routing messages** (điều phối tin nhắn)
+    *   *turn around* ➡️ **and vice versa** (the other way around)
+    *   *connect information* ➡️ **routing messages** (coordinating messages)
 *   **💡 Fixed Answer (Band 7.0+):** 
     > *"The Broker is a central server playing a key role in connecting the data flow and routing messages from Publishers to Subscribers, and vice versa."*
 *   **🧠 How to go deeper (Learning Advice):** Think about failure points. What happens if the Broker goes down completely? Look into advanced MQTT concepts like **Clustering** or **Last Will and Testament (LWT)** to understand how real-world systems handle Broker failures.
@@ -55,8 +55,8 @@
 *   **Corrections & Vocabulary Learned:**
     *   *knowledh* ➡️ **knowledge**
     *   *to much* ➡️ **too much**
-    *   *go a round it* ➡️ **skim through it** (đọc lướt qua)
-    *   *advise (verb)* ➡️ **advice (noun)** (lời khuyên)
+    *   *go a round it* ➡️ **skim through it** (read quickly)
+    *   *advise (verb)* ➡️ **advice (noun)** (guidance / suggestion)
     *   *evaluate me* ➡️ **to evaluate my performance**
 *   **💡 Fixed Answer (Band 7.0+):** 
     > *"I usually use GitHub to store my knowledge base because I prefer working in the Ubuntu Linux terminal. Regarding the content I learn, I use Antigravity (agy) to analyze and expand on it without having to read too much. I just skim through the text to store it in my short-term memory, and then push everything to GitHub because I am pressed for time. Following that, I ask agy to generate questions based on any concept I choose. The final step is for the AI to evaluate my performance, provide advice, and suggest directions for deeper exploration."*
@@ -77,42 +77,42 @@
 
 Here is a consolidated list of the technical vocabulary we discussed, along with their word families (noun, verb, adjective forms) to help you expand your vocabulary:
 
-1. **Score / Rank** (Meaning: Đánh giá, xếp hạng điểm số)
+1. **Score / Rank** (Meaning: to mark or grade, to rank results)
    - **Score / Rank** (Verb/Noun): *The AI will score the documents.*
    - **Scoring / Ranking** (Noun): *The scoring system uses BM25.*
 
-2. **Optimize** (Meaning: Tối ưu hóa)
+2. **Optimize** (Meaning: to make something as effective as possible)
    - **Optimize** (Verb): *We need to optimize the algorithm.*
    - **Optimization** (Noun): *Performance optimization is crucial.*
    - **Optimized** (Adjective): *This is not the most optimized way.*
    - **Optimal** (Adjective): *The optimal solution.*
 
-3. **Loophole** (Meaning: Lỗ hổng, kẽ hở)
+3. **Loophole** (Meaning: a weakness or gap in a system)
    - **Loophole** (Noun): *Candidates found a loophole in the AI.*
 
-4. **Route** (Meaning: Định tuyến, điều phối đường đi)
+4. **Route** (Meaning: to direct or send along a path)
    - **Route** (Verb/Noun): *The broker routes the messages.*
    - **Routing** (Noun): *Message routing is the core feature.*
    - **Router** (Noun): *A network router.*
    - **Reroute** (Verb): *Reroute the traffic.*
 
-5. **Fetch** (Meaning: Gọi/lấy dữ liệu về)
+5. **Fetch** (Meaning: to get and bring back data)
    - **Fetch** (Verb): *The client fetches data from the API.*
    - **Fetching** (Noun): *Data fetching takes 200ms.*
 
-6. **Query** (Meaning: Truy vấn)
+6. **Query** (Meaning: a request for information, to ask for data)
    - **Query** (Verb/Noun): *Write a SQL query. / Query the database.*
 
-7. **Deploy** (Meaning: Triển khai code/hệ thống)
+7. **Deploy** (Meaning: to release code/system into production)
    - **Deploy** (Verb): *Deploy the code to production.*
    - **Deployment** (Noun): *The deployment was successful.*
    - **Deployable** (Adjective): *A deployable package.*
 
-8. **Skim** (Meaning: Đọc lướt qua để lấy ý chính)
+8. **Skim** (Meaning: to read quickly to get the main idea)
    - **Skim** (Verb): *I just skim through the text.*
    - **Skimming** (Noun/Gerund): *Skimming saves a lot of time.*
 
-9. **Advice vs. Advise** (Meaning: Lời khuyên vs. Khuyên bảo)
+9. **Advice vs. Advise** (Meaning: guidance vs. to give guidance)
    - **Advice** (Noun - Uncountable): *Please give me some advice.* (Not "advices")
    - **Advise** (Verb): *I advise you to learn Linux.*
 
@@ -130,21 +130,21 @@ Here is a consolidated list of the technical vocabulary we discussed, along with
 *   **💡 Fixed Answer (Band 7.0+):** 
     > *"Actually, I am an IT student specializing in AI research, so I don't just use AI tools; I also build and develop them. Although my current skill level isn't quite high enough to build highly sophisticated models yet, Generative AI helps me a lot by making it easier to access new knowledge, articles, and methods. As for Predictive AI, it improves my decision-making because it relies on mathematical analysis and statistics, making it easier to extract insights from collected data. The last category is arguably the most complex class, as configuring and deploying it requires a very deep understanding of the system."*
 
-10. **Specialized** (Meaning: Chuyên môn hóa)
+10. **Specialized** (Meaning: focused on a specific field)
     - **Specialize** (Verb): *I specialize in AI research.*
     - **Specialized** (Adjective): *A highly specialized model.*
     - **Specialization** (Noun): *My specialization is Deep Learning.*
 
-11. **Sophisticated** (Meaning: Tinh vi, phức tạp, cao cấp)
+11. **Sophisticated** (Meaning: complex, advanced, refined)
     - **Sophisticated** (Adjective): *These are highly sophisticated AI models.*
     - **Sophistication** (Noun): *The sophistication of the algorithm.*
 
-12. **Decision-making** (Meaning: Quá trình/Kỹ năng ra quyết định)
+12. **Decision-making** (Meaning: the process of making choices)
     - **Decide** (Verb): *We need to decide the architecture.*
     - **Decision** (Noun): *It was a good decision.*
     - **Decision-making** (Noun): *Predictive AI improves my decision-making.*
 
-13. **Insight** (Meaning: Sự thấu hiểu, thông tin chi tiết sâu sắc)
+13. **Insight** (Meaning: deep understanding, valuable hidden detail)
     - **Insight** (Noun): *Extract insights from data.*
     - **Insightful** (Adjective): *That was an insightful analysis.*
 
@@ -165,20 +165,20 @@ Here is a consolidated list of the technical vocabulary we discussed, along with
     > *"Lexical (BM25), Dense, and Hybrid search are three retrieval mechanisms used in RAG systems to help us filter and rank information, such as resumes or technical documents. To make it easier to visualize, let's use CV screening as an example. BM25 relies on the appearance of pre-defined keywords to score documents. It is quite easy to set up, but it struggles to rank CVs accurately because it lacks contextual understanding. To solve this, Dense Retrieval converts text into vectors using an embedding model, allowing it to score CVs based on semantic context rather than exact words. However, because neither method is fully optimized on its own, Hybrid search was introduced to compensate for their individual weaknesses by integrating the strengths of both BM25 and Dense algorithms."*
 
 ### Vocabulary & Word Families (From Session 5)
-14. **Visualize** (Meaning: Hình dung, mường tượng) - *Replaces: "to easier for image"*
+14. **Visualize** (Meaning: to form a mental image) - *Replaces: "to easier for image"*
     - **Visualize** (Verb): *To make it easier to visualize, let's look at an example.*
     - **Visual** (Adjective): *We need a visual representation.*
     - **Visualization** (Noun): *Data visualization is important.*
 
-15. **Convert / Transform** (Meaning: Chuyển đổi bản chất) - *Replaces: "transmit" (truyền tín hiệu)*
+15. **Convert / Transform** (Meaning: to change form/nature) - *Replaces: "transmit" (transmit = to send a signal)*
     - **Convert** (Verb): *The model converts text into vectors.*
     - **Conversion** (Noun): *The conversion process is fast.*
 
-16. **Pre-defined** (Meaning: Được định nghĩa/cấu hình từ trước) - *Replaces: "configuration at the time before"*
+16. **Pre-defined** (Meaning: defined/configured in advance) - *Replaces: "configuration at the time before"*
     - **Pre-define** (Verb): *We must pre-define the rules.*
     - **Pre-defined** (Adjective): *It relies on pre-defined keywords.*
 
-17. **Compensate** (Meaning: Bù đắp, đền bù cho điểm yếu) - *Replaces: "fix weakness of them"*
+17. **Compensate** (Meaning: to make up for a weakness) - *Replaces: "fix weakness of them"*
     - **Compensate** (Verb): *Hybrid search compensates for the weaknesses of BM25.*
     - **Compensation** (Noun): *Financial compensation.*
 
@@ -200,21 +200,21 @@ Here is a consolidated list of the technical vocabulary we discussed, along with
     > *Subsequently, the payload reaches the central MQTT Broker, which plays the key role of managing and routing the information. The Broker analyzes the topic attached to the incoming message. In the final stage, the Broker routes and duplicates this message to all devices that have subscribed to that specific topic. As shown in the diagram, the processed data is simultaneously transmitted to Subscriber 1, which is a mobile application, and Subscriber 2, a database logger used for saving the environmental status."*
 
 ### Vocabulary & Word Families (From Session 6)
-18. **Illustrate** (Meaning: Minh họa) - *Replaces: "illustrate"*
+18. **Illustrate** (Meaning: to explain or show with an example) - *Replaces: "illustrate"*
     - **Illustrate** (Verb): *The diagram illustrates the process.*
     - **Illustration** (Noun): *This is a clear illustration.*
     - **Illustrative** (Adjective): *The example is highly illustrative.*
 
-19. **Receive** (Meaning: Nhận) - *Replaces: "recieves" (Spelling: 'e' before 'i' except after 'c')*
+19. **Receive** (Meaning: to get something) - *Replaces: "recieves" (Spelling: 'e' before 'i' except after 'c')*
     - **Receive** (Verb): *The broker receives the data.*
     - **Receiver** (Noun): *The subscriber acts as a receiver.*
 
-20. **Convenience** (Meaning: Sự tiện lợi) - *Replaces: "Because of convinient"*
+20. **Convenience** (Meaning: the state of being easy/convenient) - *Replaces: "Because of convinient"*
     - **Convenient** (Adjective): *MQTT is very convenient for IoT.*
     - **Convenience** (Noun): *Because of its convenience, it is widely used.*
     - **Inconvenience** (Noun): *Sorry for the inconvenience.*
 
-21. **Detect / Recognize** (Meaning: Phát hiện / Nhận diện) - *Replaces: "desaster recognization"*
+21. **Detect / Recognize** (Meaning: to notice/discover / to identify) - *Replaces: "desaster recognization"*
     - **Detect** (Verb): *Sensors detect disasters.*
     - **Detection** (Noun): *Disaster detection systems.*
     - **Recognize** (Verb): *To recognize a pattern.*
