@@ -21,6 +21,16 @@
 
 ---
 
+## 📎 Tham khảo ngoài sách (External References)
+
+> Các note phân tích từ nguồn bên ngoài, bổ sung cho 6 part chính.
+
+| # | Note | Nội dung cốt lõi | Tags |
+|---|------|-------------------|------|
+| 1 | [Version Control, CI/CD & DevOps in Agile](version-control-devops-ci-cd.md) | Branch ngắn hạn theo User Story, PR/MR tích hợp mỗi ngày, pipeline quality gate, CD & feedback loop | `#Git`, `#CI-CD`, `#DevOps` |
+
+---
+
 ## 🗂️ Cấu trúc folder cha
 
 ```
