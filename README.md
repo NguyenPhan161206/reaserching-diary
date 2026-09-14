@@ -54,6 +54,16 @@ The knowledge system is designed and organized into specialized directories, ref
 - 💡 `/random_ideas` - Personal perspectives, random ideas, or breakthrough project concepts that come to mind.
 - 📥 `/inbox` - Fleeting notes, drafts, and unclassified ideas (staging area).
 
+## 🚀 Featured Projects
+
+Hands-on projects where I apply and deepen what I research in this diary:
+
+| Project | Description | Stack |
+|---------|-------------|-------|
+| [UMT-Truck-Blind-Sight](https://github.com/NguyenPhan161206/UMT-Truck-Blind-Sight) | IoT blind-spot warning system: ESP32-S3 + waterproof ultrasonic sensor detects vehicles near trucks, streams distance/state to CoreIoT (ThingsBoard) cloud, and renders real-time warnings on a 7" LVGL touch LCD. | ESP32-S3, JSN-SR04T, CoreIoT/MQTT, ESP-IDF, LVGL v9, FreeRTOS |
+| [Snake_ANN](https://github.com/NguyenPhan161206/Snake_ANN) | AI research project: an Artificial Neural Network learns to replace the handcrafted Manhattan heuristic inside A* pathfinding for the Snake game, accounting for obstacles & the snake's own body. Multi-stage pipeline (data generation → training → integration → evaluation). | Python, TensorFlow, Pygame, NumPy |
+| [Joblink](https://github.com/qminh77/joblink) | Full-stack job-seeking social network: posts, connections, real-time messaging, job recruiting, CVs, notifications, and a full admin panel. Layered security (Zod → Server Action guards → RLS). Team project for SE005. | Next.js 16, React 19, TypeScript, Tailwind, Supabase (PostgreSQL/Realtime), TanStack Query |
+
 ## 📋 Quick Links
 | Document | Purpose |
 |----------|---------|
