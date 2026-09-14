@@ -31,11 +31,11 @@
       }
     },
     "build": {
-      "color": "#2E86C1",
+      "color": "#27AE60",
       "description": "🔨 Build and edit files — write, test, and implement code"
     },
     "plan": {
-      "color": "#9B59B6",
+      "color": "#E74C3C",
       "description": "✏️ Plan — think, research, and outline before making changes"
     }
   }
