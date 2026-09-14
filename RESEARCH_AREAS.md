@@ -11,7 +11,7 @@
 | 3 | economics_business/ | Economics/Business | B (Business) | 4 | Active | 2026-09-11 |
 | 4 | psychology_society/ | Psychology/Society | C (Social) | 3 | Active | 2026-09-11 |
 | 5 | books_summaries/ | Book Analysis | D (Book) | 5 | Active | 2026-09-11 |
-| 6 | personal_evaluations/ | Self-Assessment | E (Eval) | 2 | Active | 2026-09-14 |
+| 6 | personal_evaluations/ | Self-Assessment | E (Eval) | 3 | Active | 2026-09-14 |
 | 7 | random_ideas/ | Ideas | Flexible | 5 | Active | 2026-09-14 |
 | 8 | inbox/ | Staging | Flexible | 2 | Active | 2026-09-12 |
 | 9 | books_summaries/agile_project_management/knowledge/ | Agile Knowledge | D (Book) | 7 | Active | 2026-09-14 |
@@ -26,6 +26,7 @@
 ## Recently Added
 | Date | Folder | File | Action |
 |------|--------|------|--------|
+| 2026-09-14 | personal_evaluations/ | 04-ielts-speaking-mock-photography-advice.md | created |
 | 2026-09-14 | personal_evaluations/ | 03-ielts-speaking-part1-agile-teamwork.md | created |
 | 2026-09-14 | random_ideas/ | 05-projects-review-blindsight-snakeann-joblink.md | created |
 | 2026-09-14 | books_summaries/agile_project_management/knowledge/ | version-control-devops-ci-cd.md | created |
@@ -62,7 +63,7 @@
 | Economics | ████████░░ 80% | 4 | Macro, Game Theory, Behavioral Econ, Finance |
 | Psychology | ██████░░░░ 60% | 3 | Cognitive Biases, Behavioral Econ, Game Theory |
 | Books | ██████░░░░ 60% | 5 | Agile, Productivity |
-| Evaluations | ██░░░░░░░░ 20% | 2 | Regular tracking sessions |
+| Evaluations | ██░░░░░░░░ 20% | 3 | Regular tracking sessions |
 
 ## Folder Naming Convention
 - Folders: `snake_case/` (e.g., `ai_ml/`, `economics_business/`)
