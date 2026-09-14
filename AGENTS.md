@@ -43,6 +43,16 @@ Khi tạo note mới, Agent PHẢI:
 2. Thêm section "Related Topics" với cross-folder links
 3. Nếu phát hiện gap giữa 2 domains → gợi ý "bridge note"
 
+### A6. Language Policy (BẮT BUỘC)
+- **Mọi FILE trong repo (notes, README, template, config, scripts) PHẢI viết bằng TIẾNG ANH.**
+  - Bao gồm cả: nội dung, headings, tags, comments trong code/notes.
+  - Vietnamese CHỈ được dùng trong file khi là nội dung trích dẫn được đánh dấu rõ (e.g., Vietnamese names, quotes).
+- **Trò chuyện với user thì LINH HOẠT:** ddùng tiếng Việt hoặc tiếng Anh theo ngôn ngữ user đang dùng.
+- Khi tạo/sửa note cũ viết tiếng Việt → Agent ĐỀ XUẤT chuyển sang tiếng Anh (chờ confirm nếu file đã push).
+- Lý do: user đang luyện IELTS + xây dựng "second brain" chuẩn quốc tế; tiếng Anh giúp index, cross-reference và share public dễ dàng hơn.
+
+> **Ghi chú phân biệt:** "viết file bằng tiếng Anh" = file CONTENT, còn lời nói/chữ chat với user không bị ràng buộc ngôn ngữ.
+
 ## ═══════════════════════════════════════════
 ## SECTION B: AUTONOMY LEVELS
 ## ═══════════════════════════════════════════
@@ -237,4 +247,4 @@ Maintained in: RESEARCH_AREAS.md
 - Connection notes: `bridge-topic-a-and-topic-b.md`
 
 ---
-*Config version: 2.0 — Last updated: 2026-09-10*
+*Config version: 3.0 — Last updated: 2026-09-14*
