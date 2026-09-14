@@ -12,9 +12,9 @@
 | 4 | psychology_society/ | Psychology/Society | C (Social) | 3 | Active | 2026-09-11 |
 | 5 | books_summaries/ | Book Analysis | D (Book) | 5 | Active | 2026-09-11 |
 | 6 | personal_evaluations/ | Self-Assessment | E (Eval) | 1 | Active | 2026-09-09 |
-| 7 | random_ideas/ | Ideas | Flexible | 4 | Active | 2026-09-12 |
+| 7 | random_ideas/ | Ideas | Flexible | 5 | Active | 2026-09-14 |
 | 8 | inbox/ | Staging | Flexible | 2 | Active | 2026-09-12 |
-| 9 | books_summaries/agile_project_management/knowledge/ | Agile Knowledge | D (Book) | 6 | Active | 2026-09-12 |
+| 9 | books_summaries/agile_project_management/knowledge/ | Agile Knowledge | D (Book) | 7 | Active | 2026-09-14 |
 | 10 | books_summaries/agile_project_management/notes/ | Agile Q&A | Q&A custom | 4 | Active | 2026-09-12 |
 | 11 | books_summaries/agile_project_management/practice/ | Agile Quiz | Practice custom | 0 | Active | 2026-09-12 |
 
@@ -26,6 +26,8 @@
 ## Recently Added
 | Date | Folder | File | Action |
 |------|--------|------|--------|
+| 2026-09-14 | random_ideas/ | 05-projects-review-blindsight-snakeann-joblink.md | created |
+| 2026-09-14 | books_summaries/agile_project_management/knowledge/ | version-control-devops-ci-cd.md | created |
 | 2026-09-12 | books_summaries/agile_project_management/notes/ | 04-permanent-team-tuckman-decision-timing.md | created |
 | 2026-09-12 | ai_ml/ | 04-xp-engineering-practices-for-ml.md | created |
 | 2026-09-12 | books_summaries/agile_project_management/notes/ | 01-agility-mindset-and-manifesto.md | created |
