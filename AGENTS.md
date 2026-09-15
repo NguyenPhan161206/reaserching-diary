@@ -97,6 +97,7 @@ Agent PHẢI chọn đúng template dựa trên domain:
 | Agile — Q&A Notes | books_summaries/agile_project_management/notes/ | Q&A custom (xem notes/README.md) |
 | Agile — Practice | books_summaries/agile_project_management/practice/ | Practice custom (xem practice/README.md) |
 | IELTS — Listening | ielts_training/listening/ | Template F: IELTS Listening Practice |
+| Git & GitHub | git_github/ | Template A: Tech Note (adapted) |
 
 Xem NOTE_TEMPLATE.md để biết chi tiết từng template.
 
@@ -245,6 +246,7 @@ Maintained in: RESEARCH_AREAS.md
 | books_summaries/ | Books | D (Book) | Active | 1 | 2026-09-09 |
 | personal_evaluations/ | Self-eval | E (Eval) | Active | 1 | 2026-09-09 |
 | ielts_training/listening/ | IELTS Listening | F (IELTS) | Active | 1 | 2026-09-14 |
+| git_github/ | Git/GitHub | A (Tech) | Active | 10 | 2026-09-15 |
 | random_ideas/ | Ideas | Flexible | Reserved | 0 | — |
 | inbox/ | Staging | Flexible | Active | 1 | 2026-09-07 |
 

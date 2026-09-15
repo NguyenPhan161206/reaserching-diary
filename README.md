@@ -52,6 +52,7 @@ The knowledge system is designed and organized into specialized directories, ref
 - 📚 `/books_summaries` - Summaries, reviews, and key takeaways distilled from books.
 - 📈 `/personal_evaluations` - Personal competence tracking, English/technical skill evaluations, and feedback logs.
 - 🎧 `/ielts_training` - IELTS preparation practice (listening, reading, writing, speaking) using real-world content.
+- 🔧 `/git_github` - Git version control & GitHub collaboration — practical mastery from first commit to team workflows.
 - 💡 `/random_ideas` - Personal perspectives, random ideas, or breakthrough project concepts that come to mind.
 - 📥 `/inbox` - Fleeting notes, drafts, and unclassified ideas (staging area).
 
