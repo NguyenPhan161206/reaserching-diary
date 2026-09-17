@@ -12,3 +12,10 @@
 | 2026-09-14 | tracking | RESEARCH_AREAS.md | updated (notes count) |
 | 2026-09-14 | config | AGENTS.md | updated (added A6 Language Policy: all files in English, version 3.0) |
 | 2026-09-14 | eval | personal_evaluations/no1_Q_and_A_English_Evaluation.md | updated (converted Vietnamese meanings to English) |
+| 2026-09-17 | ielts | ielts_training/listening/01-jensen-huang-nvidia-interview.md | created (26 IELTS Listening Qs, Jensen Huang/NVIDIA, Template F) |
+| 2026-09-17 | ielts | ielts_training/README.md | created (folder guide, naming/tags conventions) |
+| 2026-09-17 | config | NOTE_TEMPLATE.md | updated (added Template F: IELTS Listening Practice) |
+| 2026-09-17 | config | AGENTS.md | updated (Section C mapping, Section H checklist, Section I row for ielts_training/) |
+| 2026-09-17 | tracking | RESEARCH_AREAS.md | updated (added ielts_training/listening/ row) |
+| 2026-09-17 | tracking | README.md | updated (repo structure: /ielts_training) |
+| 2026-09-17 | tracking | CONTRIBUTION_CALENDAR.md | updated (interactions +5, day 17 marked heavy) |
