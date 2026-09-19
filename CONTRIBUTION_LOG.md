@@ -19,7 +19,7 @@
 | 2026-09-17 | tracking | RESEARCH_AREAS.md | updated (added ielts_training/listening/ row) |
 | 2026-09-17 | tracking | README.md | updated (repo structure: /ielts_training) |
 | 2026-09-17 | tracking | CONTRIBUTION_CALENDAR.md | updated (interactions +5, day 17 marked heavy) |
-| 2026-09-19 | vocabulary | vocabulary/01-core-technical-collocations-and-viet-glish-fixes.md | created (Advanced Vocabulary & Collocation Note, Template V) |
+| 2026-09-19 | vocabulary | vocabulary/01-core-technical-collocations-and-viet-glish-fixes.md | updated (added strategy and release terms, word families, collocations, and technical distinctions) |
 | 2026-09-19 | config | NOTE_TEMPLATE.md | updated (added Template V) |
 | 2026-09-19 | config | AGENTS.md & .opencode/agents/research-assistant.md & .gemini/GEMINI.md | updated (vocabulary hub configuration) |
 | 2026-09-19 | tracking | RESEARCH_AREAS.md & CONTRIBUTION_CALENDAR.md | updated (vocabulary/ mapping & calendar streak) |

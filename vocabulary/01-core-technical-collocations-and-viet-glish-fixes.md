@@ -22,6 +22,8 @@
 | **Visualize** | /ˈvɪʒuəlaɪz/ | To form a mental image or graphical representation | Software Architecture |
 | **Convert** | /kənˈvɜːrt/ | To transform data from one format/representation to another | Data Engineering / AI Embeddings |
 | **Compensate** | /ˈkɑːmpənseɪt/ | To offset or make up for individual system weaknesses | System Design / Hybrid Architecture |
+| **Strategy** | /ˈstrætədʒi/ | A high-level plan or orientation to achieve long-term goals | Business / AI Engineering |
+| **Release** | /rɪˈliːs/ | To officially deploy code, models, or products to production/users | DevOps / Software Engineering |
 
 ---
 
@@ -165,6 +167,39 @@
 - **Viet-Glish Pitfall vs. Band 7.0+ Alternative:**
   - ❌ *Viet-Glish mistake:* "fix the bad point of the previous thing"
   - ✅ *Native standard:* "Hybrid search was introduced to compensate for the individual weaknesses of BM25 and Dense algorithms."
+
+### 10. Strategy
+- **IPA:** `/ˈstrætədʒi/`
+- **Definition & Domain Context:** A comprehensive, high-level plan or orientation designed to achieve long-term objectives, distinguishing itself from short-term tactical actions.
+- **Word Family:**
+  - Noun: Strategy, Strategist
+  - Adjective: Strategic, Strategical (rare)
+  - Adverb: Strategically
+- **Collocations & Native Pairings:**
+  - `verb + term`: *formulate a strategy, execute an AI strategy, develop a data strategy*
+  - `adjective + term`: *long-term strategy, strategic planning, strategic partnership*
+  - `term + noun`: *strategy roadmap, strategy session*
+- **Viet-Glish Pitfall vs. Band 7.0+ Alternative:**
+  - ❌ *Viet-Glish mistake:* "stategy" (spelling typo) or "plan for everyday work"
+  - ✅ *Native standard:* "Formulate a robust AI engineering strategy for system scalability."
+
+### 11. Release
+- **IPA:** `/rɪˈliːs/`
+- **Definition & Domain Context:** The technical act of deploying code, models, or products from staging to production, or publishing a new version for users.
+- **Word Family:**
+  - Noun: Release, Releasability
+  - Verb: Release
+  - Adjective: Releasable, Unreleased
+- **Collocations & Native Pairings:**
+  - `verb + term`: *release a new model, release code to production, schedule a release*
+  - `adjective + term`: *stable release, official release, unreleased version*
+  - `term + noun`: *release cycle, release notes, release candidate (RC)*
+- **Resource & Literature Mapping** *(Conditional: Software deployment & MLOps pain point)*:
+  - **Technical Architecture / Problem:** Zero-downtime deployment pipelines, CI/CD automated release workflows.
+  - **Academic Paper / Documentation:** Continuous Delivery (Jez Humble & David Farley); HuggingFace Model Hub Release Guidelines.
+- **Viet-Glish Pitfall vs. Band 7.0+ Alternative:**
+  - ❌ *Viet-Glish mistake:* "launch code" (Launch implies marketing/PR event, while Release/Deploy is the engineering action)
+  - ✅ *Native standard:* "Meta released Llama 3 on HuggingFace and updated the release notes."
 
 ---
 
