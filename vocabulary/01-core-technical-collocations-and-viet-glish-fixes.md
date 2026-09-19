@@ -2,7 +2,7 @@
 
 **Created Date:** 2026-09-19
 **Last Updated:** 2026-09-19
-**Tags:** `#vocabulary`, `#collocations`, `#technical-english`, `#ai-engineering`
+**Tags:** `#vocabulary`, `#it`, `#ai_ml`, `#git_github`
 **Status:** Published
 
 ---

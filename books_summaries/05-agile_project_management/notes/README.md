@@ -35,6 +35,7 @@
 | 04 | [Permanent Team, Tuckman & Decision Timing](04-permanent-team-tuckman-decision-timing.md) | Matrix management, Tuckman's 4 phases, permanent team vs pool, last responsible moment | 2026-09-12 | Lesson 4 |
 | 05 | [Agile Planning, INVEST, Epic, Spike & IoT Project Management](05-agile-planning-invest-epic-spike-iot.md) | Vertical slicing, INVEST, Fibonacci estimation, Spikes, TBS project leadership | 2026-09-19 | Lesson 5 |
 | 06 | [Agile Management, Metrics, Sprint vs. Scope & Crisis Handling](06-agile-management-metrics-sprint-vs-scope.md) | Velocity, Inverted Iron Triangle, Sprint vs Scope, TBS crisis negotiation | 2026-09-19 | Lesson 6 |
+| 07 | [Agile Architecture, HAL, Refactoring, Scaling & Faux Agile](07-agile-architecture-hal-refactoring-scaling.md) | Evolutionary architecture, HAL, refactoring debt, SAFe/LeSS, Faux Agile | 2026-09-19 | Lesson 7 |
 
 ---
 

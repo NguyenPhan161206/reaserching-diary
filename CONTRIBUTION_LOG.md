@@ -27,3 +27,7 @@
 | 2026-09-19 | agile | books_summaries/05-agile_project_management/notes/06-agile-management-metrics-sprint-vs-scope.md | created (Session 06 Q&A: velocity, inverted iron triangle, sprint vs scope, TBS crisis handling) |
 | 2026-09-19 | tracking | CONTRIBUTION_CALENDAR.md | updated (activity streak & interaction count) |
 | 2026-09-19 | vocabulary | vocabulary/01-core-technical-collocations-and-viet-glish-fixes.md | updated (added align/alignment and spike terms, IPA, collocations, and Viet-Glish fixes) |
+| 2026-09-19 | vocabulary | vocabulary/02-agile-iot-project-management-terminology.md | updated (added SAFe and LeSS scaling agile frameworks with IPA, collocations, and literature mapping) |
+| 2026-09-19 | vocabulary | vocabulary/02-agile-iot-project-management-terminology.md | updated (added HAL, evolutionary architecture, architectural debt, refactoring, and faux agile terms) |
+| 2026-09-19 | agile | books_summaries/05-agile_project_management/notes/07-agile-architecture-hal-refactoring-scaling.md | created (Session 07 Q&A: architecture, HAL, refactoring, scaling SAFe/LeSS, Faux Agile) |
+| 2026-09-19 | tracking | CONTRIBUTION_CALENDAR.md | updated (activity streak & interaction count +3) |
