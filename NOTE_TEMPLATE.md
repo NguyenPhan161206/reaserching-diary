@@ -457,6 +457,63 @@
 
 ---
 
+## TEMPLATE V: Advanced Vocabulary & Collocation Note
+**Sử dụng cho:** `vocabulary/`
+
+```markdown
+# Vocabulary & Collocation — [Topic / Term Group]
+
+**Created Date:** YYYY-MM-DD
+**Last Updated:** YYYY-MM-DD
+**Tags:** `#vocabulary`, `#collocations`, `#technical-english`
+**Status:** Active | Reviewed
+
+---
+
+## 📌 Term List & Quick Reference
+
+| Term / Phrase | IPA | Core Meaning | Domain |
+|---------------|-----|--------------|--------|
+| **term** | `/ipa/` | definition | AI / Business / System |
+
+---
+
+## 🧠 Detailed Vocabulary Analysis
+
+### 1. [Term Name]
+- **IPA:** `/.../`
+- **Definition & Domain Context:** Precise technical/business explanation.
+- **Word Family:** 
+  - Noun: ...
+  - Verb: ...
+  - Adjective: ...
+  - Adverb: ...
+- **Collocations & Native Pairings:**
+  - `verb + term` (e.g., ...)
+  - `adjective + term` (e.g., ...)
+  - `term + noun` (e.g., ...)
+- **Viet-Glish Pitfall vs. Band 7.0+ Alternative:**
+  - ❌ *Viet-Glish mistake:* "..."
+  - ✅ *Native standard:* "..."
+- **Resource & Literature Mapping** *(Conditional: Applied when term represents a technical problem or market/business pain point)*:
+  - **Technical Architecture / Problem:** ...
+  - **Academic Paper / Documentation:** ...
+  - **GitHub Repo / Source Code Reference:** ...
+- **Cross-Domain Bridge (Tech ↔ Economics):** How this concept links software engineering with business/economics.
+
+## 📝 Research Journey
+- **Why:** [Personal motivation for mastering these terms]
+- **Struggle:** [Confusing nuances or Viet-Glish habits overcome]
+- **Aha moment:** [Realizing the correct collocation or native pairing]
+- **Career link:** [How precise technical English impacts AI Engineer career and technical communication]
+
+## 🔗 Related Topics
+- [[folder/file.md]] — technical context connection
+- [SUGGESTED] related-vocabulary-topic — why to study next
+```
+
+---
+
 ## Template Selection Guide
 
 ```

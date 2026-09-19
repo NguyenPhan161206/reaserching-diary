@@ -10,8 +10,8 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
  ░░   ░░   ░░   ██   ░░   ░░   ██
  8    9   10   11   12   13   14
  ░░   ██   ██   ██   ██   ░░   ██
-15   16   17   18   19   20   21
- ░░   ░░   ██   ░░   ▓▓   ░░   ░░
+ 15   16   17   18   19   20   21
+ ░░   ░░   ██   ░░   ██   ░░   ░░
 22   23   24   25   26   27   28
  ░░   ░░   ░░   ░░   ░░   ░░   ░░
 29   30
@@ -19,8 +19,8 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
 ```
 
 ## Stats
-- **This month:** 10 active days | 61 interactions
-- **Current streak:** 🔥 1 day
+- **This month:** 11 active days | 65 interactions
+- **Current streak:** 🔥 2 days
 - **Longest streak:** 4 days
 - **Total active days:** 10
 

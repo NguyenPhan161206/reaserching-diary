@@ -97,6 +97,7 @@ Agent PHẢI chọn đúng template dựa trên domain:
 | Agile — Q&A Notes | books_summaries/agile_project_management/notes/ | Q&A custom (xem notes/README.md) |
 | Agile — Practice | books_summaries/agile_project_management/practice/ | Practice custom (xem practice/README.md) |
 | IELTS — Listening | ielts_training/listening/ | Template F: IELTS Listening Practice |
+| Vocabulary & Collocations | vocabulary/ | Template V: Advanced Vocabulary & Collocation |
 | Git & GitHub | git_github/ | Template A: Tech Note (adapted) |
 | CV / Resume | cv/ | LaTeX CV (XeLaTeX, EN + VI) |
 
@@ -249,6 +250,7 @@ Maintained in: RESEARCH_AREAS.md
 | ielts_training/listening/ | IELTS Listening | F (IELTS) | Active | 1 | 2026-09-14 |
 | git_github/ | Git/GitHub | A (Tech) | Active | 10 | 2026-09-15 |
 | cv/ | CV / Resume | LaTeX CV | Active | 2 | 2026-09-15 |
+| vocabulary/ | Vocabulary | V (Vocabulary) | Active | 1 | 2026-09-19 |
 | random_ideas/ | Ideas | Flexible | Reserved | 0 | — |
 | inbox/ | Staging | Flexible | Active | 1 | 2026-09-07 |
 

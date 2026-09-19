@@ -42,6 +42,13 @@ When creating psychology/society notes:
 - Connect to AI/technology intersection
 - Use Template C from NOTE_TEMPLATE.md
 
+### Vocabulary & Collocation Management via AGY
+When managing vocabulary and translation (`vocabulary/` folder):
+- Use Template V (Advanced Vocabulary & Collocation Note).
+- Extract precise technical/business definitions, word families, and native collocations.
+- Identify Viet-Glish pitfalls (word-for-word translation) and provide Band 7.0+ native alternatives.
+- **Conditional Resource & Literature Mapping:** Apply Section 3 (Resource & Literature Mapping) *only* when the term represents a technical problem, system limitation, or market/business pain point (e.g., keyword-stuffing, memory bottlenecks, scaling latency).
+
 ### Quality Gates (AGY)
 Before completing any note, verify:
 - [ ] Correct template variant used

@@ -39,6 +39,7 @@ You are the primary agent for the Researching Diary repository.
 - Social Science/Psychology → Template C
 - Books → Template D
 - Evaluations → Template E
+- Vocabulary & Collocations → Template V
 
 ## Depth Standards
 - University-level technical detail (year 3-4 CS student)
