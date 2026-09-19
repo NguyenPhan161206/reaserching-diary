@@ -22,4 +22,7 @@
 | 2026-09-19 | vocabulary | vocabulary/01-core-technical-collocations-and-viet-glish-fixes.md | updated (added strategy and release terms, word families, collocations, and technical distinctions) |
 | 2026-09-19 | config | NOTE_TEMPLATE.md | updated (added Template V) |
 | 2026-09-19 | config | AGENTS.md & .opencode/agents/research-assistant.md & .gemini/GEMINI.md | updated (vocabulary hub configuration) |
-| 2026-09-19 | tracking | RESEARCH_AREAS.md & CONTRIBUTION_CALENDAR.md | updated (vocabulary/ mapping & calendar streak) |
+| 2026-09-19 | vocabulary | vocabulary/02-agile-iot-project-management-terminology.md | created (Agile, IoT & PM terminology note, Template V) |
+| 2026-09-19 | agile | books_summaries/05-agile_project_management/notes/05-agile-planning-invest-epic-spike-iot.md | created (Session 05 Q&A: planning, INVEST, Epic, Spike, TBS project leadership) |
+| 2026-09-19 | tracking | CONTRIBUTION_CALENDAR.md | updated (activity streak & interaction count) |
+| 2026-09-19 | vocabulary | vocabulary/01-core-technical-collocations-and-viet-glish-fixes.md | updated (added align/alignment and spike terms, IPA, collocations, and Viet-Glish fixes) |

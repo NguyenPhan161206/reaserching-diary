@@ -24,6 +24,8 @@
 | **Compensate** | /ˈkɑːmpənseɪt/ | To offset or make up for individual system weaknesses | System Design / Hybrid Architecture |
 | **Strategy** | /ˈstrætədʒi/ | A high-level plan or orientation to achieve long-term goals | Business / AI Engineering |
 | **Release** | /rɪˈliːs/ | To officially deploy code, models, or products to production/users | DevOps / Software Engineering |
+| **Align / Alignment** | `/əˈlaɪn/ /əˈlaɪnmənt/` | To adjust or match systems/models to human intents or specifications | AI / System Architecture |
+| **Spike** | `/spaɪk/` | A time-boxed technical research task in Agile or sudden metric surge | Agile / MLOps / Systems |
 
 ---
 
@@ -200,6 +202,44 @@
 - **Viet-Glish Pitfall vs. Band 7.0+ Alternative:**
   - ❌ *Viet-Glish mistake:* "launch code" (Launch implies marketing/PR event, while Release/Deploy is the engineering action)
   - ✅ *Native standard:* "Meta released Llama 3 on HuggingFace and updated the release notes."
+
+### 12. Align & Alignment
+- **IPA:** `/əˈlaɪn/`, `/əˈlaɪnmənt/`
+- **Definition & Domain Context:** The process of adjusting or fine-tuning AI models, system components, or strategies so that their behavior aligns with human intentions, ethical standards, or business goals.
+- **Word Family:**
+  - Noun: Alignment, Aligner
+  - Verb: Align, Realign
+  - Adjective: Aligned, Misaligned
+- **Collocations & Native Pairings:**
+  - `verb + term`: *align model outputs, ensure model alignment, align technical goals with business strategy*
+  - `adjective + term`: *fully aligned, safety-aligned LLM, semantic alignment*
+  - `term + noun`: *alignment process, alignment technique (e.g., RLHF, DPO)*
+- **Resource & Literature Mapping** *(Conditional: AI Safety and LLM alignment pain point)*:
+  - **Technical Architecture / Problem:** Preventing LLMs from generating toxic, harmful, or hallucinated responses.
+  - **Academic Paper / Documentation:** *Ouyang et al. (2022). Training language models to follow instructions with human feedback (InstructGPT / RLHF).*
+  - **GitHub Repo Reference:** `huggingface/alignment-handbook`.
+- **Viet-Glish Pitfall vs. Band 7.0+ Alternative:**
+  - ❌ *Viet-Glish mistake:* "make model follow human" or "match the rule together"
+  - ✅ *Native standard:* "Align large language models with human preferences using Reinforcement Learning from Human Feedback (RLHF)."
+
+### 13. Spike
+- **IPA:** `/spaɪk/`
+- **Definition & Domain Context:** In Agile project management, a spike is a time-boxed research or experimentation task designed to resolve technical uncertainties, evaluate new tools, or estimate effort. In systems/DevOps, it refers to a sudden surge in traffic or resource utilization.
+- **Word Family:**
+  - Noun: Spike
+  - Verb: Spike
+  - Adjective: Spiky
+- **Collocations & Native Pairings:**
+  - `verb + term`: *run a technical spike, time-box a spike, handle traffic spikes*
+  - `adjective + term`: *technical spike, traffic spike, unexpected CPU spike*
+  - `term + noun`: *spike duration, spike task*
+- **Resource & Literature Mapping** *(Conditional: Agile estimation uncertainty & system load)*:
+  - **Technical Architecture / Problem:** Reducing estimation risk for complex architectural changes or unknown AI model integration limits.
+  - **Academic Paper / Documentation:** Scrum Guide / Agile Alliance Technical Spikes Documentation.
+  - **GitHub Repo Reference:** Agile project management templates.
+- **Viet-Glish Pitfall vs. Band 7.0+ Alternative:**
+  - ❌ *Viet-Glish mistake:* "do a test task" or "suddenly jump up high"
+  - ✅ *Native standard:* "Allocate a 2-day technical spike to evaluate model inference latency on edge devices."
 
 ---
 
