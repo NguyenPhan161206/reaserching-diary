@@ -19,7 +19,7 @@
             <li>Networking</li>
           </ul>
         </li>
-        <li><b>Contact:</b> <a href="mailto:phbn303030@gmail.com">phbn303030@gmail.com</a></li>
+        <li><b>Contact:</b> <a href="mailto:phanhuubinhnguyen30@gmail.com">phanhuubinhnguyen30@gmail.com</a></li>
       </ul>
     </td>
   </tr>
@@ -53,6 +53,7 @@ The knowledge system is designed and organized into specialized directories, ref
 - 📈 `/personal_evaluations` - Personal competence tracking, English/technical skill evaluations, and feedback logs.
 - 🎧 `/ielts_training` - IELTS preparation practice (listening, reading, writing, speaking) using real-world content.
 - 🔧 `/git_github` - Git version control & GitHub collaboration — practical mastery from first commit to team workflows.
+- 📄 `/cv` - LaTeX CV in English + Vietnamese (source + build script + rendered PDFs).
 - 💡 `/random_ideas` - Personal perspectives, random ideas, or breakthrough project concepts that come to mind.
 - 📥 `/inbox` - Fleeting notes, drafts, and unclassified ideas (staging area).
 

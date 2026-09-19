@@ -19,6 +19,7 @@
 | 11 | books_summaries/agile_project_management/practice/ | Agile Quiz | Practice custom | 0 | Active | 2026-09-12 |
 | 12 | ielts_training/listening/ | IELTS Listening | F (IELTS) | 1 | Active | 2026-09-14 |
 | 13 | git_github/ | Git/GitHub | A (Tech) | 10 | Active | 2026-09-15 |
+| 14 | cv/ | CV / Resume | LaTeX CV | 2 | Active | 2026-09-15 |
 
 ## Proposed Folders (waiting for user confirmation)
 | # | Proposed Folder | Domain | Suggested Template | Reason | Proposed Date |
@@ -29,6 +30,7 @@
 | Date | Folder | File | Action |
 |------|--------|------|--------|
 | 2026-09-15 | git_github/ | 10 notes (01-10) | created |
+| 2026-09-15 | cv/ | LaTeX CV (EN + VI), build.sh, cvstyle.sty, data/ | created |
 | 2026-09-14 | ielts_training/listening/ | 01-jensen-huang-nvidia-interview.md | created |
 | 2026-09-14 | personal_evaluations/ | 04-ielts-speaking-mock-photography-advice.md | created |
 | 2026-09-14 | personal_evaluations/ | 03-ielts-speaking-part1-agile-teamwork.md | created |

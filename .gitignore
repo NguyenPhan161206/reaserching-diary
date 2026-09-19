@@ -21,3 +21,11 @@ _site/
 # Agent session files (do NOT commit)
 *.agent-session
 .opencode/sessions/
+
+# LaTeX build artifacts (cv/)
+*.aux
+*.log
+*.out
+
+# Compiled PDF artifacts (source tracked, binaries local only)
+*.pdf
