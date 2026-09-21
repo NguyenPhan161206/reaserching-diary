@@ -6,7 +6,7 @@
 ## Active Folders
 | # | Folder | Domain | Template | Notes | Status | Last Updated |
 |---|--------|--------|----------|-------|--------|-------------|
-| 1 | ai_ml/ | AI/ML/DL/NLP | A (Tech) | 4 | Active | 2026-09-12 |
+| 1 | ai_ml/ | AI/ML/DL/NLP | A (Tech) | 5 | Active | 2026-09-21 |
 | 2 | iot_aiot/ | IoT/AIoT | A (Tech) | 2 | Active | 2026-09-07 |
 | 3 | economics_business/ | Economics/Business | B (Business) | 4 | Active | 2026-09-11 |
 | 4 | psychology_society/ | Psychology/Society | C (Social) | 3 | Active | 2026-09-11 |
@@ -18,9 +18,9 @@
 | 10 | books_summaries/agile_project_management/notes/ | Agile Q&A | Q&A custom | 4 | Active | 2026-09-12 |
 | 11 | books_summaries/agile_project_management/practice/ | Agile Quiz | Practice custom | 0 | Active | 2026-09-12 |
 | 12 | ielts_training/listening/ | IELTS Listening | F (IELTS) | 1 | Active | 2026-09-14 |
-| 13 | git_github/ | Git/GitHub | A (Tech) | 10 | Active | 2026-09-15 |
+| 13 | git_github/ | Git/GitHub | A (Tech) | 11 | Active | 2026-09-21 |
 | 14 | cv/ | CV / Resume | LaTeX CV | 2 | Active | 2026-09-15 |
-| 15 | vocabulary/ | Vocabulary & Collocations | V (Vocabulary) | 1 | Active | 2026-09-19 |
+| 15 | vocabulary/ | Vocabulary & Collocations | V (Vocabulary) | 2 | Active | 2026-09-21 |
 
 ## Proposed Folders (waiting for user confirmation)
 | # | Proposed Folder | Domain | Suggested Template | Reason | Proposed Date |
@@ -30,6 +30,9 @@
 ## Recently Added
 | Date | Folder | File | Action |
 |------|--------|------|--------|
+| 2026-09-21 | ai_ml/ | 05-mlops-lifecycle-and-deployment-architecture.md | created |
+| 2026-09-21 | git_github/ | 11-infrastructure-as-code-and-devops-automation.md | created |
+| 2026-09-21 | vocabulary/ | 04-implementation-practice-deployment-terminology.md | created |
 | 2026-09-19 | vocabulary/ | 01-core-technical-collocations-and-viet-glish-fixes.md | created |
 | 2026-09-15 | git_github/ | 10 notes (01-10) | created |
 | 2026-09-15 | cv/ | LaTeX CV (EN + VI), build.sh, cvstyle.sty, data/ | created |

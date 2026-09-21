@@ -31,3 +31,7 @@
 | 2026-09-19 | vocabulary | vocabulary/02-agile-iot-project-management-terminology.md | updated (added HAL, evolutionary architecture, architectural debt, refactoring, and faux agile terms) |
 | 2026-09-19 | agile | books_summaries/05-agile_project_management/notes/07-agile-architecture-hal-refactoring-scaling.md | created (Session 07 Q&A: architecture, HAL, refactoring, scaling SAFe/LeSS, Faux Agile) |
 | 2026-09-19 | tracking | CONTRIBUTION_CALENDAR.md | updated (activity streak & interaction count +3) |
+| 2026-09-21 | vocabulary | vocabulary/04-implementation-practice-deployment-terminology.md | created (implementation, practice, deploy terminology note, Template V) |
+| 2026-09-21 | ai_ml | ai_ml/05-mlops-lifecycle-and-deployment-architecture.md | created (MLOps lifecycle & deployment architecture, Template A) |
+| 2026-09-21 | devops | git_github/11-infrastructure-as-code-and-devops-automation.md | created (Infrastructure as Code & DevOps automation, Template A) |
+| 2026-09-21 | tracking | RESEARCH_AREAS.md & CONTRIBUTION_CALENDAR.md | updated (notes counts, interaction count, streak) |
