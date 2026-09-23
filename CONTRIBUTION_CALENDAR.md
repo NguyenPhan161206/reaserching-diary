@@ -13,16 +13,16 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
  15   16   17   18   19   20   21
  ░░   ░░   ██   ░░   ██   ░░   ██
 22   23   24   25   26   27   28
- ░░   ░░   ░░   ░░   ░░   ░░   ░░
+ ░░   ██   ░░   ░░   ░░   ░░   ░░
 29   30
  ░░   ░░
 ```
 
 ## Stats
-- **This month:** 12 active days | 78 interactions
-- **Current streak:** 🔥 1 day
+- **This month:** 13 active days | 80 interactions
+- **Current streak:** 🔥 1 day (21→23 gap: 22 inactive — streak reset, re-started 23)
 - **Longest streak:** 4 days
-- **Total active days:** 11
+- **Total active days:** 12
 
 ---
-*Last updated: 2026-09-21*
+*Last updated: 2026-09-23*
