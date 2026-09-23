@@ -99,6 +99,7 @@ Agent PHẢI chọn đúng template dựa trên domain:
 | IELTS — Listening | ielts_training/listening/ | Template F: IELTS Listening Practice |
 | Vocabulary & Collocations | vocabulary/ | Template V: Advanced Vocabulary & Collocation |
 | Git & GitHub | git_github/ | Template A: Tech Note (adapted) |
+| System Architecture & Design | software_architecture/ | Template A: Tech Note (adapted) |
 | CV / Resume | cv/ | LaTeX CV (XeLaTeX, EN + VI) |
 
 Xem NOTE_TEMPLATE.md để biết chi tiết từng template.
@@ -241,7 +242,7 @@ Maintained in: RESEARCH_AREAS.md
 
 | Folder | Domain | Template | Status | Notes Count | Last Updated |
 |--------|--------|----------|--------|-------------|-------------|
-| ai_ml/ | AI/ML/DL | A (Tech) | Active | 3 | 2026-09-07 |
+| ai_ml/ | AI/ML/DL | A (Tech) | Active | 6 | 2026-09-23 |
 | iot_aiot/ | IoT/AIoT | A (Tech) | Active | 2 | 2026-09-07 |
 | economics_business/ | Economics | B (Business) | Active | 1 | 2026-09-04 |
 | psychology_society/ | Psychology | C (Social) | Reserved | 0 | — |
@@ -251,8 +252,9 @@ Maintained in: RESEARCH_AREAS.md
 | git_github/ | Git/GitHub | A (Tech) | Active | 10 | 2026-09-15 |
 | cv/ | CV / Resume | LaTeX CV | Active | 2 | 2026-09-15 |
 | vocabulary/ | Vocabulary | V (Vocabulary) | Active | 1 | 2026-09-19 |
-| random_ideas/ | Ideas | Flexible | Reserved | 0 | — |
+| random_ideas/ | Ideas | Flexible | Active | 6 | 2026-09-23 |
 | inbox/ | Staging | Flexible | Active | 1 | 2026-09-07 |
+| software_architecture/ | SW Architecture | A (Tech) | Active | 2 | 2026-09-23 |
 
 ## ═══════════════════════════════════════════
 ## SECTION J: FOLDER→FILE NAMING CONVENTION

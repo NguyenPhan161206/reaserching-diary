@@ -40,3 +40,10 @@
 | 2026-09-23 | tracking | RESEARCH_AREAS.md | updated (random_ideas notes count, recently added) |
 | 2026-09-23 | idea | random_ideas/06-modular-company-task-system-ai-agents.md | updated (added 5 insights, 12 clarification gaps, 8 risks to acknowledge + risk register) |
 | 2026-09-23 | tracking | CONTRIBUTION_CALENDAR.md | updated (interactions +1) |
+| 2026-09-23 | arch | software_architecture/README.md | created (folder guide — new folder approved via Dynamic Folder Proposal) |
+| 2026-09-23 | arch | software_architecture/01-event-driven-architecture-task-orchestration.md | created (EDA, saga, guarantees, Template A) |
+| 2026-09-23 | arch | software_architecture/02-modular-monolith-vs-microservices.md | created (decision framework, fitness functions, Template A) |
+| 2026-09-23 | ai_ml | ai_ml/06-mcp-and-function-calling-agent-interfaces.md | created (MCP, tool schemas, governed agent loop, Template A) |
+| 2026-09-23 | config | AGENTS.md | updated (Section C + Section I: software_architecture/ mapping, counts) |
+| 2026-09-23 | tracking | README.md & RESEARCH_AREAS.md | updated (software_architecture/ added, counts, recently added) |
+| 2026-09-23 | tracking | CONTRIBUTION_CALENDAR.md | updated (interactions +1) |

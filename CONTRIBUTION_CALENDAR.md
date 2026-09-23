@@ -19,8 +19,8 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
 ```
 
 ## Stats
-- **This month:** 13 active days | 80 interactions
-- **Current streak:** 🔥 1 day (21→23 gap: 22 inactive — streak reset, re-started 23)
+- **This month:** 13 active days | 82 interactions
+- **Current streak:** 🔥 1 day (22 inactive → streak reset; 23 is the restart)
 - **Longest streak:** 4 days
 - **Total active days:** 12
 

@@ -55,6 +55,7 @@ The knowledge system is designed and organized into specialized directories, ref
 - 🔧 `/git_github` - Git version control & GitHub collaboration — practical mastery from first commit to team workflows.
 - 📄 `/cv` - LaTeX CV in English + Vietnamese (source + build script + rendered PDFs).
 - 💡 `/random_ideas` - Personal perspectives, random ideas, or breakthrough project concepts that come to mind.
+- 🏗️ `/software_architecture` - System architecture & design: event-driven back-end, modularity vs microservices, and agent interfaces — the engineering layer for building real-world systems.
 - 📥 `/inbox` - Fleeting notes, drafts, and unclassified ideas (staging area).
 
 ## 🚀 Featured Projects

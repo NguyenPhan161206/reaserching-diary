@@ -6,7 +6,7 @@
 ## Active Folders
 | # | Folder | Domain | Template | Notes | Status | Last Updated |
 |---|--------|--------|----------|-------|--------|-------------|
-| 1 | ai_ml/ | AI/ML/DL/NLP | A (Tech) | 5 | Active | 2026-09-21 |
+| 1 | ai_ml/ | AI/ML/DL/NLP | A (Tech) | 6 | Active | 2026-09-23 |
 | 2 | iot_aiot/ | IoT/AIoT | A (Tech) | 2 | Active | 2026-09-07 |
 | 3 | economics_business/ | Economics/Business | B (Business) | 4 | Active | 2026-09-11 |
 | 4 | psychology_society/ | Psychology/Society | C (Social) | 3 | Active | 2026-09-11 |
@@ -21,6 +21,7 @@
 | 13 | git_github/ | Git/GitHub | A (Tech) | 11 | Active | 2026-09-21 |
 | 14 | cv/ | CV / Resume | LaTeX CV | 2 | Active | 2026-09-15 |
 | 15 | vocabulary/ | Vocabulary & Collocations | V (Vocabulary) | 2 | Active | 2026-09-21 |
+| 16 | software_architecture/ | System Architecture & Design | A (Tech) | 2 | Active | 2026-09-23 |
 
 ## Proposed Folders (waiting for user confirmation)
 | # | Proposed Folder | Domain | Suggested Template | Reason | Proposed Date |
@@ -30,6 +31,10 @@
 ## Recently Added
 | Date | Folder | File | Action |
 |------|--------|------|--------|
+| 2026-09-23 | software_architecture/ | 02-modular-monolith-vs-microservices.md | created |
+| 2026-09-23 | software_architecture/ | 01-event-driven-architecture-task-orchestration.md | created |
+| 2026-09-23 | software_architecture/ | README.md | created (folder guide) |
+| 2026-09-23 | ai_ml/ | 06-mcp-and-function-calling-agent-interfaces.md | created |
 | 2026-09-23 | random_ideas/ | 06-modular-company-task-system-ai-agents.md | created |
 | 2026-09-21 | ai_ml/ | 05-mlops-lifecycle-and-deployment-architecture.md | created |
 | 2026-09-21 | git_github/ | 11-infrastructure-as-code-and-devops-automation.md | created |
