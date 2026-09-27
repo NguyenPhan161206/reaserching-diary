@@ -28,14 +28,15 @@
 ### 2. Snake_ANN — bài học ML + heuristic
 
 - **Ý tưởng cốt lõi:** thay vì con người *viết* distance metric (Manhattan), để mạng *học* khoảng cách thực tế có tính obstacles từ dữ liệu BFS. Đây chính là tinh thần "learned heuristic" mà các hệ thống search/planning hiện đại dùng.
-- **Pipeline rõ ràng là chìa khóa:** `data_generation → training → integration → evaluation → visualization` — tách rời từng giai đoạn giúp debug và tái sử dụng.
+- **Pipeline rõ ràng là chìa khóa:** `data_generation → training → integration → evaluation → visualization` — tách rời từng **stage** giúp debug và tái sử dụng.
 - **So sánh phải có benchmark:** có chế độ so sánh thời gian thực (phím 1/2) + benchmark win rate/số bước/thời gian → tuyên bố "ANN tốt hơn" phải đi kèm số liệu, không cảm tính.
 
 ### 3. Joblink — bài học full-stack + bảo mật
 
 - **Layered defense:** Zod validate input → action wrapper (requireRole) → ActionError không rò rỉ SQL/stack trace → **Row Level Security (RLS)** ở DB. Security được trải nhiều lớp chứ không chỉ "kiểm tra ở UI".
 - **RSC-first + feature-based:** mặc định Server Component, chỉ `use client` khi cần; code chia theo module tính năng (posts, jobs, network...) thay vì theo layer → dễ scale khi team lớn.
-- **Zero ORM + RPC:** logic phức tạp chạy thẳng RPC function ở DB — giảm round-trip, tận dụng PostgreSQL.
+- **Zero ORM + RPC:** logic phức tạp chạy thẳng RPC function ở DB — giảm round-trip, **leverage** PostgreSQL.
+- **Unauthorized access (bảo mật):** *"can thiệp"* vào dữ liệu user ngoài phạm vi là **unauthorized access** — đây chính là thứ RLS chặn; phân quyền ở DB, không phải ở UI.
 - **Làm việc nhóm:** 164 commits, message rõ ràng, quy ước chung — version control + commit convention là chuẩn giao tiếp trong team (liên hệ trực tiếp note CI/CD vừa ghi).
 
 ---

@@ -27,7 +27,7 @@ Combines non-parametric memory (retrieval system) and parametric memory (LLM) ac
 2. **Retrieval:** Extracting the most relevant documents based on matching.
 3. **Generation:** LLM generates responses conditioned on the retrieved documents.
 
-*To constrain hallucination, the system utilizes resume data in JSON format and matching snippets, strictly bounding the LLM's reasoning space.*
+*To constrain hallucination, the system **uses** resume data in JSON format and matching snippets, strictly bounding the LLM's reasoning space.*
 
 ### 3. Multi-tier Learning-to-Rank (LTR) Model
 Optimizes the relative order among documents.

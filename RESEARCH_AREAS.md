@@ -11,7 +11,7 @@
 | 3 | economics_business/ | Economics/Business | B (Business) | 4 | Active | 2026-09-11 |
 | 4 | psychology_society/ | Psychology/Society | C (Social) | 3 | Active | 2026-09-11 |
 | 5 | books_summaries/ | Book Analysis | D (Book) | 6 | Active | 2026-09-28 |
-| 6 | personal_evaluations/ | Self-Assessment | E (Eval) | 4 | Active | 2026-09-28 |
+| 6 | personal_evaluations/ | Self-Assessment | E (Eval) | 5 | Active | 2026-09-28 |
 | 7 | random_ideas/ | Ideas | Flexible | 6 | Active | 2026-09-23 |
 | 8 | inbox/ | Staging | Flexible | 2 | Active | 2026-09-12 |
 | 9 | books_summaries/agile_project_management/knowledge/ | Agile Knowledge | D (Book) | 7 | Active | 2026-09-14 |
@@ -44,12 +44,31 @@
 | Snake_ANN | `git@github.com:NguyenPhan161206/Snake_ANN.git` | ML code |
 | Joblink | `git@github.com:qminh77/joblink.git` | Full-stack code |
 
+## Language Compliance Audit (AGENTS.md Section A6)
+> Rule: every **file** in this repository must be written in English; Vietnamese is allowed only inside clearly marked quotations. **Audited 2026-09-28.** The following notes are still predominantly Vietnamese and are **awaiting user confirmation** before translation (rule A6 requires consent for already-pushed files).
+
+| File | Vietnamese density | Domain | Priority |
+|---|---|---|---|
+| `inbox/se_knowledge_agile_release_tags.md` | 61% | Agile / release notes | Medium (staging area — may be cleared instead) |
+| `iot_aiot/04-esp32-psram-vs-internal-sram.md` | 59% | IoT / hardware | **High** — strong CS content, useful in English |
+| `random_ideas/04-custom-tui-project.md` | 51% | Side project | Low |
+| `iot_aiot/03-hardware-abstraction-layer-hal.md` | 50% | IoT / architecture | **High** — HAL is a portfolio-grade topic |
+| `random_ideas/05-projects-review-blindsight-snakeann-joblink.md` | 45% | Portfolio review | **High** — 3 project write-ups meant for public use |
+| `books_summaries/05-agile_project_management/knowledge/version-control-devops-ci-cd.md` | 44% | Git / DevOps / CI-CD | **High** — largest file, core to the AI-engineer track |
+| `books_summaries/05-agile_project_management/practice/README.md` | 35% | Agile practice | Low |
+| `books_summaries/05-agile_project_management/knowledge/README.md` | 26% | Index | Low |
+
+*`AGENTS.md`, `NOTE_TEMPLATE.md` and the agent config files are intentionally bilingual (they are config, not notes) and are excluded from this audit. Vocabulary notes contain Vietnamese **source terms** as a teaching feature — that is intentional and compliant.*
+
 ## Recently Added
+
+
 | Date | Folder | File | Action |
 |------|--------|------|--------|
-| 2026-09-28 | vocabulary/ | 12-one-vietnamese-word-many-english-words.md | created (other session, batched into push per Section G) |
-| 2026-09-28 | personal_evaluations/ | 05-linkedin-research-diary-post-eval.md | created (other session — LinkedIn post evaluation, Template E, batched) |
-| 2026-09-28 | books_summaries/ | 06-building-a-second-brain/{README,01-para-and-progressive-summarization}.md | created (other session — new book sub-folder, Template D, batched) |
+| 2026-09-28 | vocabulary/ | 12-one-vietnamese-word-many-english-words.md | created (one-Vietnamese-word-many-English-words: cuối ngày / tận dụng / giai đoạn / can thiệp / có sẵn / ngày qua ngày, register ladders, confusables, Viet-Glish pitfalls, Template V) |
+| 2026-09-28 | personal_evaluations/ | 05-linkedin-research-diary-post-eval.md | created (LinkedIn post English eval, Template E: line-by-line correction log, 3 unreadable sentences, recurring error list, cognitive-offloading framing, corrected + LinkedIn-optimised versions) |
+| 2026-09-28 | books_summaries/ | 06-building-a-second-brain/{README,01-para-and-progressive-summarization}.md | created (new book sub-folder, Template D: CODE acronym, PARA, progressive summarization 5 layers, daily habits, PARA-vs-Zettelkasten, honesty policy — framework reference not first-hand read) |
+| 2026-09-28 | a6-compliance | random_ideas/05, ai_ml/03 | edited (Vietnamese "giai đoạn"/"tận dụng" → English "stage"/"leverage"; added RLS unauthorized-access bullet; "utilizes" → "uses") |
 | 2026-09-28 | dev_foundation/ | 6 sub-folders + 7 README guides | created (Dynamic Folder Proposal approved by user) |
 | 2026-09-28 | dev_foundation/dsa/ | README.md | created (anchor → DSA-reserching-diary) |
 | 2026-09-28 | dev_foundation/dsa/ | 01-learning-roadmap.md | created (phased roadmap, progress tracker, platform mix) |

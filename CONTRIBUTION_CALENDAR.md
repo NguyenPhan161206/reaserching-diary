@@ -19,12 +19,13 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
 ```
 
 ## Stats
-- **This month:** 16 active days | 109 interactions
+- **This month:** 16 active days | 120 interactions
 - **Current streak:** 🔥 4 days (23–24 active, 25–26 gap, 27–28 restarted with heavy sessions)
 - **Longest streak:** 4 days
 - **Total active days:** 15
-- **Today (28 Sep):** Dev Foundation track — 15 files touched (config v3.3, Template G, 6 new folders, 2 Linux notes, DSA anchor + roadmap, 4 tracking/config files)
+- **Today (28 Sep):** Dev Foundation track (10 files) + language session (5 files: 2 notes, 1 LinkedIn evaluation, 1 book sub-folder, 2 A6 edits) + tracking updates
 - **Vocabulary notes created on 27 Sep:** 7 (05 → 11)
+- **Vocabulary notes created on 28 Sep:** 1 (12 — one-Vietnamese-word-many-English-words)
 - **Push policy:** changed 2026-09-27 to *push on command only* (batching all new work at push time)
 
 ---

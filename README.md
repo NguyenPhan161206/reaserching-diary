@@ -49,8 +49,9 @@ The knowledge system is designed and organized into specialized directories, ref
 - 📡 `/iot_aiot` - Internet of Things, AIoT architecture, hardware, and automation solutions.
 - 📊 `/economics_business` - Macro/Microeconomics, business strategy, management, and market analysis.
 - 🧠 `/psychology_society` - Behavioral psychology, politics, and how society functions.
-- 📚 `/books_summaries` - Summaries, reviews, and key takeaways distilled from books.
+- 📚 `/books_summaries` - Summaries, reviews, and key takeaways distilled from books. Sub-folders per book: `05-agile_project_management/`, `06-building-a-second-brain/`.
 - 📈 `/personal_evaluations` - Personal competence tracking, English/technical skill evaluations, and feedback logs.
+- 🔤 `/vocabulary` - Advanced vocabulary & collocation notes (Template V), focused on register, confusables, and Viet-Glish pitfalls.
 - 🎧 `/ielts_training` - IELTS preparation practice (listening, reading, writing, speaking) using real-world content.
 - 🔧 `/git_github` - Git version control & GitHub collaboration — practical mastery from first commit to team workflows.
 - 🐧 `/dev_foundation` - Engineering fundamentals: Linux commands, Docker, YAML/config, web basics (HTML/CSS/JS/DOM), databases, and the DSA anchor. See [`dev_foundation/README.md`](dev_foundation/README.md) for the learning path.
@@ -108,6 +109,8 @@ Some knowledge **needs code to make sense**. Those codebases live in their own r
 | [RESEARCH_AREAS.md](RESEARCH_AREAS.md) | Research tracking & domain coverage |
 | [CONTRIBUTION_CALENDAR.md](CONTRIBUTION_CALENDAR.md) | Visual activity calendar |
 | [dev_foundation/README.md](dev_foundation/README.md) | Engineering fundamentals — learning path & stack map |
+| [books_summaries/06-building-a-second-brain/](books_summaries/06-building-a-second-brain/README.md) | The framework behind this diary — PARA, progressive summarization, Zettelkasten |
+| [RESEARCH_AREAS.md](RESEARCH_AREAS.md#language-compliance-audit-agentsmd-section-a6) | Language compliance audit (A6) — files pending English translation |
 
 ## 🚀 Status & Roadmap
 - **Current Stage:** `Active` — *Dev Foundation track started 2026-09-28* (Linux + DSA).

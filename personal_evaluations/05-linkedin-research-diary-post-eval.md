@@ -239,7 +239,7 @@ The post is built around **tool comparison**, but the valuable claim is the **me
 | Source | Connection to this system |
 |---|---|
 | **Tiago Forte — *Building a Second Brain* (2022)** | **PARA** (Projects, Areas, Resources, Archives) + **progressive summarization** (summarise once, then again, then again) — the named version of the "skim every day" habit |
-| **Zettelkasten (Niklas Luhmann, via Sönke Ahrens 2017)** | one idea per note, linked with `[[…]]` — the note-as-network model used throughout this repository |
+| **Zettelkasten (Niklas Luhmann, via Sönke Ahrens 2017)** | one idea per note, linked with double-bracket wiki links — the note-as-network model used throughout this repository |
 | **Ebbinghaus forgetting curve / spaced repetition** | the reason review is daily, not one-off |
 
 **Four structural problems and their fixes**
