@@ -57,3 +57,7 @@
 | 2026-09-27 | vocabulary | vocabulary/07-labelling-and-temporary-memory.md | created (label: 8 senses, ML/UI/business law, label noise & leakage, distribution shifts; scratchpad: memory hierarchy, tmpfs, on-chip SRAM, ESP32 bridge, Template V) |
 | 2026-09-27 | config | AGENTS.md & .opencode/agents/research-assistant.md | updated (Section G "Standing Authorization — Vocabulary Lookup Auto-Push", config v3.1) |
 | 2026-09-27 | tracking | RESEARCH_AREAS.md & CONTRIBUTION_CALENDAR.md | updated (vocabulary notes count 5→7, interactions +7, day 27 heavy, streak 2 days) |
+| 2026-09-27 | vocabulary | vocabulary/08-property-multi-sense-lexicon.md | created (property: 7 senses — maths, OOP, CSS/DOM, real estate, IP; Latin proprius word family; confusables matrix incl. attribute/propriety; cross-domain to property-rights theory and scaling laws, Template V) |
+| 2026-09-27 | vocabulary | vocabulary/09-commit-and-working-state-terminology.md | created (commit: 8 senses — git, DB transactions, agile, business, psychology; uncommitted vs unstaged vs untracked; isolation levels; escalation of commitment → sunk cost bridge, Template V) |
+| 2026-09-27 | tracking | RESEARCH_AREAS.md & CONTRIBUTION_CALENDAR.md | updated (vocabulary notes count 7→9, interactions +2, day 27 heavy, streak 3 days) |
+| 2026-09-27 | push | origin/mine | pushed (auto-push under standing authorization: commit 3407ee4 + this batch) |
