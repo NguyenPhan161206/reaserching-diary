@@ -1,10 +1,12 @@
 # Idea — Modular Company Task System, Operable by AI Agents
 
 **Created Date:** 2026-09-23
-**Last Updated:** 2026-09-23
+**Last Updated:** 2026-09-24
 **Tags:** `#ProjectIdea`, `#SystemArchitecture`, `#Modularity`, `#AIAgents`, `#CLIFirst`, `#EventDriven`, `#DomainSpecific`
 **Status:** Draft — under evaluation
 **Type:** Idea capture + critical evaluation (structure & reasoning quality)
+**Anchor domain (resolved 2026-09-24):** banking operations — the "company with specific expertise" is a **bank**.
+**Project repo:** [github.com/NguyenPhan161206/Project-plan-Bank-system](https://github.com/NguyenPhan161206/Project-plan-Bank-system) — project docs mirrored there (2026-09-24)
 
 ---
 

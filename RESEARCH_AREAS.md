@@ -1,7 +1,7 @@
 # Research Areas — Tracking & Proposals
 
 > Auto-maintained by Agent. DO NOT manually edit.
-> Last updated: 2026-09-23
+> Last updated: 2026-09-27
 
 ## Active Folders
 | # | Folder | Domain | Template | Notes | Status | Last Updated |
@@ -20,7 +20,7 @@
 | 12 | ielts_training/listening/ | IELTS Listening | F (IELTS) | 1 | Active | 2026-09-14 |
 | 13 | git_github/ | Git/GitHub | A (Tech) | 11 | Active | 2026-09-21 |
 | 14 | cv/ | CV / Resume | LaTeX CV | 2 | Active | 2026-09-15 |
-| 15 | vocabulary/ | Vocabulary & Collocations | V (Vocabulary) | 2 | Active | 2026-09-21 |
+| 15 | vocabulary/ | Vocabulary & Collocations | V (Vocabulary) | 5 | Active | 2026-09-27 |
 | 16 | software_architecture/ | System Architecture & Design | A (Tech) | 2 | Active | 2026-09-23 |
 
 ## Proposed Folders (waiting for user confirmation)
@@ -31,6 +31,7 @@
 ## Recently Added
 | Date | Folder | File | Action |
 |------|--------|------|--------|
+| 2026-09-27 | vocabulary/ | 05-extraordinary-deep-dive.md | created |
 | 2026-09-23 | software_architecture/ | 02-modular-monolith-vs-microservices.md | created |
 | 2026-09-23 | software_architecture/ | 01-event-driven-architecture-task-orchestration.md | created |
 | 2026-09-23 | software_architecture/ | README.md | created (folder guide) |
