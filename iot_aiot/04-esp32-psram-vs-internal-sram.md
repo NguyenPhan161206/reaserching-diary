@@ -1,7 +1,7 @@
 # PSRAM vs Internal SRAM in ESP32 Architecture
 
 **Created Date:** 2026-09-21
-**Last Updated:** 2026-09-21
+**Last Updated:** 2026-09-28
 **Tags:** `#iot_aiot`, `#esp32`, `#hardware-architecture`, `#memory-management`
 **References:** Espressif ESP-IDF Documentation
 **Status:** Published
@@ -10,78 +10,83 @@
 ---
 
 ## 📌 Key Takeaways (TL;DR)
-- **PSRAM (Pseudo Static RAM):** Là bộ nhớ ngoài, giao tiếp qua bus SPI. Dung lượng lớn (2MB - 8MB) nhưng truy xuất chậm.
-- **Internal SRAM:** Là bộ nhớ trong của vi điều khiển ESP32. Dung lượng nhỏ (~520KB) nhưng tốc độ cực cao, độ trễ gần như bằng không.
-- **Vai trò:** ESP32 là não (CPU), Internal SRAM là bàn làm việc nhỏ siêu nhanh, PSRAM là kho lưu trữ lớn nhưng xa. PSRAM hoàn toàn không có khả năng tính toán hay biên dịch code.
-- **Hardware Cache:** Trong kiến trúc ESP32, PSRAM đóng vai trò là Main Memory, còn Internal SRAM được trích một phần ra để làm "Cache" che lấp đi sự chậm chạp của PSRAM.
+- **PSRAM (Pseudo Static RAM):** external memory, reached over an SPI bus. Large capacity (2 MB – 8 MB) but slow to access.
+- **Internal SRAM:** on-chip memory of the ESP32 microcontroller. Tiny (~520 KB) but extremely fast, with near-zero latency.
+- **Roles:** the ESP32 is the brain (CPU), internal SRAM is a small ultra-fast workbench, PSRAM is a large but distant storage room. PSRAM cannot compute or compile code at all.
+- **Hardware cache:** in the ESP32 architecture PSRAM acts as *main memory*, while a portion of internal SRAM is set aside as a **cache** that hides PSRAM's slowness.
 
 ## 🧠 Detailed Notes
 
-### 1. Core Concepts: Tại sao lại cần PSRAM?
-Mặc định, ESP32 chỉ có khoảng 520KB Internal SRAM. Dung lượng này đủ cho các tác vụ nhúng truyền thống (đọc cảm biến, bật tắt Relay, gửi MQTT). Tuy nhiên, khi các dự án IoT tiến lên một cấp độ phức tạp hơn, 520KB là không đủ:
-- **Camera (ESP32-CAM):** Cần bộ đệm (Frame Buffer) khổng lồ để lưu trữ ảnh JPEG trước khi truyền qua WiFi.
-- **AI/ML trên Edge (TinyML):** Load trọng số (weights) của các mô hình nhận diện khuôn mặt hay giọng nói.
-- **UI/UX Đồ họa (LVGL):** Vẽ giao diện trên màn hình LCD lớn yêu cầu cấp phát bộ nhớ đệm hiển thị.
+### 1. Core Concepts: Why is PSRAM needed?
+By default the ESP32 has only about 520 KB of internal SRAM. That is enough for traditional embedded tasks (reading a sensor, toggling a relay, publishing MQTT). But once an IoT project moves up a level of complexity, 520 KB is not enough:
 
-Để giải quyết, người ta gắn thêm con chip PSRAM (2MB/4MB/8MB) bên cạnh ESP32.
+- **Camera (ESP32-CAM):** it needs a huge frame buffer to hold JPEG frames before transmitting them over WiFi.
+- **Edge AI/ML (TinyML):** loading the weights of face or speech recognition models.
+- **Graphical UI (LVGL):** drawing an interface on a large LCD requires allocating a display buffer.
 
-### 2. How It Works (Mechanism): Kiến trúc và Cơ chế
-Nhiều người lầm tưởng PSRAM là một con chip có khả năng tự biên dịch code hoặc xử lý dữ liệu. Thực chất:
-- **Không có tính toán:** PSRAM chỉ là cái kho chứa đồ. Nó không có CPU. 100% mọi quá trình xử lý (tính toán toán học, biên dịch, chạy logic) đều do CPU của ESP32 thực hiện.
-- **Cách dữ liệu luân chuyển:** Khi cần xử lý một bức ảnh lớn, CPU của ESP32 sẽ chạy qua Bus SPI, bốc một mảng nhỏ từ PSRAM mang về Internal SRAM, xử lý xong lại đẩy kết quả ra PSRAM cất đi.
+The solution is to solder an extra PSRAM chip (2 MB / 4 MB / 8 MB) next to the ESP32.
 
-### 3. Cấu hình trong ESP-IDF (Implementation)
-Dù trên mạch có hàn sẵn PSRAM, ESP-IDF mặc định sẽ **KHÔNG sử dụng nó**. Lý do là vì PSRAM chậm hơn RAM nội rất nhiều. Nếu ESP-IDF tự động gộp chung vào làm một, các tác vụ thời gian thực (Interrupt, ISR) lỡ rơi vào PSRAM sẽ làm treo hệ thống.
+### 2. How It Works (Mechanism): architecture and mechanics
+Many people assume PSRAM is a chip that can compile code or process data by itself. In reality:
 
-Để sử dụng, bạn phải bật trong cấu hình:
-1. Mở `menuconfig`
-2. Truy cập: `Component config` ➔ `ESP32-specific` ➔ `Support for external, SPI-connected RAM`
+- **No computation:** PSRAM is only a storage room. It has no CPU. 100% of all processing (math, compilation, running logic) is done by the ESP32's CPU.
+- **How data circulates:** to process a large image, the ESP32's CPU traverses the SPI bus, fetches a small block from PSRAM into internal SRAM, processes it, and writes the result back to PSRAM.
 
-**Code ví dụ - Cấp phát bộ nhớ thủ công vào PSRAM:**
+### 3. Configuration in ESP-IDF (Implementation)
+Even when the board already has PSRAM soldered on, ESP-IDF will **not use it by default**. The reason is that PSRAM is much slower than internal RAM. If ESP-IDF merged the two into one pool, real-time tasks (interrupts, ISRs) that happened to land in PSRAM would hang the system.
+
+To use it you must enable it in the configuration:
+1. Run `menuconfig`
+2. Navigate: `Component config` ➔ `ESP32-specific` ➔ `Support for external, SPI-connected RAM`
+
+**Example code — manual allocation into PSRAM:**
 ```c
 #include "esp_heap_caps.h"
 
-// Hàm cấp phát bộ nhớ lớn, ép buộc phải nằm ở PSRAM thay vì Internal RAM
+// Allocate a large buffer, forcing it into PSRAM instead of internal RAM
 void* allocate_large_buffer(size_t size) {
-    // MALLOC_CAP_SPIRAM chỉ định bộ nhớ nằm trên con chip ngoại vi PSRAM
+    // MALLOC_CAP_SPIRAM restricts the allocation to the external PSRAM chip
     void* buffer = heap_caps_malloc(size, MALLOC_CAP_SPIRAM);
-    
+
     if (buffer == NULL) {
-        printf("Lỗi: Không đủ bộ nhớ trên PSRAM!\n");
+        printf("Error: not enough PSRAM!\n");
     } else {
-        printf("Cấp phát thành công %zu bytes trên PSRAM.\n", size);
+        printf("Successfully allocated %zu bytes on PSRAM.\n", size);
     }
-    
+
     return buffer;
 }
 ```
 
 ### 4. Practical Application: Software Cache vs Hardware Cache
-Đây là một sự nhầm lẫn kinh điển:
-- **Xét theo mục đích (Software Cache):** Bạn hoàn toàn có thể dùng PSRAM làm nơi "lưu tạm" (cache) dữ liệu của ứng dụng, ví dụ cache ảnh tải từ internet để khỏi tải lại.
-- **Xét theo kiến trúc (Hardware Cache):** Về mặt thiết kế chip, **PSRAM KHÔNG PHẢI LÀ CACHE**. PSRAM là bộ nhớ chính (Main Memory) cắm ngoài (giống thanh RAM DDR4 trên laptop). Do tốc độ PSRAM quá chậm, phần cứng ESP32 sẽ tự động lấy một phần Internal SRAM (chạy cực nhanh) của nó ra để làm **Cache** (bộ nhớ đệm phần cứng) cho PSRAM. Khi CPU đọc PSRAM, nó sẽ kéo một cụm dữ liệu vào Cache trong ESP32 để các lần đọc tiếp theo diễn ra tức thời.
+This is a classic misconception:
+
+- **By purpose (software cache):** you are perfectly free to use PSRAM as a "temporary store" (cache) for application data — for example, caching images downloaded from the internet so they do not have to be fetched again.
+- **By architecture (hardware cache):** at the chip-design level, **PSRAM IS NOT A CACHE**. PSRAM is the main memory plugged in externally (like the DDR4 stick in a laptop). Because PSRAM is so slow, the ESP32 hardware automatically carves out part of its internal SRAM (which runs extremely fast) to act as a **cache** for PSRAM. When the CPU reads from PSRAM it pulls a chunk of data into the cache in the ESP32, so subsequent reads happen instantly.
 
 ### 5. Comparison Table
-| Tiêu chí | Internal SRAM | PSRAM (RAM ngoài) |
-|----------|---------------|-------------------|
-| **Vị trí** | Tích hợp trong nhân vi điều khiển ESP32 | Chip hàn rời trên board, nối qua SPI |
-| **Dung lượng** | Rất nhỏ (~520 KB) | Rất lớn (2 MB - 8 MB) |
-| **Tốc độ (Latency)** | Nhanh tuyệt đối, độ trễ gần bằng 0 | Chậm hơn, phụ thuộc vào tốc độ Bus SPI |
-| **Phù hợp cho** | Chạy logic cốt lõi, ngắt (Interrupts), biến toàn cục | Lưu trữ ảnh, model AI, buffer âm thanh, đồ họa |
+| Criterion | Internal SRAM | PSRAM (external RAM) |
+|----------|---------------|-----------------------|
+| **Location** | Integrated into the ESP32 die | Separate chip soldered on the board, connected over SPI |
+| **Capacity** | Very small (~520 KB) | Very large (2 MB – 8 MB) |
+| **Speed (latency)** | Absolutely fast, near-zero latency | Slower, dependent on SPI bus speed |
+| **Best suited for** | Core logic, interrupts, global variables | Storing images, AI models, audio buffers, graphics |
 
 ## 📝 Research Journey
-- **Why:** Phân tích nhu cầu cấp phát bộ nhớ khi làm các tính năng nâng cao (như AI/Camera) trên hệ sinh thái ESP-IDF.
-- **Struggle:** Ban đầu nhầm lẫn vai trò của PSRAM là một chip có thể tự xử lý (như Co-processor) và nhầm lẫn cơ chế Cache của phần mềm với kiến trúc Cache phần cứng.
-- **Aha moment:** Nhận ra ESP32 giống như người thợ (CPU), Internal SRAM là cái bàn ngay trước mặt (nhanh nhưng chật), còn PSRAM là cái kệ kho ở xa (chậm nhưng rộng). Và phần cứng ESP32 phải tự dùng SRAM làm Cache cho PSRAM chứ không phải ngược lại.
-- **Career link:** Nắm chắc kiến trúc bộ nhớ (Memory Hierarchy) là yếu tố quyết định để tránh lỗi "Out of Memory" và "Watchdog Reset" - những lỗi chí tử khi làm System Engineer cho các dự án IoT (như TBS).
+- **Why:** analysing memory-allocation requirements while building advanced features (AI, camera) on the ESP-IDF ecosystem.
+- **Struggle:** I initially thought PSRAM was a chip that could process on its own (like a co-processor), and I confused the software-level cache mechanism with the hardware-level cache architecture.
+- **Aha moment:** the ESP32 is like a craftsman (CPU), internal SRAM is the workbench right in front of them (fast but cramped), and PSRAM is the warehouse shelf further away (slow but spacious). And the ESP32 hardware has to use SRAM as the cache *for* PSRAM, not the other way round.
+- **Career link:** understanding the memory hierarchy is what prevents "Out of Memory" and "Watchdog Reset" errors — the two fatal bugs a system engineer hits on IoT projects such as TBS.
 
 ## 🔗 Related Topics
-- [[03-hardware-abstraction-layer-hal.md]] — PSRAM là cấp độ kiến trúc phần cứng, còn HAL là kiến trúc phần mềm (hai yếu tố độc lập nhưng bổ trợ nhau khi thiết kế hệ thống).
-- [SUGGESTED] esp32-memory-layout-and-linker-scripts — Tìm hiểu cách Linker sắp xếp biến `.bss` và `.data` vào các phân vùng RAM khác nhau.
+- [[03-hardware-abstraction-layer-hal.md]] — PSRAM is a hardware-architecture concern, while HAL is a software-architecture concern: two independent factors that complement each other in system design
+- [[vocabulary/07-labelling-and-temporary-memory.md]] — the same memory-hierarchy reasoning applied to software memory levels (cache → main → scratchpad)
+- [SUGGESTED] esp32-memory-layout-and-linker-scripts — how the linker places `.bss` and `.data` variables into the different RAM regions
+- [SUGGESTED] DMA to PSRAM on ESP32 — related to the open question below
 
 ## 🤔 Open Questions
-- [ ] Khi PSRAM cạn kiệt, liệu có thể dùng Flash Memory (cũng nối qua SPI) để làm nơi Swap Memory (bộ nhớ ảo) như Linux không?
-- [ ] Việc DMA (Direct Memory Access) chuyển dữ liệu từ Cảm biến thẳng vào PSRAM mà không đi qua CPU được thực hiện như thế nào trên ESP32?
+- [ ] When PSRAM runs out, can Flash memory (also connected over SPI) be used as a swap space (virtual memory), the way Linux does it?
+- [ ] How is DMA (Direct Memory Access) implemented on the ESP32 to move data from a sensor straight into PSRAM without passing through the CPU?
 
 ---
-*Kiến trúc hệ thống tốt là biết đặt đúng dữ liệu vào đúng bộ nhớ.*
+*A good system architecture means putting the right data in the right memory.*

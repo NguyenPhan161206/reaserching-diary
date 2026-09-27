@@ -3,27 +3,28 @@
 **Created Date:** 2026-09-12
 **Tags:** `#ProjectIdea`, `#Python`, `#Textual`, `#TerminalUI`, `#AI_Agents`
 
-## 💡 Ý tưởng cốt lõi (Core Idea)
-Xây dựng một hệ thống Terminal User Interface (TUI) tùy chỉnh để tương tác với các AI Agent, thay vì dùng CLI mặc định. Dự án sẽ hỗ trợ nhiều engine khác nhau, cụ thể là:
-1. **AGY TUI**: Giao diện tương tác với Antigravity Agent (sử dụng `google-antigravity` Python SDK).
-2. **Opencode TUI**: Giao diện tương tác với Opencode (tích hợp API/SDK tương ứng).
+## 💡 Core Idea
+Build a custom Terminal User Interface (TUI) for interacting with AI agents, instead of using the default CLI. The project will support several engines, specifically:
 
-## 🛠️ Tech Stack dự kiến
-- **Ngôn ngữ:** Python (>= 3.10)
-- **Thư viện UI:** `textual` (xây dựng giao diện terminal hiện đại, hỗ trợ async tốt).
-- **SDK:** `google-antigravity` và SDK của Opencode.
+1. **AGY TUI:** an interface for interacting with the Antigravity agent (using the `google-antigravity` Python SDK).
+2. **Opencode TUI:** an interface for interacting with Opencode (via the corresponding API/SDK).
 
-## 🗂️ Kiến trúc đề xuất (Multi-repo)
-Vì lý do an toàn, độc lập dependencies và tính chất đóng/mở (Private vs Open Source), dự án sẽ được chia thành 3 repositories riêng biệt:
+## 🛠️ Planned Tech Stack
+- **Language:** Python (>= 3.10)
+- **UI library:** `textual` (builds modern terminal interfaces and handles async well).
+- **SDKs:** `google-antigravity` and Opencode's SDK.
 
-1. **`reaserching-diary`**: Repo hiện tại, thuần túy chứa Markdown để ghi chép.
-2. **`agy-tui`**: Repo Python độc lập, chứa giao diện và tích hợp SDK `google-antigravity`.
-3. **`opencode-tui`**: Repo Python độc lập, chứa giao diện và tích hợp API của Opencode.
+## 🗂️ Proposed Architecture (multi-repo)
+For safety, dependency isolation and the open/closed nature of the projects (private vs open source), the project will be split into 3 separate repositories:
 
-*(Lưu ý: Chấp nhận việc lặp lại code (Code Duplication) ở các thành phần UI cơ bản như Header, Footer, ChatBox giữa 2 repo code để đổi lấy sự độc lập tuyệt đối).*
+1. **`reaserching-diary`**: the current repository, containing Markdown notes only.
+2. **`agy-tui`**: an independent Python repository with the interface and the `google-antigravity` SDK integration.
+3. **`opencode-tui`**: an independent Python repository with the interface and Opencode's API integration.
+
+*(Note: this accepts code duplication of basic UI components such as Header, Footer and ChatBox across the 2 code repositories, in exchange for absolute independence.)*
 
 ## 📝 Action Items (Next Steps)
-- [ ] Khởi tạo thư mục dự án nằm NGOÀI repository `reaserching-diary` để tránh rác log.
-- [ ] Setup `venv` và cài đặt `textual`.
-- [ ] Xây dựng khung UI cơ bản (Header, RichLog, Input) trong thư mục `shared/`.
-- [ ] Tích hợp thử AGY SDK vào khung UI và xử lý luồng stream (thoughts, tool calls, text).
+- [ ] Initialise the project directory OUTSIDE the `reaserching-diary` repository to avoid log clutter.
+- [ ] Set up `venv` and install `textual`.
+- [ ] Build the basic UI scaffold (Header, RichLog, Input) in a `shared/` directory.
+- [ ] Integrate the AGY SDK into the UI scaffold and handle the stream flow (thoughts, tool calls, text).

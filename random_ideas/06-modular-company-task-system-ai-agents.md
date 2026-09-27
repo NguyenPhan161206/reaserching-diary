@@ -104,7 +104,7 @@ You cannot predict the future; the architecture should buy **options (reversibil
 
 ---
 
-## ❓ Clarification Gaps — Points Still Unclear (Điểm chưa được làm rõ)
+## ❓ Clarification Gaps — Points Still Unclear
 
 The idea statement leaves these unresolved. They are *design blockers*, not style questions — each one changes the architecture:
 
@@ -123,7 +123,7 @@ The idea statement leaves these unresolved. They are *design blockers*, not styl
 
 ---
 
-## ✅ Strengths (Điểm tốt)
+## ✅ Strengths
 
 1. **Domain specialization is a real moat.** Generic horizontal platforms are crowded and commoditized; a system tuned to one profession's workflows has deep switching costs, obvious ROI, and is hard to displace. Vertical beats horizontal for a small builder.
 2. **Component independence is the right default.** It buys failure isolation, independent deployability, parallel team work, and technology freedom per component — directly countering the "big ball of mud" that kills long-lived internal systems.
@@ -134,7 +134,7 @@ The idea statement leaves these unresolved. They are *design blockers*, not styl
 
 ---
 
-## ⚠️ Weaknesses & Risks (Điểm xấu)
+## ⚠️ Weaknesses & Risks
 
 1. **Scope explosion / the "large system" trap.** "Large + specialized + AI + CLI + long-term" with no concrete first domain is the classic v1 trap: everything is possible, nothing ships. Without a bounded starting slice, the project balloons or stalls.
    *Mitigation:* pick ONE real company domain + 3 concrete tasks for v0; grow via strangler pattern.
@@ -152,7 +152,7 @@ The idea statement leaves these unresolved. They are *design blockers*, not styl
 
 ---
 
-## 🚨 Risks to Acknowledge Before Committing (Rủi ro phải nhận)
+## 🚨 Risks to Acknowledge Before Committing
 
 These are risks you *inherit by the nature of the idea itself* — acknowledge them now, or they surface later as surprises:
 
@@ -180,7 +180,7 @@ These are risks you *inherit by the nature of the idea itself* — acknowledge t
 
 ---
 
-## 🏗️ Structural Critique (Đánh giá về KẾT CẤU)
+## 🏗️ Structural Critique
 
 **What the structure gets right:**
 - Clear layering instinct: **system → tasks → components → interface (CLI) → intelligence (AI)**. The idea separates *what the system does* (tasks) from *how it's built* (independent components) from *how it's operated* (CLI/agents) — a healthy three-axis decomposition.
@@ -217,7 +217,7 @@ These are risks you *inherit by the nature of the idea itself* — acknowledge t
 
 ---
 
-## 🧠 Reasoning Critique (Đánh giá về KHẢ NĂNG TƯ DUY)
+## 🧠 Reasoning Critique
 
 **Where the thinking is strong:**
 1. **Systems-level framing.** The idea reasons about a *whole system* (components, linkage, interface, evolution) rather than a single feature — genuine architectural instinct, not feature-listing.

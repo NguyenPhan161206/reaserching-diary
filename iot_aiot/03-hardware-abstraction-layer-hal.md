@@ -1,7 +1,7 @@
 # Hardware Abstraction Layer (HAL) in IoT Architecture
 
 **Created Date:** 2026-09-21
-**Last Updated:** 2026-09-21
+**Last Updated:** 2026-09-28
 **Tags:** `#iot_aiot`, `#embedded-systems`, `#system-architecture`, `#testing`
 **References:** Discussion on Mocking, Unit Testing, and Profiling in Embedded Systems
 **Status:** Published
@@ -10,57 +10,57 @@
 ---
 
 ## 📌 Key Takeaways (TL;DR)
-- **HAL (Hardware Abstraction Layer)** là một lớp phần mềm trung gian giúp "che giấu" chi tiết giao tiếp phần cứng phức tạp khỏi tầng ứng dụng (Application Layer).
-- **Siêu năng lực 1 (Portability):** Giúp code độc lập với phần cứng. Đổi MCU từ STM32 sang ESP32 chỉ cần viết lại HAL, logic ứng dụng giữ nguyên 100%.
-- **Siêu năng lực 2 (Testability):** Cho phép tạo "Mock HAL" để chạy Unit Test và mô phỏng trên máy tính PC (CI/CD) mà không cần bo mạch thật.
-- **Dễ dàng Profiling:** Cho phép "tiêm" (inject) code đo thời gian (latency) vào lớp HAL mà không làm bẩn thuật toán cốt lõi.
+- **HAL (Hardware Abstraction Layer)** is an intermediate software layer that *hides* the complexity of hardware communication from the application layer.
+- **Superpower 1 (portability):** it makes the code hardware-independent. Swapping the MCU from an STM32 to an ESP32 only requires rewriting the HAL; the application logic stays 100% unchanged.
+- **Superpower 2 (testability):** it makes it possible to build a "mock HAL" so unit tests and simulations run on a PC (in CI/CD) with no real board required.
+- **Easy profiling:** timing (latency) code can be *injected* into the HAL layer without polluting the core algorithm.
 
 ## 🧠 Detailed Notes
 
-### 1. Vị trí của HAL trong Kiến trúc phần mềm IoT
-Trong hệ thống nhúng, HAL nằm ở tầng dưới cùng của phần mềm, ngay trên Hardware Drivers. Tầng Ứng dụng và Middleware tuyệt đối không được giao tiếp trực tiếp với Tầng Driver mà phải qua HAL.
+### 1. Where the HAL sits in an IoT software architecture
+In an embedded system, the HAL is the lowest software layer, sitting directly on top of the hardware drivers. The application layer and middleware must never talk to the driver layer directly — they have to go through the HAL.
 
 ```mermaid
 flowchart TD
-    subgraph AppLayer [1. Tầng Ứng Dụng - Application Layer]
-        A[Business Logic: Thuật toán bơm nước, điều khiển...]
+    subgraph AppLayer [1. Application Layer]
+        A[Business Logic: pumping algorithm, control...]
     end
 
-    subgraph Middleware [2. Tầng Middleware / OS]
-        B[FreeRTOS / Hệ điều hành]
-        C[Network Stack: WiFi, MQTT, HTTP...]
+    subgraph Middleware [2. Middleware / OS]
+        B[FreeRTOS / operating system]
+        C[Network stack: WiFi, MQTT, HTTP...]
     end
 
-    subgraph HAL_Layer [3. Lớp Trừu Tượng - HAL]
+    subgraph HAL_Layer [3. Abstraction Layer — HAL]
         D[Standard APIs: GPIO, SPI, I2C, UART...]
     end
 
-    subgraph Drivers [4. Tầng Driver / BSP]
-        E[STM32 Drivers / ESP-IDF / Board Support Package]
+    subgraph Drivers [4. Driver Layer / BSP]
+        E[STM32 drivers / ESP-IDF / Board Support Package]
     end
 
-    subgraph Hardware [5. Tầng Phần Cứng - Physical Hardware]
-        F[MCU, Sensors, Actuators...]
+    subgraph Hardware [5. Physical Hardware]
+        F[MCU, sensors, actuators...]
     end
 
-    AppLayer -->|Gọi hàm chuẩn hóa| HAL_Layer
-    Middleware -->|Gọi hàm chuẩn hóa| HAL_Layer
-    HAL_Layer -->|Dịch ra mã lệnh chip| Drivers
-    Drivers -->|Thao tác vật lý| Hardware
+    AppLayer -->|Calls the standardised functions| HAL_Layer
+    Middleware -->|Calls the standardised functions| HAL_Layer
+    HAL_Layer -->|Translates into chip commands| Drivers
+    Drivers -->|Physical operations| Hardware
 ```
 
-### 2. Mô phỏng Kiến trúc HAL (Implementation)
-Dưới đây là mô phỏng cách HAL cô lập thuật toán khỏi phần cứng.
+### 2. Simulating the HAL architecture (Implementation)
+Below is a simulation of how the HAL isolates an algorithm from the hardware.
 
-**A. File Interface (`hal_temperature.h`)**
+**A. Interface file (`hal_temperature.h`)**
 ```c
 #ifndef HAL_TEMPERATURE_H
 #define HAL_TEMPERATURE_H
-float HAL_TempSensor_Read(void); // Tầng ứng dụng chỉ thấy hàm này
+float HAL_TempSensor_Read(void); // The application layer only sees this function
 #endif
 ```
 
-**B. Tầng Ứng Dụng (`app_logic.c` - Không phụ thuộc phần cứng)**
+**B. Application layer (`app_logic.c` — hardware-independent)**
 ```c
 #include "hal_temperature.h"
 #include "hal_fan.h"
@@ -73,47 +73,51 @@ void App_CoolingSystem_Task(void) {
 }
 ```
 
-**C. Thực thi Mocking để Test trên PC (`hal_mock_impl.c`)**
+**C. Mock implementation so it can be tested on a PC (`hal_mock_impl.c`)**
 ```c
 #include "hal_temperature.h"
 #include <stdio.h>
 
-static float mock_temperature = 25.0; 
+static float mock_temperature = 25.0;
 
 void Test_SetMockTemperature(float temp) {
-    mock_temperature = temp; // Kịch bản test từ PC / JSON
+    mock_temperature = temp; // Test scenario injected from a PC / JSON
 }
 
 float HAL_TempSensor_Read(void) {
-    printf("[MOCK] Đang đọc nhiệt độ giả lập: %.2f°C\n", mock_temperature);
-    return mock_temperature; 
+    printf("[MOCK] Reading simulated temperature: %.2f°C\n", mock_temperature);
+    return mock_temperature;
 }
 ```
 
-### 3. Simulator Signals: Nơi ghi nhận tín hiệu
-Việc lấy tín hiệu giả cho lớp Mock HAL phụ thuộc vào **Scope of Testing**:
-1. **Unit Test Cục Bộ (Local):** Đọc tín hiệu giả từ 1 file JSON/CSV trên máy tính, lưu log ra file `.log`. Mục tiêu để kiểm tra nhanh thuật toán (CI/CD pipeline).
-2. **End-to-End Test (System Test):** Mock HAL kết nối mạng, nhận tín hiệu từ một kịch bản giả lập đẩy qua MQTT Broker (như AWS IoT Core). Sau khi thuật toán ra quyết định, lệnh điều khiển (JSON) lại được Mock HAL publish ngược lên AWS IoT để kiểm tra toàn luồng hệ thống.
+### 3. Simulator signals: where the fake data comes from
+Where the mock HAL layer gets its fake signals from depends on the **scope of testing**:
 
-### 4. Đo lường hiệu năng (Latency & Profiling)
-HAL cung cấp một điểm chèn tuyệt vời để đo tốc độ nhận tín hiệu và xử lý mà không thay đổi logic ứng dụng:
-- **Application Logic Latency:** Chèn timer ở Tầng ứng dụng quanh hàm `App_CoolingSystem_Task()` khi chạy Mock HAL.
-- **Hardware Read Latency:** Dùng kỹ thuật *Toggle GPIO* bên trong `hal_stm32_impl.c` kết hợp máy Oscilloscope để đo độ trễ vật lý khi đọc cảm biến.
-- **Network Latency:** Ở kịch bản End-to-End, nhét `timestamp` vào JSON payload từ AWS IoT, Mock HAL lấy thời gian hiện tại trừ đi `timestamp` đó để tính độ trễ mạng.
+1. **Local unit test:** read the fake signal from a JSON/CSV file on the PC and write the log to a `.log` file. The goal is to check the algorithm quickly (CI/CD pipeline).
+2. **End-to-end test (system test):** the mock HAL joins the network, receives signals from a simulated scenario pushed through an MQTT broker (such as AWS IoT Core). After the algorithm makes its decision, the control command (JSON) is published by the mock HAL back to AWS IoT, so the whole system flow can be verified.
+
+### 4. Performance measurement (latency & profiling)
+The HAL provides an ideal injection point for measuring signal-reception and processing speed without touching the application logic:
+
+- **Application logic latency:** insert a timer in the application layer around `App_CoolingSystem_Task()` while running the mock HAL.
+- **Hardware read latency:** use a *GPIO toggle* technique inside `hal_stm32_impl.c` together with an oscilloscope to measure the physical delay when reading a sensor.
+- **Network latency:** in the end-to-end scenario, put a `timestamp` into the JSON payload from AWS IoT; the mock HAL reads the current time and subtracts that `timestamp` to compute the network latency.
 
 ## 📝 Research Journey
-- **Why:** Cần hiểu rõ vị trí của HAL trong kiến trúc IoT để thiết kế các dự án lớn (như TBS) sao cho dễ scale và dễ test.
-- **Struggle:** Ban đầu khó phân biệt giữa Tầng Driver của hãng chip và lớp HAL của dự án. Không rõ simulator signals lấy từ đâu.
-- **Aha moment:** HAL chính là cốt lõi để mang Agile và CI/CD vào phần cứng. Mọi luồng tín hiệu (từ JSON nội bộ hay từ AWS IoT Core) đều có thể được "bơm" vào qua Mock HAL mà thuật toán không hề hay biết. Chèn timer vào HAL cũng là cách profiling thanh lịch nhất.
-- **Career link:** Nắm vững Design Pattern này là yếu tố bắt buộc để từ Embedded Junior lên Senior/System Architect, đảm bảo ranh giới rõ ràng giữa Edge và Cloud.
+- **Why:** I needed to understand where the HAL sits in an IoT architecture in order to design larger projects (such as TBS) so they scale easily and stay testable.
+- **Struggle:** at first it was hard to tell apart the vendor's chip driver layer from the project's own HAL layer, and it was unclear where the simulator signals should come from.
+- **Aha moment:** the HAL is the core of bringing Agile and CI/CD down to hardware. Every signal flow (whether from internal JSON or from AWS IoT Core) can be "pumped in" through the mock HAL without the algorithm ever knowing. Injecting a timer into the HAL is also the most elegant way to profile.
+- **Career link:** mastering this design pattern is a mandatory step from Embedded Junior to Senior/System Architect, because it enforces a clear boundary between Edge and Cloud.
 
 ## 🔗 Related Topics
-- [[../vocabulary/02-agile-iot-project-management-terminology.md]] — Định nghĩa cơ bản về HAL và Agile Spike.
-- [[02-mqtt-simulation-testing-system.md]] — Hệ thống Python đóng vai trò đẩy tín hiệu giả lập xuống Mock HAL qua Cloud.
+- [[../vocabulary/02-agile-iot-project-management-terminology.md]] — baseline definitions of HAL and the Agile spike
+- [[02-mqtt-simulation-testing-system.md]] — a Python system that plays the role of pushing simulated signals down to the mock HAL through the cloud
+- [[04-esp32-psram-vs-internal-sram.md]] — the hardware-architecture counterpart: a HAL is a software boundary, PSRAM is a hardware one
+- [SUGGESTED] Driver Abstraction Layer (DAL) — should a growing project split the HAL into smaller layers?
 
 ## 🤔 Open Questions
-- [ ] Khi dự án phình to, có nên chia HAL thành các layer nhỏ hơn (như Device Abstraction Layer - DAL) không?
-- [ ] Việc đồng bộ đồng hồ (NTP) giữa thiết bị Edge và AWS IoT để đo Network Latency có bị sai lệch khi ngắt kết nối tạm thời không?
+- [ ] As a project grows, should the HAL be split into smaller layers (such as a Device Abstraction Layer, DAL)?
+- [ ] When clock synchronisation (NTP) between the Edge device and AWS IoT is used to measure network latency, do temporary disconnections introduce measurable error?
 
 ---
-*Kiến trúc tốt là kiến trúc cho phép bạn trì hoãn các quyết định về phần cứng càng lâu càng tốt.*
+*Good architecture lets you postpone hardware decisions for as long as possible.*

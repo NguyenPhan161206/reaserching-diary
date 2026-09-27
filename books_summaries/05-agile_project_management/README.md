@@ -1,6 +1,7 @@
 # Agile Project Management For Dummies
 
 **Created Date:** 2026-09-11
+**Last Updated:** 2026-09-28
 **Tags:** `#Agile`, `#ProjectManagement`, `#Scrum`, `#ProductManagement`
 **Rating:** ⭐⭐⭐⭐⭐
 **Genre:** Tech & Business Management
@@ -20,12 +21,12 @@
 - **Core thesis:** Traditional project management is too rigid for the modern knowledge economy. Agility allows teams to navigate uncertainty, reduce waste, and deliver products that customers actually want.
 - **Target audience:** IT professionals, Project Managers, and Developers (including AI Engineers) looking to transition to Agile or fix broken Agile implementations.
 
-## 🗂️ Cấu trúc thư mục
+## 🗂️ Folder structure
 ```
-agile_project_management/
-├── knowledge/   ← Kho kiến thức Agile (notes phân tích sâu, sẽ cập nhật thêm)
-├── notes/       ← Q&A logs: {câu hỏi của user, câu trả lời chi tiết}
-└── practice/    ← Quiz & self-assessment kiểm tra retention
+05-agile_project_management/
+├── knowledge/   ← the Agile knowledge base (deep-dive notes, updated as I read more)
+├── notes/       ← Q&A logs: {the user's questions, detailed answers}
+└── practice/    ← Quiz & self-assessment for retention checking
 ```
 
 ## 📖 Book Structure — Agile Project Management For Dummies (Deep Dive)
@@ -38,8 +39,8 @@ agile_project_management/
 - [Part 6: The Part of Tens](knowledge/part-6-the-part-of-tens.md)
 
 ## 🗣️ Q&A Sessions
-- [Phiên học Q&A](notes/README.md)
-- [Phiên 01: Agility Mindset & Manifesto](notes/01-agility-mindset-and-manifesto.md)
+- [Q&A study sessions](notes/README.md)
+- [Session 01: Agility Mindset & Manifesto](notes/01-agility-mindset-and-manifesto.md)
 
 ## 📝 Research Journey
 - **Why I read this:** As an AI Engineer, building a technically sound model is useless if it doesn't solve the user's problem. Agile helps align tech development with business value.

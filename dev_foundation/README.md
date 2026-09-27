@@ -4,7 +4,7 @@
 
 **Why this folder exists:** notes in `ai_ml/`, `iot_aiot/`, and `software_architecture/` were explaining *systems* while the *tools* used to build those systems were assumed knowledge. This folder closes that gap. Every note here follows **Template G (Dev Tool & Command Note)** or **Template A (Tech Note)** and must cross-reference other technologies (AGENTS.md Section K).
 
-> **Language scope:** these technologies are learned "sơ" (overview → hands-on → later deepen when a real project demands it). The goal is a working mental model + muscle memory on commands, not exhaustive coverage.
+> **Language scope:** these technologies are learned at a *sufficient-but-not-exhaustive* depth (overview → hands-on → deepen later when a real project demands it). The goal is a working mental model + muscle memory on commands, not exhaustive coverage.
 
 ---
 
@@ -62,7 +62,7 @@ Phase 5 — build (with a real project)
 | **Linux** | Git | Every Git object is a file; a repo is a directory of files + history |
 | **Linux** | Docker | A container is just a Linux process with restricted view of the FS |
 | **Linux** | YAML | Config files (`docker-compose.yml`, `.github/workflows/*.yml`) are files you read with `cat` |
-| **Linux** | DSA | Reading compiler/test output with `grep`, `|`, `less` is half of debugging algorithms |
+| **Linux** | DSA | Reading compiler/test output with `grep`, `\|`, `less` is half of debugging algorithms |
 | **Docker** | GitHub Actions | CI builds your image from a `Dockerfile` sitting in the repo |
 | **Docker** | Databases | `docker run postgres` is how you get a throwaway database in 3 seconds |
 | **YAML** | JSON / `.env` | Same job, different trade-offs (indentation vs. braces vs. secret safety) |

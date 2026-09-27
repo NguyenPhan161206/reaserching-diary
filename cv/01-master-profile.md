@@ -268,7 +268,7 @@ mentality between technology and business domains.
   edge processing).
 - [`ai_ml/`](../ai_ml/) — ML, RAG, and engineering-practice notes feeding Snake_ANN and
   Agentic RAG.
-- [`books_summaries/agile_project_management/knowledge/version-control-devops-ci-cd.md`](../books_summaries/agile_project_management/knowledge/version-control-devops-ci-cd.md)
+- [`books_summaries/05-agile_project_management/knowledge/version-control-devops-ci-cd.md`](../books_summaries/05-agile_project_management/knowledge/version-control-devops-ci-cd.md)
   — CI/CD & DevOps practices applied in UMT-TBS-official and Joblink.
 - [`economics_business/`](../economics_business/) — business/economics foundation for the
   AI-Engineer-in-business goal.

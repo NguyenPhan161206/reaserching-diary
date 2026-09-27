@@ -140,7 +140,7 @@
 ## 🔗 Related Topics
 - [[03-ielts-speaking-part1-agile-teamwork.md]] — previous mock (5.0–5.5, teamwork/Agile topic)
 - [[no1_Q_and_A_English_Evaluation.md]] — earlier evaluation sessions (Sessions 1–6)
-- [[../books_summaries/agile_project_management/notes/README.md]] — Agile knowledge (for more examples)
+- [[../books_summaries/05-agile_project_management/notes/README.md]] — Agile knowledge (for more examples)
 
 ---
 *Growth is measured, not assumed.*

@@ -4,7 +4,7 @@
 
 **Template:** **Template A (Tech Note, adapted)** for mechanism notes (01–03, 05), **Template G** for JavaScript-as-a-language usage (04).
 
-## Scope — what "sơ" means here
+## Scope — what "just enough" means here
 
 > Learn the tags, the drawing/effect/layout-distribution mechanism, and enough JavaScript to follow the logic. Not pixel-perfect CSS, not a framework.
 

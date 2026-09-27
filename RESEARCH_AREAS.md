@@ -14,9 +14,9 @@
 | 6 | personal_evaluations/ | Self-Assessment | E (Eval) | 5 | Active | 2026-09-28 |
 | 7 | random_ideas/ | Ideas | Flexible | 6 | Active | 2026-09-23 |
 | 8 | inbox/ | Staging | Flexible | 2 | Active | 2026-09-12 |
-| 9 | books_summaries/agile_project_management/knowledge/ | Agile Knowledge | D (Book) | 7 | Active | 2026-09-14 |
-| 10 | books_summaries/agile_project_management/notes/ | Agile Q&A | Q&A custom | 4 | Active | 2026-09-12 |
-| 11 | books_summaries/agile_project_management/practice/ | Agile Quiz | Practice custom | 0 | Active | 2026-09-12 |
+| 9 | books_summaries/05-agile_project_management/knowledge/ | Agile Knowledge | D (Book) | 7 | Active | 2026-09-14 |
+| 10 | books_summaries/05-agile_project_management/notes/ | Agile Q&A | Q&A custom | 4 | Active | 2026-09-12 |
+| 11 | books_summaries/05-agile_project_management/practice/ | Agile Quiz | Practice custom | 0 | Active | 2026-09-12 |
 | 12 | ielts_training/listening/ | IELTS Listening | F (IELTS) | 1 | Active | 2026-09-14 |
 | 13 | git_github/ | Git/GitHub | A (Tech) | 11 | Active | 2026-09-21 |
 | 14 | cv/ | CV / Resume | LaTeX CV | 2 | Active | 2026-09-15 |
@@ -45,18 +45,34 @@
 | Joblink | `git@github.com:qminh77/joblink.git` | Full-stack code |
 
 ## Language Compliance Audit (AGENTS.md Section A6)
-> Rule: every **file** in this repository must be written in English; Vietnamese is allowed only inside clearly marked quotations. **Audited 2026-09-28.** The following notes are still predominantly Vietnamese and are **awaiting user confirmation** before translation (rule A6 requires consent for already-pushed files).
+> Rule: every **file** in this repository must be written in English; Vietnamese is allowed only inside clearly marked quotations. **Audited 2026-09-28 — ✅ RESOLVED.** The user gave explicit consent to translate everything (*"phải dịch sang Tiếng Anh hết"*), and all 8 tracked files have now been fully translated. Vietnamese density is 0% in every one of them.
 
-| File | Vietnamese density | Domain | Priority |
+| File | Vietnamese density (before) | Domain | Status after translation |
 |---|---|---|---|
-| `inbox/se_knowledge_agile_release_tags.md` | 61% | Agile / release notes | Medium (staging area — may be cleared instead) |
-| `iot_aiot/04-esp32-psram-vs-internal-sram.md` | 59% | IoT / hardware | **High** — strong CS content, useful in English |
-| `random_ideas/04-custom-tui-project.md` | 51% | Side project | Low |
-| `iot_aiot/03-hardware-abstraction-layer-hal.md` | 50% | IoT / architecture | **High** — HAL is a portfolio-grade topic |
-| `random_ideas/05-projects-review-blindsight-snakeann-joblink.md` | 45% | Portfolio review | **High** — 3 project write-ups meant for public use |
-| `books_summaries/05-agile_project_management/knowledge/version-control-devops-ci-cd.md` | 44% | Git / DevOps / CI-CD | **High** — largest file, core to the AI-engineer track |
-| `books_summaries/05-agile_project_management/practice/README.md` | 35% | Agile practice | Low |
-| `books_summaries/05-agile_project_management/knowledge/README.md` | 26% | Index | Low |
+| `inbox/se_knowledge_agile_release_tags.md` | 61% | Agile / release notes | ✅ translated 2026-09-28 |
+| `iot_aiot/04-esp32-psram-vs-internal-sram.md` | 59% | IoT / hardware | ✅ translated 2026-09-28 |
+| `random_ideas/04-custom-tui-project.md` | 51% | Side project | ✅ translated 2026-09-28 |
+| `iot_aiot/03-hardware-abstraction-layer-hal.md` | 50% | IoT / architecture | ✅ translated 2026-09-28 (+ 2 cross-refs added) |
+| `random_ideas/05-projects-review-blindsight-snakeann-joblink.md` | 45% | Portfolio review | ✅ translated 2026-09-28 (+ 2 cross-refs added) |
+| `books_summaries/05-agile_project_management/knowledge/version-control-devops-ci-cd.md` | 44% | Git / DevOps / CI-CD | ✅ translated 2026-09-28 (+ 2 cross-refs added) |
+| `books_summaries/05-agile_project_management/practice/README.md` | 35% | Agile practice | ✅ translated 2026-09-28 |
+| `books_summaries/05-agile_project_management/knowledge/README.md` | 26% | Index | ✅ translated 2026-09-28 |
+
+**Verification:** `grep` for Vietnamese diacritics (`[àáảãạ…đĐ]`) was then run across **every tracked `.md` file** in the repository. That repo-wide sweep found **4 more files the first audit had missed**, all now fixed:
+
+| Additional file found by the sweep | What was Vietnamese | Status |
+|---|---|---|
+| `books_summaries/05-agile_project_management/README.md` | folder-structure block + session links ("Cấu trúc thư mục", "Kho kiến thức Agile", "Phiên học Q&A") | ✅ translated 2026-09-28 |
+| `random_ideas/06-modular-company-task-system-ai-agents.md` | 6 bilingual heading suffixes ("(Điểm tốt)", "(KẾT CẤU)"…) | ✅ cleaned 2026-09-28 |
+| `dev_foundation/README.md` | the Vietnamese term "sơ" used as a scope label | ✅ rephrased 2026-09-28 |
+| `dev_foundation/web_basics/README.md` | the same "sơ" scope label | ✅ rephrased 2026-09-28 |
+
+**Final state — every remaining Vietnamese string in the repository is compliant:**
+
+- **Proper names** (never translated): `Phan Hữu Bình Nguyên` in `README.md` / `cv/01-master-profile.md`, plus Vietnamese degree, club and project names in the CV.
+- **Marked quotations of the source idea or a Vietnamese term being taught**: `ai_ml/06`, `software_architecture/01`, `random_ideas/05`, `random_ideas/06`, `personal_evaluations/05`, and the `vocabulary/` notes (whose whole teaching purpose is the Vietnamese *source* term).
+- **False positive:** `git_github/08-github-platform.md` — "résumé" is a French loanword, not Vietnamese.
+- **This file and the contribution logs** — they document the Vietnamese terms being audited.
 
 *`AGENTS.md`, `NOTE_TEMPLATE.md` and the agent config files are intentionally bilingual (they are config, not notes) and are excluded from this audit. Vocabulary notes contain Vietnamese **source terms** as a teaching feature — that is intentional and compliant.*
 
@@ -69,6 +85,10 @@
 | 2026-09-28 | personal_evaluations/ | 05-linkedin-research-diary-post-eval.md | created (LinkedIn post English eval, Template E: line-by-line correction log, 3 unreadable sentences, recurring error list, cognitive-offloading framing, corrected + LinkedIn-optimised versions) |
 | 2026-09-28 | books_summaries/ | 06-building-a-second-brain/{README,01-para-and-progressive-summarization}.md | created (new book sub-folder, Template D: CODE acronym, PARA, progressive summarization 5 layers, daily habits, PARA-vs-Zettelkasten, honesty policy — framework reference not first-hand read) |
 | 2026-09-28 | a6-compliance | random_ideas/05, ai_ml/03 | edited (Vietnamese "giai đoạn"/"tận dụng" → English "stage"/"leverage"; added RLS unauthorized-access bullet; "utilizes" → "uses") |
+| 2026-09-28 | a6-compliance | 8 files across inbox/, iot_aiot/, random_ideas/, books_summaries/05-*/ | **translated to English** (full-file translation of every file flagged by the A6 audit; structure, code, mermaid/YAML/C blocks, tables and wiki links preserved; 4 new cross-references added to dev_foundation/ and vocabulary/; A6 audit marked ✅ RESOLVED) |
+| 2026-09-28 | a6-compliance | books_summaries/05-agile_project_management/README.md | translated (found by the repo-wide sweep, missed by the first audit: folder-structure block + Q&A session links) |
+| 2026-09-28 | a6-compliance | random_ideas/06-modular-company-task-system-ai-agents.md | edited (6 bilingual heading suffixes removed — "(Điểm tốt)", "(KẾT CẤU)" etc.; the quoted source-idea passages kept as marked quotations) |
+| 2026-09-28 | a6-compliance | dev_foundation/README.md · dev_foundation/web_basics/README.md | edited (the Vietnamese scope label "sơ" replaced with "sufficient-but-not-exhaustive" / "just enough") |
 | 2026-09-28 | dev_foundation/ | 6 sub-folders + 7 README guides | created (Dynamic Folder Proposal approved by user) |
 | 2026-09-28 | dev_foundation/dsa/ | README.md | created (anchor → DSA-reserching-diary) |
 | 2026-09-28 | dev_foundation/dsa/ | 01-learning-roadmap.md | created (phased roadmap, progress tracker, platform mix) |

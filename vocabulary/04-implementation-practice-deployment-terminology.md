@@ -86,8 +86,8 @@
 
 ## 🔗 Related Topics
 - [[vocabulary/01-core-technical-collocations-and-viet-glish-fixes.md]] — Core software & release terminology
-- [[ai_ml/01-transformer.md]] — Implementing and deploying deep learning models
-- [SUGGESTED] mLOps-lifecycle-terminology — understanding monitoring, scaling, and observability in AI engineering.
+- [[ai_ml/05-mlops-lifecycle-and-deployment-architecture.md]] — implementing and deploying deep learning models
+- [SUGGESTED] MLOps lifecycle terminology — understanding monitoring, scaling, and observability in AI engineering.
 
 ---
 *Precision in vocabulary reflects precision in engineering.*

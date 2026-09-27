@@ -183,7 +183,7 @@ git reflog                                # safety net for lost commits
 
 - [[git_github/09-pull-requests-code-review.md]] — previous: PRs
 - [[git_github/10-workflows-cookbook.md]] — this is the final chapter
-- [[books_summaries/agile_project_management/knowledge/version-control-devops-ci-cd.md]] — Agile perspective on version control
+- [[books_summaries/05-agile_project_management/knowledge/version-control-devops-ci-cd.md]] — Agile perspective on version control
 - [[ai_ml/04-xp-engineering-practices-for-ml.md]] — XP practices for ML
 
 ---

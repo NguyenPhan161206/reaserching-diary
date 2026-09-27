@@ -218,7 +218,7 @@ In Scrum, the Sprint Backlog is explicitly split:
 - **Read uncommitted → dirty read** is the canonical example of a performance optimisation that creates a correctness bug, and it is a guaranteed interview question.
 
 **Agile & project management**
-- **Committed vs uncommitted backlog** and **committed capacity** are the vocabulary of delivery promises. This links directly to the existing Agile notes in `books_summaries/agile_project_management/`.
+- **Committed vs uncommitted backlog** and **committed capacity** are the vocabulary of delivery promises. This links directly to the existing Agile notes in `books_summaries/05-agile_project_management/`.
 - The everyday question *"what have we committed to?"* is a scope question, and the honest answer is read off the commitment, not off the wish list.
 
 **Business & economics**
@@ -275,7 +275,7 @@ In Scrum, the Sprint Backlog is explicitly split:
 - [[vocabulary/06-document-and-communication-verb-family.md]] — *state* versus *commit*: binding language in contracts
 - [[economics_business/03-sunk-cost-fallacy.md]] — escalation of commitment as the psychological mechanism
 - [[git_github/]] — version-control notes that use this vocabulary
-- [[books_summaries/agile_project_management/]] — committed versus uncommitted sprint backlog
+- [[books_summaries/05-agile_project_management/]] — committed versus uncommitted sprint backlog
 - [[software_architecture/01-event-driven-architecture-task-orchestration.md]] — where transaction boundaries and idempotency live
 - [SUGGESTED] **Database transaction vocabulary** (`atomicity`, `isolation`, `dirty read`, `phantom read`, `deadlock`, `two-phase commit`, `rollback`, `idempotency`) — *why:* the terms `commit` and `uncommitted` are meaningless without them, and every backend interview and bug report uses them. → fits `vocabulary/`, bridge to `software_architecture/`
 - [SUGGESTED] **Decision & commitment vocabulary** (`commitment device`, `sunk cost`, `opportunity cost`, `irreversibility`, `option value`, `real options`) — *why:* turns the behavioural term into an economic one, which is exactly the bridge this repository is built for. → fits `economics_business/`

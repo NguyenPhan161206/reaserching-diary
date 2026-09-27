@@ -190,9 +190,9 @@ def test_model_trainable_smoke():
 - **Career link:** Every ML Engineer interview explores testing/deployment. Talking about data validation tests + CI/CD pipelines differentiates me from candidates who only know notebook training + accuracy.
 
 ## 🔗 Related Topics
-- [[books_summaries/agile_project_management/knowledge/part-2-being-agile.md]] — source: XP in the Big Three frameworks
-- [[books_summaries/agile_project_management/knowledge/version-control-devops-ci-cd.md]] — branching per User Story + full CI/CD feedback loop in Agile
-- [[books_summaries/agile_project_management/notes/03-scrum-framework-and-four-ceremonies.md]] — Scrum ceremonies context
+- [[books_summaries/05-agile_project_management/knowledge/part-2-being-agile.md]] — source: XP in the Big Three frameworks
+- [[books_summaries/05-agile_project_management/knowledge/version-control-devops-ci-cd.md]] — branching per User Story + full CI/CD feedback loop in Agile
+- [[books_summaries/05-agile_project_management/notes/03-scrum-framework-and-four-ceremonies.md]] — Scrum ceremonies context
 - [[ai_ml/03-rag-and-learning-to-rank.md]] — ML system that would benefit from pipeline + evaluation tests
 - [SUGGESTED] **MLOps end-to-end note** — connecting TDD/CI/CD to model deployment lifecycle (data versioning, DVC, model registry) — should live in `ai_ml/`
 - [SUGGESTED] **TDD practice for ML pipeline** — step-by-step Red-Green-Refactor on real data pipeline + model code — should live in `ai_ml/`

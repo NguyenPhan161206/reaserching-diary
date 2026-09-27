@@ -218,7 +218,7 @@ In a conversation with a DevOps engineer, *"the staging failed"* almost certainl
 **Project management**
 - The **Critical Path Method** has two passes: the **forward pass** computes earliest start and finish; the **backward pass** computes latest start and finish and therefore **total float / slack**. Every delay question about a schedule is answered by the backward pass.
 - **Back-scheduling** from the launch date is how teams avoid the classic failure of building right and finishing late. The calendar vocabulary for it is *milestone, critical path, slack, deadline compression (crashing), fast-tracking*.
-- Links to the Agile material in `books_summaries/agile_project_management/`, where a *commitment* is compared with a *plan*.
+- Links to the Agile material in `books_summaries/05-agile_project_management/`, where a *commitment* is compared with a *plan*.
 
 **Economics & business**
 - **Backward induction** in game theory is the method that finds the **subgame-perfect equilibrium** by reasoning from the end of a dynamic game backwards. It is also a general warning: if you only reason forwards from today's assumptions, you systematically miss what everyone else will do later.
@@ -286,9 +286,9 @@ In a conversation with a DevOps engineer, *"the staging failed"* almost certainl
 - [[vocabulary/08-property-multi-sense-lexicon.md]] — *critical property* as a decisive property
 - [[ai_ml/06-mcp-and-function-calling-agent-interfaces.md]] — forward vs backward chaining in agent design
 - [[software_architecture/01-event-driven-architecture-task-orchestration.md]] — idempotency, replay and rollback
-- [[books_summaries/agile_project_management/]] — commitments, milestones and critical path
+- [[books_summaries/05-agile_project_management/]] — commitments, milestones and critical path
 - [SUGGESTED] **Backward vs forward engineering vocabulary** (`rollback`, `roll forward`, `compensating transaction`, `saga`, `reconciliation`, `event sourcing`, `idempotency key`, `retry with backoff`) — *why:* the operations half of this note, and the vocabulary of every incident review you will ever attend. → fits `software_architecture/`
-- [SUGGESTED] **Planning & scheduling vocabulary** (`milestone`, `critical path`, `slack / float`, `crashing`, `fast-tracking`, `Gantt`, `Sprint Goal`, `contingency`) — *why:* project planning is where a bank-system plan actually lives, and CPM's two passes give the vocabulary an exact structure. → fits `vocabulary/` or `books_summaries/agile_project_management/`
+- [SUGGESTED] **Planning & scheduling vocabulary** (`milestone`, `critical path`, `slack / float`, `crashing`, `fast-tracking`, `Gantt`, `Sprint Goal`, `contingency`) — *why:* project planning is where a bank-system plan actually lives, and CPM's two passes give the vocabulary an exact structure. → fits `vocabulary/` or `books_summaries/05-agile_project_management/`
 - [SUGGESTED] **English head-direction & modifier order for Vietnamese speakers** (`head-initial`, `head-final`, `post-modifier`, `relative clause`, `embedded clause`, `backward transformation`) — *why:* this one linguistics note explains the majority of your recurring Viet-Glish word-order errors at their root rather than one by one. → fits `vocabulary/`
 
 ---

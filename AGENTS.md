@@ -93,9 +93,9 @@ Agent PHẢI chọn đúng template dựa trên domain:
 | Books | books_summaries/ | Template D: Book Summary |
 | Self-evaluation | personal_evaluations/ | Template E: Evaluation Log |
 | Ideas, Inbox, Random | random_ideas/, inbox/ | Flexible |
-| Agile — Knowledge | books_summaries/agile_project_management/knowledge/ | Template D (Book) |
-| Agile — Q&A Notes | books_summaries/agile_project_management/notes/ | Q&A custom (xem notes/README.md) |
-| Agile — Practice | books_summaries/agile_project_management/practice/ | Practice custom (xem practice/README.md) |
+| Agile — Knowledge | books_summaries/05-agile_project_management/knowledge/ | Template D (Book) |
+| Agile — Q&A Notes | books_summaries/05-agile_project_management/notes/ | Q&A custom (xem notes/README.md) |
+| Agile — Practice | books_summaries/05-agile_project_management/practice/ | Practice custom (xem practice/README.md) |
 | IELTS — Listening | ielts_training/listening/ | Template F: IELTS Listening Practice |
 | Vocabulary & Collocations | vocabulary/ | Template V: Advanced Vocabulary & Collocation |
 | Git & GitHub | git_github/ | Template A: Tech Note (adapted) |
@@ -346,7 +346,7 @@ Trong repo đích (README + từng note liên quan):
 *(Added 2026-09-28 — config v3.3)*
 
 `dev_foundation/` là **folder tổng** cho nền tảng kỹ thuật. Sub-folder KHÔNG prefix số
-(theo style `books_summaries/agile_project_management/*`); thứ tự học nằm trong `dev_foundation/README.md`.
+(theo style `books_summaries/05-agile_project_management/*`); thứ tự học nằm trong `dev_foundation/README.md`.
 
 | Sub-folder | Template | Vai trò |
 |---|---|---|

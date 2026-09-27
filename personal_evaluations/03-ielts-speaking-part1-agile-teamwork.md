@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-14
 **Purpose:** Full IELTS Speaking mock session (Parts 1–3) on a team/project management topic, with feedback, corrections, and Agile knowledge connections.
-**Source:** [[../books_summaries/agile_project_management/notes/README.md]] (Q&A sessions 01–04) + IELTS Speaking format
+**Source:** [[../books_summaries/05-agile_project_management/notes/README.md]] (Q&A sessions 01–04) + IELTS Speaking format
 **Tags:** `#IELTS`, `#SpeakingFullMock`, `#AgileQA`, `#SelfEvaluation`
 
 ---
@@ -97,10 +97,10 @@ The user's own answers already demonstrate **Agile principles** without realizin
 
 | User's statement | Agile principle | Source note |
 |------------------|----------------|-------------|
-| "we just did the most important tasks first" | **Prioritization** (Backlog ordering, MoSCoW) | [[../books_summaries/agile_project_management/notes/03-scrum-framework-and-four-ceremonies.md]] |
-| ANN project, failed 3 times, still scored 9.0 | **Fail fast & iterate** ("failing fast is a feature") | [[../books_summaries/agile_project_management/README.md]] |
-| two people who understand each other, delivered early | **Self-organizing / permanent team mindset** | [[../books_summaries/agile_project_management/notes/04-permanent-team-tuckman-decision-timing.md]] |
-| "learned from each other's mistakes without blaming" | **Blameless retrospective** culture | [[../books_summaries/agile_project_management/notes/03-scrum-framework-and-four-ceremonies.md]] |
+| "we just did the most important tasks first" | **Prioritization** (Backlog ordering, MoSCoW) | [[../books_summaries/05-agile_project_management/notes/03-scrum-framework-and-four-ceremonies.md]] |
+| ANN project, failed 3 times, still scored 9.0 | **Fail fast & iterate** ("failing fast is a feature") | [[../books_summaries/05-agile_project_management/README.md]] |
+| two people who understand each other, delivered early | **Self-organizing / permanent team mindset** | [[../books_summaries/05-agile_project_management/notes/04-permanent-team-tuckman-decision-timing.md]] |
+| "learned from each other's mistakes without blaming" | **Blameless retrospective** culture | [[../books_summaries/05-agile_project_management/notes/03-scrum-framework-and-four-ceremonies.md]] |
 
 > 💡 **Tip:** Reuse the Snake_ANN story for Agile-related IELTS prompts. It is a strong, concrete, and differentiated example.
 
@@ -249,8 +249,8 @@ If you had continued, here's how a Band 7+ answer would look:
 
 ## 🔗 Related Topics
 - [[no1_Q_and_A_English_Evaluation.md]] — previous IELTS/eval sessions (Sessions 1–6)
-- [[../books_summaries/agile_project_management/notes/README.md]] — source Agile Q&A journal
-- [[../books_summaries/agile_project_management/practice/README.md]] — quiz-based retention check
+- [[../books_summaries/05-agile_project_management/notes/README.md]] — source Agile Q&A journal
+- [[../books_summaries/05-agile_project_management/practice/README.md]] — quiz-based retention check
 
 ---
 *Growth is measured, not assumed.*

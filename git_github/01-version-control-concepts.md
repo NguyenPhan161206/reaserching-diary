@@ -105,7 +105,7 @@ A commit is a **complete snapshot** of every file at the moment you committed. N
 ## 🔗 Related Topics
 
 - [[git_github/02-getting-started.md]] — next: install, configure, connect
-- [[books_summaries/agile_project_management/knowledge/version-control-devops-ci-cd.md]] — Agile perspective on version control
+- [[books_summaries/05-agile_project_management/knowledge/version-control-devops-ci-cd.md]] — Agile perspective on version control
 - [[ai_ml/04-xp-engineering-practices-for-ml.md]] — XP practices including version control for ML
 
 ---
