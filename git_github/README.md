@@ -25,6 +25,10 @@ Master Git and GitHub as daily developer tools — not by memorizing commands, b
 
 `#Git` `#GitHub` `#VersionControl` `#DevTools` `#Collaboration`
 
+## Related Tracks
+- [`../dev_foundation/README.md`](../dev_foundation/README.md) — **prerequisite/companion track**: Linux filesystem & permissions (Git stores everything as files), Docker (CI builds images), YAML (`.github/workflows/*.yml`)
+- [`../dev_foundation/dsa/README.md`](../dev_foundation/dsa/README.md) — DSA anchor; solution code lives in [DSA-reserching-diary](https://github.com/NguyenPhan161206/DSA-reserching-diary), where this repo's branching discipline is applied per solution
+
 ## Source
 
 Original LaTeX project: `/home/binhnguyen/reaserching-diary/git-github-practical/` (not deleted)

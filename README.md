@@ -53,10 +53,31 @@ The knowledge system is designed and organized into specialized directories, ref
 - 📈 `/personal_evaluations` - Personal competence tracking, English/technical skill evaluations, and feedback logs.
 - 🎧 `/ielts_training` - IELTS preparation practice (listening, reading, writing, speaking) using real-world content.
 - 🔧 `/git_github` - Git version control & GitHub collaboration — practical mastery from first commit to team workflows.
+- 🐧 `/dev_foundation` - Engineering fundamentals: Linux commands, Docker, YAML/config, web basics (HTML/CSS/JS/DOM), databases, and the DSA anchor. See [`dev_foundation/README.md`](dev_foundation/README.md) for the learning path.
 - 📄 `/cv` - LaTeX CV in English + Vietnamese (source + build script + rendered PDFs).
 - 💡 `/random_ideas` - Personal perspectives, random ideas, or breakthrough project concepts that come to mind.
 - 🏗️ `/software_architecture` - System architecture & design: event-driven back-end, modularity vs microservices, and agent interfaces — the engineering layer for building real-world systems.
 - 📥 `/inbox` - Fleeting notes, drafts, and unclassified ideas (staging area).
+
+## 🗺️ Learning Path (dev_foundation)
+
+Technical foundations are studied in a deliberate order, because each layer assumes the previous one:
+
+```
+git_github/ (done: 11 notes)
+      ↓
+dev_foundation/linux/     ← start here: filesystem, permissions, pipes
+      ↓  (runs in parallel)
+dev_foundation/dsa/ ──────────► [DSA-reserching-diary]  ← code lives in its own repo
+      ↓
+dev_foundation/docker/  ·  dev_foundation/yaml_config/
+      ↓
+dev_foundation/web_basics/  ·  dev_foundation/databases/
+      ↓
+Real projects: Joblink · UMT-Truck-Blind-Sight · Snake_ANN
+```
+
+Every gap found while building goes back into `dev_foundation/` as a note.
 
 ## 🚀 Featured Projects
 
@@ -68,20 +89,40 @@ Hands-on projects where I apply and deepen what I research in this diary:
 | [Snake_ANN](https://github.com/NguyenPhan161206/Snake_ANN) | AI research project: an Artificial Neural Network learns to replace the handcrafted Manhattan heuristic inside A* pathfinding for the Snake game, accounting for obstacles & the snake's own body. Multi-stage pipeline (data generation → training → integration → evaluation). | Python, TensorFlow, Pygame, NumPy |
 | [Joblink](https://github.com/qminh77/joblink) | Full-stack job-seeking social network: posts, connections, real-time messaging, job recruiting, CVs, notifications, and a full admin panel. Layered security (Zod → Server Action guards → RLS). Team project for SE005. | Next.js 16, React 19, TypeScript, Tailwind, Supabase (PostgreSQL/Realtime), TanStack Query |
 
+### 🔗 Companion repositories
+
+Some knowledge **needs code to make sense**. Those codebases live in their own repositories, and this diary keeps the concepts, roadmaps, and pointers:
+
+| Repository | Holds | This diary holds |
+|------------|-------|------------------|
+| [DSA-reserching-diary](https://github.com/NguyenPhan161206/DSA-reserching-diary) | Algorithm solutions, per-problem write-ups, practice log, error journal | [Roadmap & anchor](dev_foundation/dsa/README.md), complexity/tooling notes, reflections |
+
+*Rule: no solution code is duplicated into this repo — notes point instead (see `AGENTS.md` Section L).*
+
+
 ## 📋 Quick Links
 | Document | Purpose |
 |----------|---------|
 | [AGENTS.md](AGENTS.md) | AI agent configuration & rules |
-| [NOTE_TEMPLATE.md](NOTE_TEMPLATE.md) | 5 template variants per domain |
+| [NOTE_TEMPLATE.md](NOTE_TEMPLATE.md) | 7 template variants per domain |
 | [RESEARCH_AREAS.md](RESEARCH_AREAS.md) | Research tracking & domain coverage |
 | [CONTRIBUTION_CALENDAR.md](CONTRIBUTION_CALENDAR.md) | Visual activity calendar |
+| [dev_foundation/README.md](dev_foundation/README.md) | Engineering fundamentals — learning path & stack map |
 
 ## 🚀 Status & Roadmap
-- **Current Stage:** `Active` (Agent system established).
+- **Current Stage:** `Active` — *Dev Foundation track started 2026-09-28* (Linux + DSA).
+- **Current track:**
+  1. ✅ Git & GitHub fundamentals — [`git_github/`](git_github/README.md) (11 notes)
+  2. 🔄 Linux commands — [`dev_foundation/linux/`](dev_foundation/linux/README.md) (2 / 7 notes)
+  3. ⬜ DSA practice — roadmap ready, code in [DSA-reserching-diary](https://github.com/NguyenPhan161206/DSA-reserching-diary)
+  4. ⬜ Docker & YAML — [`dev_foundation/`](dev_foundation/README.md)
+  5. ⬜ Web basics & databases — [`dev_foundation/`](dev_foundation/README.md)
 - **Upcoming Plans:**
   - [x] Set up directory structure and note-taking standards.
   - [x] Push initial notes on AI and Economics to the repository.
   - [x] Configure AI Agent system (OpenCode + AGY).
+  - [ ] Complete the Linux command track (notes 02, 04, 05).
+  - [ ] Start the DSA practice loop (5–8 problems/week).
   - [ ] Maintain a habit of periodically updating new knowledge.
   - [ ] Build contribution streak 🔥
 

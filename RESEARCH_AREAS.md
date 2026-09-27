@@ -1,7 +1,7 @@
 # Research Areas — Tracking & Proposals
 
 > Auto-maintained by Agent. DO NOT manually edit.
-> Last updated: 2026-09-27
+> Last updated: 2026-09-28
 
 ## Active Folders
 | # | Folder | Domain | Template | Notes | Status | Last Updated |
@@ -22,15 +22,37 @@
 | 14 | cv/ | CV / Resume | LaTeX CV | 2 | Active | 2026-09-15 |
 | 15 | vocabulary/ | Vocabulary & Collocations | V (Vocabulary) | 11 | Active | 2026-09-27 |
 | 16 | software_architecture/ | System Architecture & Design | A (Tech) | 2 | Active | 2026-09-23 |
+| 17 | dev_foundation/ | Engineering Fundamentals | Guide (umbrella) | 0 | Active | 2026-09-28 |
+| 18 | dev_foundation/linux/ | Linux shell & filesystem | G (Dev Tool) | 2 | Active | 2026-09-28 |
+| 19 | dev_foundation/docker/ | Docker & Containers | G + A | 0 | Planned | 2026-09-28 |
+| 20 | dev_foundation/yaml_config/ | YAML & Config Formats | G + A | 0 | Planned | 2026-09-28 |
+| 21 | dev_foundation/web_basics/ | HTML / CSS / JS / DOM | A + G | 0 | Planned | 2026-09-28 |
+| 22 | dev_foundation/databases/ | SQL / PostgreSQL / MySQL / PostgREST | G + A | 0 | Planned | 2026-09-28 |
+| 23 | dev_foundation/dsa/ | DSA — anchor & roadmap only | Flexible (anchor) | 1 | Active | 2026-09-28 |
 
 ## Proposed Folders (waiting for user confirmation)
 | # | Proposed Folder | Domain | Suggested Template | Reason | Proposed Date |
 |---|----------------|--------|-------------------|--------|--------------|
 | — | — | — | — | — | — |
 
+## Cross-Repo Registry (see AGENTS.md Section L)
+| Repo | URL | Role |
+|------|-----|------|
+| DSA-reserching-diary | `git@github.com:NguyenPhan161206/DSA-reserching-diary.git` | DSA code + write-ups; this repo only anchors + roadmaps it |
+| UMT-Truck-Blind-Sight | `git@github.com:NguyenPhan161206/UMT-Truck-Blind-Sight.git` | IoT device code |
+| Snake_ANN | `git@github.com:NguyenPhan161206/Snake_ANN.git` | ML code |
+| Joblink | `git@github.com:qminh77/joblink.git` | Full-stack code |
+
 ## Recently Added
 | Date | Folder | File | Action |
 |------|--------|------|--------|
+| 2026-09-28 | dev_foundation/ | 6 sub-folders + 7 README guides | created (Dynamic Folder Proposal approved by user) |
+| 2026-09-28 | dev_foundation/dsa/ | README.md | created (anchor → DSA-reserching-diary) |
+| 2026-09-28 | dev_foundation/dsa/ | 01-learning-roadmap.md | created (phased roadmap, progress tracker, platform mix) |
+| 2026-09-28 | dev_foundation/linux/ | 01-file-system-paths-and-permissions.md | created (Template G: mental model, 30-command cheat sheet, 3 labs) |
+| 2026-09-28 | dev_foundation/linux/ | 03-text-processing-and-pipes.md | created (Template G: streams, redirection order, 36-command cheat sheet, 3 labs) |
+| 2026-09-28 | config | NOTE_TEMPLATE.md | added (TEMPLATE G — Dev Tool & Command Note) |
+| 2026-09-28 | config | AGENTS.md | updated (Section C mapping, Section H checklist, Section K cross-tech rule, Section L cross-repo registry, Section M folder system; config v3.3) |
 | 2026-09-27 | vocabulary/ | 11-position-sequence-and-direction-vocabulary.md | created |
 | 2026-09-27 | vocabulary/ | 10-fragility-and-criticality-vocabulary.md | created |
 | 2026-09-27 | vocabulary/ | 09-commit-and-working-state-terminology.md | created |
@@ -88,6 +110,10 @@
 | Psychology | ██████░░░░ 60% | 3 | Cognitive Biases, Behavioral Econ, Game Theory |
 | Books | ██████░░░░ 60% | 5 | Agile, Productivity |
 | Evaluations | ██░░░░░░░░ 20% | 3 | Regular tracking sessions |
+| Git/GitHub | ████████░░ 80% | 11 | Advanced rebase, monorepo, Actions depth |
+| Dev Foundation | █░░░░░░░░░ 10% | 2 | Linux 02/04/05 · all Docker/YAML/Web/DB notes |
+| DSA (anchor) | ██░░░░░░░░ 20% | 1 | Complexity toolkit, data-structure selection guide |
+| Architecture | ███░░░░░░░ 30% | 2 | Caching, queues, observability |
 
 ## Folder Naming Convention
 - Folders: `snake_case/` (e.g., `ai_ml/`, `economics_business/`)
