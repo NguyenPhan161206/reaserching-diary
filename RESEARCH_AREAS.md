@@ -10,8 +10,8 @@
 | 2 | iot_aiot/ | IoT/AIoT | A (Tech) | 2 | Active | 2026-09-07 |
 | 3 | economics_business/ | Economics/Business | B (Business) | 4 | Active | 2026-09-11 |
 | 4 | psychology_society/ | Psychology/Society | C (Social) | 3 | Active | 2026-09-11 |
-| 5 | books_summaries/ | Book Analysis | D (Book) | 5 | Active | 2026-09-11 |
-| 6 | personal_evaluations/ | Self-Assessment | E (Eval) | 3 | Active | 2026-09-14 |
+| 5 | books_summaries/ | Book Analysis | D (Book) | 6 | Active | 2026-09-28 |
+| 6 | personal_evaluations/ | Self-Assessment | E (Eval) | 4 | Active | 2026-09-28 |
 | 7 | random_ideas/ | Ideas | Flexible | 6 | Active | 2026-09-23 |
 | 8 | inbox/ | Staging | Flexible | 2 | Active | 2026-09-12 |
 | 9 | books_summaries/agile_project_management/knowledge/ | Agile Knowledge | D (Book) | 7 | Active | 2026-09-14 |
@@ -20,7 +20,7 @@
 | 12 | ielts_training/listening/ | IELTS Listening | F (IELTS) | 1 | Active | 2026-09-14 |
 | 13 | git_github/ | Git/GitHub | A (Tech) | 11 | Active | 2026-09-21 |
 | 14 | cv/ | CV / Resume | LaTeX CV | 2 | Active | 2026-09-15 |
-| 15 | vocabulary/ | Vocabulary & Collocations | V (Vocabulary) | 11 | Active | 2026-09-27 |
+| 15 | vocabulary/ | Vocabulary & Collocations | V (Vocabulary) | 12 | Active | 2026-09-28 |
 | 16 | software_architecture/ | System Architecture & Design | A (Tech) | 2 | Active | 2026-09-23 |
 | 17 | dev_foundation/ | Engineering Fundamentals | Guide (umbrella) | 0 | Active | 2026-09-28 |
 | 18 | dev_foundation/linux/ | Linux shell & filesystem | G (Dev Tool) | 2 | Active | 2026-09-28 |
@@ -29,6 +29,7 @@
 | 21 | dev_foundation/web_basics/ | HTML / CSS / JS / DOM | A + G | 0 | Planned | 2026-09-28 |
 | 22 | dev_foundation/databases/ | SQL / PostgreSQL / MySQL / PostgREST | G + A | 0 | Planned | 2026-09-28 |
 | 23 | dev_foundation/dsa/ | DSA — anchor & roadmap only | Flexible (anchor) | 1 | Active | 2026-09-28 |
+| 24 | books_summaries/06-building-a-second-brain/ | Book — Building a Second Brain | D (Book) | 1 | Active | 2026-09-28 |
 
 ## Proposed Folders (waiting for user confirmation)
 | # | Proposed Folder | Domain | Suggested Template | Reason | Proposed Date |
@@ -46,6 +47,9 @@
 ## Recently Added
 | Date | Folder | File | Action |
 |------|--------|------|--------|
+| 2026-09-28 | vocabulary/ | 12-one-vietnamese-word-many-english-words.md | created (other session, batched into push per Section G) |
+| 2026-09-28 | personal_evaluations/ | 05-linkedin-research-diary-post-eval.md | created (other session — LinkedIn post evaluation, Template E, batched) |
+| 2026-09-28 | books_summaries/ | 06-building-a-second-brain/{README,01-para-and-progressive-summarization}.md | created (other session — new book sub-folder, Template D, batched) |
 | 2026-09-28 | dev_foundation/ | 6 sub-folders + 7 README guides | created (Dynamic Folder Proposal approved by user) |
 | 2026-09-28 | dev_foundation/dsa/ | README.md | created (anchor → DSA-reserching-diary) |
 | 2026-09-28 | dev_foundation/dsa/ | 01-learning-roadmap.md | created (phased roadmap, progress tracker, platform mix) |
