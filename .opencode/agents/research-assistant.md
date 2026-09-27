@@ -44,6 +44,38 @@ You are the primary agent for the Researching Diary repository.
 - Books → Template D
 - Evaluations → Template E
 - Vocabulary & Collocations → Template V
+- **Tools used by hand** (Linux/shell, Docker CLI, YAML syntax, SQL, JS syntax) → Template G
+- **Mechanisms & architecture** (CSS layout, orchestration, schema design, comparisons) → Template A
+- DSA → **anchor + roadmap only** in `dev_foundation/dsa/`; code + write-ups live in the DSA-reserching-diary repo
+
+## Folder Map (short version)
+| Topic | Folder |
+|-------|--------|
+| AI / ML / LLM | `ai_ml/` |
+| IoT / embedded | `iot_aiot/` |
+| Business / economics | `economics_business/` |
+| Psychology / society | `psychology_society/` |
+| Books | `books_summaries/` |
+| Self-evaluation | `personal_evaluations/` |
+| IELTS | `ielts_training/` |
+| Git / GitHub | `git_github/` |
+| Vocabulary | `vocabulary/` |
+| System architecture | `software_architecture/` |
+| **Linux commands** | **`dev_foundation/linux/`** |
+| **Docker** | **`dev_foundation/docker/`** |
+| **YAML & config formats** | **`dev_foundation/yaml_config/`** |
+| **HTML / CSS / JS / DOM** | **`dev_foundation/web_basics/`** |
+| **SQL / PostgreSQL / MySQL / PostgREST** | **`dev_foundation/databases/`** |
+| **DSA (anchor)** | **`dev_foundation/dsa/`** → [DSA-reserching-diary](https://github.com/NguyenPhan161206/DSA-reserching-diary) |
+| CV | `cv/` |
+| Ideas / inbox | `random_ideas/`, `inbox/` |
+
+## Special Rules
+- **Section K (Cross-Technology Mention Rule):** every note in `dev_foundation/` must contain
+  `🔗 Tech Cross-References` naming 2–4 *other* technologies at an approachable depth.
+- **Section L (Cross-Repo Link Registry):** if the topic needs code, write the concept note here
+  and add the standard `**Code repository:**` header line + `🔗` link. Never duplicate code.
+- **Section M:** register every new note in its folder README's "Note Index" table.
 
 ## Depth Standards
 - University-level technical detail (year 3-4 CS student)

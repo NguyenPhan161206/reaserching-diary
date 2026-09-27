@@ -1,6 +1,6 @@
 # Note Templates — Researching Diary
 
-> 5 template variants cho từng domain. Agent PHẢI chọn đúng template khi tạo note mới.
+> 7 template variants cho từng domain. Agent PHẢI chọn đúng template khi tạo note mới.
 > Xem AGENTS.md Section C để biết mapping folder → template.
 
 ---
@@ -138,6 +138,103 @@
 
 ---
 *Economics explains human behavior. Business applies it.*
+```
+
+---
+
+## TEMPLATE G: Dev Tool & Command Note
+**Sử dụng cho:** `dev_foundation/linux/`, `dev_foundation/docker/`, `dev_foundation/yaml_config/`, `dev_foundation/web_basics/` (JS parts), `dev_foundation/databases/`
+**Mục đích:** Học *qua thực hành lệnh* — mental model → cheat sheet → lab → pitfalls → practice. Tối ưu cho tra cứu nhanh khi đang code/debug.
+**Khác Template A:** Template A giải thích *một hệ thống*; Template G giải thích *một công cụ, dùng tay*.
+
+```markdown
+# [Tool / Command Topic]
+
+**Created Date:** YYYY-MM-DD
+**Last Updated:** YYYY-MM-DD
+**Tags:** `#Linux`, `#Shell`, `#Filesystem` (chọn tag theo domain)
+**References:** [Official docs, man pages, links]
+**Status:** Draft | Review | Published
+**Difficulty:** Beginner | Intermediate | Advanced
+**Prerequisites:** [DSA / Linux / Git / etc.]
+
+---
+
+## 📌 Key Takeaways (TL;DR)
+- 1 dòng quan trọng nhất về mental model
+- 1 lệnh/pattern hay dùng nhất
+- 1 gotcha đã cắm vào người
+
+## 🧠 Detailed Notes
+
+### 1. Core Concepts (Mental Model)
+> Viết cách *nghĩ* về hệ thống TRƯỚC khi dùng lệnh. Ví dụ: "Linux không có 1 cây thư mục, nó có 1 namespace hệ thống tệp từ `/`").
+- Giải thích khái niệm nền
+- Vì sao mental model này lại quan trọng (giải thích hành vi lệnh bất ngờ)
+
+### 2. Mechanism (How It Works)
+- Bước 1 → bước 2 → bước 3 (data flow / system call / config resolution)
+- Có diagram ASCII nếu giúp hiểu
+- Nêu rõ cái gì *thực sự* xảy ra dưới lệnh
+
+### 3. Command Cheat Sheet
+
+| Command | What it does | When to use | Example / Output |
+|---------|--------------|-------------|------------------|
+| `ls -lah` | ... | ... | `total 24K ...` |
+
+> **Rule:** mỗi lệnh PHẢI có cột "When to use". Lệnh không có ngữ cảnh dùng là lệnh không học được.
+
+### 4. Practical Lab
+
+> Bài tập có đầu vào rõ + expected output để tự verify (không cần AI).
+
+**Lab 1 — [Tên]**
+```bash
+# Step 1: ...
+# Step 2: ...
+# Expected output:
+# ...
+```
+
+### 5. Common Pitfalls & Gotchas
+
+| Pitfall | Symptom | Fix |
+|---------|---------|-----|
+| `sudo rm -rf ./` hiểu sai đường dẫn | ... | ... |
+
+### 6. Comparison Table *(nếu applicable)*
+| Feature | Option A | Option B |
+|---------|----------|----------|
+| ... | ... | ... |
+
+## 🔗 Tech Cross-References
+> **BẮT BUỘC** (AGENTS.md Section K): 2–4 công nghệ khác, mỗi cái 1–3 dòng ở tầng "vừa phải, dễ hiểu".
+- **[Tech X]** — mối liên hệ 1 câu. [→ note trong repo]
+- **[Tech Y]** — mối liên hệ 1 câu. [→ note trong repo]
+
+## 🧪 Practice Tasks
+> KHÔNG kèm lời giải. Làm xong nhờ AI chấm/chữa (biến thể: hard hơn, tối ưu, hỏi lý thuyết).
+- [ ] Task 1 — mục tiêu, gợi ý command, điều kiện hoàn thành
+- [ ] Task 2 — khó hơn Task 1 một bậc
+
+## 📝 Research Journey
+- **Why:** [Động cơ cá nhân]
+- **Struggle:** [Chỗ khó hiểu nhất]
+- **Aha moment:** [Khoảnh khắc "à, hóa ra..."]
+- **Career link:** [Liên hệ mục tiêu AI Engineer]
+
+## 🔗 Related Topics
+- [[dev_foundation/...]] — connection explanation
+- 🔗 [DSA-reserching-diary](https://github.com/NguyenPhan161206/DSA-reserching-diary) — code & explanations live there (AGENTS.md Section L)
+- [SUGGESTED] topic-name — why it should be added
+
+## 🤔 Open Questions
+- [ ] Deeper question 1
+- [ ] Deeper question 2
+
+---
+*Type the commands. Break something. Read the error. That is the only real way to learn a tool.*
 ```
 
 ---
@@ -524,15 +621,22 @@ User asks about topic
   │ What folder? │
   └──────┬──────┘
          │
-    ┌────┴────┬──────────┬──────────────┬──────────────┐
-    ▼         ▼          ▼              ▼              ▼
-  ai_ml/   economics  psychology   books/         personal/
-  iot_aiot/ _business/ _society/   summaries/     evaluations/
-    │         │          │              │              │
-    ▼         ▼          ▼              ▼              ▼
- Template A  Template B  Template C   Template D    Template E
-  (Tech)    (Business)  (Social)     (Book)        (Eval)
+    ┌────┴────┬──────────┬──────────────┬──────────────┬────────────────┐
+    ▼         ▼          ▼              ▼              ▼                ▼
+  ai_ml/   economics  psychology   books/         personal/      dev_foundation/
+  iot_aiot/ _business/ _society/   summaries/     evaluations/     linux/ docker/
+    │         │          │              │              │            yaml_config/ web_basics/
+    │         │          │              │              │            databases/ dsa/
+    ▼         ▼          ▼              ▼              ▼                ▼
+Template A Template B Template C  Template D  Template E      A / G / anchor
+  (Tech)   (Business)  (Social)   (Book)      (Eval)     (G = tool/command)
 ```
 
+**Rule nhớ nhanh:**
+- Cần **dùng tay** một công cụ (lệnh shell, docker CLI, SQL, YAML) → **Template G**
+- Cần **hiểu cơ chế hệ thống/kiến trúc** (layout engine, orchestration, schema design) → **Template A**
+- Folder nào trộn cả hai → chia theo mục đích từng note, ghi rõ trong README của folder
+
 ---
-*Last updated: 2026-09-14 — Config version: 3.0*
+
+*Last updated: 2026-09-28 — Config version: 3.3 (added TEMPLATE G — Dev Tool & Command Note)*

@@ -49,6 +49,19 @@ When managing vocabulary and translation (`vocabulary/` folder):
 - Identify Viet-Glish pitfalls (word-for-word translation) and provide Band 7.0+ native alternatives.
 - **Conditional Resource & Literature Mapping:** Apply Section 3 (Resource & Literature Mapping) *only* when the term represents a technical problem, system limitation, or market/business pain point (e.g., keyword-stuffing, memory bottlenecks, scaling latency).
 
+### Dev Tool & Command Notes via AGY
+When managing notes in `dev_foundation/` (linux, docker, yaml_config, web_basics, databases):
+- **Template G (Dev Tool & Command Note)** for anything used by hand: commands, syntax, CLI workflows.
+  Must include: mental model → Command Cheat Sheet (≥ 8 commands, each with "When to use") → Practical Lab
+  with expected output → Common Pitfalls → 🔗 Tech Cross-References → 🧪 Practice Tasks (no solutions).
+- **Template A (Tech Note)** for mechanisms and architecture: rendering pipeline, orchestration model,
+  schema design, format comparisons.
+- Enforce **AGENTS.md Section K**: every note names 2–4 related technologies at approachable depth.
+- Enforce **AGENTS.md Section L**: DSA code belongs in
+  [DSA-reserching-diary](https://github.com/NguyenPhan161206/DSA-reserching-diary) — this repo only
+  holds roadmap/anchors. Always add the `**Code repository:**` header line and the `🔗` link.
+- Enforce **AGENTS.md Section M**: new notes must be registered in the folder README's "Note Index".
+
 ### Quality Gates (AGY)
 Before completing any note, verify:
 - [ ] Correct template variant used
@@ -66,4 +79,5 @@ Before ending session:
 4. Suggest push if conditions met
 
 ---
-*Config version: 2.0 — Last updated: 2026-09-10*
+*Config version: 2.1 — Last updated: 2026-09-28*
+*(v2.1: added Dev Tool & Command Notes workflow — Template G, Section K cross-tech mentions, Section L cross-repo links, Section M folder index.)*

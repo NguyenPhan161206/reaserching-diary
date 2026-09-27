@@ -100,6 +100,12 @@ Agent PHẢI chọn đúng template dựa trên domain:
 | Vocabulary & Collocations | vocabulary/ | Template V: Advanced Vocabulary & Collocation |
 | Git & GitHub | git_github/ | Template A: Tech Note (adapted) |
 | System Architecture & Design | software_architecture/ | Template A: Tech Note (adapted) |
+| Linux (shell, filesystem, processes) | dev_foundation/linux/ | Template G: Dev Tool & Command Note |
+| Docker & Containers | dev_foundation/docker/ | Template G (01–03) · Template A (04) |
+| YAML & Config Formats | dev_foundation/yaml_config/ | Template G (01–02) · Template A (03) |
+| Web Basics (HTML/CSS/JS/DOM) | dev_foundation/web_basics/ | Template A (01–03, 05) · Template G (04) |
+| Databases (SQL, PostgreSQL, MySQL, PostgREST) | dev_foundation/databases/ | Template G (01, 02, 04) · Template A (03, 05) |
+| DSA (anchor only — code ở repo riêng) | dev_foundation/dsa/ | Anchor + roadmap (Flexible) |
 | CV / Resume | cv/ | LaTeX CV (XeLaTeX, EN + VI) |
 
 Xem NOTE_TEMPLATE.md để biết chi tiết từng template.
@@ -262,6 +268,98 @@ Agent PHẢI tự check trước khi hoàn thành note:
 - [ ] Có self-assessment scoring section?
 - [ ] Có Research Journey section?
 
+### Dev Tool & Command Notes (Template G):
+- [ ] Có **mental model** (giải thích *cách hệ thống nghĩ*) trước khi liệt kê lệnh?
+- [ ] Có **Command Cheat Sheet ≥ 8 lệnh**, mỗi lệnh có cột "When to use"?
+- [ ] Có **≥ 1 Practical Lab** với expected output để tự verify?
+- [ ] Có **Common Pitfalls & Gotchas**?
+- [ ] Có **🔗 Tech Cross-References** (2–4 công nghệ khác, xem Section K)?
+- [ ] Có **🧪 Practice Tasks** KHÔNG kèm lời giải (để tự làm rồi nhờ AI chấm)?
+- [ ] Có Research Journey + career link?
+
+## ═══════════════════════════════════════════
+## SECTION K: CROSS-TECHNOLOGY MENTION RULE
+## ═══════════════════════════════════════════
+
+*(Added 2026-09-28 — config v3.3)*
+
+Nguyên tắc: kiến thức nền tảng (`dev_foundation/**`) được học ở tầng **"vừa phải, dễ hiểu"** —
+không cần chuyên sâu cho tới khi thực sự cần. Nhưng note KHÔNG được sống trong cái hộp riêng.
+
+**Mỗi note trong `dev_foundation/` PHẢI có section `🔗 Tech Cross-References` gồm 2–4 công nghệ khác.**
+Mỗi mục: 1–3 dòng giải thích mối liên hệ + link tới note trong repo (nếu có).
+
+| Note về... | Phải nhắc tới (chọn ≥ 2) |
+|---|---|
+| Linux lệnh | Git (nội dung là file → version control), Docker (chạy trong container), Shell vs PowerShell, SSH, YAML (config), permissions ↔ Linux, DSA (đọc code/nhật ký bằng CLI) |
+| Docker | Linux (namespace, cgroup, process), YAML (compose), Git/GitHub Actions (CI build image), Networking/ports ↔ DB, MLOps/deploy (`ai_ml/05`) |
+| YAML/Config | GitHub Actions (`git_github/11`), Docker Compose, `.env` ↔ secrets, JSON ↔ API/PostgREST, Python config |
+| HTML/CSS | DOM ↔ JavaScript, Browser rendering ↔ UX, Flexbox/Grid ↔ data layout, Tailwind (Joblink project), HTML ↔ accessibility/semantics ↔ SEO |
+| JavaScript | Event loop ↔ async, Node.js ↔ server, TypeScript, HTML DOM, JSON/API ↔ PostgREST |
+| Database | SQL ↔ DSA (bảng vs cấu trúc dữ liệu), Index ↔ tốc độ truy vấn, PostgREST ↔ API, Transactions ↻ Git commit, RLS ↔ phân quyền, MLOps data pipeline |
+
+**Cách đúng:** nhắc ở mức "đủ để hiểu cơ chế liên hệ", có link đi sâu hơn khi cần.
+**Cách sai:** nhảy sang học sâu công nghệ khác ngay trong note này (vi phạm A2 — lan man).
+
+## ═══════════════════════════════════════════
+## SECTION L: CROSS-REPO LINK REGISTRY
+## ═══════════════════════════════════════════
+
+*(Added 2026-09-28 — config v3.3)*
+
+Một số kiến thức **không nằm ở repo này**. Khi đó note ở đây chỉ làm **anchor** (đóng dấu) và
+PHẢI trỏ sang repo chứa code/giải thích. Agent không được tự nhân bản code vào repo này.
+
+| Repo | URL (SSH) | Chứa gì | Ở repo này chỉ có gì | Hướng link bắt buộc |
+|------|-----------|---------|----------------------|---------------------|
+| DSA-reserching-diary | `git@github.com:NguyenPhan161206/DSA-reserching-diary.git` | DSA code + solution write-up + practice log | Anchor + roadmap + tư duy thuật toán (link) | Diary → DSA (Section K block trong từng note liên quan) |
+| UMT-Truck-Blind-Sight | `git@github.com:NguyenPhan161206/UMT-Truck-Blind-Sight.git` | Code thiết bị IoT | Kiến thức + bài học rút ra | Diary → repo (ở note `iot_aiot/`) |
+| Snake_ANN | `git@github.com:NguyenPhan161206/Snake_ANN.git` | Code ML | Kiến thức ML (`ai_ml/`) | Diary → repo |
+| Joblink | `git@github.com:qminh77/joblink.git` | Code full-stack | Kiến thức web/DB/arch | Diary → repo |
+
+**Format chuẩn (copy nguyên văn, không tự diễn đạt lại):**
+
+Trong note ở repo này (header):
+```markdown
+**Code repository:** [NguyenPhan161206/DSA-reserching-diary](https://github.com/NguyenPhan161206/DSA-reserching-diary) · `git@github.com:NguyenPhan161206/DSA-reserching-diary.git`
+```
+
+Trong `## 🔗 Related Topics`:
+```markdown
+- 🔗 [DSA-reserching-diary](https://github.com/NguyenPhan161206/DSA-reserching-diary) — code & explanations live there; this diary holds concept anchors and roadmap
+```
+
+Trong repo đích (README + từng note liên quan):
+```markdown
+**Knowledge base:** [reaserching-diary](https://github.com/NguyenPhan161206/reaserching-diary) — theory, roadmap & technology notes live there
+```
+
+**Checklist khi tạo note có liên quan repo ngoài:**
+- [ ] Header có dòng `**Code repository:**` đúng format
+- [ ] Related Topics có mục `🔗` trỏ về repo đích
+- [ ] Folder `dev_foundation/dsa/` chỉ chứa anchor/roadmap, KHÔNG chứa solution code
+
+## ═══════════════════════════════════════════
+## SECTION M: FOLDER SYSTEM FOR dev_foundation/
+## ═══════════════════════════════════════════
+
+*(Added 2026-09-28 — config v3.3)*
+
+`dev_foundation/` là **folder tổng** cho nền tảng kỹ thuật. Sub-folder KHÔNG prefix số
+(theo style `books_summaries/agile_project_management/*`); thứ tự học nằm trong `dev_foundation/README.md`.
+
+| Sub-folder | Template | Vai trò |
+|---|---|---|
+| `linux/` | G | Lệnh hằng ngày, mental model hệ thống file + process |
+| `docker/` | G + A | Công cụ chạy (G) + mental model orchestration (A) |
+| `yaml_config/` | G + A | Cú pháp & dùng trong CI (G) + chọn định dạng config (A) |
+| `web_basics/` | A + G | Cơ chế render/DOM/layout (A) + ngôn ngữ JS dùng tay (G) |
+| `databases/` | G + A | SQL/engine dùng tay (G) + thiết kế schema & kiến trúc dữ liệu (A) |
+| `dsa/` | Anchor | Chỉ roadmap + link. Code & giải thích → repo DSA (Section L) |
+
+**Rule:** mọi note trong `dev_foundation/` khi tạo mới PHẢI có mục trong bảng "Note Index" của `README.md` folder đó.
+Backlog chưa viết nằm trong bảng **"Note Backlog"** cùng file.
+
 ## ═══════════════════════════════════════════
 ## SECTION I: RESEARCH AREA MAPPING
 ## ═══════════════════════════════════════════
@@ -283,6 +381,13 @@ Maintained in: RESEARCH_AREAS.md
 | random_ideas/ | Ideas | Flexible | Active | 6 | 2026-09-23 |
 | inbox/ | Staging | Flexible | Active | 1 | 2026-09-07 |
 | software_architecture/ | SW Architecture | A (Tech) | Active | 2 | 2026-09-23 |
+| dev_foundation/ | Engineering Fundamentals | Guide (umbrella) | Active | 0 | 2026-09-28 |
+| dev_foundation/linux/ | Linux shell & filesystem | G (Dev Tool) | Active | 2 | 2026-09-28 |
+| dev_foundation/docker/ | Docker & Containers | G + A | Planned | 0 | 2026-09-28 |
+| dev_foundation/yaml_config/ | YAML & Config Formats | G + A | Planned | 0 | 2026-09-28 |
+| dev_foundation/web_basics/ | HTML/CSS/JS/DOM | A + G | Planned | 0 | 2026-09-28 |
+| dev_foundation/databases/ | SQL/PostgreSQL/MySQL/PostgREST | G + A | Planned | 0 | 2026-09-28 |
+| dev_foundation/dsa/ | DSA anchor & roadmap | Flexible (anchor) | Active | 1 | 2026-09-28 |
 
 ## ═══════════════════════════════════════════
 ## SECTION J: FOLDER→FILE NAMING CONVENTION
@@ -294,6 +399,7 @@ Maintained in: RESEARCH_AREAS.md
 - Connection notes: `bridge-topic-a-and-topic-b.md`
 
 ---
-*Config version: 3.2 — Last updated: 2026-09-27*
+*Config version: 3.3 — Last updated: 2026-09-28*
+*(v3.3: added `dev_foundation/` umbrella folder (linux, docker, yaml_config, web_basics, databases, dsa) + TEMPLATE G "Dev Tool & Command Note" + Section K "Cross-Technology Mention Rule" + Section L "Cross-Repo Link Registry" + Section M "Folder System for dev_foundation". DSA code/explanations live in a separate repo; this repo only anchors + roadmaps it.)*
 *(v3.2: Section G rewritten to "Push on Command Only" — the v3.1 vocabulary-lookup auto-push standing authorization was revoked by the user the same day. Push now happens only on an explicit user command, batched with everything new.)*
 *(v3.1: added Section G "Standing Authorization — Vocabulary Lookup Auto-Push" — revoked)*
