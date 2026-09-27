@@ -53,3 +53,7 @@
 | 2026-09-27 | vocabulary | vocabulary/05-extraordinary-deep-dive.md | created (EXTRAORDINARY deep dive: etymology, 4 senses, word family, collocations, confusables matrix, Viet-Glish pitfalls, cross-domain bridge, practice section, Template V) |
 | 2026-09-27 | tracking | CONTRIBUTION_CALENDAR.md | updated (interactions +3, day 27 marked heavy, streak 2→3 days) |
 | 2026-09-27 | tracking | RESEARCH_AREAS.md | updated (vocabulary notes count 4→5, recently added) |
+| 2026-09-27 | vocabulary | vocabulary/06-document-and-communication-verb-family.md | created (mention/refer to/state/cite/raise/touch on + precisely; register ladder, comparison matrix, hedging patterns, Viet-Glish fixes, Template V) |
+| 2026-09-27 | vocabulary | vocabulary/07-labelling-and-temporary-memory.md | created (label: 8 senses, ML/UI/business law, label noise & leakage, distribution shifts; scratchpad: memory hierarchy, tmpfs, on-chip SRAM, ESP32 bridge, Template V) |
+| 2026-09-27 | config | AGENTS.md & .opencode/agents/research-assistant.md | updated (Section G "Standing Authorization — Vocabulary Lookup Auto-Push", config v3.1) |
+| 2026-09-27 | tracking | RESEARCH_AREAS.md & CONTRIBUTION_CALENDAR.md | updated (vocabulary notes count 5→7, interactions +7, day 27 heavy, streak 2 days) |

@@ -19,10 +19,11 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
 ```
 
 ## Stats
-- **This month:** 15 active days | 87 interactions
-- **Current streak:** 🔥 1 day (25–26 inactive → streak reset; 27 is the restart)
+- **This month:** 15 active days | 91 interactions
+- **Current streak:** 🔥 2 days (25–26 inactive → streak reset; 27–28 restart)
 - **Longest streak:** 4 days
 - **Total active days:** 14
+- **Vocabulary lookup streak:** 5 terms in one session (extraordinary, mention-family, label, scratchpad, precisely)
 
 ---
 *Last updated: 2026-09-27*

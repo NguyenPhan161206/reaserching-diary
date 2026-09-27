@@ -165,6 +165,26 @@ Agent cập nhật file này TRƯỚC KHI đề xuất push.
 - [ ] Files đã move từ inbox/ (nếu có)
 - [ ] Cross-references đã thêm (nếu có)
 
+### ⚡ STANDING AUTHORIZATION — Vocabulary Lookup Auto-Push
+*(Added 2026-09-27 by direct user order: "từ giờ nhớ push sau mỗi lần tra")*
+
+Khi user tra cứu từ vựng (mẫu: "extraordinary dịch", "dịch label", "dịch scratchpad"),
+Agent được **AUTO-PUSH** sau khi lưu note, **KHÔNG cần hỏi xác nhận lại**:
+
+1. Trả lời tra cứu trong chat → lưu note vào `vocabulary/` theo Template V
+2. Cập nhật `CONTRIBUTION_LOG.md`, `CONTRIBUTION_CALENDAR.md`, `RESEARCH_AREAS.md`
+3. Commit + push lên `origin/<branch>` — **không cần confirm**
+4. Vẫn PHẢI hiển thị 📋 Push Summary (để user audit) + scan secrets trước khi push
+
+**Vẫn BẦT BUỘC chờ confirm** (standing authorization KHÔNG áp dụng cho):
+- Push note không thuộc luồng tra cứu từ vựng (research note, architecture note, eval note)
+- Bất kỳ thay đổi nào lên `AGENTS.md` / `NOTE_TEMPLATE.md` / folder structure
+- Bất kỳ thay đổi nào có rủi ro xoá/rename file
+
+**Ghi chú tương thích:** điều này override điều kiện "3+ notes mới" của Push Conditions
+cho luồng vocabulary lookup. Agent nên ghi rõ trong Push Summary là push theo
+standing authorization.
+
 ### Push Confirmation Format:
 ```
 📋 Push Summary
@@ -266,4 +286,5 @@ Maintained in: RESEARCH_AREAS.md
 - Connection notes: `bridge-topic-a-and-topic-b.md`
 
 ---
-*Config version: 3.0 — Last updated: 2026-09-14*
+*Config version: 3.1 — Last updated: 2026-09-27*
+*(v3.1: added Section G "Standing Authorization — Vocabulary Lookup Auto-Push")*
