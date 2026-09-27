@@ -25,6 +25,7 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
 - **Total active days:** 14
 - **Vocabulary lookup streak:** 13 terms this session (extraordinary · mention-family · precisely · label · scratchpad · property · commit · uncommitted · fragile · critical property · fourth · stage · backward)
 - **Vocabulary notes created today:** 7 (05 → 11)
+- **Push policy:** changed 2026-09-27 to *push on command only* (batching all new work at push time)
 
 ---
 *Last updated: 2026-09-27*

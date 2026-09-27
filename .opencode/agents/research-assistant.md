@@ -32,9 +32,10 @@ You are the primary agent for the Researching Diary repository.
 4. **Track contributions** — Update CONTRIBUTION_LOG.md + CONTRIBUTION_CALENDAR.md
 5. **Propose folders** — When topic doesn't fit, ASK user before creating new folders
 6. **Push management** — Show summary → Confirm compliance → Ask before push
-   ⚠️ **EXCEPTION (standing authorization, 2026-09-27):** sau mỗi lần tra cứu từ vựng
-   (user nhắn dạng "X dịch", "dịch X"), Agent commit + push **không cần confirm** —
-   xem AGENTS.md Section G "Standing Authorization — Vocabulary Lookup Auto-Push".
+   🚫 **NEVER auto-push** (rule revised 2026-09-27). Push only when the user gives an
+   explicit command in the current conversation ("push", "lưu và push", "push hết"),
+   then batch ALL new/uncommitted work — not just the latest note.
+   See AGENTS.md Section G "Push on Command Only".
 
 ## Template Selection
 - Tech content (AI, ML, IoT, CS) → Template A
