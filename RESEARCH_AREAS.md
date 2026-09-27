@@ -20,7 +20,7 @@
 | 12 | ielts_training/listening/ | IELTS Listening | F (IELTS) | 1 | Active | 2026-09-14 |
 | 13 | git_github/ | Git/GitHub | A (Tech) | 11 | Active | 2026-09-21 |
 | 14 | cv/ | CV / Resume | LaTeX CV | 2 | Active | 2026-09-15 |
-| 15 | vocabulary/ | Vocabulary & Collocations | V (Vocabulary) | 9 | Active | 2026-09-27 |
+| 15 | vocabulary/ | Vocabulary & Collocations | V (Vocabulary) | 11 | Active | 2026-09-27 |
 | 16 | software_architecture/ | System Architecture & Design | A (Tech) | 2 | Active | 2026-09-23 |
 
 ## Proposed Folders (waiting for user confirmation)
@@ -31,6 +31,8 @@
 ## Recently Added
 | Date | Folder | File | Action |
 |------|--------|------|--------|
+| 2026-09-27 | vocabulary/ | 11-position-sequence-and-direction-vocabulary.md | created |
+| 2026-09-27 | vocabulary/ | 10-fragility-and-criticality-vocabulary.md | created |
 | 2026-09-27 | vocabulary/ | 09-commit-and-working-state-terminology.md | created |
 | 2026-09-27 | vocabulary/ | 08-property-multi-sense-lexicon.md | created |
 | 2026-09-27 | vocabulary/ | 07-labelling-and-temporary-memory.md | created |

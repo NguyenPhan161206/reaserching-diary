@@ -19,12 +19,12 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
 ```
 
 ## Stats
-- **This month:** 15 active days | 93 interactions
+- **This month:** 15 active days | 94 interactions
 - **Current streak:** 🔥 3 days (23–24 active, 25–26 gap, 27 restarted with heavy session)
 - **Longest streak:** 4 days
 - **Total active days:** 14
-- **Vocabulary lookup streak:** 8 terms in one session (extraordinary · mention-family · precisely · label · scratchpad · property · commit · uncommitted)
-- **Vocabulary notes created today:** 5 (05 → 09)
+- **Vocabulary lookup streak:** 13 terms this session (extraordinary · mention-family · precisely · label · scratchpad · property · commit · uncommitted · fragile · critical property · fourth · stage · backward)
+- **Vocabulary notes created today:** 7 (05 → 11)
 
 ---
 *Last updated: 2026-09-27*
