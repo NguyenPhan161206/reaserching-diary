@@ -105,7 +105,7 @@ Agent PHẢI chọn đúng template dựa trên domain:
 | YAML & Config Formats | dev_foundation/yaml_config/ | Template G (01–02) · Template A (03) |
 | Web Basics (HTML/CSS/JS/DOM) | dev_foundation/web_basics/ | Template A (01–03, 05) · Template G (04) |
 | Databases (SQL, PostgreSQL, MySQL, PostgREST) | dev_foundation/databases/ | Template G (01, 02, 04) · Template A (03, 05) |
-| DSA (anchor only — code ở repo riêng) | dev_foundation/dsa/ | Anchor + roadmap (Flexible) |
+| DSA (anchor + method notes — code ở repo riêng) | dev_foundation/dsa/ | A (Tech) cho method notes (04, 05) · Flexible cho anchor/roadmap (01–03) |
 | CV / Resume | cv/ | LaTeX CV (XeLaTeX, EN + VI) |
 
 Xem NOTE_TEMPLATE.md để biết chi tiết từng template.
@@ -337,7 +337,37 @@ Trong repo đích (README + từng note liên quan):
 **Checklist khi tạo note có liên quan repo ngoài:**
 - [ ] Header có dòng `**Code repository:**` đúng format
 - [ ] Related Topics có mục `🔗` trỏ về repo đích
-- [ ] Folder `dev_foundation/dsa/` chỉ chứa anchor/roadmap, KHÔNG chứa solution code
+- [ ] Folder `dev_foundation/dsa/` chỉ chứa anchor / roadmap / method notes, KHÔNG chứa solution code
+
+## ═══════════════════════════════════════════
+## ═══════════════════════════════════════════
+## SECTION N: LANGUAGE TRACK POLICY
+## ═══════════════════════════════════════════
+
+*(Added 2026-09-28 — config v3.4)*
+
+Mỗi ngôn ngữ thuộc **đúng một track**. Không trộn. Lý do: học 4 ngôn ngữ cùng lúc
+là hình thức procrastination đắt nhất — nhìn có vẻ chăm chỉ nhưng không tạo ra kỹ năng nào.
+
+| Track | Ngôn ngữ | Vai trò | Notes ở đâu | Code ở đâu |
+|-------|----------|----------|-------------|-----------|
+| **DSA** | **Java** | Course language — **mọi bài đều làm bằng Java trước** | `dev_foundation/dsa/02-java-for-dsa.md` | repo DSA: `solution.java` |
+| **DSA** | **C++** | Port target — phỏng vấn, contest, tight constant factor | `dev_foundation/dsa/03-cpp-for-dsa.md` | repo DSA: `solution.cpp` |
+| **Web** | **JavaScript** | Ngôn ngữ của web track (DOM, event loop, async) | `dev_foundation/web_basics/` | repo Joblink |
+| **AI/ML + IoT** | **Python** | Stack ML/IoT (Snake_ANN, UMT-Truck-Blind-Sight) | `ai_ml/`, `iot_aiot/` | repo riêng |
+
+**Rule "attempt → port":** làm bằng Java trước → port sang C++ **từ trí nhớ, không dịch từng dòng** →
+ghi vào section **Language Notes** trong `approach.md`. Một bản dịch máy-móc không dạy được gì.
+
+**Tỉ lệ port gợi ý:** 1 trong 5 bài, chỉ khi C++ thật sự có lợi (heap/Dijkstra, number theory, chuẩn bị phỏng vấn).
+Không làm mọi bài hai lần từ đầu.
+
+**Cấm dùng nhầm:** KHÔNG đề xuất JavaScript cho bài DSA (không có `PriorityQueue`, stack nông, hidden class),
+KHÔNG đề xuất Python cho lộ trình DSA (môn học chấm Java, phỏng vấn C++).
+
+**Agent khi gặp note mới:** kiểm tra note này có nằm đúng track không. Note về thuật toán → `dsa/`.
+Note về DOM/browser → `web_basics/`. Note về model/huấn luyện → `ai_ml/`. Trộn 2 track trong 1 note
+là lỗi phạm vi — tách nó.
 
 ## ═══════════════════════════════════════════
 ## SECTION M: FOLDER SYSTEM FOR dev_foundation/
@@ -387,7 +417,7 @@ Maintained in: RESEARCH_AREAS.md
 | dev_foundation/yaml_config/ | YAML & Config Formats | G + A | Planned | 0 | 2026-09-28 |
 | dev_foundation/web_basics/ | HTML/CSS/JS/DOM | A + G | Planned | 0 | 2026-09-28 |
 | dev_foundation/databases/ | SQL/PostgreSQL/MySQL/PostgREST | G + A | Planned | 0 | 2026-09-28 |
-| dev_foundation/dsa/ | DSA anchor & roadmap | Flexible (anchor) | Active | 1 | 2026-09-28 |
+| dev_foundation/dsa/ | DSA anchor, roadmap & method notes | A (Tech) + Flexible (anchor) | Active | 5 | 2026-09-28 |
 
 ## ═══════════════════════════════════════════
 ## SECTION J: FOLDER→FILE NAMING CONVENTION
@@ -399,7 +429,9 @@ Maintained in: RESEARCH_AREAS.md
 - Connection notes: `bridge-topic-a-and-topic-b.md`
 
 ---
-*Config version: 3.3 — Last updated: 2026-09-28*
+*Config version: 3.5 — Last updated: 2026-09-28*
+*(v3.5: DSA is no longer "anchor only" — `dev_foundation/dsa/04-complexity-analysis-toolkit.md` and `05-data-structure-selection-guide.md` are Template A method notes, so Section C now reads "anchor + method notes (A)" and Section I counts 5 notes. Section L's checklist wording updated to match: the folder holds anchor / roadmap / method notes and still must not contain solution code. Resolves the Open Question logged in `dev_foundation/README.md`.)*
+*(v3.4: added Section N "Language Track Policy" — DSA track = Java (course language) + C++ (port target); web track = JavaScript; AI/ML track = Python. JavaScript is explicitly excluded from DSA, Python explicitly excluded from DSA. Added `dev_foundation/dsa/02-java-for-dsa.md` and `03-cpp-for-dsa.md`.)*
 *(v3.3: added `dev_foundation/` umbrella folder (linux, docker, yaml_config, web_basics, databases, dsa) + TEMPLATE G "Dev Tool & Command Note" + Section K "Cross-Technology Mention Rule" + Section L "Cross-Repo Link Registry" + Section M "Folder System for dev_foundation". DSA code/explanations live in a separate repo; this repo only anchors + roadmaps it.)*
 *(v3.2: Section G rewritten to "Push on Command Only" — the v3.1 vocabulary-lookup auto-push standing authorization was revoked by the user the same day. Push now happens only on an explicit user command, batched with everything new.)*
 *(v3.1: added Section G "Standing Authorization — Vocabulary Lookup Auto-Push" — revoked)*

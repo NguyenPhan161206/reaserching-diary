@@ -27,5 +27,9 @@ _site/
 *.log
 *.out
 
+# Nested sibling repo (DSA code lives in its own remote — AGENTS.md Section L)
+# Ignore the whole folder so it is never committed as a submodule/gitlink by accident.
+/DSA-reserching-diary/
+
 # Compiled PDF artifacts (source tracked, binaries local only)
 *.pdf
