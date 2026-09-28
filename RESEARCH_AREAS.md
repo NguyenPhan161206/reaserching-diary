@@ -6,7 +6,7 @@
 ## Active Folders
 | # | Folder | Domain | Template | Notes | Status | Last Updated |
 |---|--------|--------|----------|-------|--------|-------------|
-| 1 | ai_ml/ | AI/ML/DL/NLP | A (Tech) | 6 | Active | 2026-09-23 |
+| 1 | ai_ml/ | AI/ML/DL/NLP | A (Tech) | 6 | Active | 2026-09-28 |
 | 2 | iot_aiot/ | IoT/AIoT | A (Tech) | 2 | Active | 2026-09-07 |
 | 3 | economics_business/ | Economics/Business | B (Business) | 4 | Active | 2026-09-11 |
 | 4 | psychology_society/ | Psychology/Society | C (Social) | 3 | Active | 2026-09-11 |
@@ -23,12 +23,12 @@
 | 15 | vocabulary/ | Vocabulary & Collocations | V (Vocabulary) | 12 | Active | 2026-09-28 |
 | 16 | software_architecture/ | System Architecture & Design | A (Tech) | 2 | Active | 2026-09-23 |
 | 17 | dev_foundation/ | Engineering Fundamentals | Guide (umbrella) | 0 | Active | 2026-09-28 |
-| 18 | dev_foundation/linux/ | Linux shell & filesystem | G (Dev Tool) | 2 | Active | 2026-09-28 |
+| 18 | dev_foundation/linux/ | Linux shell, filesystem & navigation | G (Dev Tool) | 3 | Active | 2026-09-28 |
 | 19 | dev_foundation/docker/ | Docker & Containers | G + A | 0 | Planned | 2026-09-28 |
 | 20 | dev_foundation/yaml_config/ | YAML & Config Formats | G + A | 0 | Planned | 2026-09-28 |
 | 21 | dev_foundation/web_basics/ | HTML / CSS / JS / DOM | A + G | 0 | Planned | 2026-09-28 |
 | 22 | dev_foundation/databases/ | SQL / PostgreSQL / MySQL / PostgREST | G + A | 0 | Planned | 2026-09-28 |
-| 23 | dev_foundation/dsa/ | DSA — anchor & roadmap only | Flexible (anchor) | 1 | Active | 2026-09-28 |
+| 23 | dev_foundation/dsa/ | DSA — roadmap, complexity toolkit, structure-selection guide, Java & C++ notes (code → DSA-reserching-diary) | A (Tech) + Flexible (anchor) | 5 | Active | 2026-09-28 |
 | 24 | books_summaries/06-building-a-second-brain/ | Book — Building a Second Brain | D (Book) | 1 | Active | 2026-09-28 |
 
 ## Proposed Folders (waiting for user confirmation)
@@ -81,6 +81,14 @@
 
 | Date | Folder | File | Action |
 |------|--------|------|--------|
+| 2026-09-28 | ai_ml/ | README.md | created (folder guide for the professional track: 6-note index with a core question each, a *reading order that is not the file numbering* — 01 → 05 → 02/03 → 04 → 06 — an ASCII diagram of how retrieval → ranking → engineering → deployment → agent interface compose, 6 Section K cross-references, a 7-item note backlog. Resolves 5 inbound links from `dev_foundation/dsa/` that pointed at a non-existent `ai_ml/README.md`) |
+| 2026-09-28 | content-fix | dev_foundation/dsa/04-complexity-analysis-toolkit.md | corrected (the master theorem table claimed 2 recurrences were out of reach for wrong reasons — $T(n)=2T(n/2)+\Theta(\log n)$ is plain **case 1** and the "$b$ is not a power of 2" line was fabricated, since the theorem never requires that. Replaced with: the two mis-parsed recurrences shown *inside* the theorem, the two real misconceptions ($b>1$ is the only requirement; case 2 has a $\log^k n$ extension), and 3 recurrences that genuinely need another move. Also corrected the memoisation claim — top-down DP does **not** flatten the stack; only bottom-up does) |
+| 2026-09-28 | content-fix | dev_foundation/linux/02-navigation-and-core-cli.md | corrected (4 fixes: `-exec` is **not** a command-injection vector — filenames are passed as plain arguments, and the real reason for `-print0`/`xargs -0` is whitespace and newlines; the `cat -A` output showed `'notes'$` while the caption said the quotes were gone, now `my notes$` / `notes$`; step 5 ran `readlink -f 02-nav.md` from the wrong directory, now `cd notes/linux` first; `git checkout -- .` was advertised as a recovery for `rm -rf` although it cannot restore untracked files — replaced with a 4-row recovery-options table that puts `gio trash` first. Lab 1 re-executed end to end: `stat` byte count 14 → 13 and the `file` column padding were both wrong) |
+| 2026-09-28 | content-fix | dev_foundation/dsa/05-data-structure-selection-guide.md | corrected (the worked example claimed "LeetCode 493, Reverse Pairs is the same idea at 3x" — 493 counts $a_i > 2a_j$, a different predicate. Now attributed to the classic merge-sort inversion count, with 493 named correctly as the same divide-and-conquer under a scaled predicate) |
+| 2026-09-28 | config | AGENTS.md | updated (v3.4 → **v3.5** — Section C row for DSA changed from "anchor only" to "anchor + method notes", template now "A (Tech) cho method notes (04, 05) · Flexible cho anchor/roadmap (01–03)"; Section I DSA row → "DSA anchor, roadmap & method notes", 1 → 5 notes; Section L checklist reworded to "anchor / roadmap / method notes") |
+| 2026-09-28 | tracking | dev_foundation/README.md | revised (Note Index corrected: linux 4 → 6 planned, dsa "—" → 6 planned; the Section C open question ticked as resolved) |
+| 2026-09-28 | tracking | dev_foundation/linux/README.md | revised (the Note Index listed 04–05 while the backlog separately re-listed the same two notes, so the planned count was ambiguous. The index is now the complete numbered plan 01–09 with a core question each, the backlog keeps only unscheduled ideas, and progress is stated as 3 / 9) |
+| 2026-09-28 | tracking | README.md | updated (`/ai_ml` entry now links the new folder guide and states the concepts-here/code-in-Snake_ANN split; Linux 3 / 7 → 3 / 9 notes; the roadmap todo now says notes 04–09) |
 | 2026-09-28 | vocabulary/ | 12-one-vietnamese-word-many-english-words.md | created (one-Vietnamese-word-many-English-words: cuối ngày / tận dụng / giai đoạn / can thiệp / có sẵn / ngày qua ngày, register ladders, confusables, Viet-Glish pitfalls, Template V) |
 | 2026-09-28 | personal_evaluations/ | 05-linkedin-research-diary-post-eval.md | created (LinkedIn post English eval, Template E: line-by-line correction log, 3 unreadable sentences, recurring error list, cognitive-offloading framing, corrected + LinkedIn-optimised versions) |
 | 2026-09-28 | books_summaries/ | 06-building-a-second-brain/{README,01-para-and-progressive-summarization}.md | created (new book sub-folder, Template D: CODE acronym, PARA, progressive summarization 5 layers, daily habits, PARA-vs-Zettelkasten, honesty policy — framework reference not first-hand read) |
@@ -94,8 +102,20 @@
 | 2026-09-28 | dev_foundation/dsa/ | 01-learning-roadmap.md | created (phased roadmap, progress tracker, platform mix) |
 | 2026-09-28 | dev_foundation/linux/ | 01-file-system-paths-and-permissions.md | created (Template G: mental model, 30-command cheat sheet, 3 labs) |
 | 2026-09-28 | dev_foundation/linux/ | 03-text-processing-and-pipes.md | created (Template G: streams, redirection order, 36-command cheat sheet, 3 labs) |
+| 2026-09-28 | dev_foundation/dsa/ | 01-learning-roadmap.md | revised (language policy rewritten: **two tracks split** — DSA = Java (course language) + C++ (port target), web = JavaScript, AI/ML = Python; attempt → port rule, per-language gotchas per phase, Python removed from the DSA plan) |
+| 2026-09-28 | dev_foundation/dsa/ | 02-java-for-dsa.md | created (Template A: Collections decision table, `PriorityQueue` is max-heap + no decrease-key → lazy-deletion Dijkstra, no built-in monotonic structures, `HashMap` iteration-order caveat, generics & type erasure, `int` overflow, `StackOverflowError` is an Error, `FastScanner`, `String.hashCode` formula, complexity cheat sheet, 11 pitfalls, 8 practice tasks) |
+| 2026-09-28 | dev_foundation/dsa/ | 03-cpp-for-dsa.md | created (Template A: STL decision table, `vector` capacity & reallocation, iterator invalidation table, indexed-heap `decrease-key` implementation, value semantics & copy costs, templates vs boxing, undefined behaviour table, `ios::sync_with_stdio(false)`, sanitizers, complexity cheat sheet, 11 pitfalls, 8 practice tasks) |
+| 2026-09-28 | dev_foundation/dsa/ | README.md | revised (two-track language table, Note Index → 3 notes, added Java↔C++ porting backlog item) |
+| 2026-09-28 | dev_foundation/linux/ | 02-navigation-and-core-cli.md | created (Template G: `cd` as process state, PATH resolution order, the eight shell expansions and why quotes stop globbing, tab completion, `find` mechanism (AND-chain of predicates, `-prune`, `-exec {} +`), `find` vs `locate` (live vs stale index), man page sections with the real `passwd(1)` vs `passwd(5)` trap, 60-command cheat sheet across 5 groups, 4 labs whose outputs were verified by running every command, 20 pitfalls incl. the measured `rm -rf "$EMPTY"/` → `rm -rf /` case, 3 comparison tables, 8 practice tasks) |
+| 2026-09-28 | dev_foundation/dsa/ | 04-complexity-analysis-toolkit.md | created (Template A: Big-O as a filter not a speed claim, $O$/$\Theta$/$\Omega$ definitions, the three questions (what is $n$ / what is $O(1)$ / which term dominates), loop-reading table, master theorem + the two recurrences people wrongly believe it cannot cover (both are ordinary case 1 / case 3) + the ones that genuinely need another move, amortised accounting/potential methods with the doubling-array proof and "amortised ≠ average ≠ expected", space complexity and the space–time trade, lower bounds via decision trees ($\log_2 n!$), a "when Big-O lies" table (cache, constants, hidden worst case), the honest measurement loop with the ratio test and a benchmark table, an $n$→operation-budget decision table, 22 pitfalls, 4 reference cheat sheets, 10 practice tasks) |
+| 2026-09-28 | dev_foundation/dsa/ | 05-data-structure-selection-guide.md | created (Template A: the **operations inventory** as the method (worked example: reverse pairs), a 28-row problem-shape → structure decision matrix, the **invertible / associative / idempotent** rule that decides which aggregate structure is even legal (why Fenwick cannot do range-min), the monotonic-stack escape hatch with a `nextGreaterElement` derivation, a Java-vs-C++ availability table (BIT/segment tree/DSU/trie/monotonic deque are all missing in both), 8 generalising rules, 13 anti-patterns, a 14-row structure comparison table, 10 practice tasks) |
+| 2026-09-28 | dev_foundation/linux/ | README.md | revised (Note Index: 02 promoted from planned to written; backlog trimmed; Related Topics gained the complexity toolkit link) |
+| 2026-09-28 | dev_foundation/dsa/ | README.md | revised (Note Index → 5 notes; the two High backlog items removed and their successors re-prioritised; a "reading order" line added; cross-refs now link the Linux navigation note) |
+| 2026-09-28 | dev_foundation/ | README.md | revised (dsa/ row reworded to "roadmap + method notes", Phase 2 gained the reading order, Note Index counts linux 2→3 / dsa 3→5, two new open questions: the `structures/` library in the code repo and the Section C template mapping for method notes) |
+| 2026-09-28 | tracking | README.md | updated (learning-path block and Status & Roadmap: Linux 2→3 notes, DSA row promoted to "🔄 method notes" with the 5-note breakdown) |
 | 2026-09-28 | config | NOTE_TEMPLATE.md | added (TEMPLATE G — Dev Tool & Command Note) |
-| 2026-09-28 | config | AGENTS.md | updated (Section C mapping, Section H checklist, Section K cross-tech rule, Section L cross-repo registry, Section M folder system; config v3.3) |
+| 2026-09-28 | config | AGENTS.md | updated (Section C mapping, Section H checklist, Section K cross-tech rule, Section L cross-repo registry, Section M folder system, **Section N Language Track Policy**; config v3.3 → **v3.4**) |
+| 2026-09-28 | hygiene | .gitignore | updated (`/DSA-reserching-diary/` ignored so the nested sibling repo can never be committed as a submodule/gitlink) |
 | 2026-09-27 | vocabulary/ | 11-position-sequence-and-direction-vocabulary.md | created |
 | 2026-09-27 | vocabulary/ | 10-fragility-and-criticality-vocabulary.md | created |
 | 2026-09-27 | vocabulary/ | 09-commit-and-working-state-terminology.md | created |

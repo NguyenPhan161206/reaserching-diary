@@ -45,7 +45,7 @@ This repository is not merely a collection of simple notes, but a tightly organi
 ## 📂 Repository Structure (Knowledge Base)
 The knowledge system is designed and organized into specialized directories, reflecting the exact domains I am pursuing:
 
-- 🤖 `/ai_ml` - Artificial Intelligence, Machine Learning, Deep Learning, and applications in economics/business.
+- 🤖 [`/ai_ml`](ai_ml/README.md) - Artificial Intelligence, Machine Learning, Deep Learning, and applications in economics/business. 6 notes; the professional track — concepts here, code in [Snake_ANN](https://github.com/NguyenPhan161206/Snake_ANN).
 - 📡 `/iot_aiot` - Internet of Things, AIoT architecture, hardware, and automation solutions.
 - 📊 `/economics_business` - Macro/Microeconomics, business strategy, management, and market analysis.
 - 🧠 `/psychology_society` - Behavioral psychology, politics, and how society functions.
@@ -67,9 +67,12 @@ Technical foundations are studied in a deliberate order, because each layer assu
 ```
 git_github/ (done: 11 notes)
       ↓
-dev_foundation/linux/     ← start here: filesystem, permissions, pipes
+dev_foundation/linux/     ← start here: filesystem, permissions, navigation, pipes
       ↓  (runs in parallel)
 dev_foundation/dsa/ ──────────► [DSA-reserching-diary]  ← code lives in its own repo
+      roadmap → complexity toolkit → structure-selection guide
+      → Java (course language) + C++ (port target)
+      JavaScript is the web track, below — not a DSA language
       ↓
 dev_foundation/docker/  ·  dev_foundation/yaml_config/
       ↓
@@ -116,15 +119,15 @@ Some knowledge **needs code to make sense**. Those codebases live in their own r
 - **Current Stage:** `Active` — *Dev Foundation track started 2026-09-28* (Linux + DSA).
 - **Current track:**
   1. ✅ Git & GitHub fundamentals — [`git_github/`](git_github/README.md) (11 notes)
-  2. 🔄 Linux commands — [`dev_foundation/linux/`](dev_foundation/linux/README.md) (2 / 7 notes)
-  3. ⬜ DSA practice — roadmap ready, code in [DSA-reserching-diary](https://github.com/NguyenPhan161206/DSA-reserching-diary)
+  2. 🔄 Linux commands — [`dev_foundation/linux/`](dev_foundation/linux/README.md) (3 / 9 notes)
+  3. 🔄 DSA method notes — [`dev_foundation/dsa/`](dev_foundation/dsa/README.md) (5 notes: roadmap, complexity, structure selection, Java, C++); practice code in [DSA-reserching-diary](https://github.com/NguyenPhan161206/DSA-reserching-diary)
   4. ⬜ Docker & YAML — [`dev_foundation/`](dev_foundation/README.md)
   5. ⬜ Web basics & databases — [`dev_foundation/`](dev_foundation/README.md)
 - **Upcoming Plans:**
   - [x] Set up directory structure and note-taking standards.
   - [x] Push initial notes on AI and Economics to the repository.
   - [x] Configure AI Agent system (OpenCode + AGY).
-  - [ ] Complete the Linux command track (notes 02, 04, 05).
+  - [ ] Complete the Linux command track (notes 04–09).
   - [ ] Start the DSA practice loop (5–8 problems/week).
   - [ ] Maintain a habit of periodically updating new knowledge.
   - [ ] Build contribution streak 🔥

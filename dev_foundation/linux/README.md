@@ -19,22 +19,24 @@
 | # | Note | Template | Core question |
 |---|------|----------|---------------|
 | 01 | [File System, Paths & Permissions](01-file-system-paths-and-permissions.md) | G | What is actually on disk, and who is allowed to touch it? |
+| 02 | [Navigation & Core CLI](02-navigation-and-core-cli.md) | G | How do I move, search, and read documentation without the mouse? |
 | 03 | [Text Processing, Pipes & Redirects](03-text-processing-and-pipes.md) | G | How do commands compose into a pipeline? |
-| 02 | *(planned)* Navigation & core CLI | G | Move around efficiently without the mouse |
 | 04 | *(planned)* Processes, Services & Package Manager | G | What is running, how do I start/stop it, where did it come from? |
 | 05 | *(planned)* Shell Environment & Aliases | G | What does the shell actually read at startup? |
+| 06 | *(planned)* Remote & Network CLI | G | How do I reach a machine or an API from the terminal, safely? |
+| 07 | *(planned)* Bash Scripting | G | When does a pipeline need conditionals, functions, and `set -euo pipefail`? |
+| 08 | *(planned)* Disk & Memory Diagnostics | G | Why is this slow, and why is this huge? |
+| 09 | *(planned)* Text Editors — `vim` Basics | G | The editor that is a hard requirement on most servers |
+
+**Progress: 3 / 9 written.** The numbered index is the *plan*; only ideas without a slot yet live in the backlog below.
 
 ## 📋 Note Backlog
 
 | Priority | Planned note | Why |
 |----------|--------------|-----|
-| High | Navigation & core CLI (`cd`/`ls`/`find`/`locate`, `man`, `--help`) | Everyday friction; needed before anything else is comfortable |
-| High | Processes, services, packages (`ps`, `top`, `kill`, `systemctl`, `apt`) | Docker and dev servers both require this |
-| Medium | Shell environment (`.bashrc`, `PATH`, `alias`, `export`) | Explains "command not found" and env-var bugs |
-| Medium | `curl` + `wget` + `ssh` + `scp` | Talking to remote machines and APIs from the terminal |
-| Low | Bash scripting (loops, functions, `set -euo pipefail`) | Only when a repetitive task appears |
-| Low | Disk & memory diagnostics (`du`, `df`, `free`, `strace` intro) | Debugging "why is this slow/huge" |
-| Low | Text editors: `vim` basics | Vim is an environment requirement on most servers |
+| Medium | Bridge: CLI for ML datasets (`find`/`awk`/`jq` over JSONL, CSV) | Connects this track to `ai_ml/` data pipelines — the first place `awk` earns its keep in the ML stack |
+| Low | Terminal multiplexing (`tmux`) | Split panes for editor + test runner; note 03's `less` is the single-window version of the same idea |
+| Low | Text user interfaces (`less` navigation deep dive, `dialog`) | Only when a script needs to ask the operator something |
 
 ---
 
@@ -51,8 +53,9 @@
 - [`git_github/03-core-daily-workflow.md`](../../git_github/03-core-daily-workflow.md) — the daily commands built on these notes
 - [`../docker/`](../docker/README.md) — containers inherit the same filesystem model
 - [`../dsa/01-learning-roadmap.md`](../dsa/01-learning-roadmap.md) — where the CLI gets used daily
+- [`../dsa/04-complexity-analysis-toolkit.md`](../dsa/04-complexity-analysis-toolkit.md) — the measurement half of that loop: `time`, ratio testing, peak RSS
 - 🔗 [DSA-reserching-diary](https://github.com/NguyenPhan161206/DSA-reserching-diary) — code & explanations live there
-- [SUGGESTED] `terminal-multiplexing.md` (tmux) — split panes for editor + test runner; belongs in `linux/`
+- [SUGGESTED] `bridge-cli-for-ml-datasets.md` — `find`/`awk`/`jq` over JSONL/CSV dataset files → `ai_ml/` data pipelines
 
 ---
 *Created: 2026-09-28 — Template: G (Dev Tool & Command Note)*

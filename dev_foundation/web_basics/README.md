@@ -4,6 +4,8 @@
 
 **Template:** **Template A (Tech Note, adapted)** for mechanism notes (01–03, 05), **Template G** for JavaScript-as-a-language usage (04).
 
+> **Track:** this is the **web track**. JavaScript is the language *here* — it is deliberately **not** a DSA language (that track is Java + C++, see [`../dsa/`](../dsa/README.md)). The JS notes below are written from the browser's point of view; for algorithms, JavaScript's missing heap and shallow stack are documented in [`../dsa/01-learning-roadmap.md`](../dsa/01-learning-roadmap.md).
+
 ## Scope — what "just enough" means here
 
 > Learn the tags, the drawing/effect/layout-distribution mechanism, and enough JavaScript to follow the logic. Not pixel-perfect CSS, not a framework.
@@ -39,6 +41,7 @@
 
 ## 🔗 Tech Cross-References (Section K)
 - **DOM ↔ JavaScript** — HTML is the *data*; the DOM is the *live object tree* JS mutates. Every framework exists to manage that mutation.
+- **JavaScript ↔ Java/C++** — same algorithm, different container model (`Map`/`Set` are insertion-ordered and hide-classed; Java's `HashMap` is unordered; C++'s `vector` is contiguous). Useful contrast when porting a DSA idea into web code → [`../dsa/README.md`](../dsa/README.md)
 - **CSS ↔ data layout** — flexbox/grid are layout algorithms, closer to `display: contents` thinking than to art; same instinct as arranging a data table
 - **PostgREST** — the server returns JSON; this is the layer that turns it into elements
 - **Databases** — every list you see is rows rendered by a template; pagination is a database problem before it is a UI problem
@@ -48,6 +51,7 @@
 ## 🔗 Related Topics
 - [`../databases/04-postgrest-auto-rest-api.md`](../databases/04-postgrest-auto-rest-api.md) — the API this layer consumes
 - [`../databases/05-schema-design-and-data-modeling.md`](../databases/05-schema-design-and-data-modeling.md) — where the data comes from
+- [`../dsa/README.md`](../dsa/README.md) — the other track (Java + C++), and why JS is not in it
 - 🔗 [Joblink](https://github.com/qminh77/joblink) — the real code base to read these notes against (Next.js/React/Tailwind/Supabase)
 - [SUGGESTED] `bridge-rendering-pipeline.md` — bridge note: HTML → DOM → CSSOM → layout → paint, one end-to-end trace
 

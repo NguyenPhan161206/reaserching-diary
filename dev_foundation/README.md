@@ -17,7 +17,7 @@
 | [`yaml_config/`](yaml_config/README.md) | YAML syntax, config design, CI usage | G + A | How do I express machine-readable configuration correctly? |
 | [`web_basics/`](web_basics/README.md) | HTML tags, CSS layout, JS core, DOM & event loop | A + G | How does a browser turn text into pixels and respond to you? |
 | [`databases/`](databases/README.md) | Relational model, SQL, PostgreSQL, MySQL, PostgREST | G + A | Where does state live, and how do I query it safely? |
-| [`dsa/`](dsa/README.md) | **Anchor only** — roadmap + link | Flexible | Where do I write the algorithm code? → **other repo** |
+| [`dsa/`](dsa/README.md) | Roadmap + method notes + **Java** & **C++** language notes (code → other repo) | A (Tech) | What structure, at what cost, in which language? |
 
 ---
 
@@ -32,9 +32,15 @@ Phase 1 — the tool you touch every single day
      (files & permissions → navigation → pipes → processes/services)
 
 Phase 2 — the practice track (runs in PARALLEL with Phase 1)
-  └─ dsa/ (anchor)  ──────────────►  DSA-reserching-diary  [code repo]
+  └─ dsa/  ─────────────────────────►  DSA-reserching-diary  [code repo]
      Learn algorithms by writing code, using the Linux CLI daily to
      read logs, run tests, and manage version control.
+     Reading order: 01 roadmap → 04 complexity → 05 structure choice
+     → 02 Java / 03 C++ (the two languages the method has to live in)
+     TWO LANGUAGES, TWO JOBS:
+       Java  → course language, attempt every problem here first
+       C++   → port target (interviews, contests, tight constants)
+     JavaScript is NOT in this track — it is the web track below.
 
 Phase 3 — package & ship the environment
   └─ docker/
@@ -43,6 +49,12 @@ Phase 3 — package & ship the environment
 Phase 4 — read (and write) a code base
   └─ web_basics/            (mechanism-first: tags → layout → cascade → JS → DOM)
   └─ databases/             (SQL → PostgreSQL → MySQL vs PG → PostgREST → schema design)
+
+LANGUAGE MAP — which language belongs to which track
+  Java       → dsa/            (course language)          + Snake_ANN (ML code)
+  C++        → dsa/            (port target, interviews)
+  JavaScript → web_basics/     (web track)
+  Python     → ai_ml/, iot_aiot/ (AI/ML + IoT stack)
 
 Phase 5 — build (with a real project)
   └─ Joblink / UMT-Truck-Blind-Sight / Snake_ANN repos
@@ -73,6 +85,8 @@ Phase 5 — build (with a real project)
 | **Databases** | PostgREST | Your database gets an instant REST API — no hand-written server |
 | **Databases** | DSA | Tables, indexes, and B-trees are data structures with a cost model |
 | **Databases** | Git | Transactions and commits are the *same idea* applied to data vs. files |
+| **Java / C++** | Databases | Both languages' container trade-offs reappear as index and page-layout decisions |
+| **Java / C++** | ML | The same contiguity argument explains why tensors are flat buffers, not object graphs |
 
 ---
 
@@ -80,12 +94,12 @@ Phase 5 — build (with a real project)
 
 | Folder | Notes written | Notes planned |
 |--------|---------------|---------------|
-| `linux/` | 2 | 5 |
+| `linux/` | 3 | 6 |
 | `docker/` | 0 | 4 |
 | `yaml_config/` | 0 | 3 |
 | `web_basics/` | 0 | 5 |
 | `databases/` | 0 | 5 |
-| `dsa/` | 2 (anchor + roadmap) | — |
+| `dsa/` | 5 (roadmap + 2 language notes + complexity toolkit + selection guide) | 6 |
 
 Each sub-folder README keeps its own **Note Index** and **Note Backlog** table (AGENTS.md Section M).
 
@@ -102,6 +116,9 @@ Each sub-folder README keeps its own **Note Index** and **Note Backlog** table (
 - [ ] Should Linux notes be written for Ubuntu 24.04 specifically (the actual environment) or kept distribution-agnostic?
 - [ ] Where does shell scripting (Bash) fit — a dedicated `linux/06-bash-scripting.md`, or only when a real task needs it?
 - [ ] Do we need a `dev_foundation/tooling/` folder later for things like `curl`, `jq`, `tmux`, `make`?
+- [ ] Is the Java↔C++ porting rule (1 in 5, weighted to heaps and number theory) the right ratio, or should it be per-topic instead of global?
+- [ ] Should the DSA track get a `structures/` implementation library in the code repo (BIT, DSU, trie, lazy segment tree, monotonic deque) so no problem ever re-implements one? Flagged in `dsa/05` — it is probably the highest-leverage hour in the whole track.
+- [x] ~~`dsa/04` and `dsa/05` are Template A notes inside a folder AGENTS.md Section C describes as "anchor only".~~ **Resolved 2026-09-28** — Section C now reads "anchor + method notes (A)", Section I counts 5 notes, and Section L's checklist says the folder holds anchor / roadmap / method notes but still no solution code. `AGENTS.md` bumped to v3.5.
 
 ---
 *Foundation first. Theory is cheap when you can run it.*

@@ -45,7 +45,7 @@
 **The independence-integrating recipe (same for both architectures):**
 
 1. **Find the bounded contexts** — the real contours of your domain: `Billing`, `Inventory`, `Ledger`, `Approval`, `Reporting`…
-2. **Give each context its data** — no shared tables; cross-context data flows as *events* (see [[01-event-driven-architecture-task-orchestration]]) or through explicit APIs.
+2. **Give each context its data** — no shared tables; cross-context data flows as *events* (see [[01-event-driven-architecture-task-orchestration.md]]) or through explicit APIs.
 3. **Enforce boundaries mechanically** — dependency rules in CI; a module may only import its own packages + published interfaces.
 4. **Version the contracts** — every public interface/event schema follows SemVer; breaking change = major version + migration window.
 5. **Measure with fitness functions** — e.g., "no module imports `ledger.db` directly", "event latency < 500 ms p95", "module X has ≥ 1 release train test".
