@@ -18,6 +18,7 @@
 | 04 | [XP Engineering Practices for ML](04-xp-engineering-practices-for-ml.md) | A (Tech) | How do you test a system whose most common failure is *silently wrong*? |
 | 05 | [MLOps Lifecycle & Deployment Architecture](05-mlops-lifecycle-and-deployment-architecture.md) | A (Tech) | What breaks between "the model works on my laptop" and "it works for users"? |
 | 06 | [MCP & Function Calling — Agent Interfaces](06-mcp-and-function-calling-agent-interfaces.md) | A (Tech) | How does an LLM call your system safely, and how do you audit it? |
+| 07 | [Affective Computing & Emotion Recognition](07-affective-computing-and-emotion-recognition.md) | A (Tech) | How do you detect a user's emotional state — and why are the published accuracy numbers not a target? |
 
 ---
 
@@ -76,7 +77,7 @@ Notes 04 and 05 are the two that turn the others from a tutorial into a product.
 
 ## 📐 Template
 
-Notes 02–06 use **Template A: Tech Note**; note 01 uses **Template B: Business Analysis** because it is a business-framing note, not a technique note. Every note must pass the Section H depth checklist for its template.
+Notes 02–07 use **Template A: Tech Note**; note 01 uses **Template B: Business Analysis** because it is a business-framing note, not a technique note. Every note must pass the Section H depth checklist for its template.
 
 ## 📋 Note Backlog
 
@@ -87,9 +88,11 @@ Notes 02–06 use **Template A: Tech Note**; note 01 uses **Template B: Business
 | Medium | Fine-tuning vs prompting vs RAG — the decision | Directly serves the "opportunity cost" argument; currently scattered across 02/03 |
 | Medium | Embedding model selection & vector dimensionality trade-offs | 02 asserts dense retrieval is better; nobody has explained the cost side yet |
 | Medium | Cost & latency engineering for inference (batching, quantisation, caching) | Turns 05's architecture into numbers a business can budget for |
+| **High** | **Sentiment vs. emotion vs. toxicity — the taxonomy nobody agrees on** | Three overlapping literatures with three label sets; note 07 assumes you can tell them apart and then finds the boundary problem unresolved |
+| **Medium** | **Multimodal learning: fusion, alignment, missing modalities** | Note 07 §2.2 covers fusion strategies; the *alignment* half (getting text and image into a shared space) is the missing piece any multimodal engineer actually implements |
 | Low | Multi-tenancy & data isolation for AI SaaS | Only relevant once a deployable product exists |
 | Low | A bridge note: AI in Economics specifically (market microstructure, demand forecasting) | The stated specialisation; currently only note 01 touches the domain |
 
 ---
 
-*Last updated: 2026-09-28*
+*Last updated: 2026-09-30*
