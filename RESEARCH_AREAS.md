@@ -1,7 +1,7 @@
 # Research Areas — Tracking & Proposals
 
 > Auto-maintained by Agent. DO NOT manually edit.
-> Last updated: 2026-09-28
+> Last updated: 2026-09-30
 
 ## Active Folders
 | # | Folder | Domain | Template | Notes | Status | Last Updated |
@@ -20,7 +20,7 @@
 | 12 | ielts_training/listening/ | IELTS Listening | F (IELTS) | 1 | Active | 2026-09-14 |
 | 13 | git_github/ | Git/GitHub | A (Tech) | 11 | Active | 2026-09-21 |
 | 14 | cv/ | CV / Resume | LaTeX CV | 2 | Active | 2026-09-15 |
-| 15 | vocabulary/ | Vocabulary & Collocations | V (Vocabulary) | 12 | Active | 2026-09-28 |
+| 15 | vocabulary/ | Vocabulary & Collocations | V (Vocabulary) | 13 | Active | 2026-09-30 |
 | 16 | software_architecture/ | System Architecture & Design | A (Tech) | 2 | Active | 2026-09-23 |
 | 17 | dev_foundation/ | Engineering Fundamentals | Guide (umbrella) | 0 | Active | 2026-09-28 |
 | 18 | dev_foundation/linux/ | Linux shell, filesystem & navigation | G (Dev Tool) | 3 | Active | 2026-09-28 |
@@ -43,6 +43,7 @@
 | UMT-Truck-Blind-Sight | `git@github.com:NguyenPhan161206/UMT-Truck-Blind-Sight.git` | IoT device code |
 | Snake_ANN | `git@github.com:NguyenPhan161206/Snake_ANN.git` | ML code |
 | Joblink | `git@github.com:qminh77/joblink.git` | Full-stack code |
+| ielts-language-lap | `git@github.com:NguyenPhan161206/ielts-language-lap.git` | IELTS practice material in Vietnamese — speaking/writing lessons. Vocabulary notes here can have a **Vietnamese-language twin** there (note 13 → `SP-personality-traits-vocab.md`) |
 
 ## Language Compliance Audit (AGENTS.md Section A6)
 > Rule: every **file** in this repository must be written in English; Vietnamese is allowed only inside clearly marked quotations. **Audited 2026-09-28 — ✅ RESOLVED.** The user gave explicit consent to translate everything (*"phải dịch sang Tiếng Anh hết"*), and all 8 tracked files have now been fully translated. Vietnamese density is 0% in every one of them.
@@ -81,6 +82,8 @@
 
 | Date | Folder | File | Action |
 |------|--------|------|--------|
+| 2026-09-30 | vocabulary/ | 13-personality-traits-neutral-positive-negative.md | created (personality adjectives from a Vietnamese classroom whiteboard, Template V). Provenance handled explicitly: the Neutral column and both Positive columns were legible and transcribed verbatim; the **right-hand side of the Negative row was washed out**, so only 8 cells could be read directly and everything in **§4.8 "Reconstructed extras"** is explicitly flagged as *not* confirmed from the board. The real content is the gap between the board's folk taxonomy and English: words whose valence flips (*sensitive, nonchalant, energetic, realistic, impersonal, logical, intuitive, selfish, greedy, lazy, ruthless*) and words that are **standard technical terms instead** (*greedy algorithm, greedy decoding, lazy loading, hard-coded, reliable/at-most-once delivery, adaptive, dynamic, sensitive attribute*). Includes the `-ness → adjective` engine in 6 patterns with the `-less` trap, the **character vs temperament** split that explains why Column 1 carries moral weight and Columns 2&3 do not, a **47-row antonym table**, register ladders for CV/LinkedIn/interview, a **Big Five (OCEAN) mapping with cited findings** (Barrick & Mount 1991; Judge et al. 1997 — conscientiousness predicts job performance across roles; extraversion in sales/management), **learned helplessness** (Seligman & Maier 1967) as the reason `lazy` is the most dangerous label on the board, and a negative-label → professional-word table. Also fixes the count confusion the source board itself creates: 66 cells vs 70 word items, because *introvert/extrovert* and *cynical/cruel* were single cells and *gentle*/*faithful* were written twice. 30 practice items, 14 Related Topics links (11 existing notes + 3 SUGGESTED), 4 open questions. **Twin note** exported to the `ielts-language-lap` repo as a Vietnamese Speaking lesson) |
+| 2026-09-30 | tracking | vocabulary/README.md | created Note Index (13 notes with the core question each), a progression paragraph explaining the 05–12 single-mechanism → 13 whole-list structure, and a Cross-References section carrying the cross-repo link to `ielts-language-lap` |
 | 2026-09-28 | ai_ml/ | README.md | created (folder guide for the professional track: 6-note index with a core question each, a *reading order that is not the file numbering* — 01 → 05 → 02/03 → 04 → 06 — an ASCII diagram of how retrieval → ranking → engineering → deployment → agent interface compose, 6 Section K cross-references, a 7-item note backlog. Resolves 5 inbound links from `dev_foundation/dsa/` that pointed at a non-existent `ai_ml/README.md`) |
 | 2026-09-28 | content-fix | dev_foundation/dsa/04-complexity-analysis-toolkit.md | corrected (the master theorem table claimed 2 recurrences were out of reach for wrong reasons — $T(n)=2T(n/2)+\Theta(\log n)$ is plain **case 1** and the "$b$ is not a power of 2" line was fabricated, since the theorem never requires that. Replaced with: the two mis-parsed recurrences shown *inside* the theorem, the two real misconceptions ($b>1$ is the only requirement; case 2 has a $\log^k n$ extension), and 3 recurrences that genuinely need another move. Also corrected the memoisation claim — top-down DP does **not** flatten the stack; only bottom-up does) |
 | 2026-09-28 | content-fix | dev_foundation/linux/02-navigation-and-core-cli.md | corrected (4 fixes: `-exec` is **not** a command-injection vector — filenames are passed as plain arguments, and the real reason for `-print0`/`xargs -0` is whitespace and newlines; the `cat -A` output showed `'notes'$` while the caption said the quotes were gone, now `my notes$` / `notes$`; step 5 ran `readlink -f 02-nav.md` from the wrong directory, now `cd notes/linux` first; `git checkout -- .` was advertised as a recovery for `rm -rf` although it cannot restore untracked files — replaced with a 4-row recovery-options table that puts `gio trash` first. Lab 1 re-executed end to end: `stat` byte count 14 → 13 and the `file` column padding were both wrong) |
