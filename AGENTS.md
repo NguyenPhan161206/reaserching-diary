@@ -316,6 +316,29 @@ PHẢI trỏ sang repo chứa code/giải thích. Agent không được tự nh�
 | UMT-Truck-Blind-Sight | `git@github.com:NguyenPhan161206/UMT-Truck-Blind-Sight.git` | Code thiết bị IoT | Kiến thức + bài học rút ra | Diary → repo (ở note `iot_aiot/`) |
 | Snake_ANN | `git@github.com:NguyenPhan161206/Snake_ANN.git` | Code ML | Kiến thức ML (`ai_ml/`) | Diary → repo |
 | Joblink | `git@github.com:qminh77/joblink.git` | Code full-stack | Kiến thức web/DB/arch | Diary → repo |
+| **ielts-language-lap** *(practice repo, không phải code repo)* | `git@github.com:NguyenPhan161206/ielts-language-lap.git` | Bài luyện IELTS **tiếng Việt** — speaking/writing/reading lessons theo `/vocab-log` | Note tiếng Anh + cross-domain bridge | **Song ngữ (bilingual twin):** note EN ở đây ↔ bản VI ở đó, hai note *cùng nội dung* chứ không phải note + code. Chiều bắt buộc: diary note phải trỏ sang bản VI; bản VI trỏ ngược lại note EN |
+
+**Quy tắc cho repo luyện tập (`ielts-language-lap`) — khác với repo code:**
+
+Vì không có code để trỏ tới, dòng header chuẩn ở trên **không áp dụng**. Thay vào đó note ở repo này dùng:
+
+```markdown
+**Practice twin:** [`ielts-language-lap` · `02_skills_mastery/speaking/lessons/SP-<slug>.md`](https://github.com/NguyenPhan161206/ielts-language-lap/blob/main/02_skills_mastery/speaking/lessons/SP-<slug>.md) — Vietnamese drill version; this note holds the theory & cross-domain.
+```
+
+> ⚠️ **A6 conflict, resolved:** the string above is the English one because it is inserted into **notes**, which Section A6 requires to be English. Only the bracketed path and the fixed prefix `**Practice twin:**` are load-bearing. For a note that is legitimately written in Vietnamese, use: *"— bản tiếng Việt dùng để luyện; note này giữ lý thuyết & cross-domain."*
+
+Và bản VI bắt buộc có dòng trỏ ngược:
+
+```markdown
+**Bản phân tích (tiếng Anh, full cross-domain):** [`reaserching-diary/vocabulary/NN-<slug>.md`](https://github.com/NguyenPhan161206/reaserching-diary/blob/main/vocabulary/NN-<slug>.md)
+```
+
+**Checklist thêm cho repo luyện tập:**
+- [ ] Note EN có dòng `**Practice twin:**` trỏ tới đúng path bản VI
+- [ ] Bản VI có dòng trỏ ngược về note EN
+- [ ] Hai note thống nhất **con số đếm** (xem `vocabulary/13` — bảng trắng có 66 ô nhưng 70 từ, vì 2 ô chứa cặp)
+- [ ] Registry entry trong `RESEARCH_AREAS.md` cũng được thêm (không chỉ ở đây)
 
 **Format chuẩn (copy nguyên văn, không tự diễn đạt lại):**
 
@@ -335,7 +358,7 @@ Trong repo đích (README + từng note liên quan):
 ```
 
 **Checklist khi tạo note có liên quan repo ngoài:**
-- [ ] Header có dòng `**Code repository:**` đúng format
+- [ ] Header có dòng `**Code repository:**` đúng format *(repo code)* **hoặc** dòng `**Practice twin:**` đúng format *(repo luyện tập)*
 - [ ] Related Topics có mục `🔗` trỏ về repo đích
 - [ ] Folder `dev_foundation/dsa/` chỉ chứa anchor / roadmap / method notes, KHÔNG chứa solution code
 
@@ -429,7 +452,8 @@ Maintained in: RESEARCH_AREAS.md
 - Connection notes: `bridge-topic-a-and-topic-b.md`
 
 ---
-*Config version: 3.5 — Last updated: 2026-09-28*
+*Config version: 3.6 — Last updated: 2026-09-30*
+*(v3.6: Section L gained a **second registry kind** — the *practice repo*. `ielts-language-lap` holds Vietnamese IELTS lessons, not code, so the `**Code repository:**` header format does not apply; the new format is `**Practice twin:**` pointing at the Vietnamese sibling note, with the reverse link mandatory in that repo. Added because `vocabulary/13` (personality traits) became the first bilingual-twin pair: the English theory note here, the Vietnamese Speaking lesson there. Also carries the lesson that the two notes must agree on *counts* — the whiteboard has 66 cells but 70 words, and both notes now say so. Section L's checklist now branches on repo type.)*
 *(v3.5: DSA is no longer "anchor only" — `dev_foundation/dsa/04-complexity-analysis-toolkit.md` and `05-data-structure-selection-guide.md` are Template A method notes, so Section C now reads "anchor + method notes (A)" and Section I counts 5 notes. Section L's checklist wording updated to match: the folder holds anchor / roadmap / method notes and still must not contain solution code. Resolves the Open Question logged in `dev_foundation/README.md`.)*
 *(v3.4: added Section N "Language Track Policy" — DSA track = Java (course language) + C++ (port target); web track = JavaScript; AI/ML track = Python. JavaScript is explicitly excluded from DSA, Python explicitly excluded from DSA. Added `dev_foundation/dsa/02-java-for-dsa.md` and `03-cpp-for-dsa.md`.)*
 *(v3.3: added `dev_foundation/` umbrella folder (linux, docker, yaml_config, web_basics, databases, dsa) + TEMPLATE G "Dev Tool & Command Note" + Section K "Cross-Technology Mention Rule" + Section L "Cross-Repo Link Registry" + Section M "Folder System for dev_foundation". DSA code/explanations live in a separate repo; this repo only anchors + roadmaps it.)*

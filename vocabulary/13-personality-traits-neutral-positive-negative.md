@@ -5,6 +5,7 @@
 **Tags:** `#vocabulary`, `#personality`, `#adjectives`, `#ielts`, `#cv`, `#linkedin`, `#psychology`, `#viet-glish`, `#big-five`
 **Status:** Active | Reviewed
 **Template:** Template V — Advanced Vocabulary & Collocation
+**Practice twin:** [`ielts-language-lap` · `02_skills_mastery/speaking/lessons/SP-personality-traits-vocab.md`](https://github.com/NguyenPhan161206/ielts-language-lap/blob/main/02_skills_mastery/speaking/lessons/SP-personality-traits-vocab.md) — Vietnamese drill version; this note holds the theory & cross-domain.
 **Source:** A classroom whiteboard "chỉ tính cách" (personality adjectives only) board, reconstructed from a photograph — 3 groups, 6 cells, **66 board cells = 70 word items** (two cells held a pair — *introvert/extrovert*, *cynical/cruel* — and two words were written twice, in Column 1 and again in Column 2: *gentle*, *faithful*).
 **Source note:** Vietnamese *tính cách* board · recall session 2026-09-30
 
