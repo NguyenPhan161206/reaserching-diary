@@ -45,7 +45,7 @@ This repository is not merely a collection of simple notes, but a tightly organi
 ## 📂 Repository Structure (Knowledge Base)
 The knowledge system is designed and organized into specialized directories, reflecting the exact domains I am pursuing:
 
-- 🤖 [`/ai_ml`](ai_ml/README.md) - Artificial Intelligence, Machine Learning, Deep Learning, and applications in economics/business. 6 notes; the professional track — concepts here, code in [Snake_ANN](https://github.com/NguyenPhan161206/Snake_ANN).
+- 🤖 [`/ai_ml`](ai_ml/README.md) - Artificial Intelligence, Machine Learning, Deep Learning, and applications in economics/business. 7 notes; the professional track — concepts here, code in [Snake_ANN](https://github.com/NguyenPhan161206/Snake_ANN).
 - 📡 `/iot_aiot` - Internet of Things, AIoT architecture, hardware, and automation solutions.
 - 📊 `/economics_business` - Macro/Microeconomics, business strategy, management, and market analysis.
 - 🧠 `/psychology_society` - Behavioral psychology, politics, and how society functions.
@@ -54,10 +54,10 @@ The knowledge system is designed and organized into specialized directories, ref
 - 🔤 `/vocabulary` - Advanced vocabulary & collocation notes (Template V), focused on register, confusables, and Viet-Glish pitfalls.
 - 🎧 `/ielts_training` - IELTS preparation practice (listening, reading, writing, speaking) using real-world content.
 - 🔧 `/git_github` - Git version control & GitHub collaboration — practical mastery from first commit to team workflows.
-- 🐧 `/dev_foundation` - Engineering fundamentals: Linux commands, Docker, YAML/config, web basics (HTML/CSS/JS/DOM), databases, and the DSA anchor. See [`dev_foundation/README.md`](dev_foundation/README.md) for the learning path.
+- 🐧 `/dev_foundation` - Engineering fundamentals: Linux commands, Docker, YAML/config, web basics (HTML/CSS/JS/DOM), the Express SSR backend (`web_server/`) with its security chapter (`security/`), databases, and the DSA anchor. See [`dev_foundation/README.md`](dev_foundation/README.md) for the learning path.
+- 🏢 `/software_architecture` - System architecture & design: event-driven back-ends, modularity vs microservices, application architecture models, and web performance/caching.
 - 📄 `/cv` - LaTeX CV in English + Vietnamese (source + build script + rendered PDFs).
 - 💡 `/random_ideas` - Personal perspectives, random ideas, or breakthrough project concepts that come to mind.
-- 🏗️ `/software_architecture` - System architecture & design: event-driven back-end, modularity vs microservices, and agent interfaces — the engineering layer for building real-world systems.
 - 📥 `/inbox` - Fleeting notes, drafts, and unclassified ideas (staging area).
 
 ## 🗺️ Learning Path (dev_foundation)
@@ -76,7 +76,8 @@ dev_foundation/dsa/ ──────────► [DSA-reserching-diary]  �
       ↓
 dev_foundation/docker/  ·  dev_foundation/yaml_config/
       ↓
-dev_foundation/web_basics/  ·  dev_foundation/databases/
+dev_foundation/web_basics/  ·  dev_foundation/web_server/  ·  dev_foundation/security/  ·  dev_foundation/databases/
+      (Web Application Development course track — completed 2026-10-10)
       ↓
 Real projects: Joblink · UMT-Truck-Blind-Sight · Snake_ANN
 ```
@@ -112,22 +113,29 @@ Some knowledge **needs code to make sense**. Those codebases live in their own r
 | [RESEARCH_AREAS.md](RESEARCH_AREAS.md) | Research tracking & domain coverage |
 | [CONTRIBUTION_CALENDAR.md](CONTRIBUTION_CALENDAR.md) | Visual activity calendar |
 | [dev_foundation/README.md](dev_foundation/README.md) | Engineering fundamentals — learning path & stack map |
+| [dev_foundation/web_server/README.md](dev_foundation/web_server/README.md) | Express SSR track — MVC, routing, templates, sessions, auth |
+| [dev_foundation/security/README.md](dev_foundation/security/README.md) | Web security track — injection, XSS, CSRF, authZ, DoS |
 | [books_summaries/06-building-a-second-brain/](books_summaries/06-building-a-second-brain/README.md) | The framework behind this diary — PARA, progressive summarization, Zettelkasten |
 | [RESEARCH_AREAS.md](RESEARCH_AREAS.md#language-compliance-audit-agentsmd-section-a6) | Language compliance audit (A6) — files pending English translation |
 
 ## 🚀 Status & Roadmap
-- **Current Stage:** `Active` — *Dev Foundation track started 2026-09-28* (Linux + DSA).
+- **Current Stage:** `Active` — *Web Application Development course track* — web basics + Express SSR + security + databases all written (2026-10-10).
 - **Current track:**
   1. ✅ Git & GitHub fundamentals — [`git_github/`](git_github/README.md) (11 notes)
   2. 🔄 Linux commands — [`dev_foundation/linux/`](dev_foundation/linux/README.md) (3 / 9 notes)
   3. 🔄 DSA method notes — [`dev_foundation/dsa/`](dev_foundation/dsa/README.md) (5 notes: roadmap, complexity, structure selection, Java, C++); practice code in [DSA-reserching-diary](https://github.com/NguyenPhan161206/DSA-reserching-diary)
-  4. ⬜ Docker & YAML — [`dev_foundation/`](dev_foundation/README.md)
-  5. ⬜ Web basics & databases — [`dev_foundation/`](dev_foundation/README.md)
+  4. ✅ Web basics — [`dev_foundation/web_basics/`](dev_foundation/web_basics/README.md) (8 notes)
+  5. ✅ Express SSR backend — [`dev_foundation/web_server/`](dev_foundation/web_server/README.md) (8 notes)
+  6. ✅ Web security — [`dev_foundation/security/`](dev_foundation/security/README.md) (2 notes)
+  7. ✅ Databases — [`dev_foundation/databases/`](dev_foundation/databases/README.md) (5 notes)
+  8. ⬜ Docker & YAML — [`dev_foundation/`](dev_foundation/README.md)
 - **Upcoming Plans:**
   - [x] Set up directory structure and note-taking standards.
   - [x] Push initial notes on AI and Economics to the repository.
   - [x] Configure AI Agent system (OpenCode + AGY).
+  - [x] Complete the Web Application Development track (26 notes across web_basics / web_server / security / databases / docker / software_architecture).
   - [ ] Complete the Linux command track (notes 04–09).
+  - [ ] Docker core notes (01–04) + YAML notes (01–03).
   - [ ] Start the DSA practice loop (5–8 problems/week).
   - [ ] Maintain a habit of periodically updating new knowledge.
   - [ ] Build contribution streak 🔥

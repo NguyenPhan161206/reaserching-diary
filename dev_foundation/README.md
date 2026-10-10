@@ -16,7 +16,9 @@
 | [`docker/`](docker/README.md) | Images, containers, volumes, networks, orchestration | G + A | How do I ship an environment, not just code? |
 | [`yaml_config/`](yaml_config/README.md) | YAML syntax, config design, CI usage | G + A | How do I express machine-readable configuration correctly? |
 | [`web_basics/`](web_basics/README.md) | HTML tags, CSS layout, JS core, DOM & event loop | A + G | How does a browser turn text into pixels and respond to you? |
-| [`databases/`](databases/README.md) | Relational model, SQL, PostgreSQL, MySQL, PostgREST | G + A | Where does state live, and how do I query it safely? |
+| [`web_server/`](web_server/README.md) | Express SSR: MVC, routing, template engines, sessions, auth | A + G | How does a request become a rendered response — safely, with state? |
+| [`security/`](security/README.md) | Web security: injection, XSS, CSRF, authZ, DoS | A | How does an attack travel, and where do I stop it? |
+| [`databases/`](databases/README.md) | Relational model, SQL, PostgreSQL, Knex, PostgREST | G + A | Where does state live, and how do I query it safely? |
 | [`dsa/`](dsa/README.md) | Roadmap + method notes + **Java** & **C++** language notes (code → other repo) | A (Tech) | What structure, at what cost, in which language? |
 
 ---
@@ -46,14 +48,16 @@ Phase 3 — package & ship the environment
   └─ docker/
   └─ yaml_config/           (feeds GitHub Actions in git_github/11)
 
-Phase 4 — read (and write) a code base
+Phase 4 — read (and write) a code base — the Web Application Development course
   └─ web_basics/            (mechanism-first: tags → layout → cascade → JS → DOM)
-  └─ databases/             (SQL → PostgreSQL → MySQL vs PG → PostgREST → schema design)
+  └─ web_server/            (Express SSR: MVC → routing → templates → sessions → auth)
+  └─ security/              (injection, XSS, CSRF, authorization, DoS — the 5.4 chapter)
+  └─ databases/             (SQL → PostgreSQL → Knex → full-text → bottlenecks)
 
 LANGUAGE MAP — which language belongs to which track
   Java       → dsa/            (course language)          + Snake_ANN (ML code)
   C++        → dsa/            (port target, interviews)
-  JavaScript → web_basics/     (web track)
+  JavaScript → web_basics/ + web_server/   (web track — browser AND server)
   Python     → ai_ml/, iot_aiot/ (AI/ML + IoT stack)
 
 Phase 5 — build (with a real project)
@@ -95,10 +99,12 @@ Phase 5 — build (with a real project)
 | Folder | Notes written | Notes planned |
 |--------|---------------|---------------|
 | `linux/` | 3 | 6 |
-| `docker/` | 0 | 4 |
+| `docker/` | 1 | 4 |
 | `yaml_config/` | 0 | 3 |
-| `web_basics/` | 0 | 5 |
-| `databases/` | 0 | 5 |
+| `web_basics/` | 8 | 4 |
+| `web_server/` | 8 | 4 |
+| `security/` | 2 | 3 |
+| `databases/` | 5 | 6 |
 | `dsa/` | 5 (roadmap + 2 language notes + complexity toolkit + selection guide) | 6 |
 
 Each sub-folder README keeps its own **Note Index** and **Note Backlog** table (AGENTS.md Section M).

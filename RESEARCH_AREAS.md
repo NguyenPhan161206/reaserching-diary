@@ -21,15 +21,17 @@
 | 13 | git_github/ | Git/GitHub | A (Tech) | 11 | Active | 2026-09-21 |
 | 14 | cv/ | CV / Resume | LaTeX CV | 2 | Active | 2026-09-15 |
 | 15 | vocabulary/ | Vocabulary & Collocations | V (Vocabulary) | 15 | Active | 2026-10-10 |
-| 16 | software_architecture/ | System Architecture & Design | A (Tech) | 2 | Active | 2026-09-23 |
+| 16 | software_architecture/ | System Architecture & Design | A (Tech) | 4 | Active | 2026-10-10 |
 | 17 | dev_foundation/ | Engineering Fundamentals | Guide (umbrella) | 0 | Active | 2026-09-28 |
 | 18 | dev_foundation/linux/ | Linux shell, filesystem & navigation | G (Dev Tool) | 3 | Active | 2026-09-28 |
-| 19 | dev_foundation/docker/ | Docker & Containers | G + A | 0 | Planned | 2026-09-28 |
+| 19 | dev_foundation/docker/ | Docker & Containers | G + A | 1 | Active | 2026-10-10 |
 | 20 | dev_foundation/yaml_config/ | YAML & Config Formats | G + A | 0 | Planned | 2026-09-28 |
-| 21 | dev_foundation/web_basics/ | HTML / CSS / JS / DOM | A + G | 0 | Planned | 2026-09-28 |
-| 22 | dev_foundation/databases/ | SQL / PostgreSQL / MySQL / PostgREST | G + A | 0 | Planned | 2026-09-28 |
-| 23 | dev_foundation/dsa/ | DSA — roadmap, complexity toolkit, structure-selection guide, Java & C++ notes (code → DSA-reserching-diary) | A (Tech) + Flexible (anchor) | 5 | Active | 2026-09-28 |
-| 24 | books_summaries/06-building-a-second-brain/ | Book — Building a Second Brain | D (Book) | 1 | Active | 2026-09-28 |
+| 21 | dev_foundation/web_basics/ | HTML / CSS / JS / DOM / RWD / Frameworks / Forms | A + G | 8 | Active | 2026-10-10 |
+| 22 | dev_foundation/web_server/ | Express SSR — MVC, Routing, Template Engines, Sessions, Auth, Advanced Features | A + G | 8 | Active | 2026-10-10 |
+| 23 | dev_foundation/security/ | Web Security (Injection, XSS, CSRF, AuthZ, DoS) | A (Tech) | 2 | Active | 2026-10-10 |
+| 24 | dev_foundation/databases/ | SQL / PostgreSQL / Knex / Full-Text / Bottlenecks / PostgREST | G + A | 5 | Active | 2026-10-10 |
+| 25 | dev_foundation/dsa/ | DSA — roadmap, complexity toolkit, structure-selection guide, Java & C++ notes (code → DSA-reserching-diary) | A (Tech) + Flexible (anchor) | 5 | Active | 2026-09-28 |
+| 26 | books_summaries/06-building-a-second-brain/ | Book — Building a Second Brain | D (Book) | 1 | Active | 2026-09-28 |
 
 ## Proposed Folders (waiting for user confirmation)
 | # | Proposed Folder | Domain | Suggested Template | Reason | Proposed Date |
@@ -82,6 +84,22 @@
 
 | Date | Folder | File | Action |
 |------|--------|------|--------|
+| 2026-10-10 | dev_foundation/web_server/ | 07-authentication-signup-signin-signout.md | created (Template A — authN vs authZ, bcrypt sizing, `session.regenerate` fixation defense, `connect-session-knex`, sessions-vs-JWT comparison, attack checklist; course ch. 4.4) |
+| 2026-10-10 | dev_foundation/web_server/ | 08-advanced-features-pagination-wysiwyg-upload.md | created (Template G — server-side + Ajax pagination, multer multipart upload with path-traversal defense, WYSIWYG → stored-XSS → sanitize-html; course ch. 4.5) |
+| 2026-10-10 | dev_foundation/security/ | 01-web-security-injection-xss-csrf-session-hijacking.md | created (Template A — SQL injection, stored/reflected/DOM XSS, CSRF + SameSite, session hijacking/fixation; vulnerable-vs-fixed pairs; course ch. 5.4) |
+| 2026-10-10 | dev_foundation/security/ | 02-authorization-and-dos-defense.md | created (Template A — RBAC vs ABAC vs ownership, IDOR/mass-assignment, rate limiting, DoS resource physics + runbook) |
+| 2026-10-10 | software_architecture/ | 03-application-architecture-models.md | created (Template A — monolithic / multi-tier / microservices / serverless spectrum with decision tables; course ch. 1.4) |
+| 2026-10-10 | software_architecture/ | 04-web-performance-caching-and-bottlenecks.md | created (Template A — end-to-end request journey, caching layers, event-loop blocking, prioritized fix checklist with a 1.8s→250ms worked example; course ch. 5.3) |
+| 2026-10-10 | dev_foundation/databases/ | 08-db-bottlenecks-indexing-and-caching.md | created (Template A — EXPLAIN ANALYZE before/after, query anti-patterns incl. N+1 and deep OFFSET, composite/partial indexes, cache-aside invalidation, pooling sizing; course ch. 5.3) |
+| 2026-10-10 | dev_foundation/docker/ | 05-deploy-express-ssr-postgres-compose.md | created (Template G — Dockerfile layer caching, compose web+db with healthcheck, pgdata volume, secrets hygiene, VPS + CI deploy; course ch. 5.2) |
+| 2026-10-10 | dev_foundation/databases/ | 07-postgresql-full-text-search.md | created (Template G — tsvector/tsquery mental model, LIKE vs pg_trgm vs full-text, ts_rank + setweight title-boosting, GIN index, search route; course ch. 4.5) |
+| 2026-10-10 | dev_foundation/databases/ | 06-knex-query-builder-and-crud.md | created (Template G — query-builder-not-ORM mental model, migrations = Git for schema, CRUD with `.returning()`, transactions, Express controller integration; course ch. 4.1–4.2) |
+| 2026-10-10 | dev_foundation/web_server/ | 03-mvc-architecture-in-express.md · 04-routing-in-express.md | created (Template A + G — the MVC request lifecycle, thin controllers, modular routes; middleware order as a security boundary; course ch. 3.2–3.3) |
+| 2026-10-10 | dev_foundation/web_server/ | 05-template-engines-handlebars-ejs-layout.md · 06-sessions-cookies-localstorage.md | created (Template G + A — EJS/HBS delimiters, helpers, partials, the Layout mechanism, escaping vs XSS; cookie attributes, server sessions, localStorage, decision tables; course ch. 3.4 + 4.3) |
+| 2026-10-10 | dev_foundation/web_server/ | 01-static-dynamic-ssr-vs-csr.md · 02-web-server-nginx-apache-express.md | created (Template A + G — static vs dynamic, SSR vs CSR; Nginx/Apache/Express mental model; course ch. 1.2–1.3 + 1.5) |
+| 2026-10-10 | dev_foundation/web_basics/ | 01-08 complete | created (8 notes: 01 HTML semantics, 02 CSS box model/layout, 03 cascade/specificity, 04 JS core, 05 DOM & event loop, 06 responsive design, 07 Bootstrap/Tailwind, 08 forms/fetch/multipart — course ch. 2 entire front-end chapter) |
+| 2026-10-10 | config | AGENTS.md | updated (v3.6 → **v3.7** — Section C gained "Web — SSR Backend" (`web_server/`, A for 01/03/06/07 + G for 02/04/05/08) and "Web — Security" (`security/`, Template A) rows; Section M gained both sub-folders; Section I counts updated: web_basics 0→8, databases 0→5, web_server 8, security 2) |
+| 2026-10-10 | dev_foundation | web_server/README.md · security/README.md | created (folder guides for the Web Application Development course: purpose, textbook map, note index 01–08 / 01–02, backlog, Section K cross-refs) |
 | 2026-10-10 | vocabulary/ | 15-harness-compress-utilize-engineering-verbs.md | created (Template V). The English-side counterpart to note 12: three verbs requested together, examined one at a time. The connecting thread is a **literal sense + borrowed professional sense** for each — *harness* needs a wild force to tame (solar, wind, AI) and is otherwise wrong (*never "harness the software"*), with the software **test harness** as a second, unrelated metaphor; *compress* is one operation at three scales (gas, files, time) and shares the Latin root **premere = press** with *express / impress / depress / suppress / oppress*, with lossless-vs-lossy, DEFLATE/zlib, and ML **model compression** (pruning, quantization, distillation) mapped; *utilize* is the trap — it is **correct on a dashboard and inflated in prose**, because *utilization* is a measured quantity (CPU/GPU/capacity utilization) while *utilize* is a pedantic *use*. Includes a consolidated 6-row *use* ladder (use · make use of · utilize · apply · employ · leverage · harness · tap into · exploit · capitalize on), a 7-row confusables matrix for *compress*, and 10 practice items. 6 Related Topics links (5 existing + 3 SUGGESTED), 3 open questions. No practice twin, consistent with note 14 |
 | 2026-09-30 | psychology_society/ | 04-big-five-personality-model.md | created (the OCEAN model, Template C). Full lineage from Allport & Odbert's 17,953 trait terms and Tupes & Christal's factor extraction through the modern instruments (NEO-PI-R, NEO-FFI, BFI, HEXACO). Covers measurement foundations the way a social-science note has to: what a trait scale actually measures (self-report, behaviourally anchored, with reliability coefficients), the lexical-hypothesis problems (circularity — traits defined by words then measured with words; aggregation — one dimension can hold several traits), and the §3.6 fix for the "big five is one factor" claim. **The counter-argument section is the load-bearing one:** Barrick & Mount's 1991 meta-analysis (N = 454) plus Judge et al. 1997 for job performance, and the reverse finding — Stahl 2010 (N = 1,112 teams) and Porter 2010 (N = 1,056 teams) — that **high average conscientiousness is associated with *lower* team performance**, which is why filling a CV with conscientiousness adjectives is not even self-serving. Also the Big Five's four documented weaknesses (self-report monotonicity, situational weakness, cultural measurement invariance failing across 50+ countries, and social-desirability bias) and the section that matters for engineering: trait inference is **psychometric** (validity coefficients, sampling error, low base rates) while affect inference is **machine-learning** — they are not the same claim and are not held to the same standard. 5,000+ words, 30 facets tabulated, ~20 cited studies with sample sizes, 8 Related Topics links, 5 open questions. Closes the note 13 hand-off |
 | 2026-09-30 | ai_ml/ | 07-affective-computing-and-emotion-recognition.md | created (Template A). Affective computing end to end: the Picard framing, the Russell circumplex as the label space, the datasets (DAIC-WOZ with its interviewer-prompt leakage, MELD, IEMOCAP, GoEmotions, GoEmotions 2 with demographic annotation) and **what each dataset's reported accuracy does and does not license you to claim**. Multimodal fusion strategies (early / late / hybrid, §2.2), label-noise and annotator-disagreement handling, the deployment split between RASP-style rule-based and model-based pipelines (§5), working sklearn/PyTorch code for a RASTP-style pipeline and a gated-fusion architecture, plus the standard sequence for a real build. The reason this note exists: **published accuracy numbers are not a target.** Fehrer's (2015) replication of Matuszek et al. (2010) found near-human accuracy on the same data with a lexiconal bag-of-words model; Wrzalik & Baron 2009; Sahu et al. 2019 (CrossCorpus, which found MELD models failing to transfer). Sets a realistic in-domain target and explains why generalisation failure, not accuracy, is the interesting problem. Ethics: EU AI Act Art. 5(1)(f) on emotion recognition in the workplace and in schools (medical and safety purposes excepted), GDPR Art. 9 special-category data and the Art. 22 automated-decision interaction, and the Illinois BIPA correction — the statute dates to 2008, not 2024, which is when the 2024 amendments passed. 5,300 words, 2 code blocks, ~15 cited studies, 8 Related Topics links, 5 open questions |
@@ -176,16 +194,27 @@
 ## Domain Coverage Analysis
 | Domain | Coverage | Notes | Gaps Identified |
 |--------|----------|-------|----------------|
-| AI/ML | ██████░░░░ 60% | 3 | Transformers, Fine-tuning, MLOps, RLHF |
+| AI/ML | ██████░░░░ 60% | 7 | Transformers, Fine-tuning, MLOps, RLHF |
 | IoT | ████░░░░░░ 40% | 2 | MQTT deep dive, Edge Computing, Zigbee |
 | Economics | ████████░░ 80% | 4 | Macro, Game Theory, Behavioral Econ, Finance |
-| Psychology | ██████░░░░ 60% | 3 | Cognitive Biases, Behavioral Econ, Game Theory |
-| Books | ██████░░░░ 60% | 5 | Agile, Productivity |
-| Evaluations | ██░░░░░░░░ 20% | 3 | Regular tracking sessions |
+| Psychology | ██████░░░░ 60% | 4 | Cognitive Biases, Behavioral Econ, Game Theory |
+| Books | ██████░░░░ 60% | 6 | Agile, Productivity |
+| Evaluations | ██░░░░░░░░ 20% | 5 | Regular tracking sessions |
 | Git/GitHub | ████████░░ 80% | 11 | Advanced rebase, monorepo, Actions depth |
-| Dev Foundation | █░░░░░░░░░ 10% | 2 | Linux 02/04/05 · all Docker/YAML/Web/DB notes |
-| DSA (anchor) | ██░░░░░░░░ 20% | 1 | Complexity toolkit, data-structure selection guide |
-| Architecture | ███░░░░░░░ 30% | 2 | Caching, queues, observability |
+| Dev Foundation | ████████░░ 80% | 32 | YAML notes (01–03), Docker core (01–04), Linux 04–09 |
+| Web Application Dev | ██████████ 100% | 26 | Course track complete 2026-10-10 — see Domain Table below (± PostgREST, MySQL, full Docker core) |
+| DSA (anchor) | ██░░░░░░░░ 20% | 5 | Practice loop in DSA-reserching-diary, Java/C++ solutions |
+| Architecture | ██████░░░░ 60% | 4 | Observability, queues, CQRS |
+
+### Web Application Development course — chapter coverage (complete 2026-10-10)
+
+| Chapter | Folders / notes |
+|---------|-----------------|
+| 1. Web architecture | `web_server/01` (SSR vs CSR) · `web_server/02` (Nginx/Apache/Express) · `software_architecture/03` (models) |
+| 2. Front-end | `web_basics/01-08` (HTML, CSS, RWD, frameworks, forms/fetch) |
+| 3. Back-end JS | `web_basics/04` (JS core) · `web_server/03` (MVC) · `04` (routing) · `05` (template engines/layout) |
+| 4. Data & auth | `databases/01,02,06,07` · `web_server/06,07,08` · `web_basics/08` |
+| 5. Deploy, perf, security | `docker/05` · `software_architecture/04` · `databases/08` · `security/01-02` |
 
 ## Folder Naming Convention
 - Folders: `snake_case/` (e.g., `ai_ml/`, `economics_business/`)

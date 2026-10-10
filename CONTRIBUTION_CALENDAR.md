@@ -30,7 +30,7 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
  ░░   ░░   ░░   ░░   ░░   ░░   ░░
 
  5    6    7    8    9   10   11
- ░░   ░░   ░░   ░░   ░░   ██   ░░
+ ░░   ░░   ░░   ░░   ░░   ██   ██
 
 12   13   14   15   16   17   18
  ░░   ░░   ░░   ░░   ░░   ░░   ░░
@@ -43,11 +43,11 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
 ```
 
 ## Stats
-- **This month (October):** 1 active day | 4 interactions
-- **Current streak:** 🔥 1 day (restarted 10 Oct)
+- **This month (October):** 2 active days | 8 interactions
+- **Current streak:** 🔥 2 days (10–11 Oct)
 - **Longest streak:** 4 days (9–12 Sep)
 - **September 2026 (closed):** 15 active days | 205 interactions
-- **Today (10 Oct):** vocabulary session — `vocabulary/15` created (harness · compress · utilize, the English-side counterpart to note 12), plus `vocabulary/README.md`, `RESEARCH_AREAS.md` and this calendar updated. Also the working session in which the agent took on a **second role**: bilingual English evaluator, with prompts scored for CEFR-adjacent feedback (evaluations logged in-chat, not yet in a repo file). 1 new note, 4 housekeeping files.
+- **Today (11 Oct):** Web Application Development course track — planned 26 notes across `web_basics/` (8), `web_server/` (8), `security/` (2), `databases/` (5), `docker/` (1), `software_architecture/` (2) written via sub-agent waves, then all tracking reconciled: `AGENTS.md` v3.7, folder READMEs, `RESEARCH_AREAS.md`, root `README.md`, and this calendar. A6 diacritic grep on all 26 files → 0 violations. Awaiting push command.
 - **Today (30 Sep, session 1 — pushed):** personality-traits vocabulary session — the whiteboard transcribed and re-analysed in `vocabulary/13` (70 word items, 30 practice items), its **Vietnamese-language twin** built in the separate `ielts-language-lap` repo as a Speaking lesson, plus `vocabulary/README.md` gaining a Note Index and a Cross-References section with the cross-repo registry entry. 8 files across 2 repos, both pushed.
 - **Today (30 Sep, session 2 — not pushed):** followed note 13's three hand-offs, one per direction. **`psychology_society/04`** — the Big Five, closing the hand-off in §6 with the measurement literature, ~20 cited studies, and the counter-argument that high average conscientiousness predicts *lower* team performance (Stahl 2010, Porter 2010). **`ai_ml/07`** — Affective Computing, whose actual argument is that published accuracy numbers are not a target, since Fehrer (2015) hit near-human accuracy on Matuszek et al.'s data with a bag-of-words model. **`vocabulary/14`** — the written-English adjective checklist that turns note 13's register ladder into a pre-submission search list, with §6's exempt formats so it stops being a blanket ban. Then `AGENTS.md` v3.6 gained the second registry kind (practice repos, `**Practice twin:**`), `psychology_society/README.md` was created, both Note Index tables were extended, and `AGENTS.md` + note 13 were updated for the new format. 10 files, 1 repo.
 - **Cross-repo session (2026-09-30):** the first time a single whiteboard produced **two notes in two repositories** — note 13 in this repo holds the theory and the cross-domain bridges, `SP-personality-traits-vocab.md` in `ielts-language-lap` holds the speaking drill, and each links to the other. `ielts-language-lap` is listed in the Cross-Repo Registry below, and — after the user's approval later the same day — the Section L registry in `AGENTS.md` gained the row it was missing, as a **second registry kind**: `**Practice twin:**` rather than `**Code repository:**`, because a practice repo has no code to point at. It is the only repo in the registry whose rows are bidirectional.
@@ -64,4 +64,4 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
 - **Push policy:** changed 2026-09-27 to *push on command only* (batching all new work at push time)
 
 ---
-*Last updated: 2026-10-10*
+*Last updated: 2026-10-11*

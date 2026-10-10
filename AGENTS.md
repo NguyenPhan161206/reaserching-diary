@@ -103,8 +103,10 @@ Agent PHẢI chọn đúng template dựa trên domain:
 | Linux (shell, filesystem, processes) | dev_foundation/linux/ | Template G: Dev Tool & Command Note |
 | Docker & Containers | dev_foundation/docker/ | Template G (01–03) · Template A (04) |
 | YAML & Config Formats | dev_foundation/yaml_config/ | Template G (01–02) · Template A (03) |
-| Web Basics (HTML/CSS/JS/DOM) | dev_foundation/web_basics/ | Template A (01–03, 05) · Template G (04) |
-| Databases (SQL, PostgreSQL, MySQL, PostgREST) | dev_foundation/databases/ | Template G (01, 02, 04) · Template A (03, 05) |
+| Web Basics (HTML/CSS/JS/DOM) | dev_foundation/web_basics/ | Template A (01–03, 05, 06) · Template G (04, 07, 08) |
+| Web — SSR Backend (Express, MVC, Routing, Templates, Sessions, Auth) | dev_foundation/web_server/ | Template A (01, 03, 06, 07) · Template G (02, 04, 05, 08) |
+| Web — Security (Injection, XSS, CSRF, AuthZ, DoS) | dev_foundation/security/ | Template A |
+| Databases (SQL, PostgreSQL, MySQL, PostgREST) | dev_foundation/databases/ | Template G (01, 02, 04, 06, 07) · Template A (03, 05, 08) |
 | DSA (anchor + method notes — code ở repo riêng) | dev_foundation/dsa/ | A (Tech) cho method notes (04, 05) · Flexible cho anchor/roadmap (01–03) |
 | CV / Resume | cv/ | LaTeX CV (XeLaTeX, EN + VI) |
 
@@ -407,6 +409,8 @@ là lỗi phạm vi — tách nó.
 | `docker/` | G + A | Công cụ chạy (G) + mental model orchestration (A) |
 | `yaml_config/` | G + A | Cú pháp & dùng trong CI (G) + chọn định dạng config (A) |
 | `web_basics/` | A + G | Cơ chế render/DOM/layout (A) + ngôn ngữ JS dùng tay (G) |
+| `web_server/` | A + G | SSR backend/Express (A) + routing/template/upload dùng tay (G) |
+| `security/` | A | Bảo mật web là thuộc tính hệ thống, không phải công cụ |
 | `databases/` | G + A | SQL/engine dùng tay (G) + thiết kế schema & kiến trúc dữ liệu (A) |
 | `dsa/` | Anchor | Chỉ roadmap + link. Code & giải thích → repo DSA (Section L) |
 
@@ -438,8 +442,10 @@ Maintained in: RESEARCH_AREAS.md
 | dev_foundation/linux/ | Linux shell & filesystem | G (Dev Tool) | Active | 2 | 2026-09-28 |
 | dev_foundation/docker/ | Docker & Containers | G + A | Planned | 0 | 2026-09-28 |
 | dev_foundation/yaml_config/ | YAML & Config Formats | G + A | Planned | 0 | 2026-09-28 |
-| dev_foundation/web_basics/ | HTML/CSS/JS/DOM | A + G | Planned | 0 | 2026-09-28 |
-| dev_foundation/databases/ | SQL/PostgreSQL/MySQL/PostgREST | G + A | Planned | 0 | 2026-09-28 |
+| dev_foundation/web_basics/ | HTML/CSS/JS/DOM/RWD/Frameworks/Forms | A + G | Active | 8 | 2026-10-10 |
+| dev_foundation/web_server/ | Express SSR, MVC, Routing, Templates, Sessions, Auth, Features | A + G | Active | 8 | 2026-10-10 |
+| dev_foundation/security/ | Web Security (Injection, XSS, CSRF, AuthZ, DoS) | A (Tech) | Active | 2 | 2026-10-10 |
+| dev_foundation/databases/ | SQL/PostgreSQL/Knex/PostgREST | G + A | Active | 5 | 2026-10-10 |
 | dev_foundation/dsa/ | DSA anchor, roadmap & method notes | A (Tech) + Flexible (anchor) | Active | 5 | 2026-09-28 |
 
 ## ═══════════════════════════════════════════
@@ -452,7 +458,8 @@ Maintained in: RESEARCH_AREAS.md
 - Connection notes: `bridge-topic-a-and-topic-b.md`
 
 ---
-*Config version: 3.6 — Last updated: 2026-09-30*
+*Config version: 3.7 — Last updated: 2026-10-10*
+*(v3.7: two new `dev_foundation/` sub-folders approved for the Web Application Development course → Section C gained "Web — SSR Backend" (`web_server/`, Template A for 01/03/06/07 + G for 02/04/05/08) and "Web — Security" (`security/`, Template A) rows; Section M table gained both sub-folders; Section I counts updated (web_basics 0→8 Active, databases 0→5 Active, web_server 8, security 2).) *
 *(v3.6: Section L gained a **second registry kind** — the *practice repo*. `ielts-language-lap` holds Vietnamese IELTS lessons, not code, so the `**Code repository:**` header format does not apply; the new format is `**Practice twin:**` pointing at the Vietnamese sibling note, with the reverse link mandatory in that repo. Added because `vocabulary/13` (personality traits) became the first bilingual-twin pair: the English theory note here, the Vietnamese Speaking lesson there. Also carries the lesson that the two notes must agree on *counts* — the whiteboard has 66 cells but 70 words, and both notes now say so. Section L's checklist now branches on repo type.)*
 *(v3.5: DSA is no longer "anchor only" — `dev_foundation/dsa/04-complexity-analysis-toolkit.md` and `05-data-structure-selection-guide.md` are Template A method notes, so Section C now reads "anchor + method notes (A)" and Section I counts 5 notes. Section L's checklist wording updated to match: the folder holds anchor / roadmap / method notes and still must not contain solution code. Resolves the Open Question logged in `dev_foundation/README.md`.)*
 *(v3.4: added Section N "Language Track Policy" — DSA track = Java (course language) + C++ (port target); web track = JavaScript; AI/ML track = Python. JavaScript is explicitly excluded from DSA, Python explicitly excluded from DSA. Added `dev_foundation/dsa/02-java-for-dsa.md` and `03-cpp-for-dsa.md`.)*
