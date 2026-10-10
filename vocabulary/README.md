@@ -26,17 +26,20 @@ Each note in this directory extracts, deep-dives, and contextualizes terminology
 | 12 | [One Vietnamese Word → Many English Words](12-one-vietnamese-word-many-english-words.md) | A Vietnamese word compresses several English senses into one — which English word carries each one? |
 | 13 | [Personality Traits — Neutral · Positive · Negative](13-personality-traits-neutral-positive-negative.md) | When a board sorts 66 adjectives into 3 groups, which of them does **English** sort differently — and why? |
 | 14 | [The Written-English Adjective Checklist](14-written-english-adjective-checklist.md) | Which personality adjectives mislead in a CV or LinkedIn post, and what replaces each one? |
+| 15 | [Harness · Compress · Utilize — Three Engineering Verbs](15-harness-compress-utilize-engineering-verbs.md) | When three "obvious" technical verbs each mean a literal thing and a borrowed thing, which register does each belong to? |
 
 ### Progression
 The first four notes build core domain vocabulary. **05–12 are all single-mechanism deep dives** — one prefix, one verb family, one near-synonym cluster at a time, which is how accuracy is actually built. **13 returns to a whiteboard-sized list** and applies the same mechanisms across the whole set at once, then bridges into psychology (Big Five, learned helplessness) and engineering (greedy algorithms, lazy loading, reliable delivery). **14 turns note 13's register ladder into a working checklist** — a search list to run before submitting anything written, with the formats where adjectives *are* correct and the twelve words whose meaning shifts rather than merely sounding weak.
+
+**15 is the English-side counterpart to 12.** Where note 12 starts from the Vietnamese word (*tận dụng*) and asks which of nine English words to pick, note 15 starts from three English verbs and asks what each one actually does — its literal root, its borrowed technical sense, and its register. It is also the third note in the run (13, 14, 15) to treat **register** as the real subject rather than meaning: *harness* needs a force, *utilize* is a dashboard word and an inflated verb, and *compress* only means "summarise" by metaphor. Like note 14 and unlike note 13, note 15 deliberately has **no practice twin** — the *utilize* correction has to land while drafting, not in a speaking drill.
 
 **Note 13 is the first note here with a cross-repo twin:** the same whiteboard exists as a Vietnamese-language Speaking lesson in `ielts-language-lap` (`SP-personality-traits-vocab.md`). Note 14 deliberately has **no** twin — its corrections have to land at the moment of drafting, not in a speaking drill.
 
 ## 🔗 Cross-References
 - 🔗 **[ielts-language-lap](https://github.com/NguyenPhan161206/ielts-language-lap)** · `git@github.com:NguyenPhan161206/ielts-language-lap.git` — the practice repository. Note **13** has a Vietnamese-language twin there at `02_skills_mastery/speaking/lessons/SP-personality-traits-vocab.md`: same whiteboard, rewritten as a Speaking lesson (Part 1/2/3 + Writing Task 1) with the trap-word deep dives and a 26-item exercise set. **This repo holds the theory; that repo holds the drill.**
-- [[vocabulary/12-one-vietnamese-word-many-english-words.md]] — the mechanism note that 13 applies at scale
+- [[vocabulary/12-one-vietnamese-word-many-english-words.md]] — the mechanism note that 13 applies at scale, and the Vietnamese-side counterpart to note 15
 - `psychology_society/` — the trait-psychology side of note 13 (the Big Five bridge)
-- `ai_ml/05-mlops-lifecycle-and-deployment-architecture.md` — the *dependability* sense of *reliable* used in note 13 §6.5
+- `ai_ml/05-mlops-lifecycle-and-deployment-architecture.md` — the *dependability* sense of *reliable* used in note 13 §6.5, and the home of *model compression* (note 15 §2)
 
 
 ## Template Structure (Template V)
