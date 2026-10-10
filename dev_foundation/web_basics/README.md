@@ -2,7 +2,7 @@
 
 **Purpose:** Read a code base and understand *how a browser turns text into pixels and reacts to you*. Mechanism-first, not "become a front-end developer".
 
-**Template:** **Template A (Tech Note, adapted)** for mechanism notes (01–03, 05), **Template G** for JavaScript-as-a-language usage (04).
+**Template:** **Template A (Tech Note, adapted)** for mechanism notes (01–03, 05, 06), **Template G (Dev Tool & Command Note)** for hands-on language/framework notes (04, 07, 08).
 
 > **Track:** this is the **web track**. JavaScript is the language *here* — it is deliberately **not** a DSA language (that track is Java + C++, see [`../dsa/`](../dsa/README.md)). The JS notes below are written from the browser's point of view; for algorithms, JavaScript's missing heap and shallow stack are documented in [`../dsa/01-learning-roadmap.md`](../dsa/01-learning-roadmap.md).
 
@@ -23,19 +23,23 @@
 
 | # | Note | Template | Core question |
 |---|------|----------|---------------|
-| — | *(none yet)* | — | — |
+| 01 | HTML structure & semantics | A | What tags exist, what each one *means*, and why the DOM tree matters? |
+| 02 | CSS box model & layout flow | A | How does the browser distribute space (block / inline / flex / grid)? |
+| 03 | Cascade, specificity & inheritance | A | Why does my style "not apply", and who wins when two rules conflict? |
+| 04 | JavaScript language core | G | What is the actual type/scope/async model I am writing against? |
+| 05 | DOM & browser event loop | A | How does a click become code, and why do animations jank? |
+| 06 | Responsive web design | A | How do breakpoints, units and media queries adapt one layout to every screen? |
+| 07 | CSS frameworks: Bootstrap & Tailwind | G | How does a utility-class framework give me the cascade for free — and cost me what? |
+| 08 | Forms, Fetch & multipart upload | G | How does browser-to-server data actually travel (form POST, JSON, FormData)? |
 
 ## 📋 Note Backlog
 
 | Priority | Planned note | Why |
 |----------|--------------|-----|
-| High | HTML structure & semantics | The tag vocabulary you need to read any project |
-| High | CSS box model & layout flow | How the browser distributes space (block/inline/flex/grid) |
-| High | Cascade, specificity & inheritance | Why your style "doesn't apply" — the #1 CSS confusion |
-| Medium | JavaScript language core (types, scope, functions, arrays) | Reading any modern code base |
-| Medium | DOM & browser event loop | How clicks become code, and why animations jank |
-| Low | Forms & accessibility semantics | Needed to read real projects, not to write them |
-| Low | Fetch/API calls (ties into PostgREST) | Connects web → database |
+| Medium | Web accessibility & ARIA beyond the basics | Note 01 touches semantics; real projects (Joblink) need the full checklist |
+| Medium | CSS animations & transitions triggers | Note 05 explains *why* animations jank — the tricks that avoid it come next |
+| Low | Client-side state: modules, bundlers & npm | The step between vanilla JS and reading a Next.js code base |
+| Low | Browser rendering pipeline deep dive (CRP) | The current notes cover layout-flow; the full paint pipeline is the next layer |
 
 ---
 
@@ -51,9 +55,10 @@
 ## 🔗 Related Topics
 - [`../databases/04-postgrest-auto-rest-api.md`](../databases/04-postgrest-auto-rest-api.md) — the API this layer consumes
 - [`../databases/05-schema-design-and-data-modeling.md`](../databases/05-schema-design-and-data-modeling.md) — where the data comes from
+- [`../web_server/README.md`](../web_server/README.md) — the server half of the request/response loop (SSR templates consume these pages)
 - [`../dsa/README.md`](../dsa/README.md) — the other track (Java + C++), and why JS is not in it
 - 🔗 [Joblink](https://github.com/qminh77/joblink) — the real code base to read these notes against (Next.js/React/Tailwind/Supabase)
 - [SUGGESTED] `bridge-rendering-pipeline.md` — bridge note: HTML → DOM → CSSOM → layout → paint, one end-to-end trace
 
 ---
-*Created: 2026-09-28 — Planned templates: A (mechanism) + G (JS language usage)*
+*Created: 2026-09-28 — Updated: 2026-10-10 — Templates: A (mechanism) + G (JS/language usage)*
