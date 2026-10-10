@@ -8,7 +8,8 @@
 |---|------|---------------|
 | 01 | Event-Driven Architecture & Task Orchestration | How do tasks *link* through a solid back-end? |
 | 02 | Modular Monolith vs Microservices | How do components stay *independent* without falling apart? |
-| … | (growing) | — |
+| 03 | Application Architecture Models | What do monolithic, multi-tier, microservices and serverless each promise — and cost? |
+| 04 | Web Performance, Caching & Bottlenecks | Where does latency hide across the layers, and what do I fix first? |
 
 ## Template
 
@@ -21,6 +22,6 @@ Uses **Template A: Tech Note (adapted)** — see `NOTE_TEMPLATE.md`. Every note 
 
 ## Research Journey Note
 
-These notes exist to *resolve the tensions* of the Modular Company Task System idea: independence vs integration (note 01/02), human vs agent interfaces (in ai_ml/), and safety/governance of autonomous operation. Treat every pattern here as a **candidate solution**, not a dogma — architecture is trade-offs made explicit.
+These notes exist to *resolve the tensions* of the Modular Company Task System idea: independence vs integration (note 01/02), the model-choice trade-offs the course demands (note 03: the 3-tier monolith is the right default), and where latency hides in every SSR app (note 04). Treat every pattern here as a **candidate solution**, not a dogma — architecture is trade-offs made explicit.
 
-*Last updated: 2026-09-23*
+*Last updated: 2026-10-10*

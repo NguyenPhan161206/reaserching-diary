@@ -17,14 +17,14 @@
 
 | # | Note | Template | Core question |
 |---|------|----------|---------------|
-| — | *(none yet)* | — | — |
+| 05 | Deploy the Express SSR app + PostgreSQL with Compose | G/A | How do I ship the whole web app + database as one reproducible system? |
 
 ## 📋 Note Backlog
 
 | Priority | Planned note | Why |
 |----------|--------------|-----|
 | High | Images, containers, registries, layers | The core mental model; everything else depends on it |
-| High | Dockerfile & build workflow | How a `Dockerfile` turns into a runnable image |
+| High | Dockerfile & build workflow | How a `Dockerfile` turns into a runnable image (note 05 uses one, assumes this) |
 | High | Volumes, bind mounts, networks, ports | Why data "disappears" and how to fix it |
 | Medium | Mental model of orchestration (compose, swarm, k8s — *why* they exist, not how) | Needed before touching any real deployment |
 | Low | Image size optimisation (multi-stage builds, `.dockerignore`) | Only when an image becomes painful |
@@ -42,11 +42,13 @@
 
 ## 🔗 Related Topics
 - [`../linux/01-file-system-paths-and-permissions.md`](../linux/01-file-system-paths-and-permissions.md) — the FS a container namespaces
+- [`../web_server/README.md`](../web_server/README.md) — the Express SSR app note 05 packages
+- [`../databases/02-postgresql-core-concepts.md`](../databases/02-postgresql-core-concepts.md) — the DB that runs in the `db` service
 - [`../yaml_config/02-yaml-in-github-actions-and-devops.md`](../yaml_config/02-yaml-in-github-actions-and-devops.md) — compose + CI syntax
 - [`../../git_github/11-infrastructure-as-code-and-devops-automation.md`](../../git_github/11-infrastructure-as-code-and-devops-automation.md) — where images get built
 - [`../../ai_ml/05-mlops-lifecycle-and-deployment-architecture.md`](../../ai_ml/05-mlops-lifecycle-and-deployment-architecture.md) — containers in the ML lifecycle
-- [`../databases/02-postgresql-core-concepts.md`](../databases/02-postgresql-core-concepts.md) — DBs you run in containers
 - [SUGGESTED] `bridge-container-vs-vm.md` — bridge note: what a VM gives you that a container doesn't, and when that still matters
+- [SUGGESTED] `bridge-docker-to-databases.md` — the healthcheck + `depends_on` trick note 05 uses, generalised to any multi-service app
 
 ---
-*Created: 2026-09-28 — Planned templates: G (tooling) + A (mental model)*
+*Created: 2026-09-28 — Updated: 2026-10-10 — Templates: G (tooling) + A (mental model)*
