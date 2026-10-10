@@ -2,7 +2,7 @@
 
 **Purpose:** Understand where state lives and how to query it safely. From relational model → SQL → engine specifics → instant REST API → schema design decisions.
 
-**Template:** **Template G** for hands-on SQL/engine notes (01, 02, 04), **Template A** for comparisons and design decisions (03, 05).
+**Template:** **Template G** for hands-on SQL/engine notes (01, 02, 06, 07), **Template A** for comparisons and design decisions (08).
 
 ## Why this matters
 
@@ -16,19 +16,21 @@
 
 | # | Note | Template | Core question |
 |---|------|----------|---------------|
-| — | *(none yet)* | — | — |
+| 01 | Relational model & SQL basics | G | What is a relational table, and how do keys, joins and `SELECT` work? |
+| 02 | PostgreSQL core concepts | G | How does the actual engine store, index and transact this data? |
+| 06 | Knex query builder & CRUD | G | How do I query PostgreSQL safely from an Express app without writing SQL strings? |
+| 07 | PostgreSQL full-text search | G | How do I search *words* (ranked), not just substrings? |
+| 08 | DB bottlenecks: indexing, caching & pooling | A | Why is the database the first bottleneck — and what do I measure and fix first? |
 
 ## 📋 Note Backlog
 
 | Priority | Planned note | Why |
 |----------|--------------|-----|
-| High | Relational model & SQL basics (tables, keys, joins, `SELECT`) | The vocabulary every other DB note assumes |
-| High | PostgreSQL core concepts (types, indexes, transactions, schema) | The engine Joblink actually runs on |
 | High | PostgREST — database as REST API | Removes an entire layer of boilerplate; huge leverage for small projects |
 | Medium | MySQL vs PostgreSQL | Comparison, not advocacy — know when each wins |
 | Medium | Schema design & data modeling | Normalisation, indexes, migrations, the decisions that hurt later |
-| Low | Transactions & isolation levels | Revisit when concurrency actually bites |
-| Low | Connection pooling | Comes up with serverless; skip until then |
+| Medium | Transactions & isolation levels | The course project writes with Knex transactions (note 06); the theory lands next |
+| Low | Connection pooling | Comes up with serverless; underwater until then |
 | Low | Vector search for AI applications | Bridges `databases/` ↔ `ai_ml/`; a natural bridge note |
 
 ---
@@ -46,9 +48,11 @@
 - [`../docker/README.md`](../docker/README.md) — run databases in containers
 - [`../yaml_config/03-config-formats-when-to-use-what.md`](../yaml_config/03-config-formats-when-to-use-what.md) — config & connection settings
 - [`../web_basics/README.md`](../web_basics/README.md) — the layer that consumes this data
+- [`../web_server/README.md`](../web_server/README.md) — the MVC app whose models call these queries
+- [`../security/README.md`](../security/README.md) — parameterised queries + RLS are this layer's authorization
 - [`../dsa/README.md`](../dsa/README.md) — the same thinking (data structures + cost models) applied to algorithms
 - 🔗 [Joblink](https://github.com/qminh77/joblink) — real PostgreSQL/Supabase schema to read against
 - [SUGGESTED] `bridge-sql-to-dsa.md` — bridge note: B-trees, hash indexes, and query planners vs. the data structures learned in DSA
 
 ---
-*Created: 2026-09-28 — Planned templates: G (hands-on) + A (comparison/design)*
+*Created: 2026-09-28 — Updated: 2026-10-10 — Templates: G (hands-on) + A (comparison/design)*
