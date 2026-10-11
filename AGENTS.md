@@ -108,6 +108,7 @@ Agent PHẢI chọn đúng template dựa trên domain:
 | Web — Security (Injection, XSS, CSRF, AuthZ, DoS) | dev_foundation/security/ | Template A |
 | Databases (SQL, PostgreSQL, MySQL, PostgREST) | dev_foundation/databases/ | Template G (01, 02, 04, 06, 07) · Template A (03, 05, 08) |
 | DSA (anchor + method notes — code ở repo riêng) | dev_foundation/dsa/ | A (Tech) cho method notes (04, 05) · Flexible cho anchor/roadmap (01–03) |
+| Mobile — Native Android (Kotlin, lifecycle, UI, Room, coroutines, Firebase) | dev_foundation/mobile_android/ | A (Tech) làm trục cơ chế + G (Dev Tool) cho phần thao tác (Android Studio, adb, Gradle, Room, Retrofit) |
 | CV / Resume | cv/ | LaTeX CV (XeLaTeX, EN + VI) |
 
 Xem NOTE_TEMPLATE.md để biết chi tiết từng template.
@@ -380,6 +381,9 @@ là hình thức procrastination đắt nhất — nhìn có vẻ chăm chỉ nh
 | **DSA** | **C++** | Port target — phỏng vấn, contest, tight constant factor | `dev_foundation/dsa/03-cpp-for-dsa.md` | repo DSA: `solution.cpp` |
 | **Web** | **JavaScript** | Ngôn ngữ của web track (DOM, event loop, async) | `dev_foundation/web_basics/` | repo Joblink |
 | **AI/ML + IoT** | **Python** | Stack ML/IoT (Snake_ANN, UMT-Truck-Blind-Sight) | `ai_ml/`, `iot_aiot/` | repo riêng |
+| **Mobile** | **Kotlin** | Native Android (JVM/ART) — course + platform track; Java là legacy/interop | `dev_foundation/mobile_android/` | đồ án Android trong course (chưa có repo riêng) |
+
+**Mobile track note:** iOS (Swift) và cross-platform (Flutter/Dart, Xamarin/MAUI/C#, React Native/JS) được học ở mức **survey** trong `mobile_android/01`, KHÔNG tách track — đúng nguyên tắc "một ngôn ngữ một track". Nếu sau này làm app Flutter thật → tạo track **Dart** riêng (Section D), không trộn vào Kotlin.
 
 **Rule "attempt → port":** làm bằng Java trước → port sang C++ **từ trí nhớ, không dịch từng dòng** →
 ghi vào section **Language Notes** trong `approach.md`. Một bản dịch máy-móc không dạy được gì.
@@ -413,6 +417,7 @@ là lỗi phạm vi — tách nó.
 | `security/` | A | Bảo mật web là thuộc tính hệ thống, không phải công cụ |
 | `databases/` | G + A | SQL/engine dùng tay (G) + thiết kế schema & kiến trúc dữ liệu (A) |
 | `dsa/` | Anchor | Chỉ roadmap + link. Code & giải thích → repo DSA (Section L) |
+| `mobile_android/` | A + G | Mobile Application Development course — OS/platform overview (A) + Android Studio/adb/Gradle/Room/Retrofit thao tác (G) |
 
 **Rule:** mọi note trong `dev_foundation/` khi tạo mới PHẢI có mục trong bảng "Note Index" của `README.md` folder đó.
 Backlog chưa viết nằm trong bảng **"Note Backlog"** cùng file.
@@ -447,6 +452,7 @@ Maintained in: RESEARCH_AREAS.md
 | dev_foundation/security/ | Web Security (Injection, XSS, CSRF, AuthZ, DoS) | A (Tech) | Active | 2 | 2026-10-10 |
 | dev_foundation/databases/ | SQL/PostgreSQL/Knex/PostgREST | G + A | Active | 5 | 2026-10-10 |
 | dev_foundation/dsa/ | DSA anchor, roadmap & method notes | A (Tech) + Flexible (anchor) | Active | 5 | 2026-09-28 |
+| dev_foundation/mobile_android/ | Native Android (Kotlin) — Mobile Application Development course track | A + G | Active | 6 | 2026-10-11 |
 
 ## ═══════════════════════════════════════════
 ## SECTION J: FOLDER→FILE NAMING CONVENTION
@@ -458,7 +464,8 @@ Maintained in: RESEARCH_AREAS.md
 - Connection notes: `bridge-topic-a-and-topic-b.md`
 
 ---
-*Config version: 3.7 — Last updated: 2026-10-10*
+*Config version: 3.8 — Last updated: 2026-10-11*
+*(v3.8: new `dev_foundation/` sub-folder `mobile_android/` approved for the Mobile Application Development course (6 chapter notes, Template A spine + G tooling sections). Section C gained the "Mobile — Native Android" row; Section M gained the sub-folder; Section I count 6; **Section N gained the Mobile track (Kotlin)** with an explicit survey-only rule for iOS/cross-platform. Root README, `dev_foundation/README.md` and `RESEARCH_AREAS.md` updated to match.)*
 *(v3.7: two new `dev_foundation/` sub-folders approved for the Web Application Development course → Section C gained "Web — SSR Backend" (`web_server/`, Template A for 01/03/06/07 + G for 02/04/05/08) and "Web — Security" (`security/`, Template A) rows; Section M table gained both sub-folders; Section I counts updated (web_basics 0→8 Active, databases 0→5 Active, web_server 8, security 2).) *
 *(v3.6: Section L gained a **second registry kind** — the *practice repo*. `ielts-language-lap` holds Vietnamese IELTS lessons, not code, so the `**Code repository:**` header format does not apply; the new format is `**Practice twin:**` pointing at the Vietnamese sibling note, with the reverse link mandatory in that repo. Added because `vocabulary/13` (personality traits) became the first bilingual-twin pair: the English theory note here, the Vietnamese Speaking lesson there. Also carries the lesson that the two notes must agree on *counts* — the whiteboard has 66 cells but 70 words, and both notes now say so. Section L's checklist now branches on repo type.)*
 *(v3.5: DSA is no longer "anchor only" — `dev_foundation/dsa/04-complexity-analysis-toolkit.md` and `05-data-structure-selection-guide.md` are Template A method notes, so Section C now reads "anchor + method notes (A)" and Section I counts 5 notes. Section L's checklist wording updated to match: the folder holds anchor / roadmap / method notes and still must not contain solution code. Resolves the Open Question logged in `dev_foundation/README.md`.)*

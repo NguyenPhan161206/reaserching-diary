@@ -20,6 +20,7 @@
 | [`security/`](security/README.md) | Web security: injection, XSS, CSRF, authZ, DoS | A | How does an attack travel, and where do I stop it? |
 | [`databases/`](databases/README.md) | Relational model, SQL, PostgreSQL, Knex, PostgREST | G + A | Where does state live, and how do I query it safely? |
 | [`dsa/`](dsa/README.md) | Roadmap + method notes + **Java** & **C++** language notes (code → other repo) | A (Tech) | What structure, at what cost, in which language? |
+| [`mobile_android/`](mobile_android/README.md) | Native Android in **Kotlin**: lifecycle, UI, storage, coroutines, Firebase | A + G | How does an app survive an OS that starts, stops, and kills it at will? |
 
 ---
 
@@ -54,11 +55,17 @@ Phase 4 — read (and write) a code base — the Web Application Development cou
   └─ security/              (injection, XSS, CSRF, authorization, DoS — the 5.4 chapter)
   └─ databases/             (SQL → PostgreSQL → Knex → full-text → bottlenecks)
 
+Phase 4b — the device in your pocket — the Mobile Application Development course
+  └─ mobile_android/        (OS/platform → components/lifecycle → UI → Room → coroutines → Firebase/GPS)
+     Native Android in Kotlin. iOS + cross-platform (Flutter/MAUI/RN) are surveyed
+     in note 01 only, not tracked separately.
+
 LANGUAGE MAP — which language belongs to which track
   Java       → dsa/            (course language)          + Snake_ANN (ML code)
   C++        → dsa/            (port target, interviews)
   JavaScript → web_basics/ + web_server/   (web track — browser AND server)
   Python     → ai_ml/, iot_aiot/ (AI/ML + IoT stack)
+  Kotlin     → mobile_android/ (Native Android — JVM/ART)
 
 Phase 5 — build (with a real project)
   └─ Joblink / UMT-Truck-Blind-Sight / Snake_ANN repos
@@ -91,6 +98,9 @@ Phase 5 — build (with a real project)
 | **Databases** | Git | Transactions and commits are the *same idea* applied to data vs. files |
 | **Java / C++** | Databases | Both languages' container trade-offs reappear as index and page-layout decisions |
 | **Java / C++** | ML | The same contiguity argument explains why tensors are flat buffers, not object graphs |
+| **Kotlin/Android** | Linux | Android is a Linux kernel fork — permissions, processes, and `/proc` behave like the OS under the terminal |
+| **Kotlin/Android** | Databases | Room is SQLite is relational theory; offline-first on device = caching at the edge |
+| **Kotlin/Android** | Web | The lifecycle/async/state problems mirror the request lifecycle and event loop of the web tracks |
 
 ---
 
@@ -106,6 +116,7 @@ Phase 5 — build (with a real project)
 | `security/` | 2 | 3 |
 | `databases/` | 5 | 6 |
 | `dsa/` | 5 (roadmap + 2 language notes + complexity toolkit + selection guide) | 6 |
+| `mobile_android/` | 6 (one per course chapter) | 7 |
 
 Each sub-folder README keeps its own **Note Index** and **Note Backlog** table (AGENTS.md Section M).
 
@@ -113,6 +124,7 @@ Each sub-folder README keeps its own **Note Index** and **Note Backlog** table (
 
 ## 🔗 Related Topics
 - [`git_github/`](../git_github/README.md) — prerequisite track; Git internals assume Linux knowledge
+- [`mobile_android/`](mobile_android/README.md) — the Native Android (Kotlin) course track
 - [`software_architecture/`](../software_architecture/README.md) — the "why" these tools exist
 - [`ai_ml/05-mlops-lifecycle-and-deployment-architecture.md`](../ai_ml/05-mlops-lifecycle-and-deployment-architecture.md) — Docker + YAML in a real ML pipeline
 - 🔗 [DSA-reserching-diary](https://github.com/NguyenPhan161206/DSA-reserching-diary) — code & explanations live there

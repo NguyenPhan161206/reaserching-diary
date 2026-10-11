@@ -54,7 +54,7 @@ The knowledge system is designed and organized into specialized directories, ref
 - 🔤 `/vocabulary` - Advanced vocabulary & collocation notes (Template V), focused on register, confusables, and Viet-Glish pitfalls.
 - 🎧 `/ielts_training` - IELTS preparation practice (listening, reading, writing, speaking) using real-world content.
 - 🔧 `/git_github` - Git version control & GitHub collaboration — practical mastery from first commit to team workflows.
-- 🐧 `/dev_foundation` - Engineering fundamentals: Linux commands, Docker, YAML/config, web basics (HTML/CSS/JS/DOM), the Express SSR backend (`web_server/`) with its security chapter (`security/`), databases, and the DSA anchor. See [`dev_foundation/README.md`](dev_foundation/README.md) for the learning path.
+- 🐧 `/dev_foundation` - Engineering fundamentals: Linux commands, Docker, YAML/config, web basics (HTML/CSS/JS/DOM), the Express SSR backend (`web_server/`) with its security chapter (`security/`), databases, the DSA anchor, and the Native Android track (`mobile_android/`). See [`dev_foundation/README.md`](dev_foundation/README.md) for the learning path.
 - 🏢 `/software_architecture` - System architecture & design: event-driven back-ends, modularity vs microservices, application architecture models, and web performance/caching.
 - 📄 `/cv` - LaTeX CV in English + Vietnamese (source + build script + rendered PDFs).
 - 💡 `/random_ideas` - Personal perspectives, random ideas, or breakthrough project concepts that come to mind.
@@ -78,6 +78,8 @@ dev_foundation/docker/  ·  dev_foundation/yaml_config/
       ↓
 dev_foundation/web_basics/  ·  dev_foundation/web_server/  ·  dev_foundation/security/  ·  dev_foundation/databases/
       (Web Application Development course track — completed 2026-10-10)
+      ↓
+dev_foundation/mobile_android/   (Mobile Application Development course track — written 2026-10-11)
       ↓
 Real projects: Joblink · UMT-Truck-Blind-Sight · Snake_ANN
 ```
@@ -119,7 +121,7 @@ Some knowledge **needs code to make sense**. Those codebases live in their own r
 | [RESEARCH_AREAS.md](RESEARCH_AREAS.md#language-compliance-audit-agentsmd-section-a6) | Language compliance audit (A6) — files pending English translation |
 
 ## 🚀 Status & Roadmap
-- **Current Stage:** `Active` — *Web Application Development course track* — web basics + Express SSR + security + databases all written (2026-10-10).
+- **Current Stage:** `Active` — *Mobile Application Development course track* — Native Android (Kotlin): lifecycle, UI, storage, coroutines, Firebase (written 2026-10-11).
 - **Current track:**
   1. ✅ Git & GitHub fundamentals — [`git_github/`](git_github/README.md) (11 notes)
   2. 🔄 Linux commands — [`dev_foundation/linux/`](dev_foundation/linux/README.md) (3 / 9 notes)
@@ -129,12 +131,14 @@ Some knowledge **needs code to make sense**. Those codebases live in their own r
   6. ✅ Web security — [`dev_foundation/security/`](dev_foundation/security/README.md) (2 notes)
   7. ✅ Databases — [`dev_foundation/databases/`](dev_foundation/databases/README.md) (5 notes)
   8. ⬜ Docker & YAML — [`dev_foundation/`](dev_foundation/README.md)
+  9. ✅ Mobile (Native Android) — [`dev_foundation/mobile_android/`](dev_foundation/mobile_android/README.md) (6 notes, written 2026-10-11)
 - **Upcoming Plans:**
   - [x] Set up directory structure and note-taking standards.
   - [x] Push initial notes on AI and Economics to the repository.
   - [x] Configure AI Agent system (OpenCode + AGY).
-  - [x] Complete the Web Application Development track (26 notes across web_basics / web_server / security / databases / docker / software_architecture).
-  - [ ] Complete the Linux command track (notes 04–09).
+- [x] Complete the Web Application Development track (26 notes across web_basics / web_server / security / databases / docker / software_architecture).
+   - [x] Complete the Mobile Application Development track (6 notes in dev_foundation/mobile_android/).
+   - [ ] Complete the Linux command track (notes 04–09).
   - [ ] Docker core notes (01–04) + YAML notes (01–03).
   - [ ] Start the DSA practice loop (5–8 problems/week).
   - [ ] Maintain a habit of periodically updating new knowledge.

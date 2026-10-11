@@ -1,7 +1,7 @@
 # Research Areas — Tracking & Proposals
 
 > Auto-maintained by Agent. DO NOT manually edit.
-> Last updated: 2026-10-10
+> Last updated: 2026-10-11
 
 ## Active Folders
 | # | Folder | Domain | Template | Notes | Status | Last Updated |
@@ -32,6 +32,7 @@
 | 24 | dev_foundation/databases/ | SQL / PostgreSQL / Knex / Full-Text / Bottlenecks / PostgREST | G + A | 5 | Active | 2026-10-10 |
 | 25 | dev_foundation/dsa/ | DSA — roadmap, complexity toolkit, structure-selection guide, Java & C++ notes (code → DSA-reserching-diary) | A (Tech) + Flexible (anchor) | 5 | Active | 2026-09-28 |
 | 26 | books_summaries/06-building-a-second-brain/ | Book — Building a Second Brain | D (Book) | 1 | Active | 2026-09-28 |
+| 27 | dev_foundation/mobile_android/ | Native Android (Kotlin) — Mobile Application Development course | A + G | 6 | Active | 2026-10-11 |
 
 ## Proposed Folders (waiting for user confirmation)
 | # | Proposed Folder | Domain | Suggested Template | Reason | Proposed Date |
@@ -84,6 +85,9 @@
 
 | Date | Folder | File | Action |
 |------|--------|------|--------|
+| 2026-10-11 | dev_foundation/mobile_android/ | 01-06 + README.md | created (new **Mobile Application Development** track — 6 chapter notes in English, Template A spine + G tooling sections: 01 OS/platforms/toolchain overview, 02 fundamental components + lifecycle + MVC + Figma + widgets, 03 UI programming (layouts, navigation, RecyclerView, fragments, menus, dialogs, WebView, ConstraintLayout), 04 local storage (SharedPreferences, scoped storage, Room/SQLite, XML/JSON/Realm), 05 multithreading (coroutines, Mutex, AsyncTask history, Retrofit/REST), 06 specialized services (Services, notifications/alarms/WorkManager, Firebase, FCM, Maps/GPS) + capstone. iOS + cross-platform covered at survey depth in note 01 per user's scope decision; no companion code repo — capstone is a course artifact) |
+| 2026-10-11 | config | AGENTS.md | updated (v3.7 → **v3.8** — Section C gained "Mobile — Native Android" (`mobile_android/`, A spine + G sections); Section I counts 6; Section M gained the sub-folder; **Section N gained the Mobile track (Kotlin)** with an explicit survey-only rule for iOS/cross-platform) |
+| 2026-10-11 | tracking | README.md · dev_foundation/README.md · RESEARCH_AREAS.md | updated (root: dev_foundation description + learning path + Status & Roadmap item 9; dev_foundation: Sub-folders, Phase 4b, language map (Kotlin), Note Index; RESEARCH_AREAS: active folder 27 + this log + chapter-coverage table) |
 | 2026-10-10 | dev_foundation/web_server/ | 07-authentication-signup-signin-signout.md | created (Template A — authN vs authZ, bcrypt sizing, `session.regenerate` fixation defense, `connect-session-knex`, sessions-vs-JWT comparison, attack checklist; course ch. 4.4) |
 | 2026-10-10 | dev_foundation/web_server/ | 08-advanced-features-pagination-wysiwyg-upload.md | created (Template G — server-side + Ajax pagination, multer multipart upload with path-traversal defense, WYSIWYG → stored-XSS → sanitize-html; course ch. 4.5) |
 | 2026-10-10 | dev_foundation/security/ | 01-web-security-injection-xss-csrf-session-hijacking.md | created (Template A — SQL injection, stored/reflected/DOM XSS, CSRF + SameSite, session hijacking/fixation; vulnerable-vs-fixed pairs; course ch. 5.4) |
@@ -203,6 +207,7 @@
 | Git/GitHub | ████████░░ 80% | 11 | Advanced rebase, monorepo, Actions depth |
 | Dev Foundation | ████████░░ 80% | 32 | YAML notes (01–03), Docker core (01–04), Linux 04–09 |
 | Web Application Dev | ██████████ 100% | 26 | Course track complete 2026-10-10 — see Domain Table below (± PostgREST, MySQL, full Docker core) |
+| Mobile (Native Android) | ██████████ 100% | 6 | Course track written 2026-10-11 — see Domain Table below (± Jetpack Compose, MVVM, testing, publishing) |
 | DSA (anchor) | ██░░░░░░░░ 20% | 5 | Practice loop in DSA-reserching-diary, Java/C++ solutions |
 | Architecture | ██████░░░░ 60% | 4 | Observability, queues, CQRS |
 
@@ -215,6 +220,17 @@
 | 3. Back-end JS | `web_basics/04` (JS core) · `web_server/03` (MVC) · `04` (routing) · `05` (template engines/layout) |
 | 4. Data & auth | `databases/01,02,06,07` · `web_server/06,07,08` · `web_basics/08` |
 | 5. Deploy, perf, security | `docker/05` · `software_architecture/04` · `databases/08` · `security/01-02` |
+
+### Mobile Application Development course — chapter coverage (written 2026-10-11)
+
+| Chapter | Notes |
+|---------|-------|
+| 1. Mobile OS, platforms & tools (evolution, Android/iOS, cross-platform survey, dev accounts, shared tools, Android Studio env) | `mobile_android/01` |
+| 2. Fundamental Android components (architecture, project/ Gradle, lifecycle, MVC, core components, Figma, basic widgets) | `mobile_android/02` |
+| 3. UI programming (views, navigation/intents, lists/RecyclerView, fragments, action-bar/menus, autolayout, WebView, dialogs) | `mobile_android/03` |
+| 4. Local data storage (SharedPreferences/DataStore, file system + scoped storage, SQLite/Room, XML/JSON/Realm) | `mobile_android/04` |
+| 5. Multithreading (threads, async, Handler/AsyncTask→coroutines, Mutex, REST/Retrofit) | `mobile_android/05` |
+| 6. Specialized services (Services, notifications/alarms/WorkManager, Firebase, FCM, Maps/GPS) + capstone | `mobile_android/06` |
 
 ## Folder Naming Convention
 - Folders: `snake_case/` (e.g., `ai_ml/`, `economics_business/`)
