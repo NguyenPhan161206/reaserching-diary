@@ -1,7 +1,7 @@
 # 01 — Mobile OS, Platforms & Tools Overview
 
 **Created Date:** 2026-10-11
-**Last Updated:** 2026-10-11
+**Last Updated:** 2026-10-12
 **Tags:** `#Android`, `#iOS`, `#MobileOS`, `#CrossPlatform`, `#Toolchain`, `#AppStore`
 **References:** Android Developers docs (`developer.android.com`), Apple Developer docs, Google Play Policy Center, AOSP source, Flutter/Xamarin/.NET MAUI/React Native official docs, `Gartner`/`StatCounter` mobile OS share
 **Status:** Draft
@@ -40,6 +40,18 @@ Every layer can **kill your process** to reclaim memory, and every layer above t
 
 > **Why this matters:** a desktop developer assumes their program owns the machine. A mobile developer must assume the machine owns *them*. This single mindset shift is the difference between code that ships and code that ANRs.
 
+**The shift, stated as a table** — because the diagram above is easy to nod at and hard to actually believe until it is written out:
+
+| The developer assumes… | On desktop | On mobile |
+|------------------------|------------|-----------|
+| **Ownership** | My process owns the machine until *I* exit | The OS owns the machine and may kill *me* at any moment to reclaim memory |
+| **Time** | A background job can run for minutes | Background work is *scheduled*, batched, and can be deferred past a Doze window |
+| **Resources** | RAM is cheap; a leak is merely wasteful | RAM is shared with every other app; a leak gets my process reaped |
+| **Connectivity** | The network is normally present | The network is an *exception*; offline is the default state |
+| **Input** | Precise pointer, hover, right-click, keyboard | Fat finger, no hover, one hand, direct sunlight |
+
+> **The deeper consequence:** the four "weird" mobile behaviours (an app restarting, background work stopping, a late notification, a dropped frame) are not bugs to work around — they are the **OS enforcing the constraints above**. When you meet one, ask *which ring in the diagram is policing me*, not *how do I defeat it*.
+
 ## 🔬 Detailed Notes
 
 ### 1. Evolution of the phone — three eras
@@ -58,6 +70,13 @@ The iPhone (2007) and Android (2008) didn't just add a touchscreen — they intr
 | **Thermal** | Phones have no fan; sustained CPU/GPU throttle | Reduce sustained load; move heavy work off-device; expect FPS to drop under heat |
 | **Intermittent network** | Mobile radio + tunnels + dead zones | **Offline-first**: local DB is the source of truth, network is a sync |
 | **Hostile input** | Small touchscreen, fingers, one-handed use, sunlight | Large touch targets (≥48dp), contrast, no hover, no right-click |
+
+**The four constraints, explained past the table** — because "batch your network calls" is a rule most people memorise without the *why*:
+
+- **🔋 Battery — the fixed cost of waking the radio dwarfs the payload.** The energy goes into bringing the mobile radio out of its low-power state and the idle "tail" that follows each transmission, not into the bytes themselves. Two consequences fall out of that one fact: (1) **100 small requests scattered across a minute can cost more than one batched request** carrying the same total data, because the radio power-cycles 100 times; (2) "keep the radio asleep" beats "send less data". This is the mechanism behind batching, `WorkManager`, and respecting Doze/App Standby (note 06).
+- **🌡️ Thermal — *sustained* power, not *peak* power, is the binding constraint.** A phone has no fan, so heat escapes only through its surface. A desktop CPU can burst to 100% for minutes and cool later; a phone throttles *within seconds* and then holds a lower clock while it is hot. The design consequence is counter-intuitive: an algorithm that finishes in a **3-second burst** can deliver better sustained performance than one that keeps every core busy for a minute, because the second one triggers throttling and pays for it. Optimise for **joules per task**, not cycles per task.
+- **📶 Intermittent network — "offline-first" is a *data-ownership* decision, not a UI trick.** The concrete rule: the **local database is the source of truth**; the network is only a *replication channel*. Writes land locally first and sync later. That is why every serious mobile app has a local store (note 04) and a sync strategy (notes 05–06). A "network-first" app shows a blank screen the moment a tunnel swallows the signal.
+- **🖐️ Hostile input — 48dp is a psychological constant, not a style choice.** `dp` is a *density-independent* unit, so 48dp is ≈ **9 mm** on every device regardless of pixel density — about a fingertip. Material's 48dp minimum touch target is a straight application of **Fitts's Law** (time to acquire a target shrinks as the target grows and the distance to it shrinks). Mobile UI is where engineering meets perceptual psychology → see [`../../psychology_society/README.md`](../../psychology_society/README.md).
 
 **Device fragmentation** is the fifth, software constraint: thousands of device models, Android API levels spanning 10+ years, manufacturer skins (One UI, MIUI), and varying screen densities/fold states. A desktop app targets ~3 OS versions; an Android app may target **API 24 → 35+** and 5 screen size classes. This is why responsive layout (note 03) isn't optional.
 
@@ -79,6 +98,7 @@ The two OSes converge on the *concepts* (sandbox, permission prompts, background
 ### 4. App stores, accounts, and cloud resources
 - **App store role:** discovery, distribution, payments, updates, and **policy enforcement**. It is a two-sided market — it earns the developer access to billions of devices in exchange for a fee and rules (see `economics_business/04-network-effects.md` for why this market concentrates so hard).
 - **Developer account:** required to publish. Google charges a **one-time \$25**; Apple charges **\$99/year** (and Apple is stricter — e.g., requires a real legal entity name for some categories).
+- **Why developers tolerate the gate (the two-sided view):** a store is not only a toll booth; it is **trust infrastructure**. Before curated stores, users would not install unknown apps (malware risk), so the *addressable market* for a small developer was tiny. A store that vets apps raises consumer willingness to install, which grows the very pie the developer sells into; the 15–30% fee is the price of that trust plus distribution. Whether that price is *fair* is a genuinely open question (see the EU DMA point in §6 and Industry Corners) — but framing it as pure extortion ignores the demand-side value the gate creates.
 - **Cloud resources** the ecosystem hands you: push (FCM/APNs), crash reporting (Play Console/App Store Connect), analytics, and identity. These are why note 06's Firebase chapter exists — the platform *wants* you on its managed services.
 - **Accounts you'll actually juggle:** Play Console (publish), Google Cloud (Firebase, Maps API keys), GitHub/GitLab (code), and the emulator's Google account (for Play Services dependencies).
 
@@ -233,5 +253,25 @@ adb logcat -v brief *:S MyApp:V
 - [ ] Given EU DMA and alternative stores, does "master the Play Store" still mean what it did in 2020?
 - [ ] How much of the "constraint mindset" (battery, offline) belongs to a `software_architecture/` note versus here?
 
+## 🎓 Lecture Log
+
+> Live teaching sessions for this chapter. The sections above hold the distilled knowledge; this log records the extra depth delivered in the lecture, the questions posed, and the argumentation that changed the note. Reverse-chronological.
+
+### Session 1 — 2026-10-12 · §1–§2 (Foundations)
+**Depth added during the lecture** (now folded into 🧠 Mental Model and §2 above):
+- The desktop-assumption vs mobile-reality table — the "the machine owns *you*" shift named explicitly, with its consequence for reading OS behaviour.
+- Radio **fixed-cost** reasoning for the battery constraint (wake-up + idle tail, not payload), and why batching follows from it.
+- *Sustained* power vs *peak* power as the real thermal constraint, and its consequence for algorithm choice (joules per task, not cycles per task).
+- Offline-first reframed as a **data-ownership** decision: local DB = source of truth, network = replication channel.
+- 48dp = ≈9mm = a fingertip → the link to **Fitts's Law** and `psychology_society/`.
+- App-store gatekeeping framed as **trust infrastructure** (demand-side value) rather than only as a fee.
+
+**Debate prompts posed to the student:**
+- (A) Which of the four constraints is *hardest* for a developer moving web → mobile, and why?
+- (B) Attack the claim *"gatekeeping is trust infrastructure"* — find a case where the gate demonstrably harms developers or users.
+
+**Student's positions:** _awaiting response_
+
 ---
+
 *An OS that can kill your app at any time is not a limitation — it is the specification. Write to it.*

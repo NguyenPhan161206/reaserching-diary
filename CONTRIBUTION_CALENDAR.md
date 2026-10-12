@@ -32,8 +32,8 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
  5    6    7    8    9   10   11
  ░░   ░░   ░░   ░░   ░░   ██   ██
 
-12   13   14   15   16   17   18
- ░░   ░░   ░░   ░░   ░░   ░░   ░░
+ 12   13   14   15   16   17   18
+ ██   ░░   ░░   ░░   ░░   ░░   ░░
 
 19   20   21   22   23   24   25
  ░░   ░░   ░░   ░░   ░░   ░░   ░░
@@ -43,10 +43,11 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
 ```
 
 ## Stats
-- **This month (October):** 2 active days | 8 interactions
-- **Current streak:** 🔥 2 days (10–11 Oct)
+- **This month (October):** 3 active days | 11 interactions
+- **Current streak:** 🔥 3 days (10–12 Oct)
 - **Longest streak:** 4 days (9–12 Sep)
 - **September 2026 (closed):** 15 active days | 205 interactions
+- **Today (12 Oct, session 1 — Mobile Android teaching, Lecture 1):** started the live lecture series for the Mobile Application Development track. Session 1 covered Chapter 1 §1–§2 (evolution of the phone; device characteristics & the four constraints) and folded the extra depth into `mobile_android/01`: a desktop-vs-mobile assumption table, the radio *fixed-cost* reason behind batching, sustained-vs-peak power for thermal, offline-first as data-ownership, 48dp ≈ 9mm tied to Fitts's Law (`psychology_society/`), and app-store gatekeeping as trust infrastructure. New `🎓 Lecture Log` section added so every session + debate prompt is recorded. `session-ses_ecfc.md` (another workspace's agent session file) deliberately left untracked. Committed & pushed per the user's new per-lecture command.
 - **Today (11 Oct):** Web Application Development course track — planned 26 notes across `web_basics/` (8), `web_server/` (8), `security/` (2), `databases/` (5), `docker/` (1), `software_architecture/` (2) written via sub-agent waves, then all tracking reconciled: `AGENTS.md` v3.7, folder READMEs, `RESEARCH_AREAS.md`, root `README.md`, and this calendar. A6 diacritic grep on all 26 files → 0 violations. Awaiting push command.
 - **Today (11 Oct, session 2 — Mobile track):** new `dev_foundation/mobile_android/` course track (Mobile Application Development / "Lập trình thiết bị di động"). 6 chapter notes in English — Template A spine + nested Template G tooling sections: 01 OS/platforms/toolchain overview (evolution, Android vs iOS, cross-platform survey, dev accounts, collaboration, Android Studio env + adb cheat sheet), 02 fundamental components (architecture, Gradle, manifest, lifecycle/back stack, MVC, core components, Figma→code, basic widgets), 03 UI programming (layouts & view hierarchy, navigation/intents+SafeArgs, RecyclerView/DiffUtil, fragments, menus, dialogs, WebView security, ConstraintLayout), 04 local storage (SharedPreferences/DataStore, scoped storage/SAF, Room/SQLite, XML/JSON/Realm), 05 multithreading (threads, Looper/Handler, AsyncTask history, coroutines, Mutex, Retrofit/REST), 06 specialized services (Services, notifications/AlarmManager/WorkManager, Firebase, FCM, Maps/GPS) + capstone checklist. Config reconciled: `AGENTS.md` v3.8 (Section C/I/M gained the folder, **Section N gained the Kotlin track** with survey-only iOS/cross-platform rule), root README + `dev_foundation/README.md` (Phase 4b, language map, Note Index) + `RESEARCH_AREAS.md` (folder 27, mobile course-coverage table). Scope decisions from user: Android-deep + iOS/cross-platform survey, 6 notes = 6 chapters, no companion code repo. A6 diacritic grep: 0 violations. Awaiting push command.
 - **Today (30 Sep, session 1 — pushed):** personality-traits vocabulary session — the whiteboard transcribed and re-analysed in `vocabulary/13` (70 word items, 30 practice items), its **Vietnamese-language twin** built in the separate `ielts-language-lap` repo as a Speaking lesson, plus `vocabulary/README.md` gaining a Note Index and a Cross-References section with the cross-repo registry entry. 8 files across 2 repos, both pushed.
@@ -65,4 +66,4 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
 - **Push policy:** changed 2026-09-27 to *push on command only* (batching all new work at push time)
 
 ---
-*Last updated: 2026-10-11*
+*Last updated: 2026-10-12*
