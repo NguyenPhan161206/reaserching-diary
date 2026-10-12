@@ -200,6 +200,18 @@ Publishing is a **pipeline with a gate**:
 - **Communication/coordination:** chat (Slack/Teams), docs (a living spec), a board (Jira/Trello/GitHub Projects), and **version app config** — secrets (API keys) go in local files/gradle properties, never committed (Section B4).
 - **Code review for mobile specifically:** watch for lifecycle leaks, main-thread I/O, missing runtime-permission handling, and hardcoded strings (i18n) — the four things reviewers catch most.
 
+**A mobile PR review checklist** (the four leaks plus three more; the first three are *mobile-specific* — a web reviewer does not instinctively look for them):
+
+| Check | What goes wrong if missed |
+|-------|---------------------------|
+| **Lifecycle** | A callback/observer outlives the Activity → leak or crash |
+| **Main-thread I/O** | Disk/network on the UI thread → **ANR** (note 05) |
+| **Runtime permissions** | Code assumes a grant the user denied → crash |
+| **Hardcoded strings** | Cannot be localised; breaks i18n |
+| **Secrets in source** | API keys in git history (Section B4) |
+| **Unbounded background work** | Battery drain; Doze kills it (note 06) |
+| **No empty/loading/error states** | UI breaks on the first slow network |
+
 ### 10. Android environment, Kotlin, emulator, build/run/debug
 This is the **Template G** half of the note — the hands-on pipeline.
 
@@ -216,6 +228,20 @@ Kotlin/Java source + resources (res/)
         ▼
   Install on device/emulator via adb  →  ART runs it
 ```
+
+**Gradle tasks you will type constantly** (the build system's public verbs):
+
+| Task | What it does | When to use |
+|------|--------------|-------------|
+| `./gradlew tasks` | List available tasks | When you don't know the task name |
+| `./gradlew assembleDebug` | Build the debug APK | CI artifacts, manual install |
+| `./gradlew installDebug` | Build + install on the connected device | Fast inner loop |
+| `./gradlew test` | Run local unit tests | Before every commit |
+| `./gradlew connectedAndroidTest` | Run instrumented tests on a device | Before release |
+| `./gradlew bundleRelease` | Produce the AAB for Play | Upload to Play Console |
+| `./gradlew clean` | Delete build outputs | When the build is inexplicably stale |
+
+> **Why Gradle and not `make`:** Gradle resolves a dependency graph (Maven/Google artifacts), supports **build variants** (debug/release/flavors) from one source tree, and is the same system CI drives — so "works on my machine" and "works in CI" are meant to be the *same* pipeline. (In practice they diverge: JDK version, `local.properties`, cached dependencies, and non-deterministic tests are the usual culprits.) This is the mobile-facing sibling of the YAML/CI track.
 
 **Command cheat sheet (adb — the tool you'll live in):**
 | Command | What it does | When to use |
@@ -304,6 +330,18 @@ adb logcat -v brief *:S MyApp:V
 ## 🎓 Lecture Log
 
 > Live teaching sessions for this chapter. The sections above hold the distilled knowledge; this log records the extra depth delivered in the lecture, the questions posed, and the argumentation that changed the note. Reverse-chronological.
+
+### Session 5 — 2026-10-12 · §9–§10 (Team Tooling, Build & Debug) — **Chapter 1 complete**
+**Depth added during the lecture:**
+- §9: a **mobile PR review checklist** (7 rows) — lifecycle, main-thread I/O, runtime permissions, hardcoded strings, secrets in source, unbounded background work, missing empty/loading/error states — with the note that the first three are *mobile-specific* checks a web reviewer does not instinctively make.
+- §10: a **Gradle task table** (`tasks`, `assembleDebug`, `installDebug`, `test`, `connectedAndroidTest`, `bundleRelease`, `clean`) as the build system's "public verbs", plus why Gradle over `make` (dependency graph, build variants, shared with CI) and the honest admission that local-vs-CI still diverges (JDK, `local.properties`, cache, flaky tests). Emulator-vs-physical-device framed as *fast iteration* vs *truth*.
+
+**Chapter 1 fully covered:** §1–§10 across five sessions (2026-10-12).
+
+**Debate prompt posed:**
+- (A) §10 — if Gradle is supposedly "the same pipeline as CI", why does "works on my machine, fails in CI" still happen so often? Name the real causes.
+
+**Student's positions:** _awaiting response_
 
 ### Session 4 — 2026-10-12 · §7–§8 (Platform Anatomy & Publishing)
 **Depth added during the lecture:**
