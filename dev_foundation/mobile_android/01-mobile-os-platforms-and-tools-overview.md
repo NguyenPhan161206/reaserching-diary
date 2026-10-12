@@ -110,6 +110,19 @@ The two OSes converge on the *concepts* (sandbox, permission prompts, background
 
 ### 5. Data access permissions, security & MDM
 Mobile security is built on **least privilege + explicit consent**:
+
+**The permission model is a timeline, not a single design** — and the direction of travel is always *stricter*:
+
+| Android version | Mechanism | The problem it solved |
+|-----------------|-----------|-----------------------|
+| ≤ 5.x (API <23) | **Install-time only** — one "permission wall" at install | Usability — but users approved blindly, so consent was nominal |
+| 6.0 (API 23) | **Runtime permissions** for *dangerous* permissions | Consent at the moment of use; users deny only what they dislike |
+| 10 (API 29) | **Scoped storage** | An app no longer sees the whole filesystem (privacy) |
+| 11 (API 30) | **One-time** + **while-in-use** grants | Stops silent background access (e.g. location) |
+| 13 (API 33) | Granular media (`READ_MEDIA_IMAGES/VIDEO/AUDIO`) | Replaces blanket `READ_EXTERNAL_STORAGE` |
+
+Every change above targets a *silent access* an app used to get away with. The system-level lesson — the same one behind Linux file permissions (UID) and database RLS — is **least privilege**: grant the narrowest capability for the shortest time. Requesting permissions you do not need is now a *store-rejection* reason, not a neutral choice (see the Industry corner below).
+
 - **Install-time / runtime permissions** (note 02 covers the mechanism): Android splits permissions into *normal* (auto-granted) and *dangerous* (prompt the user at runtime). Since Android 11, permissions can be **one-time** or **while-in-use only**; since 13, you request the specific media type (READ_MEDIA_IMAGES) instead of broad storage.
 - **Scoped storage** (Android 10+): apps can't read the whole filesystem. Each app owns its private dir; shared storage access is mediated by MediaStore / the Storage Access Framework (note 04).
 - **Storage encryption:** modern Android devices are encrypted by default; Keystore/Keychain holds keys. Passwords and tokens should never sit in plain `SharedPreferences`.
@@ -135,6 +148,10 @@ A **native** app is written in the platform's language against its SDK (Kotlin/A
 3. **Team skills:** your existing JS team → RN; C# team → MAUI; greenfield mobile team → Kotlin (native) or Flutter.
 4. **Longevity:** who maintains the framework? (Xamarin→MAUI and the partial deprecation of some tools show framework risk.)
 5. **Time-to-market vs technical debt:** cross-platform wins the first 3 months; native often wins year 3.
+
+**Two hidden variables the table above does not show:**
+- **The escape hatch is the real cost driver.** Every cross-platform framework eventually meets a feature it cannot express, and you drop to native code through its bridge — React Native *native modules*, Flutter *platform channels*, MAUI *handlers*. So the honest question is not *"can it do X?"* but **"how often will I need the escape hatch, and how expensive is one crossing?"** A content/brand-UI app crosses rarely and keeps the cross-platform advantage; a camera/Bluetooth/AR/background-heavy app crosses constantly and loses it entirely.
+- **TCO flips over time.** Cross-platform wins *months 1–3* (one codebase, one team, fastest ship); native tends to win *year 3*. Framework churn is maintenance you did not budget for — Xamarin → MAUI, and React Native's Old vs New Architecture migration — and platform vendors always optimise their own first-class toolkit first. Pick by the horizon you actually need, and say it out loud.
 
 > **This course's decision:** Android native with **Kotlin**. Why: it teaches the *platform concepts* directly (lifecycle, Binder, permissions) rather than hiding them behind a framework abstraction. A developer who understands native Android can pick up Flutter or RN; the reverse is not always true.
 
@@ -262,6 +279,17 @@ adb logcat -v brief *:S MyApp:V
 ## 🎓 Lecture Log
 
 > Live teaching sessions for this chapter. The sections above hold the distilled knowledge; this log records the extra depth delivered in the lecture, the questions posed, and the argumentation that changed the note. Reverse-chronological.
+
+### Session 3 — 2026-10-12 · §5–§6 (Security & Framework Choice)
+**Depth added during the lecture:**
+- §5: the permission model reframed as a **timeline** (install-time ≤5.x → runtime 6.0 → scoped storage 10 → one-time/while-in-use 11 → granular media 13), with the observation that every step tightens a *silent access* — and the least-privilege principle it shares with Linux permissions and DB RLS.
+- §5: the three distinct protection layers separated — *sandbox/scoped storage* (isolation) vs *permission* (capability) vs *encryption/Keystore* (data at rest).
+- §6: the two hidden variables — the **escape hatch** (RN native modules / Flutter platform channels / MAUI handlers) as the real cost driver, and **TCO flipping over time** (cross-platform wins months 1–3, native tends to win year 3 through framework churn).
+
+**Debate prompts posed:**
+- (A) §6 — is "native feel" a legitimate requirement or a prejudice, given Flutter renders pixel-identical UI on both platforms?
+
+**Student's positions:** _awaiting response_
 
 ### Session 2 — 2026-10-12 · §3–§4 (Platforms & Distribution)
 **Depth added during the lecture:**
