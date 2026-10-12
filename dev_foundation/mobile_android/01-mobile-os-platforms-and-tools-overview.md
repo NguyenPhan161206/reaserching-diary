@@ -95,12 +95,18 @@ The iPhone (2007) and Android (2008) didn't just add a touchscreen — they intr
 
 The two OSes converge on the *concepts* (sandbox, permission prompts, background restrictions, declarative UI) and diverge on the *mechanisms*. Learn concepts once; the mechanisms are the per-platform tax.
 
+**Why the two runtimes diverge — and what it actually costs you:**
+- **Android — bytecode on a managed runtime.** Kotlin (or Java) compiles to **JVM bytecode**; `D8` rewrites that to **DEX**; **ART** runs it, ahead-of-time (AOT) compiling at install and JIT-compiling at runtime. Shipping bytecode means the *same* app runs on ARM and x86 without recompiling across thousands of device models, and you get a **garbage collector**, reflection, and dynamic class loading for free. The price is a VM layer between your code and the metal — GC pauses are real, and peak throughput is below bare native.
+- **iOS — machine code on the metal.** Swift/Obj-C compile (via LLVM) straight to **native arm64 machine code**; there is no VM and no bytecode step at runtime. The upside is deterministic performance and no GC pauses; the cost is losing the portability abstraction — Apple controls the single hardware path and every rule.
+- **The transferable lesson:** *sandbox, permission prompts, background kill-rules, and declarative UI* are now **concepts** both platforms share (Jetpack Compose on Android ↔ SwiftUI on iOS are the same idea from two vendors). Learn the concept once; the per-platform *mechanism* — Binder vs XPC, DEX vs Mach-O, ART vs no-runtime — is the tax you pay for each platform you ship on. This is exactly why a native-Android developer can pick up Flutter or React Native, while the reverse is not guaranteed.
+
 ### 4. App stores, accounts, and cloud resources
 - **App store role:** discovery, distribution, payments, updates, and **policy enforcement**. It is a two-sided market — it earns the developer access to billions of devices in exchange for a fee and rules (see `economics_business/04-network-effects.md` for why this market concentrates so hard).
 - **Developer account:** required to publish. Google charges a **one-time \$25**; Apple charges **\$99/year** (and Apple is stricter — e.g., requires a real legal entity name for some categories).
 - **Why developers tolerate the gate (the two-sided view):** a store is not only a toll booth; it is **trust infrastructure**. Before curated stores, users would not install unknown apps (malware risk), so the *addressable market* for a small developer was tiny. A store that vets apps raises consumer willingness to install, which grows the very pie the developer sells into; the 15–30% fee is the price of that trust plus distribution. Whether that price is *fair* is a genuinely open question (see the EU DMA point in §6 and Industry Corners) — but framing it as pure extortion ignores the demand-side value the gate creates.
 - **Cloud resources** the ecosystem hands you: push (FCM/APNs), crash reporting (Play Console/App Store Connect), analytics, and identity. These are why note 06's Firebase chapter exists — the platform *wants* you on its managed services.
-- **Accounts you'll actually juggle:** Play Console (publish), Google Cloud (Firebase, Maps API keys), GitHub/GitLab (code), and the emulator's Google account (for Play Services dependencies).
+- **The store's power is *policy*, not *physics*.** Google charges a one-time \$25, permits sideloading and third-party stores. Apple charges \$99/year, reviews every build, and until the EU's DMA (2024) forbade sideloading entirely. That gap is a business/policy decision, not a technical limit — which is precisely why regulators *can* force it to move.
+- **Accounts you'll actually juggle:** Play Console (publish), Google Cloud (Firebase, Maps API keys), GitHub/GitLab (code), and the emulator's Google account (for Play Services dependencies). This cluster of accounts is also where API keys leak most often — keys belong in `local.properties`, never committed (see Pitfalls).
 
 ### 5. Data access permissions, security & MDM
 Mobile security is built on **least privilege + explicit consent**:
@@ -256,6 +262,19 @@ adb logcat -v brief *:S MyApp:V
 ## 🎓 Lecture Log
 
 > Live teaching sessions for this chapter. The sections above hold the distilled knowledge; this log records the extra depth delivered in the lecture, the questions posed, and the argumentation that changed the note. Reverse-chronological.
+
+### Session 2 — 2026-10-12 · §3–§4 (Platforms & Distribution)
+**Depth added during the lecture:**
+- Android-vs-iOS *runtime* divergence explained: Kotlin → JVM bytecode → `D8` → **DEX** → **ART** (AOT + JIT) versus Swift → LLVM → **native arm64**. Why Android chose bytecode (portability across device models/CPU architectures, free GC/reflection/dynamic loading) and iOS chose native (one controlled hardware path, deterministic performance, no GC pauses).
+- The transferable rule restated: **concepts** transfer (sandbox, permission prompts, background kill-rules, declarative UI — Compose ↔ SwiftUI); **mechanisms** are per-platform tax (Binder vs XPC, DEX vs Mach-O, ART vs none).
+- Store power framed as **policy, not physics** (Google \$25 one-time + sideload allowed vs Apple \$99/year + no sideload pre-DMA) — the reason regulation can move it.
+- API-key hygiene: Play Console / Google Cloud / Firebase / the emulator's Google account are the leak surfaces; keys belong in `local.properties`, never committed.
+
+**Debate prompts posed:**
+- (A) Is there a way to get both portability *and* native performance? (Kotlin/Native, GraalVM, ART AOT…)
+- (B) If store power is "policy, not physics", why is iOS sideloading still hard in 2026 despite the DMA? (the gate as *physics-ised policy*)
+
+**Student's positions:** _awaiting response_
 
 ### Session 1 — 2026-10-12 · §1–§2 (Foundations)
 **Depth added during the lecture** (now folded into 🧠 Mental Model and §2 above):
