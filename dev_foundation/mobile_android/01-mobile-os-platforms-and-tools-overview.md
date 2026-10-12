@@ -158,6 +158,18 @@ A **native** app is written in the platform's language against its SDK (Kotlin/A
 ### 7. Native Android platform & native iOS platform (survey)
 **Android platform anatomy** (detailed in note 02): Linux kernel → Hardware Abstraction Layer → native C/C++ libs (SQLite, OpenGL, libc `bionic`) → Android Runtime (ART) → Java/Kotlin framework APIs → your app. Apps ship as DEX bytecode run by ART; the manifest declares components; Binder is the IPC bus between apps and system services. (iOS is the mirror: XNU kernel → Darwin libs → Swift/Obj-C framework → your app; apps communicate via XPC instead of Binder.)
 
+**Each layer exists for a reason — and explains a behaviour you will meet:**
+
+| Layer | Why it exists (and what it explains) |
+|-------|--------------------------------------|
+| **Linux kernel + Android patches** | The **Binder** driver, **wakelocks**, ashmem, and the **Low-Memory Killer**. This is literally where "the OS may kill my process" is *implemented*. |
+| **`bionic` (not glibc)** | Android's own C library: small, fast to start, **Apache-licensed** (keeps GPL out of vendor drivers). It lacks some POSIX APIs — so "it is Linux, but not *your* Linux". |
+| **HAL + Project Treble** | The boundary that lets a SoC vendor's drivers update **independently** of AOSP. Before Treble, a new Android version forced the vendor to re-port drivers — which is exactly why old phones stopped updating. This is the *root cause of fragmentation* from §2. |
+| **Zygote** | A pre-initialised process that `fork()`s every app, so app start-up does not pay the cost of loading the whole framework from scratch. |
+| **Binder** | The single IPC channel; `ActivityManager`, `PackageManager`, and every system service are reached over it. Binder is **not in upstream Linux** — it is Android's own kernel module. |
+
+> **Why §7 matters:** this one stack explains three separate symptoms at once — a killed process (the low-memory killer), permission enforcement (kernel UID), and fragmentation (the HAL/vendor boundary). Without the stack, debugging becomes superstition.
+
 ### 8. Developer accounts & store review
 Publishing is a **pipeline with a gate**:
 1. **Sign** the app (a keystore proves "this update is from the same author"). If you lose the key you cannot update the app — back it up.
@@ -165,7 +177,20 @@ Publishing is a **pipeline with a gate**:
 3. **Automated review** (malware scan, policy checks) then **human review**.
 4. **Rollout** (staged %, internal testing tracks, closed/open beta).
 
-**Why apps get rejected (the useful list):**
+**AAB vs APK — and why the upload format matters.** An **APK** is the *installable* package; an **AAB (Android App Bundle)** is the *upload* format for Play. The AAB carries all code and resources, and Play generates **per-device APKs** (splits) containing only the density/language/ABI that device needs. This directly attacks the fragmentation problem from §2 — a 150 MB universal APK becomes a ~40 MB split for a given device, so the user downloads less and the developer keeps one codebase. Sideloading still uses APKs, because no store is there to do the splitting.
+
+**Play App Signing — a partial safety net.** You upload with an *upload key*; Google re-signs with the *app signing key* it holds. That makes a lost upload key recoverable (it can be reset), instead of the old rule that losing the single signing key meant you could never update the app again. It is **not** a reason to skip backing the key up.
+
+**Why apps get rejected (the useful list)** — grouped by type, because most first rejections are *not* code bugs:
+
+| Type | Example | Fix |
+|------|---------|-----|
+| **Policy** | Undeclared data collection, over-broad permissions | The Data Safety form must match what the code actually does |
+| **Technical** | Crash on launch, ANR | Test on a low-RAM device profile |
+| **Metadata** | Misleading screenshots/description, using another app's trademark | Read the guidelines before submitting |
+| **Legal** | Payment outside IAP for digital goods (iOS) | Use IAP |
+
+
 - Missing/privacy-policy mismatch, over-broad permissions, broken functionality ("crashes on launch"), misleading metadata/screenshots, and using another app's trademark.
 - Apple's **App Review Guidelines** additionally ban things like web-only "template" apps, background location without justification, and payment outside IAP for digital goods.
 - **Data safety / privacy forms** are now mandatory and legally binding — they must match what your code actually does.
@@ -279,6 +304,13 @@ adb logcat -v brief *:S MyApp:V
 ## 🎓 Lecture Log
 
 > Live teaching sessions for this chapter. The sections above hold the distilled knowledge; this log records the extra depth delivered in the lecture, the questions posed, and the argumentation that changed the note. Reverse-chronological.
+
+### Session 4 — 2026-10-12 · §7–§8 (Platform Anatomy & Publishing)
+**Depth added during the lecture:**
+- §7 rebuilt as *"each layer exists for a reason"*: Linux kernel + Android patches (Binder driver, wakelocks, low-memory killer — where "the OS kills me" is implemented), `bionic` instead of glibc (size + Apache licence, some missing POSIX), HAL/Treble as the *root cause of fragmentation*, Zygote (fork-based fast start), Binder as the sole IPC channel not present in upstream Linux. Framed so the one stack explains process death, permission enforcement, and fragmentation together.
+- §8: **AAB vs APK** (upload format vs install format; Play splits per device → answers §2 fragmentation), and **Play App Signing** as a *partial* safety net for a lost key. Rejection reasons regrouped into a Policy/Technical/Metadata/Legal table, with the lesson that most first rejections are not code bugs.
+
+**Student's positions:** _awaiting response_
 
 ### Session 3 — 2026-10-12 · §5–§6 (Security & Framework Choice)
 **Depth added during the lecture:**
