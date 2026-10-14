@@ -1,7 +1,7 @@
 # Research Areas — Tracking & Proposals
 
 > Auto-maintained by Agent. DO NOT manually edit.
-> Last updated: 2026-10-11
+> Last updated: 2026-10-13
 
 ## Active Folders
 | # | Folder | Domain | Template | Notes | Status | Last Updated |
@@ -20,7 +20,7 @@
 | 12 | ielts_training/listening/ | IELTS Listening | F (IELTS) | 1 | Active | 2026-09-14 |
 | 13 | git_github/ | Git/GitHub | A (Tech) | 11 | Active | 2026-09-21 |
 | 14 | cv/ | CV / Resume | LaTeX CV | 2 | Active | 2026-09-15 |
-| 15 | vocabulary/ | Vocabulary & Collocations | V (Vocabulary) | 15 | Active | 2026-10-10 |
+| 15 | vocabulary/ | Vocabulary & Collocations | V (Vocabulary) | 16 | Active | 2026-10-13 |
 | 16 | software_architecture/ | System Architecture & Design | A (Tech) | 4 | Active | 2026-10-10 |
 | 17 | dev_foundation/ | Engineering Fundamentals | Guide (umbrella) | 0 | Active | 2026-09-28 |
 | 18 | dev_foundation/linux/ | Linux shell, filesystem & navigation | G (Dev Tool) | 3 | Active | 2026-09-28 |
@@ -85,6 +85,9 @@
 
 | Date | Folder | File | Action |
 |------|--------|------|--------|
+| 2026-10-13 | vocabulary/ | 16-process-procedure-pipeline-lifecycle.md · README.md | fixed + registered (three accuracy fixes before first publish: the *Little's Law* misattribution — $T = 1/\tau$ for a balanced $k$-stage pipeline is the pipeline throughput ceiling set by the **slowest stage**, not Little's Law; $L = \lambda W$ is now stated separately and correctly, with the CI-queue and concurrency consequences — plus `PID` expanded as *Process Identifier* and practice Task 1 reworded from "memory pressure drops" to "free memory falls below the LMK threshold", the actual trigger direction. Note 16 then entered the vocabulary **Note Index** (15 → 16) with a progression paragraph; the note had been on disk since 12 Oct but unregistered) |
+| 2026-10-13 | tracking | CONTRIBUTION_LOG.md · CONTRIBUTION_CALENDAR.md | updated (note 16's creation logged for 2026-10-12 retroactively, the 13 Oct content-fix + registration pass logged for today, October grid marked, stats + streak re-based) |
+| 2026-10-12 | vocabulary/ | 16-process-procedure-pipeline-lifecycle.md | created (Template V). The most over-applied noun in student technical English: **"quá trình"**, which Vietnamese applies to an OS execution instance, a compliance checklist, a CI/CD run, an Activity state machine and a personal development arc alike. Organised around a **structural** split rather than a register one — **process** = an $Input \to Output$ transformation *or* an OS entity with a private address space and a `PID`; **procedure** = the rule-bound *how* (SOP, compliance, SQL `STORED PROCEDURE`); **pipeline** = static stages flowing one direction, with four worked domains (CI/CD, ETL, ML inference, the CPU IF→ID→EX→MEM→WB pipeline); **lifecycle** = one stateful entity's states over time (Android Activity `onCreate→onResume→onDestroy`, SDLC, MLOps); **journey** = the human/experiential narrative that *process* wrongly flattens; **progression** = relative position on a hierarchy; **course** and **evolution** for the temporal and macro-scale frames. Carries an 8-row disambiguation matrix, a transaction-cost-theory bridge (Coase/Williamson — automating a pipeline drives deployment's marginal transaction cost toward zero) and the pipeline-throughput/Little's Law limit — **corrected on 2026-10-13 before first publish**. 8 practice tasks, 4 Section-K cross-refs, 7 Related Topics links (3 SUGGESTED), 2 open questions. No practice twin, consistent with notes 14–15) |
 | 2026-10-11 | dev_foundation/mobile_android/ | 01-06 + README.md | created (new **Mobile Application Development** track — 6 chapter notes in English, Template A spine + G tooling sections: 01 OS/platforms/toolchain overview, 02 fundamental components + lifecycle + MVC + Figma + widgets, 03 UI programming (layouts, navigation, RecyclerView, fragments, menus, dialogs, WebView, ConstraintLayout), 04 local storage (SharedPreferences, scoped storage, Room/SQLite, XML/JSON/Realm), 05 multithreading (coroutines, Mutex, AsyncTask history, Retrofit/REST), 06 specialized services (Services, notifications/alarms/WorkManager, Firebase, FCM, Maps/GPS) + capstone. iOS + cross-platform covered at survey depth in note 01 per user's scope decision; no companion code repo — capstone is a course artifact) |
 | 2026-10-11 | config | AGENTS.md | updated (v3.7 → **v3.8** — Section C gained "Mobile — Native Android" (`mobile_android/`, A spine + G sections); Section I counts 6; Section M gained the sub-folder; **Section N gained the Mobile track (Kotlin)** with an explicit survey-only rule for iOS/cross-platform) |
 | 2026-10-11 | tracking | README.md · dev_foundation/README.md · RESEARCH_AREAS.md | updated (root: dev_foundation description + learning path + Status & Roadmap item 9; dev_foundation: Sub-folders, Phase 4b, language map (Kotlin), Note Index; RESEARCH_AREAS: active folder 27 + this log + chapter-coverage table) |

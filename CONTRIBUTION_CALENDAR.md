@@ -33,7 +33,7 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
  ░░   ░░   ░░   ░░   ░░   ██   ██
 
  12   13   14   15   16   17   18
- ██   ░░   ░░   ░░   ░░   ░░   ░░
+ ██   ██   ░░   ░░   ░░   ░░   ░░
 
 19   20   21   22   23   24   25
  ░░   ░░   ░░   ░░   ░░   ░░   ░░
@@ -43,10 +43,11 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
 ```
 
 ## Stats
-- **This month (October):** 3 active days | 11 interactions
-- **Current streak:** 🔥 3 days (10–12 Oct)
-- **Longest streak:** 4 days (9–12 Sep)
+- **This month (October):** 4 active days | 16 interactions
+- **Current streak:** 🔥 4 days (10–13 Oct)
+- **Longest streak:** 4 days (tied: 9–12 Sep and 10–13 Oct)
 - **September 2026 (closed):** 15 active days | 205 interactions
+- **Today (13 Oct — vocabulary publish pass + three in-session lookups):** closed the *"quá trình"* note (`vocabulary/16`), which had been sitting on disk untracked since 12 Oct, and prepared it for its first push. Three accuracy fixes landed first — the **Little's Law misattribution** being the substantive one, since $T = 1/\tau$ is the balanced-pipeline throughput ceiling set by the slowest stage while Little's Law is $L = \lambda W$ and is now stated separately — plus `PID` expanded correctly and practice Task 1's trigger direction fixed. Note 16 then entered the vocabulary **Note Index** (15 → 16) with a progression paragraph, and `RESEARCH_AREAS.md` / the log were reconciled. Separately, three translation requests were answered in-session without writing files: **thiếu ổn định**, **ràng buộc**, **mức độ** — each got a full sense table, word family + IPA, domain table, collocations, and Viet-Glish pitfalls; all three are waiting on the user's decision between new notes or a §7 addition to note 12.
 - **Today (12 Oct, session 1 — Mobile Android teaching, Lecture 1):** started the live lecture series for the Mobile Application Development track. Session 1 covered Chapter 1 §1–§2 (evolution of the phone; device characteristics & the four constraints) and folded the extra depth into `mobile_android/01`: a desktop-vs-mobile assumption table, the radio *fixed-cost* reason behind batching, sustained-vs-peak power for thermal, offline-first as data-ownership, 48dp ≈ 9mm tied to Fitts's Law (`psychology_society/`), and app-store gatekeeping as trust infrastructure. New `🎓 Lecture Log` section added so every session + debate prompt is recorded. `session-ses_ecfc.md` (another workspace's agent session file) deliberately left untracked. Committed & pushed per the user's new per-lecture command. **Lecture 2** followed in the same session (§3 Android-vs-iOS runtime divergence, §4 store-as-policy-not-physics), folded in and committed. **Lecture 3** (§5 permission timeline + least privilege ↔ Linux/RLS, §6 escape-hatch & TCO) likewise folded in and committed. **Lecture 4** (§7 platform anatomy as "why each layer exists", §8 AAB/APK + Play App Signing + rejection taxonomy) likewise. **Lecture 5** (§9 mobile PR review checklist, §10 Gradle tasks + why-Gradle + emulator-vs-device) closed **Chapter 1** — all §1–§10 taught and folded in across five commits (`a44e785`, `d1ce666`, `87ae61d`, `f6fb0b8`, and this one).
 - **Today (11 Oct):** Web Application Development course track — planned 26 notes across `web_basics/` (8), `web_server/` (8), `security/` (2), `databases/` (5), `docker/` (1), `software_architecture/` (2) written via sub-agent waves, then all tracking reconciled: `AGENTS.md` v3.7, folder READMEs, `RESEARCH_AREAS.md`, root `README.md`, and this calendar. A6 diacritic grep on all 26 files → 0 violations. Awaiting push command.
 - **Today (11 Oct, session 2 — Mobile track):** new `dev_foundation/mobile_android/` course track (Mobile Application Development / "Lập trình thiết bị di động"). 6 chapter notes in English — Template A spine + nested Template G tooling sections: 01 OS/platforms/toolchain overview (evolution, Android vs iOS, cross-platform survey, dev accounts, collaboration, Android Studio env + adb cheat sheet), 02 fundamental components (architecture, Gradle, manifest, lifecycle/back stack, MVC, core components, Figma→code, basic widgets), 03 UI programming (layouts & view hierarchy, navigation/intents+SafeArgs, RecyclerView/DiffUtil, fragments, menus, dialogs, WebView security, ConstraintLayout), 04 local storage (SharedPreferences/DataStore, scoped storage/SAF, Room/SQLite, XML/JSON/Realm), 05 multithreading (threads, Looper/Handler, AsyncTask history, coroutines, Mutex, Retrofit/REST), 06 specialized services (Services, notifications/AlarmManager/WorkManager, Firebase, FCM, Maps/GPS) + capstone checklist. Config reconciled: `AGENTS.md` v3.8 (Section C/I/M gained the folder, **Section N gained the Kotlin track** with survey-only iOS/cross-platform rule), root README + `dev_foundation/README.md` (Phase 4b, language map, Note Index) + `RESEARCH_AREAS.md` (folder 27, mobile course-coverage table). Scope decisions from user: Android-deep + iOS/cross-platform survey, 6 notes = 6 chapters, no companion code repo. A6 diacritic grep: 0 violations. Awaiting push command.
@@ -61,9 +62,11 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
 - **Language track policy (2026-09-28):** the plan is now explicitly two-track — **DSA = Java (course language) + C++ (port target)**, **web = JavaScript**, **AI/ML = Python**. JavaScript and Python are excluded from DSA, and Python is out of the DSA roadmap. The "attempt in Java → port to C++ from memory → fill Language Notes" rule and a ~1-in-5 port ratio are recorded in `AGENTS.md` Section N.
 - **Vocabulary notes created on 27 Sep:** 7 (05 → 11)
 - **Vocabulary notes created on 28 Sep:** 1 (12 — one-Vietnamese-word-many-English-words)
+- **Vocabulary notes created on 12 Oct:** 1 (16 — *quá trình*: process · procedure · pipeline · lifecycle · journey · progression)
+- **Vocabulary lookups answered in-session, not written (12–13 Oct):** 3 — *thiếu ổn định*, *ràng buộc*, *mức độ*. Each was a full translation analysis (sense table, word family + IPA, domain table, collocations, Viet-Glish pitfalls) and each is awaiting the user's decision on whether to become a file.
 - **Language compliance (A6):** ✅ repository fully compliant — all 12 non-compliant files translated/cleaned, every remaining Vietnamese string is a proper name or a marked quotation
 - **Link hygiene (fixed 2026-09-28):** commit `bb3fe27` renamed `books_summaries/agile_project_management/` → `05-agile_project_management/` but left inbound links behind. All 20 stale references across 8 note files, `RESEARCH_AREAS.md` and `AGENTS.md` Section C are now updated; a repo-wide audit of 345 links reports 0 unintentional broken links. (The dated history rows in `RESEARCH_AREAS.md` keep the old path on purpose — they are an audit trail of what the folder was called at the time.)
 - **Push policy:** changed 2026-09-27 to *push on command only* (batching all new work at push time)
 
 ---
-*Last updated: 2026-10-12*
+*Last updated: 2026-10-13*
