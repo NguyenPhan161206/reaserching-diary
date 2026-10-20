@@ -31,6 +31,8 @@ Each note in this directory extracts, deep-dives, and contextualizes terminology
 | 17 | [Urban Planning & Modern Architecture](17-urban-planning-and-modern-architecture-vocabulary.md) | A city pushes cars out (traffic fee, pedestrians, exhaust fumes) while keeping an ancient souk — and a modern building exposes concrete under a flat roof. Which specialist sense hides inside each plain word? |
 | 18 | [Sustainable Fashion & the Conscious Consumer](18-sustainable-fashion-consumer-vocabulary.md) | The apparel market runs on prestige vs. affordable, a competitive edge, and sustainability. Which everyday words are false friends (durable ≠ lasting, conscious ≠ conscientious)? |
 
+| 19 | [Fraud Detection Reading Vocabulary](19-fraud-detection-reading-vocabulary.md) | How do indicate, transaction, trigger, process, investigation, precision, recall, assume and proportion function in fraud detection explanations? |
+
 ### Progression
 The first four notes build core domain vocabulary. **05–12 are all single-mechanism deep dives** — one prefix, one verb family, one near-synonym cluster at a time, which is how accuracy is actually built. **13 returns to a whiteboard-sized list** and applies the same mechanisms across the whole set at once, then bridges into psychology (Big Five, learned helplessness) and engineering (greedy algorithms, lazy loading, reliable delivery). **14 turns note 13's register ladder into a working checklist** — a search list to run before submitting anything written, with the formats where adjectives *are* correct and the twelve words whose meaning shifts rather than merely sounding weak.
 

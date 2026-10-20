@@ -186,3 +186,5 @@
 | 2026-10-21 | ai_ml | ai_ml/08-fraud-detection-foundations.md | created (consolidated the learning conversation into Template A; preserved hypothetical examples, unknown dataset facts and unconfirmed personal reflections; no unsolicited exercises) |
 | 2026-10-21 | cross-repo | ai_ml/README.md · RESEARCH_AREAS.md · README.md | updated (fraud repository connection, index and AI/ML count 7 to 8; includes previously pending connection changes) |
 | 2026-10-21 | tracking | CONTRIBUTION_CALENDAR.md · CONTRIBUTION_LOG.md | updated (recorded this documentation session; historical interaction totals retained without inventing a new count) |
+| 2026-10-21 | vocabulary | vocabulary/19-fraud-detection-reading-vocabulary.md | created (nine lookup terms from the fraud detection conversation, Template V; explicit user request to save and push) |
+| 2026-10-21 | tracking | vocabulary/README.md · RESEARCH_AREAS.md · CONTRIBUTION_CALENDAR.md | updated (note 19 indexed, vocabulary count 18 → 19, current-day contribution recorded; no activity exercises added) |

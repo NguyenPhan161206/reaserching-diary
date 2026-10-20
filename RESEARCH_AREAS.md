@@ -20,7 +20,7 @@
 | 12 | ielts_training/listening/ | IELTS Listening | F (IELTS) | 1 | Active | 2026-09-14 |
 | 13 | git_github/ | Git/GitHub | A (Tech) | 11 | Active | 2026-09-21 |
 | 14 | cv/ | CV / Resume | LaTeX CV | 2 | Active | 2026-09-15 |
-| 15 | vocabulary/ | Vocabulary & Collocations | V (Vocabulary) | 18 | Active | 2026-10-17 |
+| 15 | vocabulary/ | Vocabulary & Collocations | V (Vocabulary) | 19 | Active | 2026-10-21 |
 | 16 | software_architecture/ | System Architecture & Design | A (Tech) | 4 | Active | 2026-10-10 |
 | 17 | dev_foundation/ | Engineering Fundamentals | Guide (umbrella) | 0 | Active | 2026-09-28 |
 | 18 | dev_foundation/linux/ | Linux shell, filesystem & navigation | G (Dev Tool) | 3 | Active | 2026-09-28 |
@@ -86,6 +86,7 @@
 
 | Date | Folder | File | Action |
 |------|--------|------|--------|
+| 2026-10-21 | vocabulary/ | 19-fraud-detection-reading-vocabulary.md · README.md | created and indexed (Template V, nine lookup terms, spelling corrections, word families, collocations and precision/recall distinction; no exercises or invented learner reflections) |
 | 2026-10-21 | ai_ml/ | 08-fraud-detection-foundations.md | created (Template A; recorded labels, leakage, imbalance, confusion matrix, precision/recall, thresholds, dimensions, subgroups and decision boundaries; hypothetical worked examples, no new learner activities) |
 | 2026-10-21 | tracking | ai_ml/README.md · README.md · RESEARCH_AREAS.md | updated (8 AI/ML notes; fraud project connection and learning entry point) |
 | 2026-10-17 | vocabulary/ | 17-urban-planning-and-modern-architecture-vocabulary.md · 18-sustainable-fashion-consumer-vocabulary.md · README.md | created (Template V ×2). The first notes requested as raw **English-word batches** rather than a Vietnamese source term — each batch the vocabulary of one IELTS passage, so the organising idea is **the specialist sense hidden inside a plain word**. Note **17** — built-environment: a city pricing cars out of its centre (traffic fee ≡ a **Pigouvian tax** on the exhaust-fume externality, which is why it must *monitor* first) while preserving an ancient *souk*, plus Modernism's materials (*flat roof*, *exposed concrete*, *purism*, *brick vs concrete ≠ cement*). Note **18** — the apparel market and ESG: **false friends** dominate (*durable* is a quality vs *lasting* a duration; *appeal* = attract vs formally request, different prepositions; *conscious* vs *conscientious*; *concern* vs *concerned* where word order is meaning), with the *prestige ↔ affordable* price ladder, *competitive edge*, and sustainability's three pillars (environmental/social/economic) vs the narrower *eco-friendly*, plus greenwashing. Bridges: note 17 → externalities/Pigouvian pricing + "purism = minimal API"; note 18 → stated-vs-revealed preference, traceability, and ESG reporting as a data problem. Matrix of 13 + 13 Viet-Glish rows, 10 + 11 practice tasks, Section-K cross-refs, 3 SUGGESTED each. No practice twin, consistent with notes 14–16. README Note Index 16 → 18 + progression paragraph added) |

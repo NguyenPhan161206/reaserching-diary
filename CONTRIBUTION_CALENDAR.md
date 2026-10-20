@@ -43,6 +43,7 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
 ```
 
 ## Stats
+- **21 Oct, vocabulary lookup follow-up:** added `vocabulary/19-fraud-detection-reading-vocabulary.md` from the nine requested terms; updated the vocabulary index, research area count and contribution log. The day remains marked heavy; no extra active day or unverified interaction count is added. Push explicitly requested.
 - **Today (21 Oct):** consolidated the fraud detection learning conversation into
   `ai_ml/08-fraud-detection-foundations.md`, updated the AI/ML index and cross-repo
   connection, root README, research areas and contribution records. Five existing
