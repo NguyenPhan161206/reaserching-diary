@@ -36,15 +36,20 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
  ██   ██   ░░   ░░   ░░   ██   ░░
 
 19   20   21   22   23   24   25
- ░░   ░░   ░░   ░░   ░░   ░░   ░░
+ ░░   ░░   ██   ░░   ░░   ░░   ░░
 
 26   27   28   29   30   31
  ░░   ░░   ░░   ░░   ░░   ░░
 ```
 
 ## Stats
-- **This month (October):** 5 active days | 19 interactions
-- **Current streak:** 🔥 1 day (17 Oct) — the 10–13 Oct streak of 4 was broken by three inactive days (14–16)
+- **Today (21 Oct):** consolidated the fraud detection learning conversation into
+  `ai_ml/08-fraud-detection-foundations.md`, updated the AI/ML index and cross-repo
+  connection, root README, research areas and contribution records. Five existing
+  documentation files updated and one note added. Examples are hypothetical;
+  no dataset experiment or learner mastery is claimed. Push explicitly requested.
+- **This month (October):** 6 recorded active days | 19 interactions through 17 Oct; later interactions not counted
+- **Current recorded streak:** 1 day (21 Oct); 18–20 Oct have no calendar marks. This reports recorded activity, not proof of inactivity.
 - **Longest streak:** 4 days (tied: 9–12 Sep and 10–13 Oct)
 - **September 2026 (closed):** 15 active days | 205 interactions
 - **Today (17 Oct — two vocabulary notes from raw word batches):** created `vocabulary/17` (urban planning & modern architecture) and `vocabulary/18` (sustainable fashion & the conscious consumer) from three in-session translation batches, then reconciled the vocabulary **Note Index** (16 → 18), the progression paragraph, `RESEARCH_AREAS.md`, the log and this calendar. The **first notes in the folder built from raw English-word batches** rather than a Vietnamese source term — their shared lesson is the *specialist sense hidden inside a plain word* (17: *construction*, *expose*, *capture*, *monitor*, *track*) versus the *false friend* (18: *durable/ lasting*, *appeal*, *conscious/ conscientious*, *concern/ concerned*). Bridges: 17 → the traffic fee as a **Pigouvian tax** on the exhaust-fume externality; 18 → **stated vs revealed preference** and sustainability/traceability as a data problem.
@@ -71,4 +76,4 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
 - **Push policy:** changed 2026-09-27 to *push on command only* (batching all new work at push time)
 
 ---
-*Last updated: 2026-10-17*
+*Last updated: 2026-10-21*

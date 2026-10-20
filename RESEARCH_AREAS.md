@@ -1,12 +1,12 @@
 # Research Areas — Tracking & Proposals
 
 > Auto-maintained by Agent. DO NOT manually edit.
-> Last updated: 2026-10-17
+> Last updated: 2026-10-21
 
 ## Active Folders
 | # | Folder | Domain | Template | Notes | Status | Last Updated |
 |---|--------|--------|----------|-------|--------|-------------|
-| 1 | ai_ml/ | AI/ML/DL/NLP | A (Tech) | 7 | Active | 2026-09-30 |
+| 1 | ai_ml/ | AI/ML/DL/NLP | A (Tech) | 8 | Active | 2026-10-21 |
 | 2 | iot_aiot/ | IoT/AIoT | A (Tech) | 2 | Active | 2026-09-07 |
 | 3 | economics_business/ | Economics/Business | B (Business) | 4 | Active | 2026-09-11 |
 | 4 | psychology_society/ | Psychology/Society | C (Social) | 4 | Active | 2026-09-30 |
@@ -42,6 +42,7 @@
 ## Cross-Repo Registry (see AGENTS.md Section L)
 | Repo | URL | Role |
 |------|-----|------|
+| Credit_Card_Fraud_Detection | `git@github.com:NguyenPhan161206/Credit_Card_Fraud_Detection.git` | Fraud detection source inspection, exercises and evidence; diary concepts and learning reflections are anchored in `ai_ml/README.md` |
 | DSA-reserching-diary | `git@github.com:NguyenPhan161206/DSA-reserching-diary.git` | DSA code + write-ups; this repo only anchors + roadmaps it |
 | UMT-Truck-Blind-Sight | `git@github.com:NguyenPhan161206/UMT-Truck-Blind-Sight.git` | IoT device code |
 | Snake_ANN | `git@github.com:NguyenPhan161206/Snake_ANN.git` | ML code |
@@ -85,6 +86,8 @@
 
 | Date | Folder | File | Action |
 |------|--------|------|--------|
+| 2026-10-21 | ai_ml/ | 08-fraud-detection-foundations.md | created (Template A; recorded labels, leakage, imbalance, confusion matrix, precision/recall, thresholds, dimensions, subgroups and decision boundaries; hypothetical worked examples, no new learner activities) |
+| 2026-10-21 | tracking | ai_ml/README.md · README.md · RESEARCH_AREAS.md | updated (8 AI/ML notes; fraud project connection and learning entry point) |
 | 2026-10-17 | vocabulary/ | 17-urban-planning-and-modern-architecture-vocabulary.md · 18-sustainable-fashion-consumer-vocabulary.md · README.md | created (Template V ×2). The first notes requested as raw **English-word batches** rather than a Vietnamese source term — each batch the vocabulary of one IELTS passage, so the organising idea is **the specialist sense hidden inside a plain word**. Note **17** — built-environment: a city pricing cars out of its centre (traffic fee ≡ a **Pigouvian tax** on the exhaust-fume externality, which is why it must *monitor* first) while preserving an ancient *souk*, plus Modernism's materials (*flat roof*, *exposed concrete*, *purism*, *brick vs concrete ≠ cement*). Note **18** — the apparel market and ESG: **false friends** dominate (*durable* is a quality vs *lasting* a duration; *appeal* = attract vs formally request, different prepositions; *conscious* vs *conscientious*; *concern* vs *concerned* where word order is meaning), with the *prestige ↔ affordable* price ladder, *competitive edge*, and sustainability's three pillars (environmental/social/economic) vs the narrower *eco-friendly*, plus greenwashing. Bridges: note 17 → externalities/Pigouvian pricing + "purism = minimal API"; note 18 → stated-vs-revealed preference, traceability, and ESG reporting as a data problem. Matrix of 13 + 13 Viet-Glish rows, 10 + 11 practice tasks, Section-K cross-refs, 3 SUGGESTED each. No practice twin, consistent with notes 14–16. README Note Index 16 → 18 + progression paragraph added) |
 | 2026-10-17 | tracking | vocabulary/README.md · RESEARCH_AREAS.md · CONTRIBUTION_LOG.md · CONTRIBUTION_CALENDAR.md | updated (vocabulary Note Index 16 → 18; progression paragraph explaining the English-word-batch format; vocabulary count 16 → 18; 17 Oct marked on the October grid; logs and calendar re-based) |
 | 2026-10-13 | vocabulary/ | 16-process-procedure-pipeline-lifecycle.md · README.md | fixed + registered (three accuracy fixes before first publish: the *Little's Law* misattribution — $T = 1/\tau$ for a balanced $k$-stage pipeline is the pipeline throughput ceiling set by the **slowest stage**, not Little's Law; $L = \lambda W$ is now stated separately and correctly, with the CI-queue and concurrency consequences — plus `PID` expanded as *Process Identifier* and practice Task 1 reworded from "memory pressure drops" to "free memory falls below the LMK threshold", the actual trigger direction. Note 16 then entered the vocabulary **Note Index** (15 → 16) with a progression paragraph; the note had been on disk since 12 Oct but unregistered) |

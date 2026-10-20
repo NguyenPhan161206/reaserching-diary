@@ -19,6 +19,7 @@
 | 05 | [MLOps Lifecycle & Deployment Architecture](05-mlops-lifecycle-and-deployment-architecture.md) | A (Tech) | What breaks between "the model works on my laptop" and "it works for users"? |
 | 06 | [MCP & Function Calling — Agent Interfaces](06-mcp-and-function-calling-agent-interfaces.md) | A (Tech) | How does an LLM call your system safely, and how do you audit it? |
 | 07 | [Affective Computing & Emotion Recognition](07-affective-computing-and-emotion-recognition.md) | A (Tech) | How do you detect a user's emotional state — and why are the published accuracy numbers not a target? |
+| 08 | [Fraud Detection Foundations](08-fraud-detection-foundations.md) | A (Tech) | How do recorded labels, features, thresholds and evaluation fit together? |
 
 ---
 
@@ -30,7 +31,10 @@ The notes are numbered chronologically, but the *conceptual* order is not the sa
 2. **05** — the production frame, read *before* the technique notes. It defines the vocabulary the others borrow: feature store, model registry, serving engine, monitoring, drift. Reading it third (as the numbering suggests) means reading notes 02–04 without knowing what they are building toward.
 3. **02 → 03** — retrieval, then ranking. 02 explains *how candidates are fetched*, 03 explains *how they are ordered*. They are one system split across two notes; 03 assumes 02.
 4. **04** — engineering discipline. The counterweight to 02/03: an ML system that cannot be tested and shipped is a demo.
-5. **06** — the newest surface. Agent interfaces re-use everything above (retrieval as a tool, ranking as a tool result, MLOps as the deployment target) and add the governance layer.
+5. **08** — an independent fraud detection foundations path: labels and leakage →
+   class imbalance → confusion matrix → precision/recall → thresholds → feature
+   dimensions and decision boundaries. Read it before evaluating project models.
+6. **06** — the agent interface surface. Agent interfaces re-use everything above (retrieval as a tool, ranking as a tool result, MLOps as the deployment target) and add the governance layer.
 
 **If you only read three:** 01, 05, 06 — business case, production reality, and the interface layer where the 2026 job descriptions are pointing.
 
@@ -77,7 +81,7 @@ Notes 04 and 05 are the two that turn the others from a tutorial into a product.
 
 ## 📐 Template
 
-Notes 02–07 use **Template A: Tech Note**; note 01 uses **Template B: Business Analysis** because it is a business-framing note, not a technique note. Every note must pass the Section H depth checklist for its template.
+Notes 02–08 use **Template A: Tech Note**; note 01 uses **Template B: Business Analysis** because it is a business-framing note, not a technique note. Every note must pass the Section H depth checklist for its template.
 
 ## 📋 Note Backlog
 
@@ -95,4 +99,29 @@ Notes 02–07 use **Template A: Tech Note**; note 01 uses **Template B: Business
 
 ---
 
-*Last updated: 2026-09-30*
+*Last updated: 2026-10-21*
+
+## Credit card fraud detection learning connection
+
+**Code repository:** [NguyenPhan161206/Credit_Card_Fraud_Detection](https://github.com/NguyenPhan161206/Credit_Card_Fraud_Detection) · `git@github.com:NguyenPhan161206/Credit_Card_Fraud_Detection.git`
+
+This diary holds concept explanations, learning questions and reflections. The
+sibling repository holds source inspection, executable exercises and experimental
+evidence. Start with [note 08](08-fraud-detection-foundations.md) for the foundations already
+covered in our conversation; its examples are hypothetical, not dataset results.
+
+- Local entry point: [connected learning workflow](../../credit-card-fraud-detection/docs/learning-workflow.md).
+- Existing related notes: [engineering practices for ML](04-xp-engineering-practices-for-ml.md)
+  for checking assumptions, and [affective computing](07-affective-computing-and-emotion-recognition.md)
+  for examples of questioning labels and reported evaluation scores. Treat these
+  as connections to investigate, not verified fraud detection methodology.
+- Follow: question → exact source → explanation → predicted exercise result →
+  observation → counterexample → learner reflection.
+- Future technical notes use Template A, including Research Journey and Related
+  Topics; do not duplicate project source code or invent personal reflections.
+
+Local links assume both repositories are siblings. For GitHub sharing, use full
+repository URLs and actual commit permalinks when available. No automatic sync
+or push is configured. No new topic folder is created; note 08 records explanations without claiming learner mastery.
+
+- 🔗 [Credit_Card_Fraud_Detection](https://github.com/NguyenPhan161206/Credit_Card_Fraud_Detection) — code & explanations live there; this diary holds concept anchors and roadmap

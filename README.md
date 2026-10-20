@@ -45,7 +45,7 @@ This repository is not merely a collection of simple notes, but a tightly organi
 ## 📂 Repository Structure (Knowledge Base)
 The knowledge system is designed and organized into specialized directories, reflecting the exact domains I am pursuing:
 
-- 🤖 [`/ai_ml`](ai_ml/README.md) - Artificial Intelligence, Machine Learning, Deep Learning, and applications in economics/business. 7 notes; the professional track — concepts here, code in [Snake_ANN](https://github.com/NguyenPhan161206/Snake_ANN).
+- 🤖 [`/ai_ml`](ai_ml/README.md) - Artificial Intelligence, Machine Learning, Deep Learning, and applications in economics/business. 8 notes; the professional track — concepts here, code in [Snake_ANN](https://github.com/NguyenPhan161206/Snake_ANN) and [Credit_Card_Fraud_Detection](https://github.com/NguyenPhan161206/Credit_Card_Fraud_Detection).
 - 📡 `/iot_aiot` - Internet of Things, AIoT architecture, hardware, and automation solutions.
 - 📊 `/economics_business` - Macro/Microeconomics, business strategy, management, and market analysis.
 - 🧠 `/psychology_society` - Behavioral psychology, politics, and how society functions.
@@ -102,6 +102,7 @@ Some knowledge **needs code to make sense**. Those codebases live in their own r
 
 | Repository | Holds | This diary holds |
 |------------|-------|------------------|
+| [Credit_Card_Fraud_Detection](https://github.com/NguyenPhan161206/Credit_Card_Fraud_Detection) | Source inspection, executable work and experimental evidence | [Fraud detection foundations](ai_ml/08-fraud-detection-foundations.md), concepts and learning reflections |
 | [DSA-reserching-diary](https://github.com/NguyenPhan161206/DSA-reserching-diary) | Algorithm solutions, per-problem write-ups, practice log, error journal | [Roadmap & anchor](dev_foundation/dsa/README.md), complexity/tooling notes, reflections |
 
 *Rule: no solution code is duplicated into this repo — notes point instead (see `AGENTS.md` Section L).*
