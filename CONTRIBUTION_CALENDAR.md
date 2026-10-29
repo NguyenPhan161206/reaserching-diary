@@ -39,18 +39,21 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
  ░░   ░░   ██   ░░   ░░   ░░   ░░
 
 26   27   28   29   30   31
- ░░   ░░   ░░   ░░   ░░   ░░
+ ░░   ░░   ░░   ░░   ██   ░░
 ```
 
 ## Stats
+- **Today (30 Oct, vocabulary pass — UAV adverse weather):** added `vocabulary/20-uav-adverse-weather-terminology.md` from a seventeen-term Vietnamese–English list. The terms were sorted onto the existing `iot_aiot/06` three-layer map (*fly*: gust rejection, DOBC, MPC/adaptive-robust, DRL attitude control, PINN aerodynamics; *see*: DVE perception, sensor fusion, dehazing/deraining/desnowing, low-visibility SLAM; *decide*: weather-aware replanning, severe-weather avoidance, energy-aware routing, dynamic geofencing, microclimate forecasting, onboard meteorology, icing diagnostics, fail-safe landing/RTH). Recorded the disambiguations the source gloss hides (*robust* vs. *sustainable*, *attitude* vs. *posture*, *fog* vs. *haze*, *predictive* vs. *forecast*, *reject* vs. *mitigate* vs. *eliminate*), the wind-triangle / disturbance-observer / MPC / haze formulas, and a starting-reference table. Vocabulary count 19 → 20. Push withheld per Section G.
+- **Today (30 Oct — UAV track opened):** three new notes in `iot_aiot/` — `05` the UAV IoT/C2 stack, `06` UAV AI and data pipeline, `07` logistics terminology + TSP-D/VRP-D/MILP/CA/GA/GHG. Added because the requested vocabulary (TSP-D, VRP-D, MILP, CA, GA, GHG, C2 link) only makes sense on top of the vehicle and data layers. Note 07's solver was executed before publishing (8.56 → 8.15 min, 4.7% saving). IoT/UAV count 2 → 7; log, calendar and research areas reconciled. Push withheld per Section G.
+- **Today (21 Oct, research methods):** created `books_summaries/07-scientific-research-methodology.md` — a comprehensive guide on scientific research methodology covering epistemology (positivism, post-positivism, Popper, Kuhn), the 6-phase research pipeline, the 4-pillar validity framework, empirical software engineering & ML evaluation application (ablation studies, data leakage, seed sensitivity), and research ethics. Updated RESEARCH_AREAS.md and contribution logs. Push on command only per Section G.
 - **21 Oct, vocabulary lookup follow-up:** added `vocabulary/19-fraud-detection-reading-vocabulary.md` from the nine requested terms; updated the vocabulary index, research area count and contribution log. The day remains marked heavy; no extra active day or unverified interaction count is added. Push explicitly requested.
 - **Today (21 Oct):** consolidated the fraud detection learning conversation into
   `ai_ml/08-fraud-detection-foundations.md`, updated the AI/ML index and cross-repo
   connection, root README, research areas and contribution records. Five existing
   documentation files updated and one note added. Examples are hypothetical;
   no dataset experiment or learner mastery is claimed. Push explicitly requested.
-- **This month (October):** 6 recorded active days | 19 interactions through 17 Oct; later interactions not counted
-- **Current recorded streak:** 1 day (21 Oct); 18–20 Oct have no calendar marks. This reports recorded activity, not proof of inactivity.
+- **This month (October):** 7 recorded active days | 19 interactions through 17 Oct; later interactions not counted
+- **Current recorded streak:** 1 day (30 Oct); 22–29 Oct have no calendar marks. This reports recorded activity, not proof of inactivity.
 - **Longest streak:** 4 days (tied: 9–12 Sep and 10–13 Oct)
 - **September 2026 (closed):** 15 active days | 205 interactions
 - **Today (17 Oct — two vocabulary notes from raw word batches):** created `vocabulary/17` (urban planning & modern architecture) and `vocabulary/18` (sustainable fashion & the conscious consumer) from three in-session translation batches, then reconciled the vocabulary **Note Index** (16 → 18), the progression paragraph, `RESEARCH_AREAS.md`, the log and this calendar. The **first notes in the folder built from raw English-word batches** rather than a Vietnamese source term — their shared lesson is the *specialist sense hidden inside a plain word* (17: *construction*, *expose*, *capture*, *monitor*, *track*) versus the *false friend* (18: *durable/ lasting*, *appeal*, *conscious/ conscientious*, *concern/ concerned*). Bridges: 17 → the traffic fee as a **Pigouvian tax** on the exhaust-fume externality; 18 → **stated vs revealed preference** and sustainability/traceability as a data problem.
@@ -77,4 +80,4 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
 - **Push policy:** changed 2026-09-27 to *push on command only* (batching all new work at push time)
 
 ---
-*Last updated: 2026-10-21*
+*Last updated: 2026-10-30*

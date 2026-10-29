@@ -1,16 +1,16 @@
 # Research Areas — Tracking & Proposals
 
 > Auto-maintained by Agent. DO NOT manually edit.
-> Last updated: 2026-10-21
+> Last updated: 2026-10-30
 
 ## Active Folders
 | # | Folder | Domain | Template | Notes | Status | Last Updated |
 |---|--------|--------|----------|-------|--------|-------------|
 | 1 | ai_ml/ | AI/ML/DL/NLP | A (Tech) | 8 | Active | 2026-10-21 |
-| 2 | iot_aiot/ | IoT/AIoT | A (Tech) | 2 | Active | 2026-09-07 |
+| 2 | iot_aiot/ | IoT/AIoT / UAV systems | A (Tech) | 7 | Active | 2026-10-30 |
 | 3 | economics_business/ | Economics/Business | B (Business) | 4 | Active | 2026-09-11 |
 | 4 | psychology_society/ | Psychology/Society | C (Social) | 4 | Active | 2026-09-30 |
-| 5 | books_summaries/ | Book Analysis | D (Book) | 6 | Active | 2026-09-28 |
+| 5 | books_summaries/ | Book Analysis | D (Book) | 7 | Active | 2026-10-21 |
 | 6 | personal_evaluations/ | Self-Assessment | E (Eval) | 5 | Active | 2026-09-28 |
 | 7 | random_ideas/ | Ideas | Flexible | 6 | Active | 2026-09-23 |
 | 8 | inbox/ | Staging | Flexible | 2 | Active | 2026-09-12 |
@@ -20,7 +20,7 @@
 | 12 | ielts_training/listening/ | IELTS Listening | F (IELTS) | 1 | Active | 2026-09-14 |
 | 13 | git_github/ | Git/GitHub | A (Tech) | 11 | Active | 2026-09-21 |
 | 14 | cv/ | CV / Resume | LaTeX CV | 2 | Active | 2026-09-15 |
-| 15 | vocabulary/ | Vocabulary & Collocations | V (Vocabulary) | 19 | Active | 2026-10-21 |
+| 15 | vocabulary/ | Vocabulary & Collocations | V (Vocabulary) | 20 | Active | 2026-10-30 |
 | 16 | software_architecture/ | System Architecture & Design | A (Tech) | 4 | Active | 2026-10-10 |
 | 17 | dev_foundation/ | Engineering Fundamentals | Guide (umbrella) | 0 | Active | 2026-09-28 |
 | 18 | dev_foundation/linux/ | Linux shell, filesystem & navigation | G (Dev Tool) | 3 | Active | 2026-09-28 |
@@ -86,6 +86,12 @@
 
 | Date | Folder | File | Action |
 |------|--------|------|--------|
+| 2026-10-30 | vocabulary/ | 20-uav-adverse-weather-terminology.md · README.md | created and indexed (Template V, seventeen requested terms sorted onto the fly/see/decide layers; Vietnamese glosses kept as marked source quotations; cross-cutting trap table for robust/sustainable, attitude/posture, fog/haze, prediction/forecast; wind-triangle, disturbance-observer, MPC and haze formulas; starting-reference table; three SUGGESTED notes) |
+| 2026-10-30 | iot_aiot/ | 05-uav-iot-stack-and-c2-links.md | created (Template A; UA/UAS/C2/UTM/SORA vocabulary, five-plane architecture, control-loop rates, MAVLink/uXRCE-DDS payload maths, FSPL link budget with worked example, C2 technology comparison, failover state machine, Remote ID/BVLOS/U-space/Part 108, threat model, runnable link-budget calculator, MAVSDK offboard skeleton, fleet telemetry schema) |
+| 2026-10-30 | iot_aiot/ | 06-uav-ai-perception-and-data-pipeline.md | created (Template A; three-problem split fly/see/decide, GSD-first reasoning for small objects, VIO/EKF2 vs learned estimators, perception stack anatomy, georeferencing and photogrammetry accuracy types, edge optimisation ladder, data pipeline with quality gates and flight-level splits, operational metrics beyond mAP, fleet MLOps, privacy governance, runnable GSD calculator and leakage-check harness, dataset/edge-platform comparison) |
+| 2026-10-30 | iot_aiot/ | 07-uav-logistics-terminology-and-optimization.md | created (Template A; all nine requested terms defined with precision notes, TSP-D arc-based MILP with synchronisation constraints and formulation advice, VRP-D extensions, continuous approximation with Daganzo/BHH formulas, GA encoding/repair/parameters, GHG functional units and sensitivity drivers, C2 feasible-arc overlay, verified brute-force TSP-D solver with executed output showing 4.7% saving on a 5-customer instance) |
+| 2026-10-30 | tracking | iot_aiot/ · RESEARCH_AREAS.md · CONTRIBUTION_LOG.md · CONTRIBUTION_CALENDAR.md | updated (IoT/UAV note count 2 → 7; three new notes registered; 30 Oct marked heavy; logs and calendar re-based; push withheld per Section G) |
+| 2026-10-21 | books_summaries/ | 07-scientific-research-methodology.md | created (Template D adapted; philosophy of science, 6-phase research pipeline, validity framework, empirical software engineering & ML evaluation application, ethics, research journey) |
 | 2026-10-21 | vocabulary/ | 19-fraud-detection-reading-vocabulary.md · README.md | created and indexed (Template V, nine lookup terms, spelling corrections, word families, collocations and precision/recall distinction; no exercises or invented learner reflections) |
 | 2026-10-21 | ai_ml/ | 08-fraud-detection-foundations.md | created (Template A; recorded labels, leakage, imbalance, confusion matrix, precision/recall, thresholds, dimensions, subgroups and decision boundaries; hypothetical worked examples, no new learner activities) |
 | 2026-10-21 | tracking | ai_ml/README.md · README.md · RESEARCH_AREAS.md | updated (8 AI/ML notes; fraud project connection and learning entry point) |
@@ -208,7 +214,7 @@
 | Domain | Coverage | Notes | Gaps Identified |
 |--------|----------|-------|----------------|
 | AI/ML | ██████░░░░ 60% | 7 | Transformers, Fine-tuning, MLOps, RLHF |
-| IoT | ████░░░░░░ 40% | 2 | MQTT deep dive, Edge Computing, Zigbee |
+| IoT / UAV | ███████░░░ 70% | 7 | MQTT deep dive, Zigbee, LoRaWAN; UAV stack + edge AI + logistics optimisation now covered, counter-UAS and BMS still open |
 | Economics | ████████░░ 80% | 4 | Macro, Game Theory, Behavioral Econ, Finance |
 | Psychology | ██████░░░░ 60% | 4 | Cognitive Biases, Behavioral Econ, Game Theory |
 | Books | ██████░░░░ 60% | 6 | Agile, Productivity |
