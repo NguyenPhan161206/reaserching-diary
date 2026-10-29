@@ -46,7 +46,7 @@ This repository is not merely a collection of simple notes, but a tightly organi
 The knowledge system is designed and organized into specialized directories, reflecting the exact domains I am pursuing:
 
 - 🤖 [`/ai_ml`](ai_ml/README.md) - Artificial Intelligence, Machine Learning, Deep Learning, and applications in economics/business. 8 notes; the professional track — concepts here, code in [Snake_ANN](https://github.com/NguyenPhan161206/Snake_ANN) and [Credit_Card_Fraud_Detection](https://github.com/NguyenPhan161206/Credit_Card_Fraud_Detection).
-- 📡 `/iot_aiot` - Internet of Things, AIoT architecture, hardware, and automation solutions.
+- 📡 `/iot_aiot` - Internet of Things, AIoT architecture, embedded hardware, UAV/UAS systems (C2 links, onboard AI, drone logistics), and automation solutions.
 - 📊 `/economics_business` - Macro/Microeconomics, business strategy, management, and market analysis.
 - 🧠 `/psychology_society` - Behavioral psychology, politics, and how society functions.
 - 📚 `/books_summaries` - Summaries, reviews, and key takeaways distilled from books. Sub-folders per book: `05-agile_project_management/`, `06-building-a-second-brain/`.

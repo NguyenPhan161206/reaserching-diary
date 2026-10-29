@@ -21,6 +21,8 @@ _site/
 # Agent session files (do NOT commit)
 *.agent-session
 .opencode/sessions/
+# Exported conversation dumps sit at the repo root as session-ses_<id>.md
+session-ses_*.md
 
 # LaTeX build artifacts (cv/)
 *.aux

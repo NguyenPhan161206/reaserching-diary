@@ -431,7 +431,7 @@ Maintained in: RESEARCH_AREAS.md
 | Folder | Domain | Template | Status | Notes Count | Last Updated |
 |--------|--------|----------|--------|-------------|-------------|
 | ai_ml/ | AI/ML/DL | A (Tech) | Active | 6 | 2026-09-23 |
-| iot_aiot/ | IoT/AIoT | A (Tech) | Active | 2 | 2026-09-07 |
+| iot_aiot/ | IoT/AIoT / UAV systems | A (Tech) | Active | 7 | 2026-10-30 |
 | economics_business/ | Economics | B (Business) | Active | 1 | 2026-09-04 |
 | psychology_society/ | Psychology | C (Social) | Reserved | 0 | — |
 | books_summaries/ | Books | D (Book) | Active | 1 | 2026-09-09 |
@@ -464,7 +464,8 @@ Maintained in: RESEARCH_AREAS.md
 - Connection notes: `bridge-topic-a-and-topic-b.md`
 
 ---
-*Config version: 3.8 — Last updated: 2026-10-11*
+*Config version: 3.9 — Last updated: 2026-10-30*
+*(v3.9: Section I reconciled with reality — `iot_aiot/` was still registered as 2 notes / 2026-09-07 while the folder had grown to 7 with the UAV track (05 UAV IoT & C2 stack, 06 UAV-AI data pipeline, 07 logistics terminology & TSP-D/VRP-D/GA/GHG). Domain label widened from "IoT/AIoT" to "IoT/AIoT / UAV systems". The folder also gained the `README.md` that Section M requires (Note Index, reading order in two arcs, backlog, and an honest flag that note 01 — rate limit & SSE — is a web-server note in the wrong folder). `.gitignore` now blocks `session-ses_*.md` so exported agent-session dumps cannot be committed by accident.)*
 *(v3.8: new `dev_foundation/` sub-folder `mobile_android/` approved for the Mobile Application Development course (6 chapter notes, Template A spine + G tooling sections). Section C gained the "Mobile — Native Android" row; Section M gained the sub-folder; Section I count 6; **Section N gained the Mobile track (Kotlin)** with an explicit survey-only rule for iOS/cross-platform. Root README, `dev_foundation/README.md` and `RESEARCH_AREAS.md` updated to match.)*
 *(v3.7: two new `dev_foundation/` sub-folders approved for the Web Application Development course → Section C gained "Web — SSR Backend" (`web_server/`, Template A for 01/03/06/07 + G for 02/04/05/08) and "Web — Security" (`security/`, Template A) rows; Section M table gained both sub-folders; Section I counts updated (web_basics 0→8 Active, databases 0→5 Active, web_server 8, security 2).) *
 *(v3.6: Section L gained a **second registry kind** — the *practice repo*. `ielts-language-lap` holds Vietnamese IELTS lessons, not code, so the `**Code repository:**` header format does not apply; the new format is `**Practice twin:**` pointing at the Vietnamese sibling note, with the reverse link mandatory in that repo. Added because `vocabulary/13` (personality traits) became the first bilingual-twin pair: the English theory note here, the Vietnamese Speaking lesson there. Also carries the lesson that the two notes must agree on *counts* — the whiteboard has 66 cells but 70 words, and both notes now say so. Section L's checklist now branches on repo type.)*
