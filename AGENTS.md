@@ -105,7 +105,7 @@ Agent PHẢI chọn đúng template dựa trên domain:
 | YAML & Config Formats | dev_foundation/yaml_config/ | Template G (01–02) · Template A (03) |
 | Web Basics (HTML/CSS/JS/DOM) | dev_foundation/web_basics/ | Template A (01–03, 05, 06) · Template G (04, 07, 08) |
 | Web — SSR Backend (Express, MVC, Routing, Templates, Sessions, Auth) | dev_foundation/web_server/ | Template A (01, 03, 06, 07) · Template G (02, 04, 05, 08) |
-| Web — Security (Injection, XSS, CSRF, AuthZ, DoS) | dev_foundation/security/ | Template A |
+| Web — Security (Injection, XSS, CSRF, AuthZ/RBAC, DoS) | dev_foundation/security/ | Template A |
 | Databases (SQL, PostgreSQL, MySQL, PostgREST) | dev_foundation/databases/ | Template G (01, 02, 04, 06, 07) · Template A (03, 05, 08) |
 | DSA (anchor + method notes — code ở repo riêng) | dev_foundation/dsa/ | A (Tech) cho method notes (04, 05) · Flexible cho anchor/roadmap (01–03) |
 | Mobile — Native Android (Kotlin, lifecycle, UI, Room, coroutines, Firebase) | dev_foundation/mobile_android/ | A (Tech) làm trục cơ chế + G (Dev Tool) cho phần thao tác (Android Studio, adb, Gradle, Room, Retrofit) |
@@ -449,7 +449,7 @@ Maintained in: RESEARCH_AREAS.md
 | dev_foundation/yaml_config/ | YAML & Config Formats | G + A | Planned | 0 | 2026-09-28 |
 | dev_foundation/web_basics/ | HTML/CSS/JS/DOM/RWD/Frameworks/Forms | A + G | Active | 8 | 2026-10-10 |
 | dev_foundation/web_server/ | Express SSR, MVC, Routing, Templates, Sessions, Auth, Features | A + G | Active | 8 | 2026-10-10 |
-| dev_foundation/security/ | Web Security (Injection, XSS, CSRF, AuthZ, DoS) | A (Tech) | Active | 2 | 2026-10-10 |
+| dev_foundation/security/ | Web Security (Injection, XSS, CSRF, AuthZ/RBAC, DoS) | A (Tech) | Active | 3 | 2026-11-05 |
 | dev_foundation/databases/ | SQL/PostgreSQL/Knex/PostgREST | G + A | Active | 5 | 2026-10-10 |
 | dev_foundation/dsa/ | DSA anchor, roadmap & method notes | A (Tech) + Flexible (anchor) | Active | 5 | 2026-09-28 |
 | dev_foundation/mobile_android/ | Native Android (Kotlin) — Mobile Application Development course track | A + G | Active | 6 | 2026-10-11 |
@@ -464,7 +464,8 @@ Maintained in: RESEARCH_AREAS.md
 - Connection notes: `bridge-topic-a-and-topic-b.md`
 
 ---
-*Config version: 3.9 — Last updated: 2026-10-30*
+*(v3.10: Section I reconciled with `dev_foundation/security/` — count 2 → 3 and last-updated 2026-11-05 after `03-role-based-access-control-rbac-complete-model.md` (RBAC0–3, hierarchy, SSD/DSD, SQL enforcement, RLS, AI-agent permissions) landed; the Section C row domain label widened to `AuthZ/RBAC`. No rule changed — this is a registry correction only.)*
+*Config version: 3.10 — Last updated: 2026-11-05*
 *(v3.9: Section I reconciled with reality — `iot_aiot/` was still registered as 2 notes / 2026-09-07 while the folder had grown to 7 with the UAV track (05 UAV IoT & C2 stack, 06 UAV-AI data pipeline, 07 logistics terminology & TSP-D/VRP-D/GA/GHG). Domain label widened from "IoT/AIoT" to "IoT/AIoT / UAV systems". The folder also gained the `README.md` that Section M requires (Note Index, reading order in two arcs, backlog, and an honest flag that note 01 — rate limit & SSE — is a web-server note in the wrong folder). `.gitignore` now blocks `session-ses_*.md` so exported agent-session dumps cannot be committed by accident.)*
 *(v3.8: new `dev_foundation/` sub-folder `mobile_android/` approved for the Mobile Application Development course (6 chapter notes, Template A spine + G tooling sections). Section C gained the "Mobile — Native Android" row; Section M gained the sub-folder; Section I count 6; **Section N gained the Mobile track (Kotlin)** with an explicit survey-only rule for iOS/cross-platform. Root README, `dev_foundation/README.md` and `RESEARCH_AREAS.md` updated to match.)*
 *(v3.7: two new `dev_foundation/` sub-folders approved for the Web Application Development course → Section C gained "Web — SSR Backend" (`web_server/`, Template A for 01/03/06/07 + G for 02/04/05/08) and "Web — Security" (`security/`, Template A) rows; Section M table gained both sub-folders; Section I counts updated (web_basics 0→8 Active, databases 0→5 Active, web_server 8, security 2).) *

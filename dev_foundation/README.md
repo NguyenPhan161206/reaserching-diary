@@ -17,7 +17,7 @@
 | [`yaml_config/`](yaml_config/README.md) | YAML syntax, config design, CI usage | G + A | How do I express machine-readable configuration correctly? |
 | [`web_basics/`](web_basics/README.md) | HTML tags, CSS layout, JS core, DOM & event loop | A + G | How does a browser turn text into pixels and respond to you? |
 | [`web_server/`](web_server/README.md) | Express SSR: MVC, routing, template engines, sessions, auth | A + G | How does a request become a rendered response — safely, with state? |
-| [`security/`](security/README.md) | Web security: injection, XSS, CSRF, authZ, DoS | A | How does an attack travel, and where do I stop it? |
+| [`security/`](security/README.md) | Web security: injection, XSS, CSRF, authZ/RBAC, DoS | A | How does an attack travel, and where do I stop it? |
 | [`databases/`](databases/README.md) | Relational model, SQL, PostgreSQL, Knex, PostgREST | G + A | Where does state live, and how do I query it safely? |
 | [`dsa/`](dsa/README.md) | Roadmap + method notes + **Java** & **C++** language notes (code → other repo) | A (Tech) | What structure, at what cost, in which language? |
 | [`mobile_android/`](mobile_android/README.md) | Native Android in **Kotlin**: lifecycle, UI, storage, coroutines, Firebase | A + G | How does an app survive an OS that starts, stops, and kills it at will? |
@@ -52,7 +52,7 @@ Phase 3 — package & ship the environment
 Phase 4 — read (and write) a code base — the Web Application Development course
   └─ web_basics/            (mechanism-first: tags → layout → cascade → JS → DOM)
   └─ web_server/            (Express SSR: MVC → routing → templates → sessions → auth)
-  └─ security/              (injection, XSS, CSRF, authorization, DoS — the 5.4 chapter)
+  └─ security/              (injection, XSS, CSRF, authorization/RBAC, DoS — the 5.4 chapter)
   └─ databases/             (SQL → PostgreSQL → Knex → full-text → bottlenecks)
 
 Phase 4b — the device in your pocket — the Mobile Application Development course
@@ -113,7 +113,7 @@ Phase 5 — build (with a real project)
 | `yaml_config/` | 0 | 3 |
 | `web_basics/` | 8 | 4 |
 | `web_server/` | 8 | 4 |
-| `security/` | 2 | 3 |
+| `security/` | 3 | 3 |
 | `databases/` | 5 | 6 |
 | `dsa/` | 5 (roadmap + 2 language notes + complexity toolkit + selection guide) | 6 |
 | `mobile_android/` | 6 (one per course chapter) | 7 |

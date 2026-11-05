@@ -1,7 +1,7 @@
 # Research Areas — Tracking & Proposals
 
 > Auto-maintained by Agent. DO NOT manually edit.
-> Last updated: 2026-10-30
+> Last updated: 2026-11-05
 
 ## Active Folders
 | # | Folder | Domain | Template | Notes | Status | Last Updated |
@@ -28,7 +28,7 @@
 | 20 | dev_foundation/yaml_config/ | YAML & Config Formats | G + A | 0 | Planned | 2026-09-28 |
 | 21 | dev_foundation/web_basics/ | HTML / CSS / JS / DOM / RWD / Frameworks / Forms | A + G | 8 | Active | 2026-10-10 |
 | 22 | dev_foundation/web_server/ | Express SSR — MVC, Routing, Template Engines, Sessions, Auth, Advanced Features | A + G | 8 | Active | 2026-10-10 |
-| 23 | dev_foundation/security/ | Web Security (Injection, XSS, CSRF, AuthZ, DoS) | A (Tech) | 2 | Active | 2026-10-10 |
+| 23 | dev_foundation/security/ | Web Security (Injection, XSS, CSRF, AuthZ, RBAC, RLS, DoS) | A (Tech) | 3 | Active | 2026-11-05 |
 | 24 | dev_foundation/databases/ | SQL / PostgreSQL / Knex / Full-Text / Bottlenecks / PostgREST | G + A | 5 | Active | 2026-10-10 |
 | 25 | dev_foundation/dsa/ | DSA — roadmap, complexity toolkit, structure-selection guide, Java & C++ notes (code → DSA-reserching-diary) | A (Tech) + Flexible (anchor) | 5 | Active | 2026-09-28 |
 | 26 | books_summaries/06-building-a-second-brain/ | Book — Building a Second Brain | D (Book) | 1 | Active | 2026-09-28 |
@@ -82,6 +82,7 @@
 *`AGENTS.md`, `NOTE_TEMPLATE.md` and the agent config files are intentionally bilingual (they are config, not notes) and are excluded from this audit. Vocabulary notes contain Vietnamese **source terms** as a teaching feature — that is intentional and compliant.*
 
 ## Recently Added
+| 2026-11-05 | dev_foundation/security/ | 03-role-based-access-control-rbac-complete-model.md · README.md | created and indexed (Template A — RBAC as one indirection; NIST/INCITS 359 RBAC0–3 with formal UA/PA/RH, SSD/DSD, cardinality and prerequisite constraints; permission naming and the role-explosion arithmetic; enforcement architecture PEP/PDP/PIP/PAP; full PostgreSQL schema with recursive-CTE permission resolution, cycle-prevention and SSD triggers, `UNIQUE NULLS NOT DISTINCT` for global roles; Express `loadPrincipal`/`requirePermission`, ownership composition, escalation-safe role administration, Casbin/OPA/NestJS/CASL sketches; threat catalogue incl. IDOR, mass assignment, stale JWT claims, confused deputy, TOCTOU; route × role matrix and route-inventory meta-test; survey of PostgreSQL/Supabase/PostgREST, Kubernetes RBAC, AWS IAM, Linux, IdPs and policy/relationship engines; RBAC vs ABAC/ReBAC/PBAC; AI-agent tool permissions, delegated tokens, prompt injection and approval binding; operations, adoption roadmap, Feynman check and an executed lab) |
 
 
 | Date | Folder | File | Action |
@@ -220,8 +221,8 @@
 | Books | ██████░░░░ 60% | 6 | Agile, Productivity |
 | Evaluations | ██░░░░░░░░ 20% | 5 | Regular tracking sessions |
 | Git/GitHub | ████████░░ 80% | 11 | Advanced rebase, monorepo, Actions depth |
-| Dev Foundation | ████████░░ 80% | 32 | YAML notes (01–03), Docker core (01–04), Linux 04–09 |
-| Web Application Dev | ██████████ 100% | 26 | Course track complete 2026-10-10 — see Domain Table below (± PostgREST, MySQL, full Docker core) |
+| Dev Foundation | ████████░░ 80% | 33 | YAML notes (01–03), Docker core (01–04), Linux 04–09 |
+| Web Application Dev | ██████████ 100% | 27 | Course track complete 2026-10-10 — see Domain Table below (± PostgREST, MySQL, full Docker core) |
 | Mobile (Native Android) | ██████████ 100% | 6 | Course track written 2026-10-11 — see Domain Table below (± Jetpack Compose, MVVM, testing, publishing) |
 | DSA (anchor) | ██░░░░░░░░ 20% | 5 | Practice loop in DSA-reserching-diary, Java/C++ solutions |
 | Architecture | ██████░░░░ 60% | 4 | Observability, queues, CQRS |
@@ -234,7 +235,7 @@
 | 2. Front-end | `web_basics/01-08` (HTML, CSS, RWD, frameworks, forms/fetch) |
 | 3. Back-end JS | `web_basics/04` (JS core) · `web_server/03` (MVC) · `04` (routing) · `05` (template engines/layout) |
 | 4. Data & auth | `databases/01,02,06,07` · `web_server/06,07,08` · `web_basics/08` |
-| 5. Deploy, perf, security | `docker/05` · `software_architecture/04` · `databases/08` · `security/01-02` |
+| 5. Deploy, perf, security | `docker/05` · `software_architecture/04` · `databases/08` · `security/01-03` |
 
 ### Mobile Application Development course — chapter coverage (written 2026-10-11)
 

@@ -117,7 +117,7 @@ Some knowledge **needs code to make sense**. Those codebases live in their own r
 | [CONTRIBUTION_CALENDAR.md](CONTRIBUTION_CALENDAR.md) | Visual activity calendar |
 | [dev_foundation/README.md](dev_foundation/README.md) | Engineering fundamentals — learning path & stack map |
 | [dev_foundation/web_server/README.md](dev_foundation/web_server/README.md) | Express SSR track — MVC, routing, templates, sessions, auth |
-| [dev_foundation/security/README.md](dev_foundation/security/README.md) | Web security track — injection, XSS, CSRF, authZ, DoS |
+| [dev_foundation/security/README.md](dev_foundation/security/README.md) | Web security track — injection, XSS, CSRF, authZ/RBAC, DoS |
 | [books_summaries/06-building-a-second-brain/](books_summaries/06-building-a-second-brain/README.md) | The framework behind this diary — PARA, progressive summarization, Zettelkasten |
 | [RESEARCH_AREAS.md](RESEARCH_AREAS.md#language-compliance-audit-agentsmd-section-a6) | Language compliance audit (A6) — files pending English translation |
 
@@ -129,7 +129,7 @@ Some knowledge **needs code to make sense**. Those codebases live in their own r
   3. 🔄 DSA method notes — [`dev_foundation/dsa/`](dev_foundation/dsa/README.md) (5 notes: roadmap, complexity, structure selection, Java, C++); practice code in [DSA-reserching-diary](https://github.com/NguyenPhan161206/DSA-reserching-diary)
   4. ✅ Web basics — [`dev_foundation/web_basics/`](dev_foundation/web_basics/README.md) (8 notes)
   5. ✅ Express SSR backend — [`dev_foundation/web_server/`](dev_foundation/web_server/README.md) (8 notes)
-  6. ✅ Web security — [`dev_foundation/security/`](dev_foundation/security/README.md) (2 notes)
+  6. ✅ Web security — [`dev_foundation/security/`](dev_foundation/security/README.md) (3 notes)
   7. ✅ Databases — [`dev_foundation/databases/`](dev_foundation/databases/README.md) (5 notes)
   8. ⬜ Docker & YAML — [`dev_foundation/`](dev_foundation/README.md)
   9. ✅ Mobile (Native Android) — [`dev_foundation/mobile_android/`](dev_foundation/mobile_android/README.md) (6 notes, written 2026-10-11)
@@ -137,7 +137,7 @@ Some knowledge **needs code to make sense**. Those codebases live in their own r
   - [x] Set up directory structure and note-taking standards.
   - [x] Push initial notes on AI and Economics to the repository.
   - [x] Configure AI Agent system (OpenCode + AGY).
-- [x] Complete the Web Application Development track (26 notes across web_basics / web_server / security / databases / docker / software_architecture).
+- [x] Complete the Web Application Development track (27 notes across web_basics / web_server / security / databases / docker / software_architecture).
    - [x] Complete the Mobile Application Development track (6 notes in dev_foundation/mobile_android/).
    - [ ] Complete the Linux command track (notes 04–09).
   - [ ] Docker core notes (01–04) + YAML notes (01–03).

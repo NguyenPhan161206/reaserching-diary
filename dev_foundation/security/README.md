@@ -2,7 +2,7 @@
 
 **Purpose:** The security chapter of the *Web Application Development* course and — more importantly — the mental model every build in this diary needs. A web app is attack surface; these notes organise the threats by *vector* (how the attack travels) and by *defense layer* (where you stop it), so that fixing one vulnerability teaches the shape of the next.
 
-**Template:** **Template A (Tech Note)** for both notes — security is a *system* property, not a tool you run.
+**Template:** **Template A (Tech Note)** for all notes — security is a *system* property, not a tool you run.
 
 > **Track:** this folder belongs to the **web track**, in parallel with `web_server/` (sessions, auth, escaping live next door) and `databases/` (SQL injection, RLS, least privilege). The Joblink project is the real-world reference: layered security = Zod validation → Server Action guards → PostgreSQL RLS.
 
@@ -11,7 +11,7 @@
 | Syllabus item (ch. 5.4) | Covered by |
 |-------------------------|------------|
 | SQL Injection · XSS · CSRF · Session Hijacking | `01` |
-| Denial of Service · Authorization | `02` |
+| Denial of Service · Authorization | `02` · `03` (RBAC depth) |
 
 ---
 
@@ -21,12 +21,15 @@
 |---|------|----------|---------------|
 | 01 | Web security: SQL Injection, XSS, CSRF, Session Hijacking | A | How does an attack travel, and which single control stops it? |
 | 02 | Authorization (RBAC, RLS) & DoS defense | A | Who is allowed to do what, and how do we stop resource exhaustion? |
+| 03 | Role-Based Access Control — the complete model | A | How do roles, hierarchies and separation-of-duty constraints actually work, and where is each decision enforced? |
 
 ## 📋 Note Backlog
 
 | Priority | Planned note | Why |
 |----------|--------------|-----|
 | Medium | Security headers & HTTPS/TLS deep dive (Helmet, HSTS, certbot) | Deployment readiness for the course project |
+| Medium | `04-rbac-in-multi-tenant-saas.md` — tenant isolation, per-tenant role templates, cross-tenant tests | §3.8 of note 03 is only a sketch; cross-tenant leaks are the highest-impact RBAC bug |
+| Low | `05-abac-and-policy-engines-opa-cedar.md` — attributes, policy testing, OpenFGA/OPA/Cedar | The next rung of the authorization ladder after RBAC |
 | Low | OWASP Top 10 walkthrough against real payloads | The standard reference list, useful for interviews |
 | Low | Secure cookies deep dive (SameSite, prefixes, partitioning) | Note 01 depends on cookie semantics from `web_server/06` |
 
@@ -34,11 +37,12 @@
 
 ## 🔗 Tech Cross-References (Section K)
 - **Security ↔ Express** — middleware order *is* a security boundary: `helmet()`, rate limiters, and guards all run as middleware. See [`../web_server/04-routing-in-express.md`](../web_server/04-routing-in-express.md).
-- **Security ↔ Databases** — parameterised queries defeat SQL injection; RLS is authorization at the storage layer. See [`../databases/06-knex-query-builder-and-crud.md`](../databases/06-knex-query-builder-and-crud.md) and [`../databases/01-relational-model-and-sql-basics.md`](../databases/01-relational-model-and-sql-basics.md).
+- **Security ↔ Databases** — parameterised queries defeat SQL injection; RLS is authorization at the storage layer, and `GRANT` is coarse database RBAC. See [`../databases/06-knex-query-builder-and-crud.md`](../databases/06-knex-query-builder-and-crud.md), [`../databases/01-relational-model-and-sql-basics.md`](../databases/01-relational-model-and-sql-basics.md) and [`03-role-based-access-control-rbac-complete-model.md`](03-role-based-access-control-rbac-complete-model.md).
 - **Security ↔ Template engines** — output escaping in Handlebars/EJS is the default XSS defense; raw output (`{{{ }}}`) re-opens the hole. See [`../web_server/05-template-engines-handlebars-ejs-layout.md`](../web_server/05-template-engines-handlebars-ejs-layout.md).
 - **Security ↔ Nginx/Docker** — the deployment layer adds rate limiting, TLS termination, and isolation. See [`../web_server/02-web-server-nginx-apache-express.md`](../web_server/02-web-server-nginx-apache-express.md) and [`../docker/05-deploy-express-ssr-postgres-compose.md`](../docker/05-deploy-express-ssr-postgres-compose.md).
 
 ## 🔗 Related Topics
+- [`./03-role-based-access-control-rbac-complete-model.md`](./03-role-based-access-control-rbac-complete-model.md) — RBAC0–3, hierarchy, separation of duty, SQL schema, enforcement, RLS, the wild, and AI agents
 - [`../web_server/06-sessions-cookies-localstorage.md`](../web_server/06-sessions-cookies-localstorage.md) — the cookie & session semantics every attack here exploits
 - [`../web_server/07-authentication-signup-signin-signout.md`](../web_server/07-authentication-signup-signin-signout.md) — authentication (who you are) feeding into authorization (what you may do)
 - [`../databases/README.md`](../databases/README.md) — data integrity and least privilege at the query layer

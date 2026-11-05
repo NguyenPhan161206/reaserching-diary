@@ -42,7 +42,35 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
  ░░   ░░   ░░   ░░   ██   ░░
 ```
 
+## November 2026
+
+*1 Nov 2026 is a Sunday, so the first week holds only the 1st.*
+
+```
+Mon  Tue  Wed  Thu  Fri  Sat  Sun
+ --   --   --   --   --   --    1
+ --   --   --   --   --   --   ▓▓
+
+  2    3    4    5    6    7    8
+ ░░   ░░   ░░   ▓▓   ░░   ░░   ░░
+
+  9   10   11   12   13   14   15
+ ░░   ░░   ░░   ░░   ░░   ░░   ░░
+
+ 16   17   18   19   20   21   22
+ ░░   ░░   ░░   ░░   ░░   ░░   ░░
+
+ 23   24   25   26   27   28   29
+ ░░   ░░   ░░   ░░   ░░   ░░   ░░
+
+ 30
+ ░░
+```
+
 ## Stats
+- **Today (5 Nov — RBAC complete model):** created `dev_foundation/security/03-role-based-access-control-rbac-complete-model.md` (Template A, ~21k words). RBAC as **one indirection** (user → role → permission) rather than a role list; NIST/INCITS 359 RBAC0–3 with formal UA/PA/RH, SSD/DSD, cardinality/prerequisite constraints; permission naming and role-explosion arithmetic; PEP/PDP/PIP/PAP enforcement architecture; a full PostgreSQL schema with recursive-CTE resolution, cycle-prevention and SSD triggers; Express `loadPrincipal`/`requirePermission`, escalation-safe role administration, Casbin/OPA/NestJS/CASL sketches; threat catalogue (IDOR, mass assignment, stale JWT claims, confused deputy, TOCTOU); route × role matrix + route-inventory meta-test; survey of PostgreSQL/Supabase/PostgREST, Kubernetes, AWS IAM, Linux, IdPs and policy engines; RBAC vs ABAC/ReBAC/PBAC; AI-agent tool permissions and prompt-injection approval binding; adoption roadmap and an executed lab. **Verified against PostgreSQL 17**, not just written: the cycle trigger, the SSD trigger, effective-permission resolution and RLS policies were run (RLS: no identity → 0, owner → 1, auditor with `doc:read:any` → 2). The first draft's `UNIQUE (tenant_id, key)` was caught by the test — NULL tenant rows are distinct, so global roles could duplicate; corrected to `UNIQUE NULLS NOT DISTINCT` (PG 15+) and re-tested. Added `pr:create` and `doc:read:any` to the seed (12 → 14 permissions), reconciled the RLS policy key with the Express check, and made the lab self-contained. Indexed in the security README (Note Index 02 → 03), `RESEARCH_AREAS.md` (security 2 → 3) and the log. `AGENTS.md` Section I updated with user approval (v3.10 — security 2 → 3, AuthZ/RBAC label). Push on user command.
+- **This month (November):** 1 recorded active day | 1 interaction through 5 Nov
+- **Current recorded streak:** 1 day (5 Nov); 31 Oct – 4 Nov have no calendar marks. This reports recorded activity, not proof of inactivity.
 - **Today (30 Oct, housekeeping pass):** closed the three gaps the UAV push left open. `AGENTS.md` → v3.9, Section I row corrected from `iot_aiot/ = 2 (2026-09-07)` to `= 7 (2026-10-30)` with the domain widened to "IoT/AIoT / UAV systems". Created `iot_aiot/README.md` — the folder index Section M requires — containing the seven-row Note Index, the two-arc reading order (embedded/telemetry 03 → 04 → 02; UAV 05 → 06 → 07), the Section K cross-technology block, and a backlog whose first two items are the ones the three new notes keep borrowing without owning (UAV energy model, SITL lab). Root README folder line now names UAV/UAS systems. `.gitignore` gained `session-ses_*.md` after the exported session dump was found sitting untracked. Verified the three UAV/vocabulary commits are on the remote (`b2bd405`, `6164b20`, `2a28285`); no note content was edited in this pass.
 - **Today (30 Oct, vocabulary pass — UAV adverse weather):** added `vocabulary/20-uav-adverse-weather-terminology.md` from a seventeen-term Vietnamese–English list. The terms were sorted onto the existing `iot_aiot/06` three-layer map (*fly*: gust rejection, DOBC, MPC/adaptive-robust, DRL attitude control, PINN aerodynamics; *see*: DVE perception, sensor fusion, dehazing/deraining/desnowing, low-visibility SLAM; *decide*: weather-aware replanning, severe-weather avoidance, energy-aware routing, dynamic geofencing, microclimate forecasting, onboard meteorology, icing diagnostics, fail-safe landing/RTH). Recorded the disambiguations the source gloss hides (*robust* vs. *sustainable*, *attitude* vs. *posture*, *fog* vs. *haze*, *predictive* vs. *forecast*, *reject* vs. *mitigate* vs. *eliminate*), the wind-triangle / disturbance-observer / MPC / haze formulas, and a starting-reference table. Vocabulary count 19 → 20. Push withheld per Section G.
 - **Today (30 Oct — UAV track opened):** three new notes in `iot_aiot/` — `05` the UAV IoT/C2 stack, `06` UAV AI and data pipeline, `07` logistics terminology + TSP-D/VRP-D/MILP/CA/GA/GHG. Added because the requested vocabulary (TSP-D, VRP-D, MILP, CA, GA, GHG, C2 link) only makes sense on top of the vehicle and data layers. Note 07's solver was executed before publishing (8.56 → 8.15 min, 4.7% saving). IoT/UAV count 2 → 7; log, calendar and research areas reconciled. Push withheld per Section G.
@@ -81,4 +109,4 @@ Mon  Tue  Wed  Thu  Fri  Sat  Sun
 - **Push policy:** changed 2026-09-27 to *push on command only* (batching all new work at push time)
 
 ---
-*Last updated: 2026-10-30*
+*Last updated: 2026-11-05*
