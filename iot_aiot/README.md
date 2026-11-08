@@ -27,10 +27,15 @@ sibling UAV project repositories, not here (AGENTS.md Section L).
 | 05 | [UAV as an IoT System: Stack, C2 Links, Airspace](05-uav-iot-stack-and-c2-links.md) | A (Tech) | What does a UAV share with any IoT device — and where does the analogy break (hard real-time, C2 link, airspace)? |
 | 06 | [UAV AI & Data Pipeline](06-uav-ai-perception-and-data-pipeline.md) | A (Tech) | A person is ~16 px at 100 m — what does that one number force you to change in the whole pipeline? |
 | 07 | [UAV Logistics: Terminology & Optimisation](07-uav-logistics-terminology-and-optimization.md) | A (Tech) | Why is TSP-D not "TSP plus a drone" — and which layer of the stack does "GHG per parcel" belong to? |
+| 08 | [Small Drone Delivery for Small Businesses](08-small-drone-delivery-for-small-businesses.md) | A (Tech) | A shop cannot afford a drone — so at what *order density* does buying drops from a shared hub beat a motorbike courier? |
 
 Status of 05–07 is **Review**, not Published: the concepts are verified (05's link budget and 07's
 TSP-D solver were executed, not estimated), but the regulatory and literature sections track a
 moving target and should be re-read before being cited.
+
+Status of 08 is **Draft**: its cost model was executed and its outputs agree with three independent
+industry benchmarks within a factor of ~1.5, but the inputs are secondary quotes and several are
+tier D/E. Every weakly-sourced row must be upgraded or deleted before promotion to Review.
 
 ---
 
@@ -46,13 +51,16 @@ Numbering is chronological; the *conceptual* order is two separate arcs that mee
 3. **02 (MQTT simulation)** last in this arc: with a mockable HAL (03) and a known memory budget
    (04), the emulator and Record & Replay system become a design rather than a wish.
 
-**Arc B — UAV (05 → 06 → 07).**
+**Arc B — UAV (05 → 06 → 07 → 08).**
 1. **05** defines the vehicle, the five planes, the link and the airspace. Every later note borrows
    its vocabulary (`offboard`, `BVLOS`, `C2`, `failsafe`).
 2. **06** assumes 05: perception only matters because there is a companion computer allowed to die,
    and GSD only matters because the aircraft flies at a regulated altitude.
 3. **07** assumes both: the routing model's drone range parameter comes from 05's link budget, and
    its "feasible arc" set is a C2 constraint, not a distance constraint.
+4. **08** closes the loop: 07 answers "given demand, what is the cheapest route"; 08 asks whether
+   *that demand exists at all* at small-business scale, and finds that the binding term is
+   supervision labour ÷ utilisation — i.e. a rule, not a battery.
 
 **Note 01 is the outlier.** Rate limiting and SSE are web-server concerns that happen to have been
 filed here early on. It is a correct note in the wrong folder; see the backlog.
@@ -71,10 +79,13 @@ Physical world
    │                                              │
    │                                        (telemetry product)
    │
-   └─ 05 vehicle + link + airspace
-            │
-            ├─ 06 perception & data pipeline  (see)
-            └─ 07 routing & sustainability    (decide)
+    └─ 05 vehicle + link + airspace
+             │
+             ├─ 06 perception & data pipeline  (see)
+             └─ 07 routing & sustainability    (decide)
+                      ▲
+                      │ demand, cost per drop
+                    08 SME feasibility & density gap
 
 01 (rate limit / SSE) is the control plane of the *server* side of either branch.
 ```
@@ -114,6 +125,9 @@ that keeps flying when the companion computer reboots.
 - [`../ai_ml/README.md`](../ai_ml/README.md) — the AI track; note 06 is where it meets hardware
 - [`../vocabulary/20-uav-adverse-weather-terminology.md`](../vocabulary/20-uav-adverse-weather-terminology.md)
   — the seventeen-term vocabulary note, sorted onto note 06's fly/see/decide map
+- [`../economics_business/05-urban-car-restriction-strategies.md`](../economics_business/05-urban-car-restriction-strategies.md)
+  — note 08's instrument-choice mirror: per-drop vs subscription vs surge is the same problem as
+  toll vs quota
 - [`../RESEARCH_AREAS.md`](../RESEARCH_AREAS.md) — folder registry and note history
 - 🔗 [UMT-Truck-Blind-Sight](https://github.com/NguyenPhan161206/UMT-Truck-Blind-Sight) — device code
   & explanations live there; this diary holds concept anchors and lessons learned
@@ -124,13 +138,13 @@ that keeps flying when the companion computer reboots.
 
 All notes use **Template A: Tech Note** and must pass the Section H depth checklist: mechanism before
 command, an executed example (not a plausible one), a "why it matters" angle, and the Research
-Journey. Notes 05–07 additionally carry the Section K cross-technology block.
+Journey. Notes 05–08 additionally carry the Section K cross-technology block.
 
 ## 📋 Note Backlog
 
 | Priority | Planned note | Why |
 |----------|--------------|-----|
-| High | **UAV energy & endurance model** (hover power, payload trade-off, battery C-rate, reserve) | Referenced by 05 (range), 06 (edge power budget) and 07 (cost per parcel) but owned by none — currently scattered across three notes |
+| High | **UAV energy & endurance model** (hover power, payload trade-off, battery C-rate, reserve) | Referenced by 05 (range), 06 (edge power budget), 07 (cost per parcel) and now **blocking note 08** (drops/day is bounded by hover power and charge turnaround) but owned by none — currently scattered across four notes |
 | High | **SITL lab** (PX4 SITL + MAVSDK, offboard at 2 Hz, watchdog and failsafe drills) | 05 explains the rule in prose; nobody has run it. A Template G note would make the failure visible |
 | Medium | **ROS 2 + uXRCE-DDS in practice** (QoS mismatch, frame conventions, timestamping) | 06 lists the failure modes; a hands-on note would turn the list into reflexes |
 | Medium | **Remote ID & UTM integration** (broadcast vs network RID, what an operator must expose) | 05 covers the regulation; the implementation surface is missing |
@@ -140,4 +154,4 @@ Journey. Notes 05–07 additionally carry the Section K cross-technology block.
 
 ---
 
-*Last updated: 2026-10-30*
+*Last updated: 2026-11-09*
